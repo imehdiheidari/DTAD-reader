@@ -1,6 +1,7 @@
 """Build content.html for a DTAD reader app from the session bodies, glossary and word audio.
 
-Usage: APP_NAME="DTAD Theory" [DATA_DIR=...] python3 -I build_content.py OUT.html
+Usage: APP_NAME="DTAD Theory" [DATA_DIR=...] [VERSION=3 UPDATE_BASE=https://raw.githubusercontent.com/OWNER/REPO/main/] python3 -I build_content.py OUT.html
+VERSION must match version.json in the repo; with UPDATE_BASE the page also updates itself when opened in a desktop browser.
 Sessions are sessions/NN.html (body fragments made by conv.py), listed in sessions/index.json as [["01.html", "Session 1 · Kickoff"], ...].
 Every word in a session must have a line in glossary-fa.txt (word|meaning) and a file audio/<word>.mp3
 (apostrophes as _); the script prints any that are missing and stops.
@@ -14,6 +15,8 @@ DATA = os.environ.get("DATA_DIR", HERE)
 AUDIO_DIR = os.environ.get("AUDIO_DIR", os.path.join(HERE, "audio"))
 SESSIONS = json.load(open(os.path.join(DATA, "sessions", "index.json"), encoding="utf8"))
 APP_NAME = os.environ.get("APP_NAME", "DTAD Theory")
+VERSION = int(os.environ.get("VERSION", "0"))
+UPDATE_BASE = os.environ.get("UPDATE_BASE", "")
 
 def words_in(fragment):
     text = html.unescape(re.sub(r"<[^>]+>", " ", fragment))
@@ -45,8 +48,10 @@ theme = open(os.path.join(HERE, "theme.html"), encoding="utf8").read()
 theme = theme.replace("/*__FONTS__*/", open(os.path.join(HERE, "fonts.css")).read())
 theme = theme.replace("__APP_NAME__", html.escape(APP_NAME)).replace("__SUBTITLE__", f"{len(SESSIONS)} session" + ("s" if len(SESSIONS) > 1 else ""))
 script = open(os.path.join(HERE, "reader-script.html"), encoding="utf8").read()
+script += "\n" + open(os.path.join(HERE, "updater.html"), encoding="utf8").read()
 
 doc = ('<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n<title>' + html.escape(APP_NAME) + '</title>\n'
+       f'<meta name="dtad-version" content="{VERSION}">\n<meta name="dtad-update-base" content="{html.escape(UPDATE_BASE)}">\n'
        '<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">\n'
        '<style>[hidden]{display:none!important}body{margin:0}</style>\n</head>\n<body>\n'
        + theme + "\n\n".join(parts) + '\n</article>\n</div>\n'

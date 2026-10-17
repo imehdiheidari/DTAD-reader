@@ -1,0 +1,39 @@
+<script>
+// Desktop self-update: when this file is opened in a browser, use the newest copy we know of
+// (the downloaded one kept in IndexedDB, or this file), then check GitHub for a newer one.
+// The Android app does its own updating, so this stays off inside its WebView.
+(function(){
+  if (/; wv\)/.test(navigator.userAgent)) return;
+  const meta = n => (document.querySelector('meta[name="'+n+'"]')||{}).content || '';
+  const mine = parseInt(meta('dtad-version'),10) || 0, base = meta('dtad-update-base');
+  if (!base || !window.indexedDB) return;
+  const KEY = 'content';
+  function db(){ return new Promise((ok,no)=>{ const r=indexedDB.open('dtad-reader',1);
+    r.onupgradeneeded=()=>r.result.createObjectStore('files'); r.onsuccess=()=>ok(r.result); r.onerror=()=>no(r.error); }); }
+  async function get(){ try{ const d=await db(); return await new Promise(ok=>{ const q=d.transaction('files').objectStore('files').get(KEY); q.onsuccess=()=>ok(q.result||null); q.onerror=()=>ok(null); }); }catch(e){ return null; } }
+  async function put(v){ try{ const d=await db(); await new Promise(ok=>{ const t=d.transaction('files','readwrite'); t.objectStore('files').put(v,KEY); t.oncomplete=ok; t.onerror=ok; }); }catch(e){} }
+  function swap(html){ document.open(); document.write(html); document.close(); }
+  function toast(text){
+    const t=document.createElement('div');
+    t.textContent=text; t.dir='rtl';
+    t.style.cssText='position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:50;background:#111;color:#fff;font:15px Vazirmatn,Tahoma,sans-serif;padding:.7rem 1.1rem;border-bottom:4px solid #f2c200;max-width:90vw';
+    document.body.appendChild(t); setTimeout(()=>t.remove(),5000);
+  }
+  (async function(){
+    const stored = await get();
+    if (stored && stored.version > mine) { swap(stored.html); return; }   // the swapped-in page runs this check itself
+    try{
+      const r = await fetch(base+'version.json?t='+Date.now(), {cache:'no-store'});
+      if (!r.ok) return;
+      const remote = await r.json();
+      if (!(remote.version > mine)) return;
+      const c = await fetch(base+(remote.file||'content.html')+'?t='+Date.now(), {cache:'no-store'});
+      if (!c.ok) return;
+      const html = await c.text();
+      await put({version: remote.version, html});
+      swap(html);
+      setTimeout(()=>toast(remote.message || 'محتوای جدید اضافه شد'), 300);
+    }catch(e){ /* offline: keep what we have */ }
+  })();
+})();
+</script>
