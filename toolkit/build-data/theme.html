@@ -1,0 +1,59 @@
+<style>
+/*__FONTS__*/
+/* Layout: one reading column under a Bauhaus header (red square, yellow bar, blue circle); the Persian card floats beside the selection, bottom sheet on phones. */
+:root{
+  --paper:#ffffff; --ink:#111111; --muted:#5b5d63; --rule:#e2e2e2;
+  --red:#d6281e; --blue:#1d4fa3; --yellow:#f2c200; --yellow-soft:#fff4c2; --mark:#ffe36e;
+  --font-sans:"Jost","Futura","Century Gothic","Segoe UI",Roboto,Arial,sans-serif;
+  --font-fa:"Vazirmatn","Jost",Tahoma,"Segoe UI",sans-serif;
+  color-scheme:light;
+}
+html,body{background:var(--paper);color:var(--ink)}
+body{font-family:var(--font-sans)}
+.wrap{max-width:44rem;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:1.5rem 6rem}
+header{display:grid;gap:1rem;margin-bottom:2rem}
+.mark{display:block;width:132px;height:44px}
+h1{font-size:clamp(2rem,8vw,2.8rem);line-height:1;margin:0;font-weight:700;letter-spacing:-.01em;text-transform:uppercase}
+.sub{font-size:.8rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0}
+.howto{direction:rtl;text-align:right;font-family:var(--font-fa);font-size:.95rem;line-height:1.9;background:var(--yellow-soft);color:var(--ink);border:2px solid var(--ink);padding:.8rem 1rem;margin:0}
+.howto b{color:var(--red)}
+.session-title{display:flex;align-items:center;gap:.6rem;font-size:1.1rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin:2.5rem 0 1.2rem;padding-bottom:.5rem;border-bottom:3px solid var(--ink)}
+.session-title::before{content:"";width:.9rem;height:.9rem;background:var(--red);flex:none}
+article{font-size:1.06rem;line-height:1.78}
+article p{margin:0 0 1.2em}
+article ::selection{background:var(--mark);color:var(--ink)}
+.ts{font-size:.72rem;font-weight:500;color:var(--red);margin-inline-end:.5em;user-select:none;-webkit-user-select:none;font-variant-numeric:tabular-nums;letter-spacing:.04em}
+.slide{border:2px solid var(--ink);padding:.9rem 1.1rem;margin:0 0 1.4em;font-size:.95rem;line-height:1.65;background:var(--paper)}
+.slide p{margin:.3em 0}.slide ul{margin:.3em 0;padding-inline-start:1.2em}
+.slide-tag{display:inline-block;background:var(--blue);color:var(--paper);font-size:.66rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;padding:.15rem .5rem;user-select:none;-webkit-user-select:none;margin-bottom:.4rem}
+#gloss{position:absolute;z-index:20;width:min(22rem,calc(100vw - 32px));background:var(--paper);color:var(--ink);border:2px solid var(--ink);box-shadow:6px 6px 0 var(--blue);padding:0 1rem .9rem;direction:rtl;text-align:right;font-family:var(--font-fa)}
+#gloss::before{content:"";display:block;height:8px;margin:0 -1rem .7rem;background:linear-gradient(90deg,var(--red) 0 50%,var(--yellow) 50% 75%,var(--blue) 75%)}
+#gloss .src{direction:ltr;text-align:left;font-family:var(--font-sans);color:var(--muted);font-size:.95rem;overflow-wrap:anywhere}
+#gloss .fa{font-size:1.2rem;font-weight:700;line-height:1.6;color:var(--ink)}
+#gloss .none{color:var(--muted);font-size:.9rem}
+#gloss .row{display:flex;align-items:center;gap:.6rem;padding:.35rem 0}
+#gloss .row+.row{border-top:1px solid var(--rule)}
+#gloss .row .w{direction:ltr;font-family:var(--font-sans);color:var(--muted);font-size:.9rem;min-width:0;overflow-wrap:anywhere}
+#gloss .row .m{flex:1;min-width:0;line-height:1.7}
+#gloss .list{max-height:45vh;overflow-y:auto}
+.head{display:flex;align-items:center;gap:.6rem;margin-bottom:.35rem}
+.head .src{flex:1}
+.play{flex:none;width:2.1rem;height:2.1rem;border-radius:50%;border:0;background:var(--red);color:var(--paper);font-size:.8rem;line-height:1;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;padding:0 0 0 2px}
+.play:hover,.play.on{background:var(--blue)}
+.play:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+@media (max-width:640px){
+  #gloss{position:fixed;left:0;right:0;bottom:0;top:auto!important;width:auto;border-width:2px 0 0;box-shadow:none;
+    padding-bottom:calc(.9rem + env(safe-area-inset-bottom,0px));
+    padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+  #gloss::before{margin-left:calc(-1 * max(16px,env(safe-area-inset-left,0px)));margin-right:calc(-1 * max(16px,env(safe-area-inset-right,0px)))}
+}
+@media (prefers-reduced-motion:no-preference){#gloss{animation:pop .14s ease-out}@keyframes pop{from{opacity:.4;transform:translateY(4px)}to{opacity:1;transform:none}}}
+</style>
+<div class="wrap">
+<header>
+  <svg class="mark" viewBox="0 0 132 44" aria-hidden="true"><rect x="0" y="0" width="44" height="44" fill="#d6281e"/><rect x="50" y="14" width="34" height="16" fill="#f2c200"/><circle cx="110" cy="22" r="22" fill="#1d4fa3"/></svg>
+  <h1>__APP_NAME__</h1>
+  <p class="sub">Digital Technologies in Architecture and Design · __SUBTITLE__</p>
+  <p class="howto">هر کلمه یا عبارتی را که متوجه نمی‌شوی <b>انتخاب کن</b> (با ماوس بکش یا روی کلمه دوبار کلیک کن؛ در موبایل انگشت را روی کلمه نگه دار). معنی فارسی‌اش همان‌جا ظاهر می‌شود؛ با دکمه‌ی <b>▶</b> تلفظش را بشنو. وقتی انتخاب را برداری، معنی ناپدید می‌شود. این صفحه بدون اینترنت هم کار می‌کند.</p>
+</header>
+<article id="text">

@@ -1,0 +1,86 @@
+<script>
+(function(){
+  const D=JSON.parse(document.getElementById('dict').textContent);
+  const box=document.getElementById('gloss'), article=document.getElementById('text');
+  let current='', timer=null, keepUntil=0, audio=null;
+  const esc=t=>t.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+  function find(w){
+    w=w.toLowerCase().replace(/’/g,"'");
+    if(D[w]) return w;
+    const c=[w.replace(/'s$/,''),w.replace(/s$/,''),w.replace(/es$/,''),w.replace(/ies$/,'y'),w.replace(/ed$/,''),w.replace(/ed$/,'e'),w.replace(/d$/,''),w.replace(/ing$/,''),w.replace(/ing$/,'e'),w.replace(/ly$/,'')];
+    for(const x of c) if(D[x]) return x;
+    return null;
+  }
+  function stop(){ if(audio){audio.pause();audio=null;} box.querySelectorAll('.play.on').forEach(b=>b.classList.remove('on')); if(window.speechSynthesis) speechSynthesis.cancel(); }
+  function playKeys(keys,btn){
+    stop(); let i=0; btn&&btn.classList.add('on');
+    const next=()=>{ if(i>=keys.length){btn&&btn.classList.remove('on');audio=null;return;}
+      audio=new Audio('data:audio/mpeg;base64,'+D[keys[i++]][1]); audio.onended=()=>setTimeout(next,120); audio.onerror=next; audio.play().catch(()=>{btn&&btn.classList.remove('on');}); };
+    next();
+  }
+  function speakPhrase(text,keys,btn){
+    // prefer the device's own English voice for a whole phrase (works offline on most devices); else play word by word
+    const ss=window.speechSynthesis;
+    const v=ss&&ss.getVoices().find(v=>/^en/i.test(v.lang)&&v.localService!==false);
+    if(ss&&v){ stop(); const u=new SpeechSynthesisUtterance(text); u.voice=v; u.lang=v.lang; u.rate=.9; btn.classList.add('on'); u.onend=u.onerror=()=>btn.classList.remove('on'); ss.speak(u); }
+    else playKeys(keys,btn);
+  }
+  const btn=(label)=>'<button class="play" type="button" aria-label="'+esc(label)+'">▶</button>';
+
+  function hide(){box.hidden=true;current='';stop();}
+  function place(range){
+    if(window.matchMedia('(max-width:640px)').matches){box.style.left='';box.style.top='';return;}
+    const r=range.getBoundingClientRect(), w=box.offsetWidth, h=box.offsetHeight;
+    let left=r.left+window.scrollX+r.width/2-w/2;
+    left=Math.max(window.scrollX+16,Math.min(left,window.scrollX+document.documentElement.clientWidth-w-16));
+    let top=r.bottom+window.scrollY+10;
+    if(r.bottom+h+20>window.innerHeight && r.top>h+20) top=r.top+window.scrollY-h-10;
+    box.style.left=left+'px'; box.style.top=top+'px';
+  }
+  function show(text,range){
+    current=text;
+    const toks=text.match(/[A-Za-z][A-Za-z'’-]*[A-Za-z]|[A-Za-z]/g)||[];
+    const seen=new Set(), keys=[];
+    for(const t of toks){const k=find(t); if(k&&!seen.has(k)){seen.add(k);keys.push(k);}}
+    const all=toks.map(find).filter(Boolean);
+    let html;
+    if(toks.length===1){
+      const k=keys[0];
+      html='<div class="head"><div class="src">'+esc(text)+'</div>'+(k?btn('Play '+text):'')+'</div>'+
+        (k?'<div class="fa">'+esc(D[k][0])+'</div>':'<div class="none">معنی این کلمه در فایل نیست.</div>');
+    }else{
+      html='<div class="head"><div class="src">'+esc(text.length>80?text.slice(0,80)+'…':text)+'</div>'+(all.length?btn('Play phrase'):'')+'</div>'+
+        '<div class="list">'+keys.map((k,i)=>'<div class="row" data-k="'+esc(k)+'"><span class="w">'+esc(k)+'</span><span class="m">'+esc(D[k][0])+'</span>'+btn('Play '+k)+'</div>').join('')+'</div>';
+    }
+    box.innerHTML=html; box.hidden=false;
+    const hb=box.querySelector('.head .play');
+    if(hb) hb.onclick=()=> toks.length===1?playKeys([keys[0]],hb):speakPhrase(text,all,hb);
+    box.querySelectorAll('.row .play').forEach(b=>b.onclick=()=>playKeys([b.parentElement.dataset.k],b));
+    place(range);
+  }
+  function check(){
+    const sel=window.getSelection();
+    if(!sel||sel.isCollapsed||!sel.rangeCount) return;
+    const range=sel.getRangeAt(0);
+    if(!article.contains(range.commonAncestorContainer)){hide();return;}
+    const text=sel.toString().replace(/\s+/g,' ').trim().replace(/^[^A-Za-z]+|[^A-Za-z]+$/g,'');
+    if(!text||text.length>400){hide();return;}
+    if(text===current){place(range);return;}
+    show(text,range);
+  }
+  // touching the card (e.g. the play button) can clear the selection; keep the card open in that case
+  const keep=()=>{keepUntil=Date.now()+800;};
+  box.addEventListener('pointerdown',keep); box.addEventListener('touchstart',keep,{passive:true});
+  box.addEventListener('mousedown',e=>e.preventDefault());
+  document.addEventListener('selectionchange',()=>{
+    const sel=window.getSelection();
+    clearTimeout(timer);
+    if(!sel||sel.isCollapsed){ if(Date.now()<keepUntil) return; hide(); return; }
+    timer=setTimeout(check,300);
+  });
+  document.addEventListener('pointerdown',e=>{ if(!box.hidden&&!box.contains(e.target)) keepUntil=0; });
+  window.addEventListener('resize',()=>{const s=window.getSelection();if(!box.hidden&&s&&s.rangeCount&&!s.isCollapsed)place(s.getRangeAt(0));});
+  if(window.speechSynthesis) speechSynthesis.getVoices();
+})();
+</script>
