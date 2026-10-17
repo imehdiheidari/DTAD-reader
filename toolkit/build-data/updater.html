@@ -7,7 +7,7 @@
   const meta = n => (document.querySelector('meta[name="'+n+'"]')||{}).content || '';
   const mine = parseInt(meta('dtad-version'),10) || 0, base = meta('dtad-update-base');
   if (!base || !window.indexedDB) return;
-  const KEY = 'content';
+  const KEY = base;   // one stored copy per course; every file:// page shares one origin
   function db(){ return new Promise((ok,no)=>{ const r=indexedDB.open('dtad-reader',1);
     r.onupgradeneeded=()=>r.result.createObjectStore('files'); r.onsuccess=()=>ok(r.result); r.onerror=()=>no(r.error); }); }
   async function get(){ try{ const d=await db(); return await new Promise(ok=>{ const q=d.transaction('files').objectStore('files').get(KEY); q.onsuccess=()=>ok(q.result||null); q.onerror=()=>ok(null); }); }catch(e){ return null; } }
