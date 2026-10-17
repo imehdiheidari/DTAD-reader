@@ -12,3 +12,7 @@ Transcript format: `**[h:mm:ss]** text` paragraphs; slide text as `>` blockquote
 Words may contain accented Latin letters (daímōn, Fürstengruft); the page and the build script treat them as one word.
 
 Other courses built with this toolkit: `project/` (DTAD Project).
+
+Publishing an update: build with `VERSION=N` (N = the new number) and `UPDATE_BASE`, push `content.html` first, wait until `curl --compressed -s <UPDATE_BASE>content.html | grep 'dtad-version'` shows N (GitHub's CDN keeps the old file up to 5 minutes), then push `version.json` with N. The Android app and the PC page both ignore a download whose `dtad-version` is lower than announced.
+
+PC use: the same `content.html`, saved as e.g. `DTAD Theory.html` and opened in Chrome or Edge, updates itself (`updater.html`): it keeps the newest downloaded copy in the browser's IndexedDB and shows it, offline too.

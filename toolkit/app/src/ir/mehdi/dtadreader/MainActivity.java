@@ -65,6 +65,10 @@ public class MainActivity extends Activity {
                 if (v <= have) return;
                 File tmp = new File(getFilesDir(), "content.tmp");
                 download(base + remote.optString("file", "content.html") + "?t=" + t, tmp);
+                // GitHub's CDN can serve an older content.html for a few minutes after a push: keep only the announced version
+                java.util.regex.Matcher m = java.util.regex.Pattern.compile("<meta name=\"dtad-version\" content=\"(\\d+)\"")
+                        .matcher(readStream(new FileInputStream(tmp)));
+                if (!m.find() || Integer.parseInt(m.group(1)) < v) { tmp.delete(); return; }
                 if (!tmp.renameTo(downloaded())) return;
                 prefs.edit().putInt("version", v).apply();
                 String msg = remote.optString("message", "محتوای جدید اضافه شد");

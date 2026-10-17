@@ -30,7 +30,11 @@
       const c = await fetch(base+(remote.file||'content.html')+'?t='+Date.now(), {cache:'no-store'});
       if (!c.ok) return;
       const html = await c.text();
-      await put({version: remote.version, html});
+      // GitHub's CDN can serve an older content.html for a few minutes after a push; only keep a page
+      // that really is the announced version, otherwise try again next time
+      const got = parseInt((html.match(/<meta name="dtad-version" content="(\d+)"/)||[])[1],10) || 0;
+      if (got < remote.version) return;
+      await put({version: got, html});
       swap(html);
       setTimeout(()=>toast(remote.message || 'محتوای جدید اضافه شد'), 300);
     }catch(e){ /* offline: keep what we have */ }
