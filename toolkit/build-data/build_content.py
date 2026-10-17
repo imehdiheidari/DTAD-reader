@@ -1,6 +1,6 @@
 """Build content.html for a DTAD reader app from the session bodies, glossary and word audio.
 
-Usage: APP_NAME="DTAD Theory" python3 -I build_content.py OUT.html
+Usage: APP_NAME="DTAD Theory" [DATA_DIR=...] python3 -I build_content.py OUT.html
 Sessions are sessions/NN.html (body fragments made by conv.py), listed in sessions/index.json as [["01.html", "Session 1 · Kickoff"], ...].
 Every word in a session must have a line in glossary-fa.txt (word|meaning) and a file audio/<word>.mp3
 (apostrophes as _); the script prints any that are missing and stops.
@@ -8,17 +8,19 @@ Every word in a session must have a line in glossary-fa.txt (word|meaning) and a
 import base64, html, json, os, re, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+# a course keeps its own sessions/ and glossary-fa.txt in DATA_DIR (e.g. project/build-data); theme and script stay here
+DATA = os.environ.get("DATA_DIR", HERE)
 # audio/ is shipped as audio.tar: the shared folder mangled thousands of small mp3 files, so extract it locally
 AUDIO_DIR = os.environ.get("AUDIO_DIR", os.path.join(HERE, "audio"))
-SESSIONS = json.load(open(os.path.join(HERE, "sessions", "index.json"), encoding="utf8"))
+SESSIONS = json.load(open(os.path.join(DATA, "sessions", "index.json"), encoding="utf8"))
 APP_NAME = os.environ.get("APP_NAME", "DTAD Theory")
 
 def words_in(fragment):
     text = html.unescape(re.sub(r"<[^>]+>", " ", fragment))
-    return {w.lower().replace("’", "'") for w in re.findall(r"[A-Za-z][A-Za-z'’-]*[A-Za-z]|[A-Za-z]", text)}
+    return {w.lower().replace("’", "'") for w in re.findall(r"[A-Za-zÀ-ÖØ-öø-ɏ][A-Za-zÀ-ÖØ-öø-ɏ'’-]*[A-Za-zÀ-ÖØ-öø-ɏ]|[A-Za-zÀ-ÖØ-öø-ɏ]", text)}
 
 gloss = {}
-for line in open(os.path.join(HERE, "glossary-fa.txt"), encoding="utf8"):
+for line in open(os.path.join(DATA, "glossary-fa.txt"), encoding="utf8"):
     line = line.rstrip("\n")
     if "|" in line:
         k, v = line.split("|", 1)
@@ -26,7 +28,7 @@ for line in open(os.path.join(HERE, "glossary-fa.txt"), encoding="utf8"):
 
 parts, words = [], set()
 for fname, title in SESSIONS:
-    frag = open(os.path.join(HERE, "sessions", fname), encoding="utf8").read()
+    frag = open(os.path.join(DATA, "sessions", fname), encoding="utf8").read()
     words |= words_in(frag)
     parts.append(f'<h2 class="session-title">{html.escape(title)}</h2>\n{frag}')
 

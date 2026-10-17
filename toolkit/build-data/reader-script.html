@@ -40,7 +40,7 @@
   }
   function show(text,range){
     current=text;
-    const toks=text.match(/[A-Za-z][A-Za-z'’-]*[A-Za-z]|[A-Za-z]/g)||[];
+    const toks=text.match(/[A-Za-zÀ-ÖØ-öø-ɏ][A-Za-zÀ-ÖØ-öø-ɏ'’-]*[A-Za-zÀ-ÖØ-öø-ɏ]|[A-Za-zÀ-ÖØ-öø-ɏ]/g)||[];
     const seen=new Set(), keys=[];
     for(const t of toks){const k=find(t); if(k&&!seen.has(k)){seen.add(k);keys.push(k);}}
     const all=toks.map(find).filter(Boolean);
@@ -64,7 +64,7 @@
     if(!sel||sel.isCollapsed||!sel.rangeCount) return;
     const range=sel.getRangeAt(0);
     if(!article.contains(range.commonAncestorContainer)){hide();return;}
-    const text=sel.toString().replace(/\s+/g,' ').trim().replace(/^[^A-Za-z]+|[^A-Za-z]+$/g,'');
+    const text=sel.toString().replace(/\s+/g,' ').trim().replace(/^[^A-Za-zÀ-ÖØ-öø-ɏ]+|[^A-Za-zÀ-ÖØ-öø-ɏ]+$/g,'');
     if(!text||text.length>400){hide();return;}
     if(text===current){place(range);return;}
     show(text,range);
