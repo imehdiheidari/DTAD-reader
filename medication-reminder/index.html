@@ -188,6 +188,23 @@
   .seg button[aria-pressed="true"] { background: var(--yellow); color: var(--ink); }
   .panel-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
 
+  /* ---------- notification setup (Android app only) ---------- */
+  .alarm-strip { display: flex; align-items: center; gap: 12px; width: 100%; border: var(--stroke) solid var(--ink); background: var(--red); color: var(--white); padding: 10px 14px; font-weight: 700; font-size: 1rem; line-height: 1.3; font-family: inherit; text-align: start; cursor: pointer; }
+  .alarm-strip::before { content: ""; width: 14px; height: 14px; background: var(--white); flex: none; animation: blink 1s steps(2, start) infinite; }
+  .setup { border: var(--stroke) solid var(--ink); background: var(--white); }
+  .setup summary { list-style: none; cursor: pointer; padding: 12px 16px; display: flex; align-items: center; gap: 12px; font-weight: 800; }
+  .setup summary::-webkit-details-marker { display: none; }
+  .setup summary::after { content: ""; margin-inline-start: auto; border-inline: 7px solid transparent; border-top: 10px solid var(--ink); }
+  .setup[open] summary::after { transform: rotate(180deg); }
+  .setup-list { list-style: none; margin: 0; padding: 0 16px 8px; }
+  .setup-item { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-top: 2px solid var(--ink); }
+  .setup-item .txt { flex: 1; min-width: 0; font-weight: 700; }
+  .setup-item .hint { display: block; font-weight: 500; color: var(--mute); font-size: 0.9rem; }
+  .ok-mark { width: 18px; height: 18px; border-radius: 50%; background: var(--blue); flex: none; }
+  .bad-mark { width: 18px; height: 18px; background: var(--red); flex: none; }
+  .unk-mark { width: 18px; height: 18px; border: 3px solid var(--ink); flex: none; }
+  .setup-foot { padding: 12px 16px 16px; display: flex; flex-direction: column; gap: 10px; border-top: 2px solid var(--ink); }
+
   /* ---------- reminder dialog ---------- */
   .overlay {
     position: fixed; inset: 0; z-index: 50; display: grid; place-items: center;
@@ -298,6 +315,21 @@
       alerts: 'فعال‌سازی صدا و اعلان',
       alertsOn: 'صدا فعال است',
       webNote: 'در مرورگر، یادآوری فقط وقتی این صفحه باز است کار می‌کند. برای اعلان با برنامهٔ بسته، نسخهٔ اندروید را نصب کنید.',
+      setupTitle: "تنظیم اعلان‌ها",
+      setupBad: "اعلان‌ها کامل فعال نیستند. برای درست کردن بزنید.",
+      setupOk: "اعلان‌ها آماده‌اند",
+      chk_notif: "اجازهٔ اعلان",
+      chk_channel: "اعلان شناور بالای صفحه و صدا",
+      chk_exact: "زنگ دقیقاً سر وقت",
+      chk_battery: "بدون محدودیت باتری",
+      chk_fsi: "نمایش روی صفحهٔ قفل",
+      chk_app: "اجرای خودکار و فعالیت در پس‌زمینه",
+      fix: "درست کردن",
+      open: "باز کردن",
+      channelHint: "در صفحهٔ باز شده «اعلان شناور» یا «بنر» و «صدا» را روشن کنید.",
+      appHint: "در گوشی‌های اوپو، ریلمی، وان‌پلاس، شیائومی و سامسونگ: «اجرای خودکار» را روشن و مصرف باتری را «بدون محدودیت» کنید. برنامه را از فهرست برنامه‌های اخیر نبندید (یا آن‌جا قفلش کنید)؛ بستن اجباری همهٔ یادآوری‌ها را تا باز کردن دوبارهٔ برنامه متوقف می‌کند.",
+      test: "اعلان آزمایشی تا ۱ دقیقهٔ دیگر",
+      testSet: "تنظیم شد. برنامه را ببندید و ۱ دقیقه صبر کنید.",
       units: { tablet: ['قرص'], capsule: ['کپسول'], ml: ['میلی‌لیتر'], drop: ['قطره'], spoon: ['قاشق چای‌خوری'] }
     },
     en: {
@@ -347,6 +379,21 @@
       alerts: 'Enable sound & alerts',
       alertsOn: 'Sound on',
       webNote: 'In a browser, reminders only work while this page is open. Install the Android app to get notifications when it is closed.',
+      setupTitle: "Notification setup",
+      setupBad: "Notifications are not fully set up. Tap to fix.",
+      setupOk: "Notifications are ready",
+      chk_notif: "Allow notifications",
+      chk_channel: "Pop-up banner at the top and sound",
+      chk_exact: "Alarms at the exact time",
+      chk_battery: "No battery restriction",
+      chk_fsi: "Show over the lock screen",
+      chk_app: "Auto-start and background activity",
+      fix: "Fix",
+      open: "Open",
+      channelHint: "On the page that opens, turn on “Pop on screen” / “Banner” and sound.",
+      appHint: "On Oppo, Realme, OnePlus, Xiaomi and Samsung phones: turn on “Auto-start” and set battery use to “Unrestricted”. Don’t swipe the app away from recent apps (or lock it there): a force stop pauses all reminders until you open the app again.",
+      test: "Test notification in 1 minute",
+      testSet: "Set. Close the app and wait 1 minute.",
       units: { tablet: ['tablet', 'tablets'], capsule: ['capsule', 'capsules'], ml: ['ml', 'ml'], drop: ['drop', 'drops'], spoon: ['teaspoon', 'teaspoons'] }
     },
     de: {
@@ -396,6 +443,21 @@
       alerts: 'Ton & Hinweise aktivieren',
       alertsOn: 'Ton an',
       webNote: 'Im Browser funktionieren Erinnerungen nur, solange diese Seite geöffnet ist. Für Hinweise bei geschlossener App die Android-App installieren.',
+      setupTitle: "Benachrichtigungen einrichten",
+      setupBad: "Benachrichtigungen sind nicht vollständig eingerichtet. Zum Beheben tippen.",
+      setupOk: "Benachrichtigungen sind bereit",
+      chk_notif: "Benachrichtigungen erlauben",
+      chk_channel: "Pop-up-Banner oben und Ton",
+      chk_exact: "Wecker zur exakten Zeit",
+      chk_battery: "Keine Akku-Einschränkung",
+      chk_fsi: "Über dem Sperrbildschirm anzeigen",
+      chk_app: "Autostart und Hintergrundaktivität",
+      fix: "Beheben",
+      open: "Öffnen",
+      channelHint: "Auf der geöffneten Seite „Pop-up“ / „Banner“ und Ton einschalten.",
+      appHint: "Auf Oppo-, Realme-, OnePlus-, Xiaomi- und Samsung-Handys: „Autostart“ einschalten und Akkunutzung auf „Uneingeschränkt“ stellen. Die App nicht aus den letzten Apps wegwischen (oder dort sperren): Ein erzwungenes Beenden stoppt alle Erinnerungen, bis die App wieder geöffnet wird.",
+      test: "Testbenachrichtigung in 1 Minute",
+      testSet: "Eingestellt. App schließen und 1 Minute warten.",
       units: { tablet: ['Tablette', 'Tabletten'], capsule: ['Kapsel', 'Kapseln'], ml: ['ml', 'ml'], drop: ['Tropfen', 'Tropfen'], spoon: ['Teelöffel', 'Teelöffel'] }
     }
   };
@@ -705,6 +767,38 @@
     </div>`;
   }
 
+  const CHECKS = ['notif', 'channel', 'exact', 'battery', 'fsi'];
+  function readStatus() {
+    try { return NATIVE && NATIVE.status ? JSON.parse(NATIVE.status()) : null; } catch (e) { return null; }
+  }
+
+  function SetupPanel({ status, open, setOpen, t }) {
+    const [testSet, setTestSet] = useState(false);
+    const bad = CHECKS.filter(k => status[k] === false);
+    return html`<details className="setup" id="setup" open=${open} onToggle=${e => setOpen(e.currentTarget.open)}>
+      <summary>
+        <span className=${bad.length ? 'bad-mark' : 'ok-mark'} aria-hidden="true"></span>
+        ${t('setupTitle')}${bad.length ? '' : ' · ' + t('setupOk')}
+      </summary>
+      <ul className="setup-list">
+        ${CHECKS.map(k => html`<li key=${k} className="setup-item">
+          <span className=${status[k] ? 'ok-mark' : 'bad-mark'} aria-hidden="true"></span>
+          <span className="txt">${t('chk_' + k)}${k === 'channel' && !status[k] ? html`<span className="hint">${t('channelHint')}</span>` : null}</span>
+          ${status[k] ? null : html`<button type="button" className="btn btn-red" onClick=${() => NATIVE.openSettings(k)}>${t('fix')}</button>`}
+        </li>`)}
+        <li className="setup-item">
+          <span className="unk-mark" aria-hidden="true"></span>
+          <span className="txt">${t('chk_app')}<span className="hint">${t('appHint')}</span></span>
+          <button type="button" className="btn" onClick=${() => NATIVE.openSettings('app')}>${t('open')}</button>
+        </li>
+      </ul>
+      <div className="setup-foot">
+        <button type="button" className="btn btn-yellow" onClick=${() => { NATIVE.test(); setTestSet(true); }}>${t('test')}</button>
+        ${testSet ? html`<strong>${t('testSet')}</strong>` : null}
+      </div>
+    </details>`;
+  }
+
   function TestPanel({ t, f, clock, isVirtual, setSpeed, jump, jumpToNext, realTime, resetToday, alertsOn, enableAlerts }) {
     return html`<details className="panel">
       <summary className="display">${t('testClock')}</summary>
@@ -740,6 +834,14 @@
     const [snoozes, setSnoozes] = useState((stored && stored.snoozes) || {}); // key -> { nextAt, count }
     const [selectedId, setSelectedId] = useState(null);
     const [alertsOn, setAlertsOn] = useState(false);
+    const [status, setStatus] = useState(readStatus);
+    const [setupOpen, setSetupOpen] = useState(() => { const st = readStatus(); return !!st && CHECKS.some(k => st[k] === false); });
+    useEffect(() => {
+      if (!NATIVE) return;
+      const id = setInterval(() => setStatus(readStatus()), 3000);
+      return () => clearInterval(id);
+    }, []);
+    const setupBad = !!status && CHECKS.some(k => status[k] === false);
 
     // Virtual clock (browser test panel only): real time by default, can be sped up or moved forward.
     const [clock, setClock] = useState(() => ({ baseReal: Date.now(), baseVirt: Date.now(), speed: 1 }));
@@ -767,6 +869,7 @@
         if (Array.isArray(s.doses) && s.doses.length) setDoses(s.doses);
         setLog(s.log || {});
         setSnoozes(s.snoozes || {});
+        setStatus(readStatus());
       };
       return () => { delete window.__doseReload; };
     }, []);
@@ -879,6 +982,10 @@
       </header>
 
       <main key=${lang} className="shell fade-in">
+        ${setupBad ? html`<button type="button" className="alarm-strip" onClick=${() => {
+            setSetupOpen(true);
+            setTimeout(() => { const el = document.getElementById('setup'); if (el) el.scrollIntoView({ block: 'start' }); }, 50);
+          }}>${t('setupBad')}</button>` : null}
         <section className="band" aria-label=${t('now')}>
           <span className="label">${isVirtual ? t('testTime') : t('now')}</span>
           <span className="band-clock num" dir="ltr">${f.time(now)}</span>
@@ -896,6 +1003,8 @@
           onUpdateMed=${(id, p) => updateMed(current.dose.id, id, p)}
           onRemoveMed=${id => removeMed(current.dose.id, id)}
           onPrev=${() => go(-1)} onNext=${() => go(1)} />
+
+        ${status ? html`<${SetupPanel} status=${status} open=${setupOpen} setOpen=${setSetupOpen} t=${t} />` : null}
 
         ${NATIVE ? null : html`<${TestPanel} t=${t} f=${f} clock=${clock} isVirtual=${isVirtual} setSpeed=${setSpeed} jump=${jump}
           jumpToNext=${jumpToNext} realTime=${realTime} resetToday=${resetToday}
