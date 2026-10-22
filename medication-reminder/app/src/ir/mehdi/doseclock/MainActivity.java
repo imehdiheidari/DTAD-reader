@@ -1,14 +1,11 @@
 package ir.mehdi.doseclock;
 
 import android.app.Activity;
-import android.app.NotificationManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.provider.Settings;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
@@ -22,14 +19,10 @@ public class MainActivity extends Activity {
 
     /** What the page sees as window.DoseNative: it keeps the state in the app so the alarms can use it. */
     static final class Bridge {
-        private final MainActivity a;
         private final Context c;
-        Bridge(MainActivity a) { this.a = a; this.c = a.getApplicationContext(); }
+        Bridge(Context c) { this.c = c; }
         @JavascriptInterface public String load() { return Alarms.prefs(c).getString(Alarms.STATE, ""); }
         @JavascriptInterface public void save(String json) { Alarms.saveState(c, json); Alarms.reschedule(c); }
-        @JavascriptInterface public String status() { return Alarms.status(c).toString(); }
-        @JavascriptInterface public void test() { Alarms.scheduleTest(c, 60 * 1000L); }
-        @JavascriptInterface public void openSettings(String which) { a.openSettingsLater(which); }
     }
 
     @Override
@@ -45,7 +38,7 @@ public class MainActivity extends Activity {
         s.setDomStorageEnabled(true);
         s.setAllowFileAccess(true);
         web.setWebChromeClient(new WebChromeClient());
-        web.addJavascriptInterface(new Bridge(this), "DoseNative");
+        web.addJavascriptInterface(new Bridge(getApplicationContext()), "DoseNative");
         setContentView(web);
         web.loadUrl("file:///android_asset/index.html");
 
@@ -81,39 +74,6 @@ public class MainActivity extends Activity {
 
     @Override
     public void onRequestPermissionsResult(int code, String[] perms, int[] results) { reload(); }
-
-    void openSettingsLater(final String which) { runOnUiThread(() -> openSettings(which)); }
-
-    private void openSettings(String which) {
-        String pkg = getPackageName();
-        Intent i;
-        switch (which) {
-            case "notif":
-                if (Build.VERSION.SDK_INT >= 33 && checkSelfPermission("android.permission.POST_NOTIFICATIONS") != PackageManager.PERMISSION_GRANTED
-                        && shouldShowRequestPermissionRationale("android.permission.POST_NOTIFICATIONS")) { askNotificationPermission(); return; }
-                i = Build.VERSION.SDK_INT >= 26 ? new Intent(Settings.ACTION_APP_NOTIFICATION_SETTINGS).putExtra(Settings.EXTRA_APP_PACKAGE, pkg) : appDetails();
-                break;
-            case "channel":
-                if (!((NotificationManager) getSystemService(NOTIFICATION_SERVICE)).areNotificationsEnabled()) { openSettings("notif"); return; }
-                i = Build.VERSION.SDK_INT >= 26 ? new Intent(Settings.ACTION_CHANNEL_NOTIFICATION_SETTINGS)
-                        .putExtra(Settings.EXTRA_APP_PACKAGE, pkg).putExtra(Settings.EXTRA_CHANNEL_ID, Alarms.CHANNEL) : appDetails();
-                break;
-            case "exact":
-                i = Build.VERSION.SDK_INT >= 31 ? new Intent(Settings.ACTION_REQUEST_SCHEDULE_EXACT_ALARM, Uri.parse("package:" + pkg)) : appDetails();
-                break;
-            case "battery":
-                i = new Intent(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS, Uri.parse("package:" + pkg));
-                break;
-            case "fsi":
-                i = Build.VERSION.SDK_INT >= 34 ? new Intent(Settings.ACTION_MANAGE_APP_USE_FULL_SCREEN_INTENT, Uri.parse("package:" + pkg)) : appDetails();
-                break;
-            default:
-                i = appDetails();
-        }
-        try { startActivity(i); } catch (Exception e) { try { startActivity(appDetails()); } catch (Exception ignored) {} }
-    }
-
-    private Intent appDetails() { return new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, Uri.parse("package:" + getPackageName())); }
 
     @Override
     protected void onResume() {

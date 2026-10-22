@@ -14,10 +14,6 @@ public class AlarmReceiver extends BroadcastReceiver {
             case Alarms.ACTION_FIRE: Alarms.fire(c, id); break;
             case Alarms.ACTION_DONE: Alarms.done(c, id, i.getStringExtra("key")); break;
             case Alarms.ACTION_LATER: Alarms.later(c, id, i.getStringExtra("key"), i.getIntExtra("count", 1)); break;
-            case Alarms.ACTION_TEST: Alarms.showTest(c); return;
-            case Alarms.ACTION_TEST_CLOSE:
-                ((android.app.NotificationManager) c.getSystemService(Context.NOTIFICATION_SERVICE)).cancel(Alarms.TEST_ID);
-                return;
             default: return;
         }
         MainActivity.reloadIfOpen();

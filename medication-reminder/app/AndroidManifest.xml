@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="ir.mehdi.doseclock" android:versionCode="3" android:versionName="1.2">
+    package="ir.mehdi.doseclock" android:versionCode="4" android:versionName="1.3">
     <uses-sdk android:minSdkVersion="24" android:targetSdkVersion="34"/>
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
@@ -8,7 +8,6 @@
     <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" android:maxSdkVersion="32"/>
     <uses-permission android:name="android.permission.USE_EXACT_ALARM"/>
     <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT"/>
-    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/>
     <application android:label="@string/app_name" android:icon="@mipmap/ic_launcher"
         android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar" android:allowBackup="true">
         <activity android:name=".MainActivity" android:exported="true" android:launchMode="singleTask"

@@ -11,7 +11,6 @@ import android.content.SharedPreferences;
 import android.media.AudioAttributes;
 import android.media.RingtoneManager;
 import android.os.Build;
-import android.os.PowerManager;
 import java.text.SimpleDateFormat;
 import java.util.*;
 import org.json.JSONArray;
@@ -28,8 +27,6 @@ final class Alarms {
     static final String PREFS = "dose", STATE = "state", FIRED = "fired", IDS = "ids";
     // A new channel id: channel importance and sound are fixed once created, and the first one had no alarm sound.
     static final String CHANNEL = "dose-alarms-v2", OLD_CHANNEL = "dose-reminders";
-    static final String ACTION_TEST = "ir.mehdi.doseclock.TEST", ACTION_TEST_CLOSE = "ir.mehdi.doseclock.TEST_CLOSE";
-    static final int TEST_ID = 999;
     static final String ACTION_FIRE = "ir.mehdi.doseclock.FIRE";
     static final String ACTION_DONE = "ir.mehdi.doseclock.DONE";
     static final String ACTION_LATER = "ir.mehdi.doseclock.LATER";
@@ -256,74 +253,19 @@ final class Alarms {
         return PendingIntent.getActivity(c, notifId(id) * 4 + (overLock ? 0 : 3), open, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
     }
 
-    /** What could keep a reminder from showing, for the setup checklist in the page. */
-    static JSONObject status(Context c) {
-        JSONObject o = new JSONObject();
-        NotificationManager nm = (NotificationManager) c.getSystemService(Context.NOTIFICATION_SERVICE);
-        AlarmManager am = (AlarmManager) c.getSystemService(Context.ALARM_SERVICE);
-        PowerManager pm = (PowerManager) c.getSystemService(Context.POWER_SERVICE);
-        try {
-            boolean on = nm.areNotificationsEnabled();
-            o.put("notif", on);
-            boolean high = true;
-            if (Build.VERSION.SDK_INT >= 26) {
-                createChannel(c);
-                NotificationChannel ch = nm.getNotificationChannel(CHANNEL);
-                high = ch != null && ch.getImportance() >= NotificationManager.IMPORTANCE_HIGH;
-            }
-            o.put("channel", on && high);
-            o.put("exact", Build.VERSION.SDK_INT < 31 || am.canScheduleExactAlarms());
-            o.put("battery", pm.isIgnoringBatteryOptimizations(c.getPackageName()));
-            o.put("fsi", Build.VERSION.SDK_INT < 34 || nm.canUseFullScreenIntent());
-        } catch (JSONException ignored) {}
-        return o;
-    }
-
-    static void scheduleTest(Context c, long inMs) {
-        Intent i = new Intent(c, AlarmReceiver.class).setAction(ACTION_TEST).putExtra("id", "test");
-        PendingIntent pi = PendingIntent.getBroadcast(c, TEST_ID, i, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
-        AlarmManager am = (AlarmManager) c.getSystemService(Context.ALARM_SERVICE);
-        long at = System.currentTimeMillis() + inMs;
-        if (Build.VERSION.SDK_INT >= 31 && !am.canScheduleExactAlarms()) am.setAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, at, pi);
-        else am.setAlarmClock(new AlarmManager.AlarmClockInfo(at, openPi(c, "test", false)), pi);
-    }
-
-    @SuppressWarnings("deprecation")
-    static void showTest(Context c) {
-        createChannel(c);
-        Txt t = Txt.of(state(c).optString("lang", "fa"));
-        Intent close = new Intent(c, AlarmReceiver.class).setAction(ACTION_TEST_CLOSE).putExtra("id", "test");
-        PendingIntent closePi = PendingIntent.getBroadcast(c, TEST_ID + 1, close, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
-        Notification.Builder b = builder(c);
-        b.setSmallIcon(R.drawable.ic_stat).setColor(0xFF1447A6)
-            .setContentTitle(t.testTitle).setContentText(t.testBody)
-            .setStyle(new Notification.BigTextStyle().bigText(t.testBody))
-            .setCategory(Notification.CATEGORY_ALARM).setVisibility(Notification.VISIBILITY_PUBLIC)
-            .setAutoCancel(true).setShowWhen(true)
-            .setContentIntent(openPi(c, "test", false))
-            .setFullScreenIntent(openPi(c, "test", true), true)
-            .addAction(0, t.done, closePi).addAction(0, t.later, closePi);
-        ((NotificationManager) c.getSystemService(Context.NOTIFICATION_SERVICE)).notify(TEST_ID, b.build());
-    }
-
     /** Notification wording in the language chosen in the app. */
     static final class Txt {
-        final String lang, title, done, later, reminder, dose, noMeds, channel, testTitle, testBody;
+        final String lang, title, done, later, reminder, dose, noMeds, channel;
 
-        private Txt(String lang, String title, String done, String later, String reminder, String dose, String noMeds, String channel,
-                    String testTitle, String testBody) {
+        private Txt(String lang, String title, String done, String later, String reminder, String dose, String noMeds, String channel) {
             this.lang = lang; this.title = title; this.done = done; this.later = later;
             this.reminder = reminder; this.dose = dose; this.noMeds = noMeds; this.channel = channel;
-            this.testTitle = testTitle; this.testBody = testBody;
         }
 
         static Txt of(String lang) {
-            if ("en".equals(lang)) return new Txt("en", "Time for your medication", "Done", "Later", "Reminder %s", "Dose %s", "Take the medication for this dose.", "Medication reminders",
-                    "Test notification", "If you see this at the top of the screen, reminders work.");
-            if ("de".equals(lang)) return new Txt("de", "Zeit für Ihre Medikamente", "Erledigt", "Später", "Erinnerung %s", "Dosis %s", "Nehmen Sie die Medikamente dieser Dosis.", "Medikamenten-Erinnerungen",
-                    "Testbenachrichtigung", "Wenn Sie das oben auf dem Bildschirm sehen, funktionieren die Erinnerungen.");
-            return new Txt("fa", "وقت داروست", "خوردم", "بعدا", "یادآوری %s", "نوبت %s", "داروهای این نوبت را بخورید.", "یادآور دارو",
-                "اعلان آزمایشی", "اگر این را بالای صفحه می‌بینید، یادآوری‌ها درست کار می‌کنند.");
+            if ("en".equals(lang)) return new Txt("en", "Time for your medication", "Done", "Later", "Reminder %s", "Dose %s", "Take the medication for this dose.", "Medication reminders");
+            if ("de".equals(lang)) return new Txt("de", "Zeit für Ihre Medikamente", "Erledigt", "Später", "Erinnerung %s", "Dosis %s", "Nehmen Sie die Medikamente dieser Dosis.", "Medikamenten-Erinnerungen");
+            return new Txt("fa", "وقت داروست", "خوردم", "بعدا", "یادآوری %s", "نوبت %s", "داروهای این نوبت را بخورید.", "یادآور دارو");
         }
 
         String digits(String s) {
@@ -342,7 +284,7 @@ final class Alarms {
         String dose(int n) { return String.format(Locale.US, dose, digits(String.valueOf(n))); }
 
         String time(String hhmm) {
-            if (!"en".equals(lang)) return digits(String.format(Locale.US, "%05s", hhmm).replace(' ', '0'));
+            if (!"en".equals(lang)) return digits(hhmm.length() == 4 ? "0" + hhmm : hhmm);
             try {
                 Date d = new SimpleDateFormat("HH:mm", Locale.US).parse(hhmm);
                 return new SimpleDateFormat("hh:mm a", Locale.US).format(d);
