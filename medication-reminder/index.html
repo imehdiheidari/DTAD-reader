@@ -65,6 +65,13 @@
   .lang button + button { border-left: 2px solid var(--white); }
   .lang button[aria-pressed="true"] { background: var(--yellow); color: var(--ink); }
   .lang .fa { font-family: var(--font-fa); font-size: 15px; letter-spacing: 0; }
+  .snz { position: relative; flex: none; }
+  .snz-btn { width: 32px; height: 32px; display: grid; place-items: center; border: 2px solid var(--white); background: transparent; color: var(--white); cursor: pointer; padding: 0; }
+  .snz-btn[aria-expanded="true"] { background: var(--yellow); color: var(--ink); }
+  .snz-menu { position: absolute; top: calc(100% + 8px); left: 0; z-index: 80; width: 232px; background: var(--white); color: var(--ink); border: var(--stroke) solid var(--ink); box-shadow: 6px 6px 0 var(--yellow); padding: 10px; display: flex; flex-direction: column; gap: 8px; }
+  .snz-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+  .snz-grid button { min-height: 40px; border: var(--stroke-thin) solid var(--ink); background: var(--white); color: var(--ink); font-weight: 700; font-size: 0.9rem; line-height: 1; font-family: inherit; cursor: pointer; }
+  .snz-grid button[aria-checked="true"] { background: var(--yellow); }
   .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1rem; min-width: 0; user-select: none; -webkit-user-select: none; }
   .brand-shapes { display: flex; gap: 4px; flex: none; }
   .brand-shapes i { width: 12px; height: 12px; display: block; }
@@ -243,6 +250,7 @@
   const STORE_KEY = 'bauhaus-dose-clock-v2';
   const OLD_STORE_KEY = 'bauhaus-dose-clock-v1';
   const SNOOZE_MS = 30 * 60 * 1000;
+  const SNOOZE_OPTIONS = [1, 5, 10, 15, 30, 60];   // minutes between "Later" reminders; 30 by default
   const DAY_MS = 24 * 60 * 60 * 1000;
   const MAX_DOSES = 8;
   const LOCALES = { fa: 'fa-IR', en: 'en-US', de: 'de-DE' };
@@ -286,7 +294,9 @@
       reminderN: 'یادآوری {n}',
       done: 'خوردم',
       later: 'بعدا',
-      laterHint: 'با «بعدا» هر ۳۰ دقیقه دوباره یادآوری می‌شود.',
+      laterHint: 'با «بعدا» هر {n} دقیقه دوباره یادآوری می‌شود.',
+      repeatEvery: 'فاصلهٔ تکرار یادآوری بعد از «بعدا»',
+      minutesN: '{n} دقیقه',
       moreDue: '{n} نوبت دیگر هم در انتظار است',
       noMedsAlert: 'داروهای این نوبت را بخورید.',
       testClock: 'ساعت آزمایشی',
@@ -335,7 +345,9 @@
       reminderN: 'Reminder {n}',
       done: 'Done',
       later: 'Later',
-      laterHint: '“Later” reminds you again every 30 minutes.',
+      laterHint: '“Later” reminds you again every {n} minutes.',
+      repeatEvery: 'Repeat after “Later” every',
+      minutesN: '{n} min',
       moreDue: '+{n} more dose due',
       noMedsAlert: 'Take the medication for this dose.',
       testClock: 'Test clock',
@@ -384,7 +396,9 @@
       reminderN: 'Erinnerung {n}',
       done: 'Erledigt',
       later: 'Später',
-      laterHint: '„Später“ erinnert alle 30 Minuten erneut.',
+      laterHint: '„Später“ erinnert alle {n} Minuten erneut.',
+      repeatEvery: 'Nach „Später“ erneut erinnern alle',
+      minutesN: '{n} Min.',
       moreDue: '+{n} weitere Dosis fällig',
       noMedsAlert: 'Nehmen Sie die Medikamente dieser Dosis.',
       testClock: 'Testuhr',
@@ -536,6 +550,31 @@
     </div>`;
   }
 
+  const IconRepeat = () => html`<svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M14.5 9 A5.5 5.5 0 1 1 11.8 4.3" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M10 1.5 L15 3.8 L11.2 7.6 Z" fill="currentColor"/></svg>`;
+
+  // Small button beside the languages: how many minutes "Later" waits before reminding again.
+  function SnoozePicker({ value, onChange, t, f, lang }) {
+    const [open, setOpen] = useState(false);
+    const ref = useRef(null);
+    useEffect(() => {
+      if (!open) return;
+      const close = e => { if (ref.current && !ref.current.contains(e.target)) setOpen(false); };
+      document.addEventListener('pointerdown', close);
+      return () => document.removeEventListener('pointerdown', close);
+    }, [open]);
+    return html`<div className="snz" ref=${ref}>
+      <button type="button" className="snz-btn" aria-label=${t('repeatEvery')} title=${t('repeatEvery')} aria-expanded=${open}
+        onClick=${() => setOpen(o => !o)}><${IconRepeat} /></button>
+      ${open ? html`<div className="snz-menu" dir=${DIR[lang]} role="menu" aria-label=${t('repeatEvery')}>
+        <span className="label">${t('repeatEvery')}</span>
+        <div className="snz-grid">
+          ${SNOOZE_OPTIONS.map(m => html`<button key=${m} type="button" role="menuitemradio" aria-checked=${m === value}
+            onClick=${() => { onChange(m); setOpen(false); }}>${t('minutesN', { n: f.num(m) })}</button>`)}
+        </div>
+      </div>` : null}
+    </div>`;
+  }
+
   function MedForm({ initial, t, lang, idBase, submitLabel, onSubmit, onCancel }) {
     const [name, setName] = useState(initial ? initial.name : '');
     const [qty, setQty] = useState(initial ? String(initial.qty) : '1');
@@ -668,7 +707,7 @@
     </article>`;
   }
 
-  function ReminderDialog({ row, extra, t, f, lang, onDone, onLater }) {
+  function ReminderDialog({ row, extra, snoozeMin, t, f, lang, onDone, onLater }) {
     const doneRef = useRef(null);
     useEffect(() => { if (doneRef.current) doneRef.current.focus(); }, [row.key, row.count]);
     return html`<div className="overlay">
@@ -699,7 +738,7 @@
           </button>
         </div>
         <div className="alert-hint">
-          <span>${t('laterHint')}</span>
+          <span>${t('laterHint', { n: f.num(snoozeMin) })}</span>
           ${extra > 0 ? html`<strong>${t('moreDue', { n: f.num(extra) })}</strong>` : null}
         </div>
       </div>
@@ -739,6 +778,7 @@
     const [doses, setDoses] = useState(stored && Array.isArray(stored.doses) && stored.doses.length ? stored.doses : defaultDoses);
     const [log, setLog] = useState((stored && stored.log) || {});         // "YYYY-MM-DD|doseId" -> taken-at ms
     const [snoozes, setSnoozes] = useState((stored && stored.snoozes) || {}); // key -> { nextAt, count }
+    const [snoozeMin, setSnoozeMin] = useState(stored && SNOOZE_OPTIONS.includes(stored.snoozeMin) ? stored.snoozeMin : 30);
     const [selectedId, setSelectedId] = useState(null);
     const [alertsOn, setAlertsOn] = useState(false);
     // Virtual clock (browser test panel only): real time by default, can be sped up or moved forward.
@@ -754,8 +794,8 @@
     useEffect(() => {
       if (first.current && stored && stored.doses) { first.current = false; return; }
       first.current = false;
-      save({ lang, doses, log, snoozes });
-    }, [lang, doses, log, snoozes]);
+      save({ lang, doses, log, snoozes, snoozeMin });
+    }, [lang, doses, log, snoozes, snoozeMin]);
     useEffect(() => { document.documentElement.lang = lang; document.documentElement.dir = DIR[lang]; }, [lang]);
 
     // The app calls this after Done / Later was pressed on a system notification, and when it comes back to the front.
@@ -767,6 +807,7 @@
         if (Array.isArray(s.doses) && s.doses.length) setDoses(s.doses);
         setLog(s.log || {});
         setSnoozes(s.snoozes || {});
+        if (SNOOZE_OPTIONS.includes(s.snoozeMin)) setSnoozeMin(s.snoozeMin);
       };
       return () => { delete window.__doseReload; };
     }, []);
@@ -839,7 +880,7 @@
       setLog(l => ({ ...l, [r.key]: now }));
       setSnoozes(s => { const n = { ...s }; delete n[r.key]; return n; });
     };
-    const snooze = r => setSnoozes(s => ({ ...s, [r.key]: { nextAt: now + SNOOZE_MS, count: r.count } }));
+    const snooze = r => setSnoozes(s => ({ ...s, [r.key]: { nextAt: now + snoozeMin * 60000, count: r.count } }));
 
     /* ----- schedule editing ----- */
     const updateDose = (id, patch) => setDoses(ds => ds.map(d => (d.id === id ? { ...d, ...patch } : d)));
@@ -886,7 +927,10 @@
     return html`<${React.Fragment}>
       <header className="topbar">
         <div className="topbar-inner" dir="ltr">
-          <${LangToggle} lang=${lang} setLang=${setLang} />
+          <div className="flex items-center gap-2">
+            <${LangToggle} lang=${lang} setLang=${setLang} />
+            <${SnoozePicker} value=${snoozeMin} onChange=${setSnoozeMin} t=${t} f=${f} lang=${lang} />
+          </div>
           <span className="brand" dir=${DIR[lang]} onPointerDown=${holdStart} onPointerUp=${holdEnd} onPointerLeave=${holdEnd}
             onContextMenu=${e => e.preventDefault()}>
             <span className="brand-shapes" aria-hidden="true"><i className="r"></i><i className="b"></i><i className="y"></i></span>
@@ -929,7 +973,7 @@
         : null}
 
       ${due.length
-        ? html`<${ReminderDialog} row=${due[0]} extra=${due.length - 1} t=${t} f=${f} lang=${lang}
+        ? html`<${ReminderDialog} row=${due[0]} extra=${due.length - 1} snoozeMin=${snoozeMin} t=${t} f=${f} lang=${lang}
             onDone=${() => markDone(due[0])} onLater=${() => snooze(due[0])} />`
         : null}
     <//>`;

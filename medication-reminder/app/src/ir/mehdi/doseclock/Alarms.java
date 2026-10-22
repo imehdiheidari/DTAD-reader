@@ -30,7 +30,6 @@ final class Alarms {
     static final String ACTION_FIRE = "ir.mehdi.doseclock.FIRE";
     static final String ACTION_DONE = "ir.mehdi.doseclock.DONE";
     static final String ACTION_LATER = "ir.mehdi.doseclock.LATER";
-    static final long SNOOZE_MS = 30 * 60 * 1000L;
     static final long DAY_MS = 24 * 60 * 60 * 1000L;
 
     private Alarms() {}
@@ -195,7 +194,9 @@ final class Alarms {
         if (!obj(s, "log").has(key)) {
             try {
                 JSONObject sn = new JSONObject();
-                sn.put("nextAt", System.currentTimeMillis() + SNOOZE_MS);
+                // Minutes picked in the app (1, 5, 10, 15, 30 or 60); 30 until changed.
+                int min = Math.max(1, Math.min(60, s.optInt("snoozeMin", 30)));
+                sn.put("nextAt", System.currentTimeMillis() + min * 60 * 1000L);
                 sn.put("count", count);
                 obj(s, "snoozes").put(key, sn);
             } catch (JSONException ignored) {}

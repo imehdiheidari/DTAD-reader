@@ -11,7 +11,8 @@ public class Sim {
   public static void main(String[] x) throws Exception {
     long now = System.currentTimeMillis();
     String lang = x.length > 0 ? x[0] : "fa";
-    String st = "{\"lang\":\"" + lang + "\",\"doses\":[{\"id\":\"am\",\"time\":\"" + hhmm(now - 60000) + "\",\"meds\":[{\"id\":\"m\",\"name\":\"Prednisolone\",\"qty\":1,\"unit\":\"tablet\"}]},{\"id\":\"pm\",\"time\":\"" + hhmm(now + 3 * 60000) + "\",\"meds\":[]}],\"log\":{},\"snoozes\":{}}";
+    String snz = x.length > 1 ? ",\"snoozeMin\":" + x[1] : "";
+    String st = "{\"lang\":\"" + lang + "\"" + snz + ",\"doses\":[{\"id\":\"am\",\"time\":\"" + hhmm(now - 60000) + "\",\"meds\":[{\"id\":\"m\",\"name\":\"Prednisolone\",\"qty\":1,\"unit\":\"tablet\"}]},{\"id\":\"pm\",\"time\":\"" + hhmm(now + 3 * 60000) + "\",\"meds\":[]}],\"log\":{},\"snoozes\":{}}";
     System.out.println("1) page saves state (dose am due 1 min ago, pm in 3 min)");
     Alarms.saveState(c, st); Alarms.reschedule(c); alarms();
     System.out.println("2) am alarm fires"); Alarms.fire(c, "am"); shown(); alarms();
