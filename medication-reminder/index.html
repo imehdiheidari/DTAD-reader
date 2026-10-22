@@ -79,38 +79,32 @@
     padding-block: 20px 48px;
     padding-left: max(16px, env(safe-area-inset-left, 0px));
     padding-right: max(16px, env(safe-area-inset-right, 0px));
-    display: flex; flex-direction: column; gap: 22px;
+    display: flex; flex-direction: column; gap: 16px;
   }
 
-  /* ---------- clock band ---------- */
-  .band { display: grid; grid-template-columns: minmax(0, 1fr) auto; border: var(--stroke) solid var(--ink); background: var(--white); box-shadow: 8px 8px 0 var(--ink); }
-  .band-now { position: relative; overflow: hidden; background: var(--blue); color: var(--white); padding: 16px 18px; display: flex; flex-direction: column; gap: 4px; min-width: 0; }
-  .band-sun { position: absolute; width: 130px; height: 130px; border-radius: 50%; background: var(--yellow); border: var(--stroke) solid var(--ink); bottom: -70px; inset-inline-end: -36px; }
-  .band-now > :not(.band-sun) { position: relative; }
-  .band-clock { font-size: clamp(2.2rem, 9vw, 3.4rem); font-weight: 800; line-height: 1; letter-spacing: -0.02em; }
-  .band-date { font-weight: 500; }
-  .band-next { border-inline-start: var(--stroke) solid var(--ink); padding: 12px 14px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; text-align: center; }
-  .disc { width: 118px; height: 118px; border-radius: 50%; border: var(--stroke) solid var(--ink); background: var(--white); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 8px; gap: 2px; }
-  .disc.due { background: var(--red); color: var(--white); }
-  .disc-count { font-size: 1.2rem; font-weight: 800; line-height: 1; }
-  .disc-sub { font-size: 0.8rem; font-weight: 500; line-height: 1.2; }
+  /* ---------- clock band: one thin strip ---------- */
+  .band { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 14px; background: var(--blue); color: var(--white); border: var(--stroke) solid var(--ink); box-shadow: 6px 6px 0 var(--ink); padding: 8px 14px; }
+  .band::before { content: ""; width: 14px; height: 14px; border-radius: 50%; background: var(--yellow); border: 2px solid var(--ink); flex: none; }
+  .band-clock { font-size: 1.6rem; font-weight: 800; line-height: 1; letter-spacing: -0.01em; }
+  .band-date { font-weight: 500; margin-inline-start: auto; }
 
   /* ---------- dose tabs ---------- */
   .tabs { display: flex; border: var(--stroke) solid var(--ink); background: var(--white); overflow-x: auto; scrollbar-width: none; }
   .tab {
-    flex: 1 1 0; min-width: 92px; min-height: 76px; padding: 10px 12px; border: 0; border-inline-end: var(--stroke) solid var(--ink);
+    flex: 1 1 0; min-width: 84px; min-height: 54px; padding: 6px 10px; border: 0; border-inline-end: var(--stroke) solid var(--ink);
     background: var(--white); color: var(--ink); cursor: pointer; font-family: inherit; text-align: start;
-    display: flex; flex-direction: column; justify-content: space-between; gap: 4px; transition: background 140ms;
+    display: flex; flex-direction: column; justify-content: center; gap: 2px; transition: background 140ms;
   }
   .tab:hover { background: var(--paper); }
   .tab[aria-selected="true"] { background: var(--yellow); }
   .tab-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
-  .tab-time { font-weight: 800; font-size: 1.25rem; line-height: 1; }
-  .tab-add { flex: none; width: 68px; min-height: 76px; border: 0; background: var(--paper); cursor: pointer; display: grid; place-items: center; }
-  .tab-add span { width: 40px; height: 40px; border-radius: 50%; background: var(--blue); color: var(--white); border: var(--stroke-thin) solid var(--ink); display: grid; place-items: center; font: 800 1.5rem/1 var(--font-latin); }
+  .tab-time { font-weight: 800; font-size: 1.05rem; line-height: 1; }
+  .tab .label { font-size: 11px; }
+  .tab-add { flex: none; width: 56px; min-height: 54px; border: 0; background: var(--paper); cursor: pointer; display: grid; place-items: center; }
+  .tab-add span { width: 32px; height: 32px; border-radius: 50%; background: var(--blue); color: var(--white); border: var(--stroke-thin) solid var(--ink); display: grid; place-items: center; font: 800 1.25rem/1 var(--font-latin); }
   .tab-add:disabled { cursor: not-allowed; opacity: 0.4; }
 
-  .mk { width: 14px; height: 14px; flex: none; background: currentColor; display: inline-block; }
+  .mk { width: 12px; height: 12px; flex: none; background: currentColor; display: inline-block; }
   .mk-taken { border-radius: 50%; }
   .mk-due { animation: blink 1s steps(2, start) infinite; }
   .mk-snoozed { clip-path: polygon(50% 0, 100% 100%, 0 100%); }
@@ -121,14 +115,13 @@
 
   /* ---------- dose page ---------- */
   .page { border: var(--stroke) solid var(--ink); background: var(--white); box-shadow: 8px 8px 0 var(--ink); touch-action: pan-y; }
-  .page-head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px; padding: 20px; border-bottom: var(--stroke) solid var(--ink); background: var(--paper); }
+  .page-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 16px; border-bottom: var(--stroke) solid var(--ink); background: var(--paper); }
   .st-taken .page-head { background: var(--blue); color: var(--white); }
   .st-due .page-head { background: var(--red); color: var(--white); }
   .st-snoozed .page-head { background: var(--yellow); }
-  .page-clock { font-size: clamp(3rem, 13vw, 4.6rem); font-weight: 800; line-height: 0.95; letter-spacing: -0.02em; }
-  .chip { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; }
+  .page-title { margin: 0; font-size: 1.35rem; }
   .time-input { width: 150px; min-height: 44px; border: var(--stroke-thin) solid var(--ink); background: var(--white); color: var(--ink); font: 700 1.05rem/1 var(--font-latin); padding: 0.4rem 0.6rem; border-radius: 0; }
-  .page-body { padding: 20px; display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+  .page-body { padding: 16px; display: flex; flex-direction: column; gap: 14px; min-width: 0; }
 
   .meds { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
   .med-item { display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 2px solid var(--ink); min-width: 0; }
@@ -594,13 +587,6 @@
     </li>`;
   }
 
-  function statusText(row, t, f) {
-    if (row.status === 'taken') return t('stTaken', { t: f.time(row.at) });
-    if (row.status === 'due') return t('stDue');
-    if (row.status === 'snoozed') return t('stSnoozed', { t: f.time(row.at) });
-    return t('stUpcoming');
-  }
-
   function DoseTabs({ rows, selectedId, onSelect, onAdd, canAdd, t, f }) {
     return html`<div className="tabs" role="tablist" aria-label=${t('time')}>
       ${rows.map(r => html`<button key=${r.dose.id} type="button" role="tab" className="tab"
@@ -646,16 +632,9 @@
     return html`<article id="dose-page" role="tabpanel" aria-labelledby=${'tab-' + dose.id}
         className=${'page fade-in st-' + status} key=${dose.id} onTouchStart=${onTouchStart} onTouchEnd=${onTouchEnd}>
       <div className="page-head">
-        <div className="flex flex-col gap-2 min-w-0">
-          <span className="label">${t('doseN', { n: f.num(row.index + 1) })}</span>
-          <div className="page-clock num" dir="ltr">${f.hhmm(dose.time)}</div>
-          <span className="chip"><span className=${'mk mk-' + status} aria-hidden="true"></span>${statusText(row, t, f)}</span>
-        </div>
-        <label className="flex flex-col gap-1" htmlFor=${'time-' + dose.id}>
-          <span className="label">${t('time')}</span>
-          <input id=${'time-' + dose.id} type="time" dir="ltr" className="time-input" value=${dose.time}
-            onChange=${e => e.target.value && onTime(e.target.value)} />
-        </label>
+        <h2 className="page-title display">${t('doseN', { n: f.num(row.index + 1) })}</h2>
+        <input id=${'time-' + dose.id} type="time" dir="ltr" className="time-input" value=${dose.time} aria-label=${t('time')}
+          onChange=${e => e.target.value && onTime(e.target.value)} />
       </div>
 
       <div className="page-body">
@@ -901,21 +880,9 @@
 
       <main key=${lang} className="shell fade-in">
         <section className="band" aria-label=${t('now')}>
-          <div className="band-now">
-            <span className="band-sun" aria-hidden="true"></span>
-            <span className="label">${isVirtual ? t('testTime') : t('now')}</span>
-            <div className="band-clock num" dir="ltr">${f.time(now)}</div>
-            <div className="band-date">${f.date(now)}</div>
-          </div>
-          <div className="band-next">
-            <span className="label">${t('nextDose')}</span>
-            ${due.length
-              ? html`<div className="disc due"><div className="disc-count">${t('dueNow')}</div></div>`
-              : next
-                ? html`<div className="disc"><div className="disc-count num" dir="ltr">${f.countdown(next.at - now)}</div>
-                    <div className="disc-sub">${next.tomorrow ? t('tomorrowAt', { t: f.time(next.at) }) : t('at', { t: f.time(next.at) })}</div></div>`
-                : null}
-          </div>
+          <span className="label">${isVirtual ? t('testTime') : t('now')}</span>
+          <span className="band-clock num" dir="ltr">${f.time(now)}</span>
+          <span className="band-date">${f.date(now)}</span>
         </section>
 
         <${DoseTabs} rows=${rows} selectedId=${current.dose.id} onSelect=${setSelectedId}
