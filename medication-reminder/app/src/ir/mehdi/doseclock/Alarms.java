@@ -8,6 +8,9 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.util.Base64;
 import android.media.AudioAttributes;
 import android.media.RingtoneManager;
 import android.os.Build;
@@ -242,6 +245,16 @@ final class Alarms {
                 .append(t.num(m.optDouble("qty", 1))).append(' ').append(t.unit(m.optString("unit"), m.optDouble("qty", 1)));
         }
         String text = body.length() > 0 ? body.toString() : t.noMeds;
+        Bitmap photo = null;   // the first medication photo, as the notification's picture
+        if (meds != null) for (int i = 0; i < meds.length() && photo == null; i++) {
+            JSONObject m = meds.optJSONObject(i);
+            String url = m == null ? "" : m.optString("photo");
+            int comma = url.indexOf(',');
+            if (url.startsWith("data:image") && comma > 0) {
+                try { byte[] b = Base64.decode(url.substring(comma + 1), Base64.DEFAULT); photo = BitmapFactory.decodeByteArray(b, 0, b.length); }
+                catch (Exception ignored) {}
+            }
+        }
         String head = t.title + " · " + t.time(dose.optString("time"));
 
         Notification.Builder b = builder(c);
@@ -262,6 +275,7 @@ final class Alarms {
             .setDeleteIntent(actionPi(c, ACTION_LATER, id, key, count, 2))   // swiping it away counts as "Later"
             .addAction(0, t.done, actionPi(c, ACTION_DONE, id, key, count, 1))
             .addAction(0, t.later, actionPi(c, ACTION_LATER, id, key, count, 2));
+        if (photo != null) b.setLargeIcon(photo);
         ((NotificationManager) c.getSystemService(Context.NOTIFICATION_SERVICE)).notify(notifId(id), b.build());
     }
 

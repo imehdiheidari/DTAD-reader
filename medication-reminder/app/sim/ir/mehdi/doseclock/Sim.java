@@ -4,7 +4,7 @@ public class Sim {
   static Context c = new Context();
   static String hhmm(long ms) { Calendar k = Calendar.getInstance(); k.setTimeInMillis(ms); return String.format(Locale.US, "%02d:%02d", k.get(Calendar.HOUR_OF_DAY), k.get(Calendar.MINUTE)); }
   static void alarms() { for (Map.Entry<String,Object[]> e : c.am.alarms.entrySet()) System.out.println("   alarm " + e.getKey() + " at " + new Date((Long) e.getValue()[0])); }
-  static void shown() { for (Map.Entry<Integer,Notification> e : c.nm.shown.entrySet()) System.out.println("   NOTIF " + e.getValue().title + " | " + e.getValue().text + " | " + e.getValue().sub + " | " + e.getValue().actions); if (c.nm.shown.isEmpty()) System.out.println("   (no notification)"); }
+  static void shown() { for (Map.Entry<Integer,Notification> e : c.nm.shown.entrySet()) System.out.println("   NOTIF " + e.getValue().title + " | " + e.getValue().text + " | " + e.getValue().sub + " | " + e.getValue().actions + (e.getValue().large != null ? " | picture " + e.getValue().large.bytes + " bytes" : "")); if (c.nm.shown.isEmpty()) System.out.println("   (no notification)"); }
   static void press(int which) { Notification n = c.nm.shown.values().iterator().next(); Intent i = n.actionPis.get(which).intent;
     String a = i.action; String id = (String) i.extras.get("id");
     if (a.equals(Alarms.ACTION_DONE)) Alarms.done(c, id, (String) i.extras.get("key")); else Alarms.later(c, id, (String) i.extras.get("key"), (Integer) i.extras.get("count")); }
@@ -12,7 +12,7 @@ public class Sim {
     long now = System.currentTimeMillis();
     String lang = x.length > 0 ? x[0] : "fa";
     String snz = x.length > 1 ? ",\"snoozeMin\":" + x[1] : "";
-    String st = "{\"lang\":\"" + lang + "\"" + snz + ",\"doses\":[{\"id\":\"am\",\"time\":\"" + hhmm(now - 60000) + "\",\"meds\":[{\"id\":\"m\",\"name\":\"Prednisolone\",\"qty\":1,\"unit\":\"tablet\"}]},{\"id\":\"pm\",\"time\":\"" + hhmm(now + 3 * 60000) + "\",\"meds\":[]}],\"log\":{},\"snoozes\":{}}";
+    String st = "{\"lang\":\"" + lang + "\"" + snz + ",\"doses\":[{\"id\":\"am\",\"time\":\"" + hhmm(now - 60000) + "\",\"meds\":[{\"id\":\"m\",\"name\":\"Prednisolone\",\"qty\":1,\"unit\":\"tablet\",\"photo\":\"data:image/jpeg;base64,/9j/4AAQSkZJRg==\"}]},{\"id\":\"pm\",\"time\":\"" + hhmm(now + 3 * 60000) + "\",\"meds\":[]}],\"log\":{},\"snoozes\":{}}";
     System.out.println("1) page saves state (dose am due 1 min ago, pm in 3 min)");
     Alarms.saveState(c, st); Alarms.reschedule(c); alarms();
     System.out.println("2) am alarm fires"); Alarms.fire(c, "am"); shown(); alarms();

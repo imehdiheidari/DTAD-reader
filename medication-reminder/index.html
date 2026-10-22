@@ -131,11 +131,26 @@
   .page-body { padding: 16px; display: flex; flex-direction: column; gap: 14px; min-width: 0; }
 
   .meds { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
-  .med-item { display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 2px solid var(--ink); min-width: 0; }
+  .med-item { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 2px solid var(--ink); min-width: 0; }
   .med-item:first-child { border-top: 2px solid var(--ink); }
   .med-dot { width: 16px; height: 16px; background: var(--yellow); border: 3px solid var(--ink); flex: none; }
   .med-name { font-weight: 700; font-size: 1.1rem; overflow-wrap: anywhere; }
-  .med-qty { color: var(--mute); font-weight: 500; }
+  .med-thumb { width: 40px; height: 40px; object-fit: cover; border: 3px solid var(--ink); flex: none; }
+  .photo-wrap { position: relative; flex: none; }
+  .photo-slot { width: 64px; height: 64px; padding: 0; border: var(--stroke-thin) solid var(--ink); background: var(--yellow); color: var(--ink); cursor: pointer; display: grid; place-items: center; overflow: hidden; }
+  .photo-slot.has-photo { background: var(--white); }
+  .photo-slot img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .plus-mark { font: 800 2rem/1 var(--font-latin); }
+  .photo-menu { position: absolute; top: calc(100% + 6px); inset-inline-start: 0; z-index: 30; min-width: 150px; background: var(--white); border: var(--stroke-thin) solid var(--ink); box-shadow: 4px 4px 0 var(--ink); display: flex; flex-direction: column; }
+  .photo-menu button { display: flex; align-items: center; gap: 10px; min-height: 46px; padding: 0 14px; border: 0; background: var(--white); color: var(--ink); font-weight: 700; font-size: 1rem; font-family: inherit; cursor: pointer; text-align: start; }
+  .photo-menu button + button { border-top: 2px solid var(--ink); }
+  .photo-menu button:hover { background: var(--paper); }
+  .pm-cam { width: 16px; height: 16px; border-radius: 50%; background: var(--blue); flex: none; }
+  .pm-gal { width: 16px; height: 16px; background: var(--red); flex: none; }
+  .btn-xs { width: 32px; height: 32px; min-height: 0; padding: 0; box-shadow: 2px 2px 0 var(--ink); flex: none; }
+  .btn-xs svg { width: 14px; height: 14px; flex: none; }
+  .form-photo { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+  .form-actions { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
 
   .slot {
     width: 100%; min-height: 88px; border: var(--stroke-thin) dashed var(--ink); background: var(--paper); color: var(--ink);
@@ -295,6 +310,12 @@
       done: 'خوردم',
       later: 'بعدا',
       laterHint: 'با «بعدا» هر {n} دقیقه دوباره یادآوری می‌شود.',
+      addPhoto: 'افزودن عکس',
+      changePhoto: 'تغییر عکس',
+      camera: 'دوربین',
+      gallery: 'گالری',
+      removePhoto: 'حذف عکس',
+      deleteMed: 'حذف دارو',
       repeatEvery: 'فاصلهٔ تکرار یادآوری بعد از «بعدا»',
       minutesN: '{n} دقیقه',
       moreDue: '{n} نوبت دیگر هم در انتظار است',
@@ -346,6 +367,12 @@
       done: 'Done',
       later: 'Later',
       laterHint: '“Later” reminds you again every {n} minutes.',
+      addPhoto: 'Add photo',
+      changePhoto: 'Change photo',
+      camera: 'Camera',
+      gallery: 'Gallery',
+      removePhoto: 'Remove photo',
+      deleteMed: 'Delete medication',
       repeatEvery: 'Repeat after “Later” every',
       minutesN: '{n} min',
       moreDue: '+{n} more dose due',
@@ -397,6 +424,12 @@
       done: 'Erledigt',
       later: 'Später',
       laterHint: '„Später“ erinnert alle {n} Minuten erneut.',
+      addPhoto: 'Foto hinzufügen',
+      changePhoto: 'Foto ändern',
+      camera: 'Kamera',
+      gallery: 'Galerie',
+      removePhoto: 'Foto entfernen',
+      deleteMed: 'Medikament löschen',
       repeatEvery: 'Nach „Später“ erneut erinnern alle',
       minutesN: '{n} Min.',
       moreDue: '+{n} weitere Dosis fällig',
@@ -575,13 +608,91 @@
     </div>`;
   }
 
-  function MedForm({ initial, t, lang, idBase, submitLabel, onSubmit, onCancel }) {
+  /* ---------------- medication photos (square, 320 px JPEG data URLs kept in the state) ---------------- */
+  const PHOTO_PX = 320;
+  const photoWaiters = {};
+  // The app answers NATIVE.pickPhoto with this, once the photo is taken or picked (null if cancelled).
+  window.__photoPicked = (req, dataUrl) => { const w = photoWaiters[req]; delete photoWaiters[req]; if (w) w(dataUrl || null); };
+
+  function cropSquare(src) {
+    return new Promise(resolve => {
+      const img = new Image();
+      img.onload = () => {
+        const side = Math.min(img.naturalWidth, img.naturalHeight);
+        const cv = document.createElement('canvas');
+        cv.width = cv.height = PHOTO_PX;
+        cv.getContext('2d').drawImage(img, (img.naturalWidth - side) / 2, (img.naturalHeight - side) / 2, side, side, 0, 0, PHOTO_PX, PHOTO_PX);
+        resolve(cv.toDataURL('image/jpeg', 0.82));
+      };
+      img.onerror = () => resolve(null);
+      img.src = src;
+    });
+  }
+
+  // source: 'camera' or 'gallery'. The app uses its own camera / gallery screens; a browser uses a file input.
+  function pickPhoto(source) {
+    if (NATIVE && NATIVE.pickPhoto) {
+      return new Promise(resolve => {
+        const req = 'p' + uid();
+        photoWaiters[req] = resolve;
+        try { NATIVE.pickPhoto(req, source); } catch (e) { delete photoWaiters[req]; resolve(null); }
+      });
+    }
+    return new Promise(resolve => {
+      const input = document.createElement('input');
+      input.type = 'file';
+      input.accept = 'image/*';
+      if (source === 'camera') input.setAttribute('capture', 'environment');
+      input.onchange = () => {
+        const file = input.files && input.files[0];
+        if (!file) return resolve(null);
+        const r = new FileReader();
+        r.onload = () => cropSquare(r.result).then(resolve);
+        r.onerror = () => resolve(null);
+        r.readAsDataURL(file);
+      };
+      input.click();
+    });
+  }
+
+  // The square beside a medication's name: its photo, or a yellow "+" to add one (camera or gallery).
+  function PhotoSlot({ photo, name, onPhoto, t }) {
+    const [open, setOpen] = useState(false);
+    const ref = useRef(null);
+    useEffect(() => {
+      if (!open) return;
+      const close = e => { if (ref.current && !ref.current.contains(e.target)) setOpen(false); };
+      document.addEventListener('pointerdown', close);
+      return () => document.removeEventListener('pointerdown', close);
+    }, [open]);
+    const pick = source => { setOpen(false); pickPhoto(source).then(url => { if (url) onPhoto(url); }); };
+    return html`<div className="photo-wrap" ref=${ref}>
+      <button type="button" className=${'photo-slot' + (photo ? ' has-photo' : '')} aria-expanded=${open}
+        aria-label=${(photo ? t('changePhoto') : t('addPhoto')) + ': ' + name} title=${photo ? t('changePhoto') : t('addPhoto')}
+        onClick=${() => setOpen(o => !o)}>
+        ${photo ? html`<img src=${photo} alt="" />` : html`<span className="plus-mark" aria-hidden="true">+</span>`}
+      </button>
+      ${open ? html`<div className="photo-menu" role="menu">
+        <button type="button" role="menuitem" onClick=${() => pick('camera')}><span className="pm-cam" aria-hidden="true"></span>${t('camera')}</button>
+        <button type="button" role="menuitem" onClick=${() => pick('gallery')}><span className="pm-gal" aria-hidden="true"></span>${t('gallery')}</button>
+      </div>` : null}
+    </div>`;
+  }
+
+  function MedForm({ initial, t, lang, idBase, submitLabel, onSubmit, onCancel, onDelete }) {
     const [name, setName] = useState(initial ? initial.name : '');
     const [qty, setQty] = useState(initial ? String(initial.qty) : '1');
     const [unit, setUnit] = useState(initial ? initial.unit : 'tablet');
+    const [photo, setPhoto] = useState(initial ? initial.photo : undefined);
+    const [confirming, setConfirming] = useState(false);
+    useEffect(() => {
+      if (!confirming) return;
+      const id = setTimeout(() => setConfirming(false), 3000);
+      return () => clearTimeout(id);
+    }, [confirming]);
     const qtyNum = parseFloat(toLatinDigits(qty));
     const ok = name.trim().length > 0 && qtyNum > 0;
-    return html`<form className="med-form" onSubmit=${e => { e.preventDefault(); if (ok) onSubmit({ name: name.trim(), qty: qtyNum, unit }); }}>
+    return html`<form className="med-form" onSubmit=${e => { e.preventDefault(); if (ok) onSubmit({ name: name.trim(), qty: qtyNum, unit, photo }); }}>
       <label htmlFor=${idBase + '-name'}>
         <span className="label">${t('medName')}</span>
         <input id=${idBase + '-name'} className="field" value=${name} placeholder=${t('namePh')} autoFocus
@@ -600,9 +711,19 @@
           </select>
         </label>
       </div>
-      <div className="flex flex-wrap gap-3">
-        <button type="submit" className="btn btn-blue" disabled=${!ok}>${submitLabel}</button>
-        <button type="button" className="btn" onClick=${onCancel}>${t('cancel')}</button>
+      <div className="form-photo">
+        <${PhotoSlot} photo=${photo} name=${name} onPhoto=${setPhoto} t=${t} />
+        ${photo ? html`<button type="button" className="btn" onClick=${() => setPhoto(undefined)}><${IconX} /> ${t('removePhoto')}</button>`
+          : html`<span className="label" style=${{ color: 'var(--mute)' }}>${t('addPhoto')}</span>`}
+      </div>
+      <div className="form-actions">
+        <div className="flex flex-wrap gap-3">
+          <button type="submit" className="btn btn-blue" disabled=${!ok}>${submitLabel}</button>
+          <button type="button" className="btn" onClick=${onCancel}>${t('cancel')}</button>
+        </div>
+        ${onDelete ? html`<button type="button" className="btn btn-red"
+            onClick=${() => (confirming ? onDelete() : setConfirming(true))}>
+            <${IconX} /> ${confirming ? t('confirmRemove') : t('deleteMed')}</button>` : null}
       </div>
     </form>`;
   }
@@ -611,19 +732,14 @@
     const [editing, setEditing] = useState(false);
     if (editing) {
       return html`<li className="med-item"><${MedForm} initial=${med} t=${t} lang=${lang} idBase=${'med-' + med.id}
-        submitLabel=${t('save')} onCancel=${() => setEditing(false)}
+        submitLabel=${t('save')} onCancel=${() => setEditing(false)} onDelete=${onDelete}
         onSubmit=${m => { onSave(m); setEditing(false); }} /></li>`;
     }
     return html`<li className="med-item">
-      <span className="med-dot" aria-hidden="true"></span>
-      <div className="flex-1 min-w-0">
-        <div className="med-name" dir="auto">${med.name}</div>
-        <div className="med-qty"><span className="num">${f.num(med.qty)}</span> ${unitLabel(med.unit, med.qty, lang)}</div>
-      </div>
-      <button type="button" className="btn btn-sq" aria-label=${t('edit') + ': ' + med.name} title=${t('edit')}
+      <${PhotoSlot} photo=${med.photo} name=${med.name} onPhoto=${photo => onSave({ photo })} t=${t} />
+      <div className="med-name flex-1 min-w-0" dir="auto">${med.name}</div>
+      <button type="button" className="btn btn-xs" aria-label=${t('edit') + ': ' + med.name} title=${t('edit')}
         onClick=${() => setEditing(true)}><${IconEdit} /></button>
-      <button type="button" className="btn btn-sq btn-red" aria-label=${t('del') + ': ' + med.name} title=${t('del')}
-        onClick=${onDelete}><${IconX} /></button>
     </li>`;
   }
 
@@ -723,7 +839,7 @@
         <div className="alert-body" id="alert-meds">
           ${row.dose.meds.length
             ? html`<ul className="meds">${row.dose.meds.map(m => html`<li key=${m.id} className="med-item">
-                <span className="med-dot" aria-hidden="true"></span>
+                ${m.photo ? html`<img className="med-thumb" src=${m.photo} alt="" />` : html`<span className="med-dot" aria-hidden="true"></span>`}
                 <div className="flex-1 min-w-0"><div className="med-name" dir="auto">${m.name}</div></div>
                 <div className="font-bold text-lg"><span className="num">${f.num(m.qty)}</span> ${unitLabel(m.unit, m.qty, lang)}</div>
               </li>`)}</ul>`
@@ -903,8 +1019,18 @@
       setDoses(ds => [...ds, d]);
       setSelectedId(d.id);
     };
-    const addMed = (doseId, med) => setDoses(ds => ds.map(d => (d.id === doseId ? { ...d, meds: [...d.meds, { id: uid(), ...med }] } : d)));
-    const updateMed = (doseId, medId, patch) => setDoses(ds => ds.map(d => (d.id === doseId ? { ...d, meds: d.meds.map(m => (m.id === medId ? { ...m, ...patch } : m)) } : d)));
+    const addMed = (doseId, med) => setDoses(ds => ds.map(d => {
+      if (d.id !== doseId) return d;
+      const m = { id: uid(), ...med };
+      if (!m.photo) delete m.photo;
+      return { ...d, meds: [...d.meds, m] };
+    }));
+    const updateMed = (doseId, medId, patch) => setDoses(ds => ds.map(d => (d.id === doseId ? { ...d, meds: d.meds.map(m => {
+      if (m.id !== medId) return m;
+      const n = { ...m, ...patch };
+      if (!n.photo) delete n.photo;
+      return n;
+    }) } : d)));
     const removeMed = (doseId, medId) => setDoses(ds => ds.map(d => (d.id === doseId ? { ...d, meds: d.meds.filter(m => m.id !== medId) } : d)));
 
     /* ----- test clock ----- */
