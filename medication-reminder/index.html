@@ -5,19 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Bauhaus Dose Clock</title>
 <meta name="claude:viewport-fit-sides" content="cover">
+<!-- vendor:start (app/build.sh swaps this block for the bundled offline copies) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700;800&family=Vazirmatn:wght@400;500;700;800&display=swap">
 <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<!-- vendor:end -->
 <script>
   tailwind.config = {
-    corePlugins: { preflight: true },
     theme: { extend: { colors: { bred: '#D52A1E', bblue: '#1447A6', byellow: '#F7C600', bink: '#121212', bpaper: '#F4F2ED' } } }
   };
 </script>
 <style>
-  /* Layout: a poster grid. Hard 4px black rules split the page into blocks of pure primary colour;
-     circles, squares and triangles carry meaning (status, actions), never decoration alone. */
+  /* Layout: one dose per page. A compact clock band on top, a row of square tabs (one per dose),
+     and a single page for the chosen dose. Hard 4px black rules, pure primaries, shapes carry meaning. */
   :root {
     --red: #D52A1E;
     --blue: #1447A6;
@@ -51,66 +52,109 @@
   .topbar { background: var(--ink); color: var(--white); position: sticky; top: env(safe-area-inset-top, 0px); z-index: 60; }
   body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 61; background: var(--ink); }
   .topbar-inner {
-    max-width: 1120px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    max-width: 760px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 12px;
     padding-block: 10px;
     padding-left: max(16px, env(safe-area-inset-left, 0px));
     padding-right: max(16px, env(safe-area-inset-right, 0px));
   }
-  .lang { display: flex; border: 2px solid var(--white); }
+  .lang { display: flex; border: 2px solid var(--white); flex: none; }
   .lang button {
     width: 42px; height: 32px; border: 0; background: transparent; color: var(--white); cursor: pointer;
     font: 700 13px/1 var(--font-latin); letter-spacing: 0.08em; transition: background 160ms, color 160ms;
   }
   .lang button + button { border-left: 2px solid var(--white); }
   .lang button[aria-pressed="true"] { background: var(--yellow); color: var(--ink); }
-  .lang button:hover:not([aria-pressed="true"]) { background: #2a2a2a; }
   .lang .fa { font-family: var(--font-fa); font-size: 15px; letter-spacing: 0; }
-  .topbar-badge { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
-  .topbar-badge i { width: 10px; height: 10px; background: var(--red); display: inline-block; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1rem; min-width: 0; }
+  .brand-shapes { display: flex; gap: 4px; flex: none; }
+  .brand-shapes i { width: 12px; height: 12px; display: block; }
+  .brand-shapes .r { background: var(--red); }
+  .brand-shapes .b { background: var(--blue); border-radius: 50%; box-shadow: 0 0 0 1px var(--white); }
+  .brand-shapes .y { background: var(--yellow); clip-path: polygon(50% 0, 100% 100%, 0 100%); }
+  .brand-name { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
   /* ---------- shell ---------- */
   .shell {
-    max-width: 1120px; margin: 0 auto;
-    padding-block: 28px 64px;
+    max-width: 760px; margin: 0 auto;
+    padding-block: 20px 48px;
     padding-left: max(16px, env(safe-area-inset-left, 0px));
     padding-right: max(16px, env(safe-area-inset-right, 0px));
-    display: flex; flex-direction: column; gap: 32px;
+    display: flex; flex-direction: column; gap: 22px;
   }
 
-  /* ---------- masthead ---------- */
-  .mast { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px; }
-  .mast h1 { font-size: clamp(2rem, 6vw, 3.6rem); margin: 0; }
-  .mast p { margin: 6px 0 0; color: var(--mute); font-weight: 500; }
-  .shapes { display: flex; align-items: flex-end; gap: 10px; }
-  .shapes .s1 { width: 44px; height: 44px; background: var(--red); border: var(--stroke-thin) solid var(--ink); }
-  .shapes .s2 { width: 44px; height: 44px; border-radius: 50%; background: var(--blue); border: var(--stroke-thin) solid var(--ink); }
-  .shapes .s3 { width: 50px; height: 44px; background: var(--ink); clip-path: polygon(50% 0, 100% 100%, 0 100%); position: relative; }
-  .shapes .s3::after { content: ""; position: absolute; inset: 5px 6px 3px; background: var(--yellow); clip-path: polygon(50% 0, 100% 100%, 0 100%); }
+  /* ---------- clock band ---------- */
+  .band { display: grid; grid-template-columns: minmax(0, 1fr) auto; border: var(--stroke) solid var(--ink); background: var(--white); box-shadow: 8px 8px 0 var(--ink); }
+  .band-now { position: relative; overflow: hidden; background: var(--blue); color: var(--white); padding: 16px 18px; display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+  .band-sun { position: absolute; width: 130px; height: 130px; border-radius: 50%; background: var(--yellow); border: var(--stroke) solid var(--ink); bottom: -70px; inset-inline-end: -36px; }
+  .band-now > :not(.band-sun) { position: relative; }
+  .band-clock { font-size: clamp(2.2rem, 9vw, 3.4rem); font-weight: 800; line-height: 1; letter-spacing: -0.02em; }
+  .band-date { font-weight: 500; }
+  .band-next { border-inline-start: var(--stroke) solid var(--ink); padding: 12px 14px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; text-align: center; }
+  .disc { width: 118px; height: 118px; border-radius: 50%; border: var(--stroke) solid var(--ink); background: var(--white); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 8px; gap: 2px; }
+  .disc.due { background: var(--red); color: var(--white); }
+  .disc-count { font-size: 1.2rem; font-weight: 800; line-height: 1; }
+  .disc-sub { font-size: 0.8rem; font-weight: 500; line-height: 1.2; }
 
-  /* ---------- hero ---------- */
-  .hero { display: grid; grid-template-columns: 1fr; border: var(--stroke) solid var(--ink); background: var(--white); box-shadow: 10px 10px 0 var(--ink); }
-  @media (min-width: 820px) { .hero { grid-template-columns: 7fr 5fr; } }
-  .hero-now { position: relative; overflow: hidden; background: var(--blue); color: var(--white); padding: 28px; min-height: 260px; display: flex; flex-direction: column; justify-content: space-between; gap: 16px; }
-  .hero-sun { position: absolute; width: 260px; height: 260px; border-radius: 50%; background: var(--yellow); border: var(--stroke) solid var(--ink); bottom: -110px; inset-inline-end: -70px; }
-  .hero-bar { position: absolute; top: 0; inset-inline-end: 64px; width: 18px; height: 100%; background: var(--ink); }
-  .hero-now > :not(.hero-sun):not(.hero-bar) { position: relative; }
-  .hero-clock { font-size: clamp(3.4rem, 11vw, 7rem); font-weight: 800; line-height: 0.9; letter-spacing: -0.02em; }
-  .hero-date { font-size: 1.15rem; font-weight: 500; }
-  .sec-track { height: 10px; width: min(320px, 70%); background: rgba(255,255,255,0.25); border: 2px solid var(--ink); }
-  .sec-fill { height: 100%; background: var(--yellow); }
-  .hero-next { border-top: var(--stroke) solid var(--ink); padding: 24px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; text-align: center; }
-  @media (min-width: 820px) { .hero-next { border-top: 0; border-inline-start: var(--stroke) solid var(--ink); } }
-  .disc { width: min(240px, 70vw); aspect-ratio: 1; max-width: 100%; border-radius: 50%; background: var(--red); color: var(--white); border: var(--stroke) solid var(--ink); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; padding: 20px; }
-  .disc.calm { background: var(--white); color: var(--ink); }
-  .disc-count { font-size: clamp(1.9rem, 6vw, 2.6rem); font-weight: 800; line-height: 1; }
-  .disc-sub { font-size: 0.95rem; font-weight: 500; }
+  /* ---------- dose tabs ---------- */
+  .tabs { display: flex; border: var(--stroke) solid var(--ink); background: var(--white); overflow-x: auto; scrollbar-width: none; }
+  .tab {
+    flex: 1 1 0; min-width: 92px; min-height: 76px; padding: 10px 12px; border: 0; border-inline-end: var(--stroke) solid var(--ink);
+    background: var(--white); color: var(--ink); cursor: pointer; font-family: inherit; text-align: start;
+    display: flex; flex-direction: column; justify-content: space-between; gap: 4px; transition: background 140ms;
+  }
+  .tab:hover { background: var(--paper); }
+  .tab[aria-selected="true"] { background: var(--yellow); }
+  .tab-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+  .tab-time { font-weight: 800; font-size: 1.25rem; line-height: 1; }
+  .tab-add { flex: none; width: 68px; min-height: 76px; border: 0; background: var(--paper); cursor: pointer; display: grid; place-items: center; }
+  .tab-add span { width: 40px; height: 40px; border-radius: 50%; background: var(--blue); color: var(--white); border: var(--stroke-thin) solid var(--ink); display: grid; place-items: center; font: 800 1.5rem/1 var(--font-latin); }
+  .tab-add:disabled { cursor: not-allowed; opacity: 0.4; }
 
-  .progress { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; background: var(--ink); color: var(--white); padding: 14px 18px; }
-  .pips { display: flex; flex-wrap: wrap; gap: 8px; }
-  .pip { width: 22px; height: 22px; border: 3px solid var(--white); }
-  .pip.taken { background: var(--yellow); border-color: var(--yellow); }
-  .pip.due { background: var(--red); }
-  .pip.snoozed { background: transparent; border-style: dashed; border-color: var(--yellow); }
+  .mk { width: 14px; height: 14px; flex: none; background: currentColor; display: inline-block; }
+  .mk-taken { border-radius: 50%; }
+  .mk-due { animation: blink 1s steps(2, start) infinite; }
+  .mk-snoozed { clip-path: polygon(50% 0, 100% 100%, 0 100%); }
+  .mk-upcoming { background: transparent; border: 3px solid currentColor; }
+  .tab .mk-taken { color: var(--blue); }
+  .tab .mk-due { color: var(--red); }
+  @keyframes blink { to { visibility: hidden; } }
+
+  /* ---------- dose page ---------- */
+  .page { border: var(--stroke) solid var(--ink); background: var(--white); box-shadow: 8px 8px 0 var(--ink); touch-action: pan-y; }
+  .page-head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px; padding: 20px; border-bottom: var(--stroke) solid var(--ink); background: var(--paper); }
+  .st-taken .page-head { background: var(--blue); color: var(--white); }
+  .st-due .page-head { background: var(--red); color: var(--white); }
+  .st-snoozed .page-head { background: var(--yellow); }
+  .page-clock { font-size: clamp(3rem, 13vw, 4.6rem); font-weight: 800; line-height: 0.95; letter-spacing: -0.02em; }
+  .chip { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; }
+  .time-input { width: 150px; min-height: 44px; border: var(--stroke-thin) solid var(--ink); background: var(--white); color: var(--ink); font: 700 1.05rem/1 var(--font-latin); padding: 0.4rem 0.6rem; border-radius: 0; }
+  .page-body { padding: 20px; display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+
+  .meds { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+  .med-item { display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 2px solid var(--ink); min-width: 0; }
+  .med-item:first-child { border-top: 2px solid var(--ink); }
+  .med-dot { width: 16px; height: 16px; background: var(--yellow); border: 3px solid var(--ink); flex: none; }
+  .med-name { font-weight: 700; font-size: 1.1rem; overflow-wrap: anywhere; }
+  .med-qty { color: var(--mute); font-weight: 500; }
+
+  .slot {
+    width: 100%; min-height: 88px; border: var(--stroke-thin) dashed var(--ink); background: var(--paper); color: var(--ink);
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding: 16px;
+    font-family: inherit; font-weight: 700; font-size: 1.05rem; cursor: pointer; transition: background 140ms;
+  }
+  .slot:hover { background: #ebe8e0; }
+  .slot.big { min-height: 200px; }
+  .slot .plus { width: 52px; height: 52px; border-radius: 50%; background: var(--blue); color: var(--white); border: var(--stroke-thin) solid var(--ink); display: grid; place-items: center; font: 800 1.8rem/1 var(--font-latin); }
+
+  .med-form { display: grid; gap: 12px; width: 100%; padding: 14px; border: var(--stroke-thin) solid var(--ink); background: var(--paper); }
+  .med-form .row { display: grid; grid-template-columns: 1fr 1.4fr; gap: 12px; }
+  .med-form label { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+
+  .page-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 20px; border-top: var(--stroke) solid var(--ink); background: var(--paper); }
+  .pager { display: flex; align-items: center; gap: 10px; }
+  .arrow { width: 0; height: 0; border-block: 9px solid transparent; }
+  .arrow.prev { border-inline-end: 13px solid currentColor; }
+  .arrow.next { border-inline-start: 13px solid currentColor; }
 
   /* ---------- buttons & fields ---------- */
   .btn {
@@ -122,95 +166,53 @@
   }
   .btn:hover { background: var(--paper); }
   .btn:active { transform: translate(4px, 4px); box-shadow: 0 0 0 var(--ink); }
-  .btn:disabled { opacity: 0.4; cursor: not-allowed; box-shadow: none; transform: none; }
+  .btn:disabled { opacity: 0.35; cursor: not-allowed; box-shadow: none; transform: none; }
   .btn-blue { background: var(--blue); color: var(--white); }
   .btn-blue:hover { background: #0f3a8a; }
   .btn-red { background: var(--red); color: var(--white); }
   .btn-red:hover { background: #b8221a; }
   .btn-yellow { background: var(--yellow); color: var(--ink); }
   .btn-yellow:hover { background: #e3b600; }
-  .btn-ink { background: var(--ink); color: var(--white); box-shadow: 4px 4px 0 var(--yellow); }
-  .btn-ink:hover { background: #2a2a2a; }
-  .btn-sq { width: 40px; height: 40px; min-height: 0; padding: 0; box-shadow: 3px 3px 0 var(--ink); flex: none; }
-  .btn-circle { width: 48px; height: 48px; min-height: 0; padding: 0; border-radius: 50%; font-size: 1.5rem; flex: none; }
+  .btn-sq { width: 44px; height: 44px; min-height: 0; padding: 0; box-shadow: 3px 3px 0 var(--ink); flex: none; }
   .btn-on { background: var(--yellow); color: var(--ink); }
   :focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }
   .panel :focus-visible { outline-color: var(--yellow); }
-
   .field { width: 100%; min-height: 44px; border: var(--stroke-thin) solid var(--ink); border-radius: 0; background: var(--white); color: var(--ink); padding: 0.5rem 0.75rem; font: inherit; }
-  .field:focus { outline: 3px solid var(--blue); outline-offset: 2px; }
 
-  /* ---------- schedule ---------- */
-  .sec-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; border-bottom: var(--stroke) solid var(--ink); padding-bottom: 12px; }
-  .sec-head h2 { margin: 0; font-size: clamp(1.5rem, 4vw, 2.1rem); display: flex; align-items: center; gap: 12px; }
-  .sec-head h2::before { content: ""; width: 22px; height: 22px; background: var(--red); border: 3px solid var(--ink); flex: none; }
-  .stepper { display: flex; align-items: center; gap: 12px; }
-  .stepper-val { min-width: 56px; height: 56px; display: grid; place-items: center; border: var(--stroke) solid var(--ink); background: var(--yellow); font-size: 1.6rem; font-weight: 800; }
-  .note { border-inline-start: 8px solid var(--yellow); background: var(--white); padding: 10px 14px; font-weight: 500; border-top: 2px solid var(--ink); border-bottom: 2px solid var(--ink); border-inline-end: 2px solid var(--ink); }
-
-  .doses { display: grid; gap: 22px; }
-  .dose { display: grid; grid-template-columns: 1fr; border: var(--stroke) solid var(--ink); background: var(--white); }
-  @media (min-width: 680px) { .dose { grid-template-columns: 220px 1fr; } }
-  .dose-time { padding: 18px; display: flex; flex-direction: column; gap: 10px; border-bottom: var(--stroke) solid var(--ink); background: var(--paper); }
-  @media (min-width: 680px) { .dose-time { border-bottom: 0; border-inline-end: var(--stroke) solid var(--ink); } }
-  .st-taken .dose-time { background: var(--blue); color: var(--white); }
-  .st-due .dose-time { background: var(--red); color: var(--white); }
-  .st-snoozed .dose-time { background: var(--yellow); }
-  .dose-clock { font-size: 2.6rem; font-weight: 800; line-height: 1; }
-  .time-input { width: 100%; max-width: 170px; min-height: 44px; border: var(--stroke-thin) solid var(--ink); background: var(--white); color: var(--ink); font: 700 1.05rem/1 var(--font-latin); padding: 0.4rem 0.6rem; border-radius: 0; }
-  .chip { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 0.9rem; }
-  .mk { width: 14px; height: 14px; flex: none; background: currentColor; }
-  .mk-taken { border-radius: 50%; }
-  .mk-due { animation: blink 1s steps(2, start) infinite; }
-  .mk-snoozed { clip-path: polygon(50% 0, 100% 100%, 0 100%); }
-  .mk-upcoming { background: transparent; border: 3px solid currentColor; }
-  @keyframes blink { to { visibility: hidden; } }
-
-  .dose-body { padding: 18px; display: flex; flex-direction: column; gap: 14px; min-width: 0; }
-  .meds { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
-  .med-item { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 2px solid var(--ink); min-width: 0; }
-  .med-item:first-child { border-top: 2px solid var(--ink); }
-  .med-dot { width: 16px; height: 16px; background: var(--yellow); border: 3px solid var(--ink); flex: none; }
-  .med-name { font-weight: 700; font-size: 1.05rem; overflow-wrap: anywhere; }
-  .med-qty { color: var(--mute); font-weight: 500; }
-  .empty { color: var(--mute); font-weight: 500; padding: 12px 0; border-top: 2px dashed var(--ink); border-bottom: 2px dashed var(--ink); }
-  .med-form { display: grid; gap: 12px; width: 100%; padding: 14px; border: var(--stroke-thin) solid var(--ink); background: var(--paper); }
-  .med-form .row { display: grid; grid-template-columns: 1fr 1.4fr; gap: 12px; }
-  .med-form label { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
-  .dose-foot { display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center; }
-
-  /* ---------- test panel ---------- */
-  .panel { background: var(--ink); color: var(--white); border: var(--stroke) solid var(--ink); padding: 22px; display: flex; flex-direction: column; gap: 16px; }
-  .panel h2 { margin: 0; color: var(--yellow); font-size: 1.5rem; display: flex; align-items: center; gap: 12px; }
-  .panel h2::before { content: ""; width: 22px; height: 22px; border-radius: 50%; background: var(--yellow); flex: none; }
+  /* ---------- test clock (browser only) ---------- */
+  .panel { background: var(--ink); color: var(--white); border: var(--stroke) solid var(--ink); }
+  .panel summary { list-style: none; cursor: pointer; padding: 14px 18px; display: flex; align-items: center; gap: 12px; color: var(--yellow); font-weight: 800; }
+  .panel summary::-webkit-details-marker { display: none; }
+  .panel summary::before { content: ""; width: 18px; height: 18px; border-radius: 50%; background: var(--yellow); flex: none; }
+  .panel summary::after { content: ""; margin-inline-start: auto; border-inline: 7px solid transparent; border-top: 10px solid var(--yellow); }
+  .panel[open] summary::after { transform: rotate(180deg); }
+  .panel-body { padding: 0 18px 18px; display: flex; flex-direction: column; gap: 14px; }
   .panel p { margin: 0; color: #d8d6d0; max-width: 62ch; }
   .panel .btn { box-shadow: 4px 4px 0 var(--yellow); }
   .seg { display: flex; border: var(--stroke-thin) solid var(--white); }
-  .seg button { min-width: 64px; min-height: 44px; border: 0; background: transparent; color: var(--white); font: 700 1rem/1 var(--font-latin); cursor: pointer; }
+  .seg button { min-width: 60px; min-height: 44px; border: 0; background: transparent; color: var(--white); font: 700 1rem/1 var(--font-latin); cursor: pointer; }
   .seg button + button { border-left: var(--stroke-thin) solid var(--white); }
   .seg button[aria-pressed="true"] { background: var(--yellow); color: var(--ink); }
-  .panel-row { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
-
-  .foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; color: var(--mute); font-weight: 500; border-top: var(--stroke) solid var(--ink); padding-top: 14px; }
+  .panel-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
 
   /* ---------- reminder dialog ---------- */
   .overlay {
     position: fixed; inset: 0; z-index: 50; display: grid; place-items: center;
     padding: max(16px, env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) max(16px, env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px));
-    background:
-      repeating-linear-gradient(135deg, rgba(18,18,18,0.72) 0 18px, rgba(18,18,18,0.6) 18px 36px);
+    background: repeating-linear-gradient(135deg, rgba(18,18,18,0.72) 0 18px, rgba(18,18,18,0.6) 18px 36px);
   }
-  .alert { width: 100%; max-width: 560px; max-height: 100%; overflow: auto; background: var(--white); color: var(--ink); border: 5px solid var(--ink); box-shadow: 14px 14px 0 var(--yellow); animation: drop 320ms cubic-bezier(.2,1.4,.4,1) both; }
+  .alert { width: 100%; max-width: 520px; max-height: 100%; overflow: auto; background: var(--white); color: var(--ink); border: 5px solid var(--ink); box-shadow: 14px 14px 0 var(--yellow); animation: drop 320ms cubic-bezier(.2,1.4,.4,1) both; }
   @keyframes drop { from { transform: translateY(-24px); opacity: 0; } to { transform: none; opacity: 1; } }
   .alert-head { position: relative; overflow: hidden; background: var(--red); color: var(--white); padding: 22px; display: flex; align-items: center; gap: 18px; border-bottom: 5px solid var(--ink); }
   .alert-head h2 { margin: 2px 0 0; font-size: clamp(1.6rem, 6vw, 2.2rem); }
-  .bell { width: 72px; height: 72px; flex: none; border-radius: 50%; background: var(--white); border: 5px solid var(--ink); display: grid; place-items: center; }
-  .bell::after { content: ""; width: 26px; height: 26px; border-radius: 50%; background: var(--yellow); border: 4px solid var(--ink); animation: pulse 1.2s ease-in-out infinite; }
+  .bell { width: 68px; height: 68px; flex: none; border-radius: 50%; background: var(--white); border: 5px solid var(--ink); display: grid; place-items: center; }
+  .bell::after { content: ""; width: 24px; height: 24px; border-radius: 50%; background: var(--yellow); border: 4px solid var(--ink); animation: pulse 1.2s ease-in-out infinite; }
   @keyframes pulse { 50% { transform: scale(1.35); } }
   .alert-count { position: absolute; top: 0; inset-inline-end: 0; background: var(--yellow); color: var(--ink); border-bottom: 5px solid var(--ink); border-inline-start: 5px solid var(--ink); padding: 6px 12px; font-weight: 800; }
-  .alert-body { padding: 20px 22px; }
+  .alert-body { padding: 18px 22px; }
+  .alert-empty { margin: 0; font-weight: 500; color: var(--mute); }
   .alert-actions { display: grid; grid-template-columns: 1fr 1fr; border-top: 5px solid var(--ink); }
-  .act { min-height: 120px; border: 0; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; font-weight: 800; font-size: 1.7rem; line-height: 1; font-family: inherit; text-transform: uppercase; letter-spacing: 0.02em; transition: filter 120ms; }
+  .act { min-height: 116px; border: 0; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; font-weight: 800; font-size: 1.7rem; line-height: 1; font-family: inherit; text-transform: uppercase; letter-spacing: 0.02em; transition: filter 120ms; }
   html[lang="fa"] .act { text-transform: none; font-size: 2rem; }
   .act:hover { filter: brightness(1.08); }
   .act:active { filter: brightness(0.92); }
@@ -229,19 +231,26 @@
 <body>
 <div id="root"></div>
 
+<!-- vendor-js:start -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.production.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/umd/react-dom.production.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/htm@3.1.1/dist/htm.umd.js"></script>
+<!-- vendor-js:end -->
 <script>
 /* Bauhaus Dose Clock — medication reminder.
-   React 18 + htm (JSX-like tagged templates, no build step) + Tailwind play CDN. */
+   React 18 + htm (JSX-like tagged templates, no build step) + Tailwind play CDN.
+   Inside the Android app (window.DoseNative) the state lives in the app, which posts real system
+   notifications with Done / Later buttons even when the app is closed. */
 (function () {
   const { useState, useEffect, useRef, useMemo, useCallback } = React;
   const html = htm.bind(React.createElement);
 
-  const STORE_KEY = 'bauhaus-dose-clock-v1';
+  const NATIVE = window.DoseNative || null;
+  const STORE_KEY = 'bauhaus-dose-clock-v2';
+  const OLD_STORE_KEY = 'bauhaus-dose-clock-v1';
   const SNOOZE_MS = 30 * 60 * 1000;
   const DAY_MS = 24 * 60 * 60 * 1000;
+  const MAX_DOSES = 8;
   const LOCALES = { fa: 'fa-IR', en: 'en-US', de: 'de-DE' };
   const DIR = { fa: 'rtl', en: 'ltr', de: 'ltr' };
   const UNITS = ['tablet', 'capsule', 'ml', 'drop', 'spoon'];
@@ -251,19 +260,12 @@
   const I18N = {
     fa: {
       appName: 'یادآور دارو',
-      tagline: 'فرم از کارکرد پیروی می‌کند',
       now: 'اکنون',
       testTime: 'زمان آزمایشی',
       nextDose: 'نوبت بعدی',
       at: 'ساعت {t}',
-      tomorrowAt: 'فردا ساعت {t}',
+      tomorrowAt: 'فردا {t}',
       dueNow: 'همین حالا',
-      noDoses: 'نوبتی تعریف نشده',
-      progress: 'امروز: {a} از {b} نوبت خورده شد',
-      schedule: 'برنامهٔ روزانه',
-      dosesPerDay: 'تعداد نوبت در روز',
-      fewer: 'کم کردن یک نوبت',
-      more: 'افزودن یک نوبت',
       doseN: 'نوبت {n}',
       time: 'ساعت مصرف',
       medName: 'نام دارو',
@@ -271,25 +273,28 @@
       unit: 'واحد',
       namePh: 'مثلاً آسپرین ۱۰۰',
       addMed: 'افزودن دارو',
+      addDose: 'افزودن نوبت',
+      emptySlot: 'هنوز دارویی برای این نوبت ثبت نشده',
       edit: 'ویرایش',
       save: 'ذخیره',
       cancel: 'انصراف',
       del: 'حذف',
       removeDose: 'حذف نوبت',
       confirmRemove: 'برای حذف دوباره بزنید',
-      noMeds: 'هنوز دارویی برای این نوبت ثبت نشده است.',
+      prev: 'نوبت قبلی',
+      next: 'نوبت بعدی',
+      pageOf: '{a} از {b}',
       stTaken: 'ساعت {t} خورده شد',
       stDue: 'وقت مصرف است',
-      stSnoozed: 'یادآوری بعدی ساعت {t}',
+      stSnoozed: 'یادآوری بعدی {t}',
       stUpcoming: 'در انتظار',
-      sample: 'این‌ها داروهای نمونه هستند. آن‌ها را ویرایش یا حذف کنید.',
       notifTitle: 'وقت داروست',
-      scheduled: 'نوبت ساعت {t}',
       reminderN: 'یادآوری {n}',
       done: 'خوردم',
       later: 'بعدا',
       laterHint: 'با «بعدا» هر ۳۰ دقیقه دوباره یادآوری می‌شود.',
       moreDue: '{n} نوبت دیگر هم در انتظار است',
+      noMedsAlert: 'داروهای این نوبت را بخورید.',
       testClock: 'ساعت آزمایشی',
       testHint: 'زمان را جلو ببرید تا یادآوری و تکرار ۳۰ دقیقه‌ای را همین الان آزمایش کنید. با سرعت ۶۰× هر ثانیه یک دقیقه است.',
       speed: 'سرعت',
@@ -299,25 +304,17 @@
       resetToday: 'پاک کردن ثبت‌های امروز',
       alerts: 'فعال‌سازی صدا و اعلان',
       alertsOn: 'صدا فعال است',
-      openNote: 'یادآوری‌ها تا وقتی این صفحه باز است کار می‌کنند.',
-      language: 'زبان',
+      webNote: 'در مرورگر، یادآوری فقط وقتی این صفحه باز است کار می‌کند. برای اعلان با برنامهٔ بسته، نسخهٔ اندروید را نصب کنید.',
       units: { tablet: ['قرص'], capsule: ['کپسول'], ml: ['میلی‌لیتر'], drop: ['قطره'], spoon: ['قاشق چای‌خوری'] }
     },
     en: {
       appName: 'Medication Reminder',
-      tagline: 'Form follows function',
       now: 'Now',
       testTime: 'Test time',
       nextDose: 'Next dose',
       at: 'at {t}',
-      tomorrowAt: 'tomorrow at {t}',
+      tomorrowAt: 'tomorrow {t}',
       dueNow: 'Now!',
-      noDoses: 'No doses set',
-      progress: 'Today: {a} of {b} doses taken',
-      schedule: 'Daily schedule',
-      dosesPerDay: 'Doses per day',
-      fewer: 'Remove one dose',
-      more: 'Add one dose',
       doseN: 'Dose {n}',
       time: 'Time',
       medName: 'Medication',
@@ -325,25 +322,28 @@
       unit: 'Unit',
       namePh: 'e.g. Aspirin 100 mg',
       addMed: 'Add medication',
+      addDose: 'Add dose',
+      emptySlot: 'No medication for this dose yet',
       edit: 'Edit',
       save: 'Save',
       cancel: 'Cancel',
       del: 'Delete',
       removeDose: 'Remove dose',
       confirmRemove: 'Tap again to remove',
-      noMeds: 'No medication for this dose yet.',
+      prev: 'Previous dose',
+      next: 'Next dose',
+      pageOf: '{a} of {b}',
       stTaken: 'Taken at {t}',
       stDue: 'Due now',
       stSnoozed: 'Next reminder {t}',
       stUpcoming: 'Upcoming',
-      sample: 'These are sample medications. Edit or delete them.',
       notifTitle: 'Time for your medication',
-      scheduled: 'Scheduled {t}',
       reminderN: 'Reminder {n}',
       done: 'Done',
       later: 'Later',
       laterHint: '“Later” reminds you again every 30 minutes.',
       moreDue: '+{n} more dose due',
+      noMedsAlert: 'Take the medication for this dose.',
       testClock: 'Test clock',
       testHint: 'Move time forward to test the reminders and the 30-minute snooze loop right now. At 60× one second equals one minute.',
       speed: 'Speed',
@@ -353,25 +353,17 @@
       resetToday: 'Clear today’s records',
       alerts: 'Enable sound & alerts',
       alertsOn: 'Sound on',
-      openNote: 'Reminders work while this page stays open.',
-      language: 'Language',
+      webNote: 'In a browser, reminders only work while this page is open. Install the Android app to get notifications when it is closed.',
       units: { tablet: ['tablet', 'tablets'], capsule: ['capsule', 'capsules'], ml: ['ml', 'ml'], drop: ['drop', 'drops'], spoon: ['teaspoon', 'teaspoons'] }
     },
     de: {
       appName: 'Medikamenten­erinnerung',
-      tagline: 'Form folgt Funktion',
       now: 'Jetzt',
       testTime: 'Testzeit',
       nextDose: 'Nächste Dosis',
       at: 'um {t}',
-      tomorrowAt: 'morgen um {t}',
+      tomorrowAt: 'morgen {t}',
       dueNow: 'Jetzt!',
-      noDoses: 'Keine Dosen festgelegt',
-      progress: 'Heute: {a} von {b} Dosen genommen',
-      schedule: 'Tagesplan',
-      dosesPerDay: 'Dosen pro Tag',
-      fewer: 'Eine Dosis entfernen',
-      more: 'Eine Dosis hinzufügen',
       doseN: 'Dosis {n}',
       time: 'Uhrzeit',
       medName: 'Medikament',
@@ -379,25 +371,28 @@
       unit: 'Einheit',
       namePh: 'z. B. Aspirin 100 mg',
       addMed: 'Medikament hinzufügen',
+      addDose: 'Dosis hinzufügen',
+      emptySlot: 'Für diese Dosis ist noch kein Medikament eingetragen',
       edit: 'Bearbeiten',
       save: 'Speichern',
       cancel: 'Abbrechen',
       del: 'Löschen',
       removeDose: 'Dosis entfernen',
       confirmRemove: 'Zum Entfernen erneut tippen',
-      noMeds: 'Für diese Dosis ist noch kein Medikament eingetragen.',
+      prev: 'Vorherige Dosis',
+      next: 'Nächste Dosis',
+      pageOf: '{a} von {b}',
       stTaken: 'Genommen um {t}',
       stDue: 'Jetzt fällig',
       stSnoozed: 'Nächste Erinnerung {t}',
       stUpcoming: 'Geplant',
-      sample: 'Das sind Beispielmedikamente. Bearbeiten oder löschen Sie sie.',
       notifTitle: 'Zeit für Ihre Medikamente',
-      scheduled: 'Geplant für {t}',
       reminderN: 'Erinnerung {n}',
       done: 'Erledigt',
       later: 'Später',
       laterHint: '„Später“ erinnert alle 30 Minuten erneut.',
       moreDue: '+{n} weitere Dosis fällig',
+      noMedsAlert: 'Nehmen Sie die Medikamente dieser Dosis.',
       testClock: 'Testuhr',
       testHint: 'Spulen Sie die Zeit vor, um Erinnerungen und die 30-Minuten-Schleife sofort zu testen. Bei 60× entspricht eine Sekunde einer Minute.',
       speed: 'Tempo',
@@ -407,8 +402,7 @@
       resetToday: 'Heutige Einträge löschen',
       alerts: 'Ton & Hinweise aktivieren',
       alertsOn: 'Ton an',
-      openNote: 'Erinnerungen funktionieren, solange diese Seite geöffnet ist.',
-      language: 'Sprache',
+      webNote: 'Im Browser funktionieren Erinnerungen nur, solange diese Seite geöffnet ist. Für Hinweise bei geschlossener App die Android-App installieren.',
       units: { tablet: ['Tablette', 'Tabletten'], capsule: ['Kapsel', 'Kapseln'], ml: ['ml', 'ml'], drop: ['Tropfen', 'Tropfen'], spoon: ['Teelöffel', 'Teelöffel'] }
     }
   };
@@ -471,11 +465,23 @@
   }
 
   /* ---------------- storage ---------------- */
+  // The app keeps the state (so its alarms can read it while the app is closed); a browser uses localStorage.
+  function readJSON(key) {
+    try { const raw = localStorage.getItem(key); return raw ? JSON.parse(raw) : null; } catch (e) { return null; }
+  }
   function load() {
-    try { const raw = localStorage.getItem(STORE_KEY); return raw ? JSON.parse(raw) : null; } catch (e) { return null; }
+    if (NATIVE) {
+      try { const raw = NATIVE.load(); if (raw) return JSON.parse(raw); } catch (e) { /* fall back to web storage */ }
+    }
+    const s = readJSON(STORE_KEY);
+    if (s) return s;
+    const old = readJSON(OLD_STORE_KEY);   // earlier version: keep only the chosen language, drop the sample medications
+    return old && old.lang ? { lang: old.lang } : null;
   }
   function save(state) {
-    try { localStorage.setItem(STORE_KEY, JSON.stringify(state)); } catch (e) { /* storage unavailable */ }
+    const json = JSON.stringify(state);
+    if (NATIVE) { try { NATIVE.save(json); } catch (e) { /* ignore */ } }
+    try { localStorage.setItem(STORE_KEY, json); } catch (e) { /* storage unavailable */ }
   }
   function detectLang() {
     try {
@@ -485,17 +491,11 @@
     return 'fa';
   }
   const defaultDoses = () => [
-    { id: 'am', time: '08:00', meds: [
-      { id: uid(), name: 'Vitamin D3 1000 IU', qty: 1, unit: 'tablet' },
-      { id: uid(), name: 'Metformin 500 mg', qty: 1, unit: 'tablet' }
-    ] },
-    { id: 'pm', time: '20:00', meds: [
-      { id: uid(), name: 'Metformin 500 mg', qty: 1, unit: 'tablet' },
-      { id: uid(), name: 'Omega-3', qty: 2, unit: 'capsule' }
-    ] }
+    { id: 'am', time: '08:00', meds: [] },
+    { id: 'pm', time: '20:00', meds: [] }
   ];
 
-  /* ---------------- sound & system alerts ---------------- */
+  /* ---------------- sound & browser alerts (browser only; the app posts system notifications) ---------------- */
   let audioCtx = null;
   function unlockAudio() {
     try {
@@ -503,7 +503,7 @@
       if (audioCtx && audioCtx.state === 'suspended') audioCtx.resume();
     } catch (e) { /* audio unavailable */ }
   }
-  window.addEventListener('pointerdown', unlockAudio);
+  if (!NATIVE) window.addEventListener('pointerdown', unlockAudio);
   function chime() {
     if (!audioCtx || audioCtx.state !== 'running') return;
     try {
@@ -522,7 +522,7 @@
       });
     } catch (e) { /* ignore */ }
   }
-  function systemNotify(title, body) {
+  function browserNotify(title, body) {
     try {
       if ('Notification' in window && Notification.permission === 'granted') new Notification(title, { body });
     } catch (e) { /* not allowed here */ }
@@ -594,49 +594,96 @@
     </li>`;
   }
 
-  function DoseCard({ row, t, f, lang, canRemove, onTime, onRemove, onAddMed, onUpdateMed, onRemoveMed }) {
+  function statusText(row, t, f) {
+    if (row.status === 'taken') return t('stTaken', { t: f.time(row.at) });
+    if (row.status === 'due') return t('stDue');
+    if (row.status === 'snoozed') return t('stSnoozed', { t: f.time(row.at) });
+    return t('stUpcoming');
+  }
+
+  function DoseTabs({ rows, selectedId, onSelect, onAdd, canAdd, t, f }) {
+    return html`<div className="tabs" role="tablist" aria-label=${t('time')}>
+      ${rows.map(r => html`<button key=${r.dose.id} type="button" role="tab" className="tab"
+          id=${'tab-' + r.dose.id} aria-controls="dose-page" aria-selected=${r.dose.id === selectedId}
+          onClick=${() => onSelect(r.dose.id)}>
+        <span className="tab-top"><span className="label">${t('doseN', { n: f.num(r.index + 1) })}</span>
+          <span className=${'mk mk-' + r.status} aria-hidden="true"></span></span>
+        <span className="tab-time num" dir="ltr">${f.hhmm(r.dose.time)}</span>
+      </button>`)}
+      <button type="button" className="tab-add" aria-label=${t('addDose')} title=${t('addDose')} disabled=${!canAdd} onClick=${onAdd}>
+        <span aria-hidden="true">+</span>
+      </button>
+    </div>`;
+  }
+
+  function DosePage({ row, total, t, f, lang, canRemove, onTime, onRemove, onAddMed, onUpdateMed, onRemoveMed, onPrev, onNext }) {
     const [adding, setAdding] = useState(false);
     const [confirming, setConfirming] = useState(false);
+    const touch = useRef(null);
+    useEffect(() => { setAdding(false); setConfirming(false); }, [row.dose.id]);
     useEffect(() => {
       if (!confirming) return;
       const id = setTimeout(() => setConfirming(false), 3000);
       return () => clearTimeout(id);
     }, [confirming]);
 
-    const { dose, status } = row;
-    const statusText = {
-      taken: () => t('stTaken', { t: f.time(row.at) }),
-      due: () => t('stDue'),
-      snoozed: () => t('stSnoozed', { t: f.time(row.at) }),
-      upcoming: () => t('stUpcoming')
-    }[status]();
+    // Swipe sideways to move between doses (direction follows the reading direction).
+    const onTouchStart = e => {
+      if (e.target.closest('input, select, textarea')) { touch.current = null; return; }
+      const p = e.touches[0]; touch.current = { x: p.clientX, y: p.clientY };
+    };
+    const onTouchEnd = e => {
+      if (!touch.current) return;
+      const p = e.changedTouches[0];
+      const dx = p.clientX - touch.current.x, dy = p.clientY - touch.current.y;
+      touch.current = null;
+      if (Math.abs(dx) < 70 || Math.abs(dy) > 60) return;
+      const forward = DIR[lang] === 'rtl' ? dx > 0 : dx < 0;
+      forward ? onNext() : onPrev();
+    };
 
-    return html`<article className=${'dose st-' + status} aria-label=${t('doseN', { n: f.num(row.index + 1) })}>
-      <div className="dose-time">
-        <span className="label">${t('doseN', { n: f.num(row.index + 1) })}</span>
-        <div className="dose-clock num" dir="ltr">${f.hhmm(dose.time)}</div>
-        <span className="chip"><span className=${'mk mk-' + status} aria-hidden="true"></span>${statusText}</span>
+    const { dose, status } = row;
+    return html`<article id="dose-page" role="tabpanel" aria-labelledby=${'tab-' + dose.id}
+        className=${'page fade-in st-' + status} key=${dose.id} onTouchStart=${onTouchStart} onTouchEnd=${onTouchEnd}>
+      <div className="page-head">
+        <div className="flex flex-col gap-2 min-w-0">
+          <span className="label">${t('doseN', { n: f.num(row.index + 1) })}</span>
+          <div className="page-clock num" dir="ltr">${f.hhmm(dose.time)}</div>
+          <span className="chip"><span className=${'mk mk-' + status} aria-hidden="true"></span>${statusText(row, t, f)}</span>
+        </div>
         <label className="flex flex-col gap-1" htmlFor=${'time-' + dose.id}>
           <span className="label">${t('time')}</span>
           <input id=${'time-' + dose.id} type="time" dir="ltr" className="time-input" value=${dose.time}
             onChange=${e => e.target.value && onTime(e.target.value)} />
         </label>
       </div>
-      <div className="dose-body">
+
+      <div className="page-body">
         ${dose.meds.length
           ? html`<ul className="meds">${dose.meds.map(m => html`<${MedRow} key=${m.id} med=${m} t=${t} f=${f} lang=${lang}
               onSave=${patch => onUpdateMed(m.id, patch)} onDelete=${() => onRemoveMed(m.id)} />`)}</ul>`
-          : html`<p className="empty m-0">${t('noMeds')}</p>`}
+          : null}
         ${adding
           ? html`<${MedForm} t=${t} lang=${lang} idBase=${'new-' + dose.id} submitLabel=${t('addMed')}
               onCancel=${() => setAdding(false)} onSubmit=${m => { onAddMed(m); setAdding(false); }} />`
-          : null}
-        <div className="dose-foot">
-          ${!adding ? html`<button type="button" className="btn btn-yellow" onClick=${() => setAdding(true)}>+ ${t('addMed')}</button>` : html`<span></span>`}
-          ${canRemove ? html`<button type="button" className=${'btn ' + (confirming ? 'btn-red' : '')}
-              onClick=${() => (confirming ? onRemove() : setConfirming(true))}>
-              <${IconX} /> ${confirming ? t('confirmRemove') : t('removeDose')}</button>` : null}
+          : html`<button type="button" className=${'slot' + (dose.meds.length ? '' : ' big')} onClick=${() => setAdding(true)}>
+              <span className="plus" aria-hidden="true">+</span>
+              <span>${t('addMed')}</span>
+              ${dose.meds.length ? null : html`<span className="label" style=${{ color: 'var(--mute)' }}>${t('emptySlot')}</span>`}
+            </button>`}
+      </div>
+
+      <div className="page-foot">
+        <div className="pager">
+          <button type="button" className="btn btn-sq" aria-label=${t('prev')} title=${t('prev')} disabled=${row.index === 0} onClick=${onPrev}>
+            <span className="arrow prev" aria-hidden="true"></span></button>
+          <span className="font-bold num">${t('pageOf', { a: f.num(row.index + 1), b: f.num(total) })}</span>
+          <button type="button" className="btn btn-sq" aria-label=${t('next')} title=${t('next')} disabled=${row.index === total - 1} onClick=${onNext}>
+            <span className="arrow next" aria-hidden="true"></span></button>
         </div>
+        ${canRemove ? html`<button type="button" className=${'btn ' + (confirming ? 'btn-red' : '')}
+            onClick=${() => (confirming ? onRemove() : setConfirming(true))}>
+            <${IconX} /> ${confirming ? t('confirmRemove') : t('removeDose')}</button>` : null}
       </div>
     </article>`;
   }
@@ -661,7 +708,7 @@
                 <div className="flex-1 min-w-0"><div className="med-name" dir="auto">${m.name}</div></div>
                 <div className="font-bold text-lg"><span className="num">${f.num(m.qty)}</span> ${unitLabel(m.unit, m.qty, lang)}</div>
               </li>`)}</ul>`
-            : html`<p className="empty m-0">${t('noMeds')}</p>`}
+            : html`<p className="alert-empty">${t('noMedsAlert')}</p>`}
         </div>
         <div className="alert-actions">
           <button ref=${doneRef} type="button" className="act act-done" onClick=${onDone}>
@@ -680,26 +727,29 @@
   }
 
   function TestPanel({ t, f, clock, isVirtual, setSpeed, jump, jumpToNext, realTime, resetToday, alertsOn, enableAlerts }) {
-    return html`<section className="panel" aria-labelledby="test-title">
-      <h2 id="test-title" className="display">${t('testClock')}</h2>
-      <p>${t('testHint')}</p>
-      <div className="panel-row">
-        <span className="label">${t('speed')}</span>
-        <div className="seg" role="group" aria-label=${t('speed')}>
-          ${SPEEDS.map(s => html`<button key=${s} type="button" className="num" dir="ltr" aria-pressed=${clock.speed === s}
-            onClick=${() => setSpeed(s)}>${f.num(s)}×</button>`)}
+    return html`<details className="panel">
+      <summary className="display">${t('testClock')}</summary>
+      <div className="panel-body">
+        <p>${t('webNote')}</p>
+        <p>${t('testHint')}</p>
+        <div className="panel-row">
+          <span className="label">${t('speed')}</span>
+          <div className="seg" role="group" aria-label=${t('speed')}>
+            ${SPEEDS.map(s => html`<button key=${s} type="button" className="num" dir="ltr" aria-pressed=${clock.speed === s}
+              onClick=${() => setSpeed(s)}>${f.num(s)}×</button>`)}
+          </div>
+        </div>
+        <div className="panel-row">
+          <button type="button" className="btn btn-yellow" data-test="plus30" onClick=${() => jump(SNOOZE_MS)}>${t('plus30')}</button>
+          <button type="button" className="btn" data-test="jump" onClick=${jumpToNext}>${t('jumpNext')}</button>
+          <button type="button" className="btn" disabled=${!isVirtual} onClick=${realTime}>${t('realTime')}</button>
+          <button type="button" className="btn btn-red" onClick=${resetToday}>${t('resetToday')}</button>
+          <button type="button" className=${'btn ' + (alertsOn ? 'btn-on' : '')} onClick=${enableAlerts}>
+            ${alertsOn ? t('alertsOn') : t('alerts')}
+          </button>
         </div>
       </div>
-      <div className="panel-row">
-        <button type="button" className="btn btn-yellow" onClick=${() => jump(SNOOZE_MS)}>${t('plus30')}</button>
-        <button type="button" className="btn" onClick=${jumpToNext}>${t('jumpNext')}</button>
-        <button type="button" className="btn" disabled=${!isVirtual} onClick=${realTime}>${t('realTime')}</button>
-        <button type="button" className="btn btn-red" onClick=${resetToday}>${t('resetToday')}</button>
-        <button type="button" className=${'btn ' + (alertsOn ? 'btn-on' : '')} onClick=${enableAlerts}>
-          ${alertsOn ? t('alertsOn') : t('alerts')}
-        </button>
-      </div>
-    </section>`;
+    </details>`;
   }
 
   /* ---------------- app ---------------- */
@@ -709,10 +759,10 @@
     const [doses, setDoses] = useState(stored && Array.isArray(stored.doses) && stored.doses.length ? stored.doses : defaultDoses);
     const [log, setLog] = useState((stored && stored.log) || {});         // "YYYY-MM-DD|doseId" -> taken-at ms
     const [snoozes, setSnoozes] = useState((stored && stored.snoozes) || {}); // key -> { nextAt, count }
-    const [sample, setSample] = useState(stored ? !!stored.sample : true);
+    const [selectedId, setSelectedId] = useState(null);
     const [alertsOn, setAlertsOn] = useState(false);
 
-    // Virtual clock: real time by default, can be sped up or moved forward for testing.
+    // Virtual clock (browser test panel only): real time by default, can be sped up or moved forward.
     const [clock, setClock] = useState(() => ({ baseReal: Date.now(), baseVirt: Date.now(), speed: 1 }));
     const [, setTick] = useState(0);
     useEffect(() => { const id = setInterval(() => setTick(x => x + 1), 250); return () => clearInterval(id); }, []);
@@ -720,8 +770,27 @@
     const now = virtNow(clock);
     const isVirtual = clock.speed !== 1 || Math.abs(now - Date.now()) > 2000;
 
-    useEffect(() => { save({ lang, doses, log, snoozes, sample }); }, [lang, doses, log, snoozes, sample]);
+    // Save every change at once, so the chosen language and the schedule survive closing the app.
+    const first = useRef(true);
+    useEffect(() => {
+      if (first.current && stored && stored.doses) { first.current = false; return; }
+      first.current = false;
+      save({ lang, doses, log, snoozes });
+    }, [lang, doses, log, snoozes]);
     useEffect(() => { document.documentElement.lang = lang; document.documentElement.dir = DIR[lang]; }, [lang]);
+
+    // The app calls this after Done / Later was pressed on a system notification, and when it comes back to the front.
+    useEffect(() => {
+      window.__doseReload = () => {
+        const s = load();
+        if (!s) return;
+        if (I18N[s.lang]) setLang(s.lang);
+        if (Array.isArray(s.doses) && s.doses.length) setDoses(s.doses);
+        setLog(s.log || {});
+        setSnoozes(s.snoozes || {});
+      };
+      return () => { delete window.__doseReload; };
+    }, []);
 
     const t = useCallback((k, vars) => {
       let s = I18N[lang][k] != null ? I18N[lang][k] : (I18N.en[k] != null ? I18N.en[k] : k);
@@ -730,7 +799,7 @@
     }, [lang]);
     const f = useMemo(() => makeFmt(lang), [lang]);
 
-    /* ----- derive each dose's state for the current (virtual) day ----- */
+    /* ----- each dose's state for the current day ----- */
     const today = dayKey(now);
     const sorted = [...doses].sort((a, b) => toMin(a.time) - toMin(b.time));
     const rows = sorted.map((dose, index) => {
@@ -751,22 +820,30 @@
     const next = pending[0]
       ? { at: pending[0].at, row: pending[0], tomorrow: false }
       : sorted[0] ? { at: atTime(now + DAY_MS, sorted[0].time), row: null, tomorrow: true } : null;
-    const takenCount = rows.filter(r => r.status === 'taken').length;
 
-    /* ----- ring once each time a dose becomes due (first time and every snooze repeat) ----- */
+    // The page shown: the one picked, otherwise the dose that is due, otherwise the next one.
+    const fallback = (due[0] || pending[0] || rows[0]);
+    const current = rows.find(r => r.dose.id === selectedId) || fallback;
+    const go = step => {
+      const i = current.index + step;
+      if (rows[i]) setSelectedId(rows[i].dose.id);
+    };
+
+    /* ----- ring once each time a dose becomes due (the app does this with system notifications) ----- */
     const seen = useRef(new Set());
     const dueSig = due.map(r => r.key + '#' + r.count).join(',');
     useEffect(() => {
+      if (NATIVE) return;
       due.forEach(r => {
         const sig = r.key + '#' + r.count;
         if (seen.current.has(sig)) return;
         seen.current.add(sig);
         chime();
-        systemNotify(t('notifTitle'), r.dose.meds.map(m => `${m.name} × ${f.num(m.qty)}`).join(' · '));
+        browserNotify(t('notifTitle'), r.dose.meds.map(m => `${m.name} × ${f.num(m.qty)}`).join(' · '));
       });
     }, [dueSig]);
     useEffect(() => {
-      document.title = due.length ? `(${due.length}) ${t('notifTitle')}` : 'Bauhaus Dose Clock';
+      document.title = due.length ? `(${due.length}) ${t('notifTitle')}` : t('appName');
     }, [due.length, lang]);
 
     /* ----- reminder actions ----- */
@@ -777,18 +854,22 @@
     const snooze = r => setSnoozes(s => ({ ...s, [r.key]: { nextAt: now + SNOOZE_MS, count: r.count } }));
 
     /* ----- schedule editing ----- */
-    const touch = () => setSample(false);
     const updateDose = (id, patch) => setDoses(ds => ds.map(d => (d.id === id ? { ...d, ...patch } : d)));
-    const removeDose = id => setDoses(ds => (ds.length > 1 ? ds.filter(d => d.id !== id) : ds));
-    const addDose = () => setDoses(ds => (ds.length >= 8 ? ds : [...ds, { id: uid(), time: timeForNewDose(ds), meds: [] }]));
-    const removeLastDose = () => setDoses(ds => {
-      if (ds.length <= 1) return ds;
-      const last = [...ds].sort((a, b) => toMin(a.time) - toMin(b.time)).pop();
-      return ds.filter(d => d.id !== last.id);
-    });
-    const addMed = (doseId, med) => { touch(); setDoses(ds => ds.map(d => (d.id === doseId ? { ...d, meds: [...d.meds, { id: uid(), ...med }] } : d))); };
-    const updateMed = (doseId, medId, patch) => { touch(); setDoses(ds => ds.map(d => (d.id === doseId ? { ...d, meds: d.meds.map(m => (m.id === medId ? { ...m, ...patch } : m)) } : d))); };
-    const removeMed = (doseId, medId) => { touch(); setDoses(ds => ds.map(d => (d.id === doseId ? { ...d, meds: d.meds.filter(m => m.id !== medId) } : d))); };
+    const removeDose = id => {
+      const i = rows.findIndex(r => r.dose.id === id);
+      const neighbour = rows[i + 1] || rows[i - 1];
+      setDoses(ds => (ds.length > 1 ? ds.filter(d => d.id !== id) : ds));
+      if (neighbour) setSelectedId(neighbour.dose.id);
+    };
+    const addDose = () => {
+      if (doses.length >= MAX_DOSES) return;
+      const d = { id: uid(), time: timeForNewDose(doses), meds: [] };
+      setDoses(ds => [...ds, d]);
+      setSelectedId(d.id);
+    };
+    const addMed = (doseId, med) => setDoses(ds => ds.map(d => (d.id === doseId ? { ...d, meds: [...d.meds, { id: uid(), ...med }] } : d)));
+    const updateMed = (doseId, medId, patch) => setDoses(ds => ds.map(d => (d.id === doseId ? { ...d, meds: d.meds.map(m => (m.id === medId ? { ...m, ...patch } : m)) } : d)));
+    const removeMed = (doseId, medId) => setDoses(ds => ds.map(d => (d.id === doseId ? { ...d, meds: d.meds.filter(m => m.id !== medId) } : d)));
 
     /* ----- test clock ----- */
     const setSpeed = speed => setClock(c => ({ baseReal: Date.now(), baseVirt: virtNow(c), speed }));
@@ -807,88 +888,51 @@
       setTimeout(chime, 60);
     };
 
-    const secFrac = new Date(now).getSeconds() / 60;
-
     return html`<${React.Fragment}>
       <header className="topbar">
         <div className="topbar-inner" dir="ltr">
           <${LangToggle} lang=${lang} setLang=${setLang} />
-          ${isVirtual
-            ? html`<span className="topbar-badge" dir=${DIR[lang]}><i aria-hidden="true"></i>${t('testTime')} · <span className="num">${f.num(clock.speed)}×</span></span>`
-            : html`<span className="topbar-badge" dir=${DIR[lang]}>${t('tagline')}</span>`}
+          <span className="brand" dir=${DIR[lang]}>
+            <span className="brand-shapes" aria-hidden="true"><i className="r"></i><i className="b"></i><i className="y"></i></span>
+            <span className="brand-name">${t('appName')}</span>
+          </span>
         </div>
       </header>
 
       <main key=${lang} className="shell fade-in">
-        <div className="mast">
-          <div className="min-w-0">
-            <h1 className="display">${t('appName')}</h1>
-            <p>${t('openNote')}</p>
+        <section className="band" aria-label=${t('now')}>
+          <div className="band-now">
+            <span className="band-sun" aria-hidden="true"></span>
+            <span className="label">${isVirtual ? t('testTime') : t('now')}</span>
+            <div className="band-clock num" dir="ltr">${f.time(now)}</div>
+            <div className="band-date">${f.date(now)}</div>
           </div>
-          <div className="shapes" aria-hidden="true"><span className="s1"></span><span className="s2"></span><span className="s3"></span></div>
-        </div>
-
-        <div>
-          <section className="hero" aria-label=${t('now')}>
-            <div className="hero-now">
-              <span className="hero-sun" aria-hidden="true"></span>
-              <span className="hero-bar" aria-hidden="true"></span>
-              <span className="label">${isVirtual ? t('testTime') : t('now')}</span>
-              <div>
-                <div className="hero-clock num" dir="ltr">${f.time(now)}</div>
-                <div className="hero-date">${f.date(now)}</div>
-              </div>
-              <div className="sec-track" aria-hidden="true"><div className="sec-fill" style=${{ width: (secFrac * 100).toFixed(1) + '%' }}></div></div>
-            </div>
-            <div className="hero-next">
-              <span className="label">${t('nextDose')}</span>
-              ${due.length
-                ? html`<div className="disc"><div className="disc-count">${t('dueNow')}</div>
-                    <div className="disc-sub">${t('doseN', { n: f.num(due[0].index + 1) })} · <span dir="ltr" className="num">${f.hhmm(due[0].dose.time)}</span></div></div>`
-                : next
-                  ? html`<div className="disc calm"><div className="disc-count num" dir="ltr">${f.countdown(next.at - now)}</div>
-                      <div className="disc-sub">${next.tomorrow ? t('tomorrowAt', { t: f.time(next.at) }) : t('at', { t: f.time(next.at) })}</div></div>`
-                  : html`<div className="disc calm"><div className="disc-sub">${t('noDoses')}</div></div>`}
-            </div>
-          </section>
-          <div className="progress" style=${{ boxShadow: '10px 10px 0 var(--ink)' }}>
-            <span className="font-bold">${t('progress', { a: f.num(takenCount), b: f.num(rows.length) })}</span>
-            <div className="pips" aria-hidden="true">${rows.map(r => html`<span key=${r.key} className=${'pip ' + r.status}></span>`)}</div>
-          </div>
-        </div>
-
-        <section className="flex flex-col gap-5" aria-labelledby="sched-title">
-          <div className="sec-head">
-            <h2 id="sched-title" className="display">${t('schedule')}</h2>
-            <div className="stepper">
-              <span className="label">${t('dosesPerDay')}</span>
-              <button type="button" className="btn btn-circle" aria-label=${t('fewer')} title=${t('fewer')}
-                disabled=${doses.length <= 1} onClick=${removeLastDose}>−</button>
-              <span className="stepper-val num" aria-live="polite">${f.num(doses.length)}</span>
-              <button type="button" className="btn btn-circle btn-blue" aria-label=${t('more')} title=${t('more')}
-                disabled=${doses.length >= 8} onClick=${addDose}>+</button>
-            </div>
-          </div>
-          ${sample ? html`<p className="note m-0">${t('sample')}</p>` : null}
-          <div className="doses">
-            ${rows.map(r => html`<${DoseCard} key=${r.dose.id} row=${r} t=${t} f=${f} lang=${lang}
-              canRemove=${doses.length > 1}
-              onTime=${time => updateDose(r.dose.id, { time })}
-              onRemove=${() => removeDose(r.dose.id)}
-              onAddMed=${m => addMed(r.dose.id, m)}
-              onUpdateMed=${(id, p) => updateMed(r.dose.id, id, p)}
-              onRemoveMed=${id => removeMed(r.dose.id, id)} />`)}
+          <div className="band-next">
+            <span className="label">${t('nextDose')}</span>
+            ${due.length
+              ? html`<div className="disc due"><div className="disc-count">${t('dueNow')}</div></div>`
+              : next
+                ? html`<div className="disc"><div className="disc-count num" dir="ltr">${f.countdown(next.at - now)}</div>
+                    <div className="disc-sub">${next.tomorrow ? t('tomorrowAt', { t: f.time(next.at) }) : t('at', { t: f.time(next.at) })}</div></div>`
+                : null}
           </div>
         </section>
 
-        <${TestPanel} t=${t} f=${f} clock=${clock} isVirtual=${isVirtual} setSpeed=${setSpeed} jump=${jump}
-          jumpToNext=${jumpToNext} realTime=${realTime} resetToday=${resetToday}
-          alertsOn=${alertsOn} enableAlerts=${enableAlerts} />
+        <${DoseTabs} rows=${rows} selectedId=${current.dose.id} onSelect=${setSelectedId}
+          onAdd=${addDose} canAdd=${doses.length < MAX_DOSES} t=${t} f=${f} />
 
-        <footer className="foot">
-          <span>${t('tagline')}</span>
-          <span>${t('laterHint')}</span>
-        </footer>
+        <${DosePage} key=${current.dose.id} row=${current} total=${rows.length} t=${t} f=${f} lang=${lang}
+          canRemove=${doses.length > 1}
+          onTime=${time => updateDose(current.dose.id, { time })}
+          onRemove=${() => removeDose(current.dose.id)}
+          onAddMed=${m => addMed(current.dose.id, m)}
+          onUpdateMed=${(id, p) => updateMed(current.dose.id, id, p)}
+          onRemoveMed=${id => removeMed(current.dose.id, id)}
+          onPrev=${() => go(-1)} onNext=${() => go(1)} />
+
+        ${NATIVE ? null : html`<${TestPanel} t=${t} f=${f} clock=${clock} isVirtual=${isVirtual} setSpeed=${setSpeed} jump=${jump}
+          jumpToNext=${jumpToNext} realTime=${realTime} resetToday=${resetToday}
+          alertsOn=${alertsOn} enableAlerts=${enableAlerts} />`}
       </main>
 
       ${due.length
