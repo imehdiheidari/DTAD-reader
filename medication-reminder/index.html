@@ -1,0 +1,905 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bauhaus Dose Clock</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700;800&family=Vazirmatn:wght@400;500;700;800&display=swap">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>
+  tailwind.config = {
+    corePlugins: { preflight: true },
+    theme: { extend: { colors: { bred: '#D52A1E', bblue: '#1447A6', byellow: '#F7C600', bink: '#121212', bpaper: '#F4F2ED' } } }
+  };
+</script>
+<style>
+  /* Layout: a poster grid. Hard 4px black rules split the page into blocks of pure primary colour;
+     circles, squares and triangles carry meaning (status, actions), never decoration alone. */
+  :root {
+    --red: #D52A1E;
+    --blue: #1447A6;
+    --yellow: #F7C600;
+    --ink: #121212;
+    --paper: #F4F2ED;
+    --white: #FFFFFF;
+    --mute: #55534D;
+    --stroke: 4px;
+    --stroke-thin: 3px;
+    --font-latin: 'Jost', 'Futura', 'Century Gothic', 'Avenir Next', Arial, sans-serif;
+    --font-fa: 'Vazirmatn', Tahoma, 'Segoe UI', sans-serif;
+    color-scheme: light;
+  }
+
+  html, body { background: var(--paper); color: var(--ink); }
+  body { margin: 0; font-family: var(--font-latin); font-size: 16px; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+  html[lang="fa"] body { font-family: var(--font-fa); }
+  * { box-sizing: border-box; }
+
+  .num { font-variant-numeric: tabular-nums; }
+  .display { font-weight: 800; letter-spacing: -0.01em; text-transform: uppercase; line-height: 1.02; text-wrap: balance; }
+  .label { font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+  html[lang="fa"] .display, html[lang="fa"] .label, html[lang="fa"] .btn { text-transform: none; letter-spacing: 0; }
+  html[lang="fa"] .label { font-size: 13px; }
+
+  .fade-in { animation: fade 260ms ease both; }
+  @keyframes fade { from { opacity: 0.25; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+
+  /* ---------- top bar ---------- */
+  .topbar { background: var(--ink); color: var(--white); position: sticky; top: env(safe-area-inset-top, 0px); z-index: 60; }
+  body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 61; background: var(--ink); }
+  .topbar-inner {
+    max-width: 1120px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    padding-block: 10px;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+  }
+  .lang { display: flex; border: 2px solid var(--white); }
+  .lang button {
+    width: 42px; height: 32px; border: 0; background: transparent; color: var(--white); cursor: pointer;
+    font: 700 13px/1 var(--font-latin); letter-spacing: 0.08em; transition: background 160ms, color 160ms;
+  }
+  .lang button + button { border-left: 2px solid var(--white); }
+  .lang button[aria-pressed="true"] { background: var(--yellow); color: var(--ink); }
+  .lang button:hover:not([aria-pressed="true"]) { background: #2a2a2a; }
+  .lang .fa { font-family: var(--font-fa); font-size: 15px; letter-spacing: 0; }
+  .topbar-badge { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
+  .topbar-badge i { width: 10px; height: 10px; background: var(--red); display: inline-block; }
+
+  /* ---------- shell ---------- */
+  .shell {
+    max-width: 1120px; margin: 0 auto;
+    padding-block: 28px 64px;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    display: flex; flex-direction: column; gap: 32px;
+  }
+
+  /* ---------- masthead ---------- */
+  .mast { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px; }
+  .mast h1 { font-size: clamp(2rem, 6vw, 3.6rem); margin: 0; }
+  .mast p { margin: 6px 0 0; color: var(--mute); font-weight: 500; }
+  .shapes { display: flex; align-items: flex-end; gap: 10px; }
+  .shapes .s1 { width: 44px; height: 44px; background: var(--red); border: var(--stroke-thin) solid var(--ink); }
+  .shapes .s2 { width: 44px; height: 44px; border-radius: 50%; background: var(--blue); border: var(--stroke-thin) solid var(--ink); }
+  .shapes .s3 { width: 50px; height: 44px; background: var(--ink); clip-path: polygon(50% 0, 100% 100%, 0 100%); position: relative; }
+  .shapes .s3::after { content: ""; position: absolute; inset: 5px 6px 3px; background: var(--yellow); clip-path: polygon(50% 0, 100% 100%, 0 100%); }
+
+  /* ---------- hero ---------- */
+  .hero { display: grid; grid-template-columns: 1fr; border: var(--stroke) solid var(--ink); background: var(--white); box-shadow: 10px 10px 0 var(--ink); }
+  @media (min-width: 820px) { .hero { grid-template-columns: 7fr 5fr; } }
+  .hero-now { position: relative; overflow: hidden; background: var(--blue); color: var(--white); padding: 28px; min-height: 260px; display: flex; flex-direction: column; justify-content: space-between; gap: 16px; }
+  .hero-sun { position: absolute; width: 260px; height: 260px; border-radius: 50%; background: var(--yellow); border: var(--stroke) solid var(--ink); bottom: -110px; inset-inline-end: -70px; }
+  .hero-bar { position: absolute; top: 0; inset-inline-end: 64px; width: 18px; height: 100%; background: var(--ink); }
+  .hero-now > :not(.hero-sun):not(.hero-bar) { position: relative; }
+  .hero-clock { font-size: clamp(3.4rem, 11vw, 7rem); font-weight: 800; line-height: 0.9; letter-spacing: -0.02em; }
+  .hero-date { font-size: 1.15rem; font-weight: 500; }
+  .sec-track { height: 10px; width: min(320px, 70%); background: rgba(255,255,255,0.25); border: 2px solid var(--ink); }
+  .sec-fill { height: 100%; background: var(--yellow); }
+  .hero-next { border-top: var(--stroke) solid var(--ink); padding: 24px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; text-align: center; }
+  @media (min-width: 820px) { .hero-next { border-top: 0; border-inline-start: var(--stroke) solid var(--ink); } }
+  .disc { width: min(240px, 70vw); aspect-ratio: 1; max-width: 100%; border-radius: 50%; background: var(--red); color: var(--white); border: var(--stroke) solid var(--ink); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; padding: 20px; }
+  .disc.calm { background: var(--white); color: var(--ink); }
+  .disc-count { font-size: clamp(1.9rem, 6vw, 2.6rem); font-weight: 800; line-height: 1; }
+  .disc-sub { font-size: 0.95rem; font-weight: 500; }
+
+  .progress { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; background: var(--ink); color: var(--white); padding: 14px 18px; }
+  .pips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .pip { width: 22px; height: 22px; border: 3px solid var(--white); }
+  .pip.taken { background: var(--yellow); border-color: var(--yellow); }
+  .pip.due { background: var(--red); }
+  .pip.snoozed { background: transparent; border-style: dashed; border-color: var(--yellow); }
+
+  /* ---------- buttons & fields ---------- */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 0.55rem;
+    border: var(--stroke-thin) solid var(--ink); border-radius: 0; background: var(--white); color: var(--ink);
+    font-weight: 700; font-size: 0.95rem; line-height: 1.1; font-family: inherit; letter-spacing: 0.05em; text-transform: uppercase;
+    padding: 0.6rem 1rem; min-height: 44px; cursor: pointer;
+    box-shadow: 4px 4px 0 var(--ink); transition: transform 80ms ease, box-shadow 80ms ease, background 120ms;
+  }
+  .btn:hover { background: var(--paper); }
+  .btn:active { transform: translate(4px, 4px); box-shadow: 0 0 0 var(--ink); }
+  .btn:disabled { opacity: 0.4; cursor: not-allowed; box-shadow: none; transform: none; }
+  .btn-blue { background: var(--blue); color: var(--white); }
+  .btn-blue:hover { background: #0f3a8a; }
+  .btn-red { background: var(--red); color: var(--white); }
+  .btn-red:hover { background: #b8221a; }
+  .btn-yellow { background: var(--yellow); color: var(--ink); }
+  .btn-yellow:hover { background: #e3b600; }
+  .btn-ink { background: var(--ink); color: var(--white); box-shadow: 4px 4px 0 var(--yellow); }
+  .btn-ink:hover { background: #2a2a2a; }
+  .btn-sq { width: 40px; height: 40px; min-height: 0; padding: 0; box-shadow: 3px 3px 0 var(--ink); flex: none; }
+  .btn-circle { width: 48px; height: 48px; min-height: 0; padding: 0; border-radius: 50%; font-size: 1.5rem; flex: none; }
+  .btn-on { background: var(--yellow); color: var(--ink); }
+  :focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }
+  .panel :focus-visible { outline-color: var(--yellow); }
+
+  .field { width: 100%; min-height: 44px; border: var(--stroke-thin) solid var(--ink); border-radius: 0; background: var(--white); color: var(--ink); padding: 0.5rem 0.75rem; font: inherit; }
+  .field:focus { outline: 3px solid var(--blue); outline-offset: 2px; }
+
+  /* ---------- schedule ---------- */
+  .sec-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; border-bottom: var(--stroke) solid var(--ink); padding-bottom: 12px; }
+  .sec-head h2 { margin: 0; font-size: clamp(1.5rem, 4vw, 2.1rem); display: flex; align-items: center; gap: 12px; }
+  .sec-head h2::before { content: ""; width: 22px; height: 22px; background: var(--red); border: 3px solid var(--ink); flex: none; }
+  .stepper { display: flex; align-items: center; gap: 12px; }
+  .stepper-val { min-width: 56px; height: 56px; display: grid; place-items: center; border: var(--stroke) solid var(--ink); background: var(--yellow); font-size: 1.6rem; font-weight: 800; }
+  .note { border-inline-start: 8px solid var(--yellow); background: var(--white); padding: 10px 14px; font-weight: 500; border-top: 2px solid var(--ink); border-bottom: 2px solid var(--ink); border-inline-end: 2px solid var(--ink); }
+
+  .doses { display: grid; gap: 22px; }
+  .dose { display: grid; grid-template-columns: 1fr; border: var(--stroke) solid var(--ink); background: var(--white); }
+  @media (min-width: 680px) { .dose { grid-template-columns: 220px 1fr; } }
+  .dose-time { padding: 18px; display: flex; flex-direction: column; gap: 10px; border-bottom: var(--stroke) solid var(--ink); background: var(--paper); }
+  @media (min-width: 680px) { .dose-time { border-bottom: 0; border-inline-end: var(--stroke) solid var(--ink); } }
+  .st-taken .dose-time { background: var(--blue); color: var(--white); }
+  .st-due .dose-time { background: var(--red); color: var(--white); }
+  .st-snoozed .dose-time { background: var(--yellow); }
+  .dose-clock { font-size: 2.6rem; font-weight: 800; line-height: 1; }
+  .time-input { width: 100%; max-width: 170px; min-height: 44px; border: var(--stroke-thin) solid var(--ink); background: var(--white); color: var(--ink); font: 700 1.05rem/1 var(--font-latin); padding: 0.4rem 0.6rem; border-radius: 0; }
+  .chip { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 0.9rem; }
+  .mk { width: 14px; height: 14px; flex: none; background: currentColor; }
+  .mk-taken { border-radius: 50%; }
+  .mk-due { animation: blink 1s steps(2, start) infinite; }
+  .mk-snoozed { clip-path: polygon(50% 0, 100% 100%, 0 100%); }
+  .mk-upcoming { background: transparent; border: 3px solid currentColor; }
+  @keyframes blink { to { visibility: hidden; } }
+
+  .dose-body { padding: 18px; display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+  .meds { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+  .med-item { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 2px solid var(--ink); min-width: 0; }
+  .med-item:first-child { border-top: 2px solid var(--ink); }
+  .med-dot { width: 16px; height: 16px; background: var(--yellow); border: 3px solid var(--ink); flex: none; }
+  .med-name { font-weight: 700; font-size: 1.05rem; overflow-wrap: anywhere; }
+  .med-qty { color: var(--mute); font-weight: 500; }
+  .empty { color: var(--mute); font-weight: 500; padding: 12px 0; border-top: 2px dashed var(--ink); border-bottom: 2px dashed var(--ink); }
+  .med-form { display: grid; gap: 12px; width: 100%; padding: 14px; border: var(--stroke-thin) solid var(--ink); background: var(--paper); }
+  .med-form .row { display: grid; grid-template-columns: 1fr 1.4fr; gap: 12px; }
+  .med-form label { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+  .dose-foot { display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center; }
+
+  /* ---------- test panel ---------- */
+  .panel { background: var(--ink); color: var(--white); border: var(--stroke) solid var(--ink); padding: 22px; display: flex; flex-direction: column; gap: 16px; }
+  .panel h2 { margin: 0; color: var(--yellow); font-size: 1.5rem; display: flex; align-items: center; gap: 12px; }
+  .panel h2::before { content: ""; width: 22px; height: 22px; border-radius: 50%; background: var(--yellow); flex: none; }
+  .panel p { margin: 0; color: #d8d6d0; max-width: 62ch; }
+  .panel .btn { box-shadow: 4px 4px 0 var(--yellow); }
+  .seg { display: flex; border: var(--stroke-thin) solid var(--white); }
+  .seg button { min-width: 64px; min-height: 44px; border: 0; background: transparent; color: var(--white); font: 700 1rem/1 var(--font-latin); cursor: pointer; }
+  .seg button + button { border-left: var(--stroke-thin) solid var(--white); }
+  .seg button[aria-pressed="true"] { background: var(--yellow); color: var(--ink); }
+  .panel-row { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+
+  .foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; color: var(--mute); font-weight: 500; border-top: var(--stroke) solid var(--ink); padding-top: 14px; }
+
+  /* ---------- reminder dialog ---------- */
+  .overlay {
+    position: fixed; inset: 0; z-index: 50; display: grid; place-items: center;
+    padding: max(16px, env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) max(16px, env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px));
+    background:
+      repeating-linear-gradient(135deg, rgba(18,18,18,0.72) 0 18px, rgba(18,18,18,0.6) 18px 36px);
+  }
+  .alert { width: 100%; max-width: 560px; max-height: 100%; overflow: auto; background: var(--white); color: var(--ink); border: 5px solid var(--ink); box-shadow: 14px 14px 0 var(--yellow); animation: drop 320ms cubic-bezier(.2,1.4,.4,1) both; }
+  @keyframes drop { from { transform: translateY(-24px); opacity: 0; } to { transform: none; opacity: 1; } }
+  .alert-head { position: relative; overflow: hidden; background: var(--red); color: var(--white); padding: 22px; display: flex; align-items: center; gap: 18px; border-bottom: 5px solid var(--ink); }
+  .alert-head h2 { margin: 2px 0 0; font-size: clamp(1.6rem, 6vw, 2.2rem); }
+  .bell { width: 72px; height: 72px; flex: none; border-radius: 50%; background: var(--white); border: 5px solid var(--ink); display: grid; place-items: center; }
+  .bell::after { content: ""; width: 26px; height: 26px; border-radius: 50%; background: var(--yellow); border: 4px solid var(--ink); animation: pulse 1.2s ease-in-out infinite; }
+  @keyframes pulse { 50% { transform: scale(1.35); } }
+  .alert-count { position: absolute; top: 0; inset-inline-end: 0; background: var(--yellow); color: var(--ink); border-bottom: 5px solid var(--ink); border-inline-start: 5px solid var(--ink); padding: 6px 12px; font-weight: 800; }
+  .alert-body { padding: 20px 22px; }
+  .alert-actions { display: grid; grid-template-columns: 1fr 1fr; border-top: 5px solid var(--ink); }
+  .act { min-height: 120px; border: 0; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; font-weight: 800; font-size: 1.7rem; line-height: 1; font-family: inherit; text-transform: uppercase; letter-spacing: 0.02em; transition: filter 120ms; }
+  html[lang="fa"] .act { text-transform: none; font-size: 2rem; }
+  .act:hover { filter: brightness(1.08); }
+  .act:active { filter: brightness(0.92); }
+  .act-done { background: var(--blue); color: var(--white); }
+  .act-later { background: var(--yellow); color: var(--ink); border-inline-start: 5px solid var(--ink); }
+  .act-done .glyph { width: 30px; height: 30px; border-radius: 50%; background: var(--white); border: 4px solid var(--ink); }
+  .act-later .glyph { width: 30px; height: 30px; background: var(--ink); clip-path: polygon(0 0, 100% 50%, 0 100%); }
+  html[dir="rtl"] .act-later .glyph { transform: scaleX(-1); }
+  .alert-hint { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; padding: 12px 22px; background: var(--paper); border-top: 3px solid var(--ink); font-weight: 500; font-size: 0.92rem; }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+  }
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/umd/react-dom.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/htm@3.1.1/dist/htm.umd.js"></script>
+<script>
+/* Bauhaus Dose Clock — medication reminder.
+   React 18 + htm (JSX-like tagged templates, no build step) + Tailwind play CDN. */
+(function () {
+  const { useState, useEffect, useRef, useMemo, useCallback } = React;
+  const html = htm.bind(React.createElement);
+
+  const STORE_KEY = 'bauhaus-dose-clock-v1';
+  const SNOOZE_MS = 30 * 60 * 1000;
+  const DAY_MS = 24 * 60 * 60 * 1000;
+  const LOCALES = { fa: 'fa-IR', en: 'en-US', de: 'de-DE' };
+  const DIR = { fa: 'rtl', en: 'ltr', de: 'ltr' };
+  const UNITS = ['tablet', 'capsule', 'ml', 'drop', 'spoon'];
+  const SPEEDS = [1, 60, 600];
+
+  /* ---------------- i18n ---------------- */
+  const I18N = {
+    fa: {
+      appName: 'یادآور دارو',
+      tagline: 'فرم از کارکرد پیروی می‌کند',
+      now: 'اکنون',
+      testTime: 'زمان آزمایشی',
+      nextDose: 'نوبت بعدی',
+      at: 'ساعت {t}',
+      tomorrowAt: 'فردا ساعت {t}',
+      dueNow: 'همین حالا',
+      noDoses: 'نوبتی تعریف نشده',
+      progress: 'امروز: {a} از {b} نوبت خورده شد',
+      schedule: 'برنامهٔ روزانه',
+      dosesPerDay: 'تعداد نوبت در روز',
+      fewer: 'کم کردن یک نوبت',
+      more: 'افزودن یک نوبت',
+      doseN: 'نوبت {n}',
+      time: 'ساعت مصرف',
+      medName: 'نام دارو',
+      qty: 'مقدار',
+      unit: 'واحد',
+      namePh: 'مثلاً آسپرین ۱۰۰',
+      addMed: 'افزودن دارو',
+      edit: 'ویرایش',
+      save: 'ذخیره',
+      cancel: 'انصراف',
+      del: 'حذف',
+      removeDose: 'حذف نوبت',
+      confirmRemove: 'برای حذف دوباره بزنید',
+      noMeds: 'هنوز دارویی برای این نوبت ثبت نشده است.',
+      stTaken: 'ساعت {t} خورده شد',
+      stDue: 'وقت مصرف است',
+      stSnoozed: 'یادآوری بعدی ساعت {t}',
+      stUpcoming: 'در انتظار',
+      sample: 'این‌ها داروهای نمونه هستند. آن‌ها را ویرایش یا حذف کنید.',
+      notifTitle: 'وقت داروست',
+      scheduled: 'نوبت ساعت {t}',
+      reminderN: 'یادآوری {n}',
+      done: 'خوردم',
+      later: 'بعدا',
+      laterHint: 'با «بعدا» هر ۳۰ دقیقه دوباره یادآوری می‌شود.',
+      moreDue: '{n} نوبت دیگر هم در انتظار است',
+      testClock: 'ساعت آزمایشی',
+      testHint: 'زمان را جلو ببرید تا یادآوری و تکرار ۳۰ دقیقه‌ای را همین الان آزمایش کنید. با سرعت ۶۰× هر ثانیه یک دقیقه است.',
+      speed: 'سرعت',
+      plus30: '+۳۰ دقیقه',
+      jumpNext: 'پرش به نوبت بعدی',
+      realTime: 'بازگشت به زمان واقعی',
+      resetToday: 'پاک کردن ثبت‌های امروز',
+      alerts: 'فعال‌سازی صدا و اعلان',
+      alertsOn: 'صدا فعال است',
+      openNote: 'یادآوری‌ها تا وقتی این صفحه باز است کار می‌کنند.',
+      language: 'زبان',
+      units: { tablet: ['قرص'], capsule: ['کپسول'], ml: ['میلی‌لیتر'], drop: ['قطره'], spoon: ['قاشق چای‌خوری'] }
+    },
+    en: {
+      appName: 'Medication Reminder',
+      tagline: 'Form follows function',
+      now: 'Now',
+      testTime: 'Test time',
+      nextDose: 'Next dose',
+      at: 'at {t}',
+      tomorrowAt: 'tomorrow at {t}',
+      dueNow: 'Now!',
+      noDoses: 'No doses set',
+      progress: 'Today: {a} of {b} doses taken',
+      schedule: 'Daily schedule',
+      dosesPerDay: 'Doses per day',
+      fewer: 'Remove one dose',
+      more: 'Add one dose',
+      doseN: 'Dose {n}',
+      time: 'Time',
+      medName: 'Medication',
+      qty: 'Quantity',
+      unit: 'Unit',
+      namePh: 'e.g. Aspirin 100 mg',
+      addMed: 'Add medication',
+      edit: 'Edit',
+      save: 'Save',
+      cancel: 'Cancel',
+      del: 'Delete',
+      removeDose: 'Remove dose',
+      confirmRemove: 'Tap again to remove',
+      noMeds: 'No medication for this dose yet.',
+      stTaken: 'Taken at {t}',
+      stDue: 'Due now',
+      stSnoozed: 'Next reminder {t}',
+      stUpcoming: 'Upcoming',
+      sample: 'These are sample medications. Edit or delete them.',
+      notifTitle: 'Time for your medication',
+      scheduled: 'Scheduled {t}',
+      reminderN: 'Reminder {n}',
+      done: 'Done',
+      later: 'Later',
+      laterHint: '“Later” reminds you again every 30 minutes.',
+      moreDue: '+{n} more dose due',
+      testClock: 'Test clock',
+      testHint: 'Move time forward to test the reminders and the 30-minute snooze loop right now. At 60× one second equals one minute.',
+      speed: 'Speed',
+      plus30: '+30 min',
+      jumpNext: 'Jump to next dose',
+      realTime: 'Back to real time',
+      resetToday: 'Clear today’s records',
+      alerts: 'Enable sound & alerts',
+      alertsOn: 'Sound on',
+      openNote: 'Reminders work while this page stays open.',
+      language: 'Language',
+      units: { tablet: ['tablet', 'tablets'], capsule: ['capsule', 'capsules'], ml: ['ml', 'ml'], drop: ['drop', 'drops'], spoon: ['teaspoon', 'teaspoons'] }
+    },
+    de: {
+      appName: 'Medikamenten­erinnerung',
+      tagline: 'Form folgt Funktion',
+      now: 'Jetzt',
+      testTime: 'Testzeit',
+      nextDose: 'Nächste Dosis',
+      at: 'um {t}',
+      tomorrowAt: 'morgen um {t}',
+      dueNow: 'Jetzt!',
+      noDoses: 'Keine Dosen festgelegt',
+      progress: 'Heute: {a} von {b} Dosen genommen',
+      schedule: 'Tagesplan',
+      dosesPerDay: 'Dosen pro Tag',
+      fewer: 'Eine Dosis entfernen',
+      more: 'Eine Dosis hinzufügen',
+      doseN: 'Dosis {n}',
+      time: 'Uhrzeit',
+      medName: 'Medikament',
+      qty: 'Menge',
+      unit: 'Einheit',
+      namePh: 'z. B. Aspirin 100 mg',
+      addMed: 'Medikament hinzufügen',
+      edit: 'Bearbeiten',
+      save: 'Speichern',
+      cancel: 'Abbrechen',
+      del: 'Löschen',
+      removeDose: 'Dosis entfernen',
+      confirmRemove: 'Zum Entfernen erneut tippen',
+      noMeds: 'Für diese Dosis ist noch kein Medikament eingetragen.',
+      stTaken: 'Genommen um {t}',
+      stDue: 'Jetzt fällig',
+      stSnoozed: 'Nächste Erinnerung {t}',
+      stUpcoming: 'Geplant',
+      sample: 'Das sind Beispielmedikamente. Bearbeiten oder löschen Sie sie.',
+      notifTitle: 'Zeit für Ihre Medikamente',
+      scheduled: 'Geplant für {t}',
+      reminderN: 'Erinnerung {n}',
+      done: 'Erledigt',
+      later: 'Später',
+      laterHint: '„Später“ erinnert alle 30 Minuten erneut.',
+      moreDue: '+{n} weitere Dosis fällig',
+      testClock: 'Testuhr',
+      testHint: 'Spulen Sie die Zeit vor, um Erinnerungen und die 30-Minuten-Schleife sofort zu testen. Bei 60× entspricht eine Sekunde einer Minute.',
+      speed: 'Tempo',
+      plus30: '+30 Min.',
+      jumpNext: 'Zur nächsten Dosis',
+      realTime: 'Zurück zur Echtzeit',
+      resetToday: 'Heutige Einträge löschen',
+      alerts: 'Ton & Hinweise aktivieren',
+      alertsOn: 'Ton an',
+      openNote: 'Erinnerungen funktionieren, solange diese Seite geöffnet ist.',
+      language: 'Sprache',
+      units: { tablet: ['Tablette', 'Tabletten'], capsule: ['Kapsel', 'Kapseln'], ml: ['ml', 'ml'], drop: ['Tropfen', 'Tropfen'], spoon: ['Teelöffel', 'Teelöffel'] }
+    }
+  };
+  const LANGS = [
+    { code: 'fa', short: 'فا', name: 'فارسی' },
+    { code: 'en', short: 'EN', name: 'English' },
+    { code: 'de', short: 'DE', name: 'Deutsch' }
+  ];
+
+  function unitLabel(unit, qty, lang) {
+    const forms = I18N[lang].units[unit] || [unit];
+    return Number(qty) === 1 || forms.length === 1 ? forms[0] : forms[1];
+  }
+
+  function makeFmt(lang) {
+    const loc = LOCALES[lang];
+    const timeF = new Intl.DateTimeFormat(loc, { hour: '2-digit', minute: '2-digit', hour12: lang === 'en' });
+    const dateF = new Intl.DateTimeFormat(loc, { weekday: 'long', day: 'numeric', month: 'long' });
+    const two = n => Number(n).toLocaleString(loc, { minimumIntegerDigits: 2, useGrouping: false });
+    return {
+      time: ms => timeF.format(ms),
+      hhmm: s => timeF.format(atTime(Date.now(), s)),
+      date: ms => dateF.format(ms),
+      num: n => Number(n).toLocaleString(loc, { maximumFractionDigits: 2 }),
+      countdown: ms => {
+        const s = Math.max(0, Math.floor(ms / 1000));
+        return `${two(Math.floor(s / 3600))}:${two(Math.floor((s % 3600) / 60))}:${two(s % 60)}`;
+      }
+    };
+  }
+
+  /* ---------------- time helpers ---------------- */
+  const pad = n => String(n).padStart(2, '0');
+  const dayKey = ms => { const d = new Date(ms); return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`; };
+  const toMin = hhmm => { const [h, m] = hhmm.split(':').map(Number); return h * 60 + m; };
+  const fromMin = min => `${pad(Math.floor(min / 60) % 24)}:${pad(min % 60)}`;
+  function atTime(ms, hhmm) {
+    const d = new Date(ms);
+    const [h, m] = hhmm.split(':').map(Number);
+    return new Date(d.getFullYear(), d.getMonth(), d.getDate(), h, m, 0, 0).getTime();
+  }
+  const uid = () => Math.random().toString(36).slice(2, 10);
+  const toLatinDigits = s => String(s)
+    .replace(/[۰-۹]/g, d => '۰۱۲۳۴۵۶۷۸۹'.indexOf(d))
+    .replace(/[٠-٩]/g, d => '٠١٢٣٤٥٦٧٨٩'.indexOf(d))
+    .replace(/[٫,]/g, '.');
+
+  // A new dose goes into the middle of the largest gap in the day, so custom times are kept.
+  function timeForNewDose(doses) {
+    const mins = doses.map(d => toMin(d.time)).sort((a, b) => a - b);
+    if (mins.length === 0) return '08:00';
+    if (mins.length === 1) return fromMin((mins[0] + 720) % 1440);
+    let best = { gap: -1, start: 0 };
+    mins.forEach((m, i) => {
+      const nextM = i === mins.length - 1 ? mins[0] + 1440 : mins[i + 1];
+      if (nextM - m > best.gap) best = { gap: nextM - m, start: m };
+    });
+    const mid = Math.round((best.start + best.gap / 2) / 5) * 5;
+    return fromMin(((mid % 1440) + 1440) % 1440);
+  }
+
+  /* ---------------- storage ---------------- */
+  function load() {
+    try { const raw = localStorage.getItem(STORE_KEY); return raw ? JSON.parse(raw) : null; } catch (e) { return null; }
+  }
+  function save(state) {
+    try { localStorage.setItem(STORE_KEY, JSON.stringify(state)); } catch (e) { /* storage unavailable */ }
+  }
+  function detectLang() {
+    try {
+      const n = (navigator.language || '').slice(0, 2).toLowerCase();
+      if (n === 'de' || n === 'en' || n === 'fa') return n;
+    } catch (e) { /* ignore */ }
+    return 'fa';
+  }
+  const defaultDoses = () => [
+    { id: 'am', time: '08:00', meds: [
+      { id: uid(), name: 'Vitamin D3 1000 IU', qty: 1, unit: 'tablet' },
+      { id: uid(), name: 'Metformin 500 mg', qty: 1, unit: 'tablet' }
+    ] },
+    { id: 'pm', time: '20:00', meds: [
+      { id: uid(), name: 'Metformin 500 mg', qty: 1, unit: 'tablet' },
+      { id: uid(), name: 'Omega-3', qty: 2, unit: 'capsule' }
+    ] }
+  ];
+
+  /* ---------------- sound & system alerts ---------------- */
+  let audioCtx = null;
+  function unlockAudio() {
+    try {
+      if (!audioCtx) { const AC = window.AudioContext || window.webkitAudioContext; if (AC) audioCtx = new AC(); }
+      if (audioCtx && audioCtx.state === 'suspended') audioCtx.resume();
+    } catch (e) { /* audio unavailable */ }
+  }
+  window.addEventListener('pointerdown', unlockAudio);
+  function chime() {
+    if (!audioCtx || audioCtx.state !== 'running') return;
+    try {
+      const t0 = audioCtx.currentTime;
+      [523.25, 659.25, 783.99, 1046.5].forEach((freq, i) => {
+        const o = audioCtx.createOscillator();
+        const g = audioCtx.createGain();
+        const s = t0 + i * 0.16;
+        o.type = 'triangle';
+        o.frequency.value = freq;
+        g.gain.setValueAtTime(0.0001, s);
+        g.gain.exponentialRampToValueAtTime(0.25, s + 0.02);
+        g.gain.exponentialRampToValueAtTime(0.0001, s + 0.4);
+        o.connect(g).connect(audioCtx.destination);
+        o.start(s); o.stop(s + 0.45);
+      });
+    } catch (e) { /* ignore */ }
+  }
+  function systemNotify(title, body) {
+    try {
+      if ('Notification' in window && Notification.permission === 'granted') new Notification(title, { body });
+    } catch (e) { /* not allowed here */ }
+    try { if (audioCtx && navigator.vibrate) navigator.vibrate([200, 100, 200]); } catch (e) { /* ignore */ }
+  }
+
+  /* ---------------- icons ---------------- */
+  const IconEdit = () => html`<svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M3 15 L3 12 L12 3 L15 6 L6 15 Z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="miter"/></svg>`;
+  const IconX = () => html`<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 2 L14 14 M14 2 L2 14" stroke="currentColor" stroke-width="3"/></svg>`;
+
+  /* ---------------- components ---------------- */
+  function LangToggle({ lang, setLang }) {
+    return html`<div className="lang" role="group" aria-label="Language / زبان / Sprache">
+      ${LANGS.map(l => html`<button key=${l.code} type="button" className=${l.code === 'fa' ? 'fa' : ''}
+        aria-pressed=${lang === l.code} aria-label=${l.name} title=${l.name} lang=${l.code}
+        onClick=${() => setLang(l.code)}>${l.short}</button>`)}
+    </div>`;
+  }
+
+  function MedForm({ initial, t, lang, idBase, submitLabel, onSubmit, onCancel }) {
+    const [name, setName] = useState(initial ? initial.name : '');
+    const [qty, setQty] = useState(initial ? String(initial.qty) : '1');
+    const [unit, setUnit] = useState(initial ? initial.unit : 'tablet');
+    const qtyNum = parseFloat(toLatinDigits(qty));
+    const ok = name.trim().length > 0 && qtyNum > 0;
+    return html`<form className="med-form" onSubmit=${e => { e.preventDefault(); if (ok) onSubmit({ name: name.trim(), qty: qtyNum, unit }); }}>
+      <label htmlFor=${idBase + '-name'}>
+        <span className="label">${t('medName')}</span>
+        <input id=${idBase + '-name'} className="field" value=${name} placeholder=${t('namePh')} autoFocus
+          onChange=${e => setName(e.target.value)} />
+      </label>
+      <div className="row">
+        <label htmlFor=${idBase + '-qty'}>
+          <span className="label">${t('qty')}</span>
+          <input id=${idBase + '-qty'} className="field num" inputMode="decimal" value=${qty}
+            onChange=${e => setQty(e.target.value)} />
+        </label>
+        <label htmlFor=${idBase + '-unit'}>
+          <span className="label">${t('unit')}</span>
+          <select id=${idBase + '-unit'} className="field" value=${unit} onChange=${e => setUnit(e.target.value)}>
+            ${UNITS.map(u => html`<option key=${u} value=${u}>${unitLabel(u, 2, lang)}</option>`)}
+          </select>
+        </label>
+      </div>
+      <div className="flex flex-wrap gap-3">
+        <button type="submit" className="btn btn-blue" disabled=${!ok}>${submitLabel}</button>
+        <button type="button" className="btn" onClick=${onCancel}>${t('cancel')}</button>
+      </div>
+    </form>`;
+  }
+
+  function MedRow({ med, t, f, lang, onSave, onDelete }) {
+    const [editing, setEditing] = useState(false);
+    if (editing) {
+      return html`<li className="med-item"><${MedForm} initial=${med} t=${t} lang=${lang} idBase=${'med-' + med.id}
+        submitLabel=${t('save')} onCancel=${() => setEditing(false)}
+        onSubmit=${m => { onSave(m); setEditing(false); }} /></li>`;
+    }
+    return html`<li className="med-item">
+      <span className="med-dot" aria-hidden="true"></span>
+      <div className="flex-1 min-w-0">
+        <div className="med-name" dir="auto">${med.name}</div>
+        <div className="med-qty"><span className="num">${f.num(med.qty)}</span> ${unitLabel(med.unit, med.qty, lang)}</div>
+      </div>
+      <button type="button" className="btn btn-sq" aria-label=${t('edit') + ': ' + med.name} title=${t('edit')}
+        onClick=${() => setEditing(true)}><${IconEdit} /></button>
+      <button type="button" className="btn btn-sq btn-red" aria-label=${t('del') + ': ' + med.name} title=${t('del')}
+        onClick=${onDelete}><${IconX} /></button>
+    </li>`;
+  }
+
+  function DoseCard({ row, t, f, lang, canRemove, onTime, onRemove, onAddMed, onUpdateMed, onRemoveMed }) {
+    const [adding, setAdding] = useState(false);
+    const [confirming, setConfirming] = useState(false);
+    useEffect(() => {
+      if (!confirming) return;
+      const id = setTimeout(() => setConfirming(false), 3000);
+      return () => clearTimeout(id);
+    }, [confirming]);
+
+    const { dose, status } = row;
+    const statusText = {
+      taken: () => t('stTaken', { t: f.time(row.at) }),
+      due: () => t('stDue'),
+      snoozed: () => t('stSnoozed', { t: f.time(row.at) }),
+      upcoming: () => t('stUpcoming')
+    }[status]();
+
+    return html`<article className=${'dose st-' + status} aria-label=${t('doseN', { n: f.num(row.index + 1) })}>
+      <div className="dose-time">
+        <span className="label">${t('doseN', { n: f.num(row.index + 1) })}</span>
+        <div className="dose-clock num" dir="ltr">${f.hhmm(dose.time)}</div>
+        <span className="chip"><span className=${'mk mk-' + status} aria-hidden="true"></span>${statusText}</span>
+        <label className="flex flex-col gap-1" htmlFor=${'time-' + dose.id}>
+          <span className="label">${t('time')}</span>
+          <input id=${'time-' + dose.id} type="time" dir="ltr" className="time-input" value=${dose.time}
+            onChange=${e => e.target.value && onTime(e.target.value)} />
+        </label>
+      </div>
+      <div className="dose-body">
+        ${dose.meds.length
+          ? html`<ul className="meds">${dose.meds.map(m => html`<${MedRow} key=${m.id} med=${m} t=${t} f=${f} lang=${lang}
+              onSave=${patch => onUpdateMed(m.id, patch)} onDelete=${() => onRemoveMed(m.id)} />`)}</ul>`
+          : html`<p className="empty m-0">${t('noMeds')}</p>`}
+        ${adding
+          ? html`<${MedForm} t=${t} lang=${lang} idBase=${'new-' + dose.id} submitLabel=${t('addMed')}
+              onCancel=${() => setAdding(false)} onSubmit=${m => { onAddMed(m); setAdding(false); }} />`
+          : null}
+        <div className="dose-foot">
+          ${!adding ? html`<button type="button" className="btn btn-yellow" onClick=${() => setAdding(true)}>+ ${t('addMed')}</button>` : html`<span></span>`}
+          ${canRemove ? html`<button type="button" className=${'btn ' + (confirming ? 'btn-red' : '')}
+              onClick=${() => (confirming ? onRemove() : setConfirming(true))}>
+              <${IconX} /> ${confirming ? t('confirmRemove') : t('removeDose')}</button>` : null}
+        </div>
+      </div>
+    </article>`;
+  }
+
+  function ReminderDialog({ row, extra, t, f, lang, onDone, onLater }) {
+    const doneRef = useRef(null);
+    useEffect(() => { if (doneRef.current) doneRef.current.focus(); }, [row.key, row.count]);
+    return html`<div className="overlay">
+      <div className="alert" role="alertdialog" aria-modal="true" aria-labelledby="alert-title" aria-describedby="alert-meds">
+        <div className="alert-head">
+          <span className="bell" aria-hidden="true"></span>
+          <div className="min-w-0">
+            <p className="label m-0">${t('doseN', { n: f.num(row.index + 1) })} · <span dir="ltr" className="num">${f.hhmm(row.dose.time)}</span></p>
+            <h2 id="alert-title" className="display">${t('notifTitle')}</h2>
+          </div>
+          <span className="alert-count num">${t('reminderN', { n: f.num(row.count) })}</span>
+        </div>
+        <div className="alert-body" id="alert-meds">
+          ${row.dose.meds.length
+            ? html`<ul className="meds">${row.dose.meds.map(m => html`<li key=${m.id} className="med-item">
+                <span className="med-dot" aria-hidden="true"></span>
+                <div className="flex-1 min-w-0"><div className="med-name" dir="auto">${m.name}</div></div>
+                <div className="font-bold text-lg"><span className="num">${f.num(m.qty)}</span> ${unitLabel(m.unit, m.qty, lang)}</div>
+              </li>`)}</ul>`
+            : html`<p className="empty m-0">${t('noMeds')}</p>`}
+        </div>
+        <div className="alert-actions">
+          <button ref=${doneRef} type="button" className="act act-done" onClick=${onDone}>
+            <span className="glyph" aria-hidden="true"></span>${t('done')}
+          </button>
+          <button type="button" className="act act-later" onClick=${onLater}>
+            <span className="glyph" aria-hidden="true"></span>${t('later')}
+          </button>
+        </div>
+        <div className="alert-hint">
+          <span>${t('laterHint')}</span>
+          ${extra > 0 ? html`<strong>${t('moreDue', { n: f.num(extra) })}</strong>` : null}
+        </div>
+      </div>
+    </div>`;
+  }
+
+  function TestPanel({ t, f, clock, isVirtual, setSpeed, jump, jumpToNext, realTime, resetToday, alertsOn, enableAlerts }) {
+    return html`<section className="panel" aria-labelledby="test-title">
+      <h2 id="test-title" className="display">${t('testClock')}</h2>
+      <p>${t('testHint')}</p>
+      <div className="panel-row">
+        <span className="label">${t('speed')}</span>
+        <div className="seg" role="group" aria-label=${t('speed')}>
+          ${SPEEDS.map(s => html`<button key=${s} type="button" className="num" dir="ltr" aria-pressed=${clock.speed === s}
+            onClick=${() => setSpeed(s)}>${f.num(s)}×</button>`)}
+        </div>
+      </div>
+      <div className="panel-row">
+        <button type="button" className="btn btn-yellow" onClick=${() => jump(SNOOZE_MS)}>${t('plus30')}</button>
+        <button type="button" className="btn" onClick=${jumpToNext}>${t('jumpNext')}</button>
+        <button type="button" className="btn" disabled=${!isVirtual} onClick=${realTime}>${t('realTime')}</button>
+        <button type="button" className="btn btn-red" onClick=${resetToday}>${t('resetToday')}</button>
+        <button type="button" className=${'btn ' + (alertsOn ? 'btn-on' : '')} onClick=${enableAlerts}>
+          ${alertsOn ? t('alertsOn') : t('alerts')}
+        </button>
+      </div>
+    </section>`;
+  }
+
+  /* ---------------- app ---------------- */
+  function App() {
+    const stored = useMemo(load, []);
+    const [lang, setLang] = useState(stored && I18N[stored.lang] ? stored.lang : detectLang());
+    const [doses, setDoses] = useState(stored && Array.isArray(stored.doses) && stored.doses.length ? stored.doses : defaultDoses);
+    const [log, setLog] = useState((stored && stored.log) || {});         // "YYYY-MM-DD|doseId" -> taken-at ms
+    const [snoozes, setSnoozes] = useState((stored && stored.snoozes) || {}); // key -> { nextAt, count }
+    const [sample, setSample] = useState(stored ? !!stored.sample : true);
+    const [alertsOn, setAlertsOn] = useState(false);
+
+    // Virtual clock: real time by default, can be sped up or moved forward for testing.
+    const [clock, setClock] = useState(() => ({ baseReal: Date.now(), baseVirt: Date.now(), speed: 1 }));
+    const [, setTick] = useState(0);
+    useEffect(() => { const id = setInterval(() => setTick(x => x + 1), 250); return () => clearInterval(id); }, []);
+    const virtNow = c => c.baseVirt + (Date.now() - c.baseReal) * c.speed;
+    const now = virtNow(clock);
+    const isVirtual = clock.speed !== 1 || Math.abs(now - Date.now()) > 2000;
+
+    useEffect(() => { save({ lang, doses, log, snoozes, sample }); }, [lang, doses, log, snoozes, sample]);
+    useEffect(() => { document.documentElement.lang = lang; document.documentElement.dir = DIR[lang]; }, [lang]);
+
+    const t = useCallback((k, vars) => {
+      let s = I18N[lang][k] != null ? I18N[lang][k] : (I18N.en[k] != null ? I18N.en[k] : k);
+      if (vars) Object.keys(vars).forEach(v => { s = s.replace('{' + v + '}', vars[v]); });
+      return s;
+    }, [lang]);
+    const f = useMemo(() => makeFmt(lang), [lang]);
+
+    /* ----- derive each dose's state for the current (virtual) day ----- */
+    const today = dayKey(now);
+    const sorted = [...doses].sort((a, b) => toMin(a.time) - toMin(b.time));
+    const rows = sorted.map((dose, index) => {
+      const key = today + '|' + dose.id;
+      const sched = atTime(now, dose.time);
+      const takenAt = log[key];
+      const sn = snoozes[key];
+      const count = (sn ? sn.count : 0) + 1;
+      let status, at = null;
+      if (takenAt) { status = 'taken'; at = takenAt; }
+      else if (now < sched) { status = 'upcoming'; at = sched; }
+      else if (sn && now < sn.nextAt) { status = 'snoozed'; at = sn.nextAt; }
+      else { status = 'due'; }
+      return { dose, index, key, sched, status, at, count };
+    });
+    const due = rows.filter(r => r.status === 'due');
+    const pending = rows.filter(r => r.status === 'upcoming' || r.status === 'snoozed').sort((a, b) => a.at - b.at);
+    const next = pending[0]
+      ? { at: pending[0].at, row: pending[0], tomorrow: false }
+      : sorted[0] ? { at: atTime(now + DAY_MS, sorted[0].time), row: null, tomorrow: true } : null;
+    const takenCount = rows.filter(r => r.status === 'taken').length;
+
+    /* ----- ring once each time a dose becomes due (first time and every snooze repeat) ----- */
+    const seen = useRef(new Set());
+    const dueSig = due.map(r => r.key + '#' + r.count).join(',');
+    useEffect(() => {
+      due.forEach(r => {
+        const sig = r.key + '#' + r.count;
+        if (seen.current.has(sig)) return;
+        seen.current.add(sig);
+        chime();
+        systemNotify(t('notifTitle'), r.dose.meds.map(m => `${m.name} × ${f.num(m.qty)}`).join(' · '));
+      });
+    }, [dueSig]);
+    useEffect(() => {
+      document.title = due.length ? `(${due.length}) ${t('notifTitle')}` : 'Bauhaus Dose Clock';
+    }, [due.length, lang]);
+
+    /* ----- reminder actions ----- */
+    const markDone = r => {
+      setLog(l => ({ ...l, [r.key]: now }));
+      setSnoozes(s => { const n = { ...s }; delete n[r.key]; return n; });
+    };
+    const snooze = r => setSnoozes(s => ({ ...s, [r.key]: { nextAt: now + SNOOZE_MS, count: r.count } }));
+
+    /* ----- schedule editing ----- */
+    const touch = () => setSample(false);
+    const updateDose = (id, patch) => setDoses(ds => ds.map(d => (d.id === id ? { ...d, ...patch } : d)));
+    const removeDose = id => setDoses(ds => (ds.length > 1 ? ds.filter(d => d.id !== id) : ds));
+    const addDose = () => setDoses(ds => (ds.length >= 8 ? ds : [...ds, { id: uid(), time: timeForNewDose(ds), meds: [] }]));
+    const removeLastDose = () => setDoses(ds => {
+      if (ds.length <= 1) return ds;
+      const last = [...ds].sort((a, b) => toMin(a.time) - toMin(b.time)).pop();
+      return ds.filter(d => d.id !== last.id);
+    });
+    const addMed = (doseId, med) => { touch(); setDoses(ds => ds.map(d => (d.id === doseId ? { ...d, meds: [...d.meds, { id: uid(), ...med }] } : d))); };
+    const updateMed = (doseId, medId, patch) => { touch(); setDoses(ds => ds.map(d => (d.id === doseId ? { ...d, meds: d.meds.map(m => (m.id === medId ? { ...m, ...patch } : m)) } : d))); };
+    const removeMed = (doseId, medId) => { touch(); setDoses(ds => ds.map(d => (d.id === doseId ? { ...d, meds: d.meds.filter(m => m.id !== medId) } : d))); };
+
+    /* ----- test clock ----- */
+    const setSpeed = speed => setClock(c => ({ baseReal: Date.now(), baseVirt: virtNow(c), speed }));
+    const jump = ms => setClock(c => ({ baseReal: Date.now(), baseVirt: virtNow(c) + ms, speed: c.speed }));
+    const jumpToNext = () => { if (next) setClock(c => ({ baseReal: Date.now(), baseVirt: Math.max(virtNow(c), next.at), speed: c.speed })); };
+    const realTime = () => setClock({ baseReal: Date.now(), baseVirt: Date.now(), speed: 1 });
+    const resetToday = () => {
+      const strip = o => Object.fromEntries(Object.entries(o).filter(([k]) => !k.startsWith(today + '|')));
+      setLog(strip); setSnoozes(strip);
+      seen.current = new Set([...seen.current].filter(k => !k.startsWith(today + '|')));
+    };
+    const enableAlerts = () => {
+      unlockAudio();
+      setAlertsOn(true);
+      try { if ('Notification' in window && Notification.permission === 'default') Notification.requestPermission(); } catch (e) { /* ignore */ }
+      setTimeout(chime, 60);
+    };
+
+    const secFrac = new Date(now).getSeconds() / 60;
+
+    return html`<${React.Fragment}>
+      <header className="topbar">
+        <div className="topbar-inner" dir="ltr">
+          <${LangToggle} lang=${lang} setLang=${setLang} />
+          ${isVirtual
+            ? html`<span className="topbar-badge" dir=${DIR[lang]}><i aria-hidden="true"></i>${t('testTime')} · <span className="num">${f.num(clock.speed)}×</span></span>`
+            : html`<span className="topbar-badge" dir=${DIR[lang]}>${t('tagline')}</span>`}
+        </div>
+      </header>
+
+      <main key=${lang} className="shell fade-in">
+        <div className="mast">
+          <div className="min-w-0">
+            <h1 className="display">${t('appName')}</h1>
+            <p>${t('openNote')}</p>
+          </div>
+          <div className="shapes" aria-hidden="true"><span className="s1"></span><span className="s2"></span><span className="s3"></span></div>
+        </div>
+
+        <div>
+          <section className="hero" aria-label=${t('now')}>
+            <div className="hero-now">
+              <span className="hero-sun" aria-hidden="true"></span>
+              <span className="hero-bar" aria-hidden="true"></span>
+              <span className="label">${isVirtual ? t('testTime') : t('now')}</span>
+              <div>
+                <div className="hero-clock num" dir="ltr">${f.time(now)}</div>
+                <div className="hero-date">${f.date(now)}</div>
+              </div>
+              <div className="sec-track" aria-hidden="true"><div className="sec-fill" style=${{ width: (secFrac * 100).toFixed(1) + '%' }}></div></div>
+            </div>
+            <div className="hero-next">
+              <span className="label">${t('nextDose')}</span>
+              ${due.length
+                ? html`<div className="disc"><div className="disc-count">${t('dueNow')}</div>
+                    <div className="disc-sub">${t('doseN', { n: f.num(due[0].index + 1) })} · <span dir="ltr" className="num">${f.hhmm(due[0].dose.time)}</span></div></div>`
+                : next
+                  ? html`<div className="disc calm"><div className="disc-count num" dir="ltr">${f.countdown(next.at - now)}</div>
+                      <div className="disc-sub">${next.tomorrow ? t('tomorrowAt', { t: f.time(next.at) }) : t('at', { t: f.time(next.at) })}</div></div>`
+                  : html`<div className="disc calm"><div className="disc-sub">${t('noDoses')}</div></div>`}
+            </div>
+          </section>
+          <div className="progress" style=${{ boxShadow: '10px 10px 0 var(--ink)' }}>
+            <span className="font-bold">${t('progress', { a: f.num(takenCount), b: f.num(rows.length) })}</span>
+            <div className="pips" aria-hidden="true">${rows.map(r => html`<span key=${r.key} className=${'pip ' + r.status}></span>`)}</div>
+          </div>
+        </div>
+
+        <section className="flex flex-col gap-5" aria-labelledby="sched-title">
+          <div className="sec-head">
+            <h2 id="sched-title" className="display">${t('schedule')}</h2>
+            <div className="stepper">
+              <span className="label">${t('dosesPerDay')}</span>
+              <button type="button" className="btn btn-circle" aria-label=${t('fewer')} title=${t('fewer')}
+                disabled=${doses.length <= 1} onClick=${removeLastDose}>−</button>
+              <span className="stepper-val num" aria-live="polite">${f.num(doses.length)}</span>
+              <button type="button" className="btn btn-circle btn-blue" aria-label=${t('more')} title=${t('more')}
+                disabled=${doses.length >= 8} onClick=${addDose}>+</button>
+            </div>
+          </div>
+          ${sample ? html`<p className="note m-0">${t('sample')}</p>` : null}
+          <div className="doses">
+            ${rows.map(r => html`<${DoseCard} key=${r.dose.id} row=${r} t=${t} f=${f} lang=${lang}
+              canRemove=${doses.length > 1}
+              onTime=${time => updateDose(r.dose.id, { time })}
+              onRemove=${() => removeDose(r.dose.id)}
+              onAddMed=${m => addMed(r.dose.id, m)}
+              onUpdateMed=${(id, p) => updateMed(r.dose.id, id, p)}
+              onRemoveMed=${id => removeMed(r.dose.id, id)} />`)}
+          </div>
+        </section>
+
+        <${TestPanel} t=${t} f=${f} clock=${clock} isVirtual=${isVirtual} setSpeed=${setSpeed} jump=${jump}
+          jumpToNext=${jumpToNext} realTime=${realTime} resetToday=${resetToday}
+          alertsOn=${alertsOn} enableAlerts=${enableAlerts} />
+
+        <footer className="foot">
+          <span>${t('tagline')}</span>
+          <span>${t('laterHint')}</span>
+        </footer>
+      </main>
+
+      ${due.length
+        ? html`<${ReminderDialog} row=${due[0]} extra=${due.length - 1} t=${t} f=${f} lang=${lang}
+            onDone=${() => markDone(due[0])} onLater=${() => snooze(due[0])} />`
+        : null}
+    <//>`;
+  }
+
+  ReactDOM.createRoot(document.getElementById('root')).render(html`<${App} />`);
+})();
+</script>
+</body>
+</html>
