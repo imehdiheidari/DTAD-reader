@@ -11,6 +11,7 @@ public class BootReceiver extends BroadcastReceiver {
         String a = i.getAction();
         if (Intent.ACTION_BOOT_COMPLETED.equals(a) || Intent.ACTION_MY_PACKAGE_REPLACED.equals(a)
                 || Intent.ACTION_TIME_CHANGED.equals(a) || Intent.ACTION_TIMEZONE_CHANGED.equals(a)) {
+            Alarms.log(c, "system: " + a);
             Alarms.reschedule(c);
         }
     }

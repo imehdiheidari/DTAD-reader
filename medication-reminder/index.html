@@ -65,7 +65,7 @@
   .lang button + button { border-left: 2px solid var(--white); }
   .lang button[aria-pressed="true"] { background: var(--yellow); color: var(--ink); }
   .lang .fa { font-family: var(--font-fa); font-size: 15px; letter-spacing: 0; }
-  .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1rem; min-width: 0; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1rem; min-width: 0; user-select: none; -webkit-user-select: none; }
   .brand-shapes { display: flex; gap: 4px; flex: none; }
   .brand-shapes i { width: 12px; height: 12px; display: block; }
   .brand-shapes .r { background: var(--red); }
@@ -825,6 +825,15 @@
       document.title = due.length ? `(${due.length}) ${t('notifTitle')}` : t('appName');
     }, [due.length, lang]);
 
+    /* ----- hidden event log: hold the app name for a second (app only) ----- */
+    const [debugText, setDebugText] = useState(null);
+    const holdTimer = useRef(null);
+    const holdStart = () => {
+      if (!NATIVE || !NATIVE.debugLog) return;
+      holdTimer.current = setTimeout(() => { try { setDebugText(NATIVE.debugLog() || '—'); } catch (e) { setDebugText(String(e)); } }, 900);
+    };
+    const holdEnd = () => clearTimeout(holdTimer.current);
+
     /* ----- reminder actions ----- */
     const markDone = r => {
       setLog(l => ({ ...l, [r.key]: now }));
@@ -834,6 +843,13 @@
 
     /* ----- schedule editing ----- */
     const updateDose = (id, patch) => setDoses(ds => ds.map(d => (d.id === id ? { ...d, ...patch } : d)));
+    // A new time means a new reminder: forget today's "Done" / "Later" for that dose.
+    const changeTime = (id, time) => {
+      const key = today + '|' + id;
+      const drop = o => { if (!(key in o)) return o; const n = { ...o }; delete n[key]; return n; };
+      setLog(drop); setSnoozes(drop);
+      updateDose(id, { time });
+    };
     const removeDose = id => {
       const i = rows.findIndex(r => r.dose.id === id);
       const neighbour = rows[i + 1] || rows[i - 1];
@@ -871,7 +887,8 @@
       <header className="topbar">
         <div className="topbar-inner" dir="ltr">
           <${LangToggle} lang=${lang} setLang=${setLang} />
-          <span className="brand" dir=${DIR[lang]}>
+          <span className="brand" dir=${DIR[lang]} onPointerDown=${holdStart} onPointerUp=${holdEnd} onPointerLeave=${holdEnd}
+            onContextMenu=${e => e.preventDefault()}>
             <span className="brand-shapes" aria-hidden="true"><i className="r"></i><i className="b"></i><i className="y"></i></span>
             <span className="brand-name">${t('appName')}</span>
           </span>
@@ -890,7 +907,7 @@
 
         <${DosePage} key=${current.dose.id} row=${current} total=${rows.length} t=${t} f=${f} lang=${lang}
           canRemove=${doses.length > 1}
-          onTime=${time => updateDose(current.dose.id, { time })}
+          onTime=${time => changeTime(current.dose.id, time)}
           onRemove=${() => removeDose(current.dose.id)}
           onAddMed=${m => addMed(current.dose.id, m)}
           onUpdateMed=${(id, p) => updateMed(current.dose.id, id, p)}
@@ -901,6 +918,15 @@
           jumpToNext=${jumpToNext} realTime=${realTime} resetToday=${resetToday}
           alertsOn=${alertsOn} enableAlerts=${enableAlerts} />`}
       </main>
+
+      ${debugText != null
+        ? html`<div className="overlay" style=${{ zIndex: 70 }}>
+            <div className="alert" style=${{ boxShadow: '14px 14px 0 var(--blue)' }}>
+              <pre dir="ltr" style=${{ margin: 0, padding: '14px', fontSize: '11px', lineHeight: 1.45, whiteSpace: 'pre-wrap', wordBreak: 'break-word', maxHeight: '70vh', overflow: 'auto' }}>${debugText}</pre>
+              <div className="alert-hint"><button type="button" className="btn" onClick=${() => setDebugText(null)}>${t('cancel')}</button></div>
+            </div>
+          </div>`
+        : null}
 
       ${due.length
         ? html`<${ReminderDialog} row=${due[0]} extra=${due.length - 1} t=${t} f=${f} lang=${lang}

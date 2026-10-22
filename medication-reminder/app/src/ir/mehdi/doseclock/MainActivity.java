@@ -23,6 +23,7 @@ public class MainActivity extends Activity {
         Bridge(Context c) { this.c = c; }
         @JavascriptInterface public String load() { return Alarms.prefs(c).getString(Alarms.STATE, ""); }
         @JavascriptInterface public void save(String json) { Alarms.saveState(c, json); Alarms.reschedule(c); }
+        @JavascriptInterface public String debugLog() { return Alarms.prefs(c).getString(Alarms.LOG, ""); }
     }
 
     @Override
@@ -43,6 +44,7 @@ public class MainActivity extends Activity {
         web.loadUrl("file:///android_asset/index.html");
 
         Alarms.createChannel(this);
+        Alarms.log(this, "app opened");
         Alarms.reschedule(this);
         askNotificationPermission();
     }

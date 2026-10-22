@@ -24,7 +24,7 @@ import org.json.JSONObject;
  * Keys are "YYYY-MM-DD|doseId", as in the page.
  */
 final class Alarms {
-    static final String PREFS = "dose", STATE = "state", FIRED = "fired", IDS = "ids";
+    static final String PREFS = "dose", STATE = "state", FIRED = "fired", IDS = "ids", LOG = "log";
     // A new channel id: channel importance and sound are fixed once created, and the first one had no alarm sound.
     static final String CHANNEL = "dose-alarms-v2", OLD_CHANNEL = "dose-reminders";
     static final String ACTION_FIRE = "ir.mehdi.doseclock.FIRE";
@@ -61,6 +61,19 @@ final class Alarms {
         return cal.getTimeInMillis();
     }
 
+    /** A short event log (hold the app name to see it), to find out why a reminder did not show. */
+    static synchronized void log(Context c, String msg) {
+        SharedPreferences p = prefs(c);
+        String line = new SimpleDateFormat("MM-dd HH:mm:ss", Locale.US).format(new Date()) + "  " + msg;
+        String old = p.getString(LOG, "");
+        String[] lines = old.isEmpty() ? new String[0] : old.split("\n");
+        StringBuilder b = new StringBuilder();
+        for (int i = Math.max(0, lines.length - 79); i < lines.length; i++) b.append(lines[i]).append('\n');
+        p.edit().putString(LOG, b.append(line).toString()).commit();
+    }
+
+    private static String fmt(long ms) { return new SimpleDateFormat("MM-dd HH:mm", Locale.US).format(new Date(ms)); }
+
     static int notifId(String doseId) { return 1000 + (doseId.hashCode() & 0x3fffff); }
 
     private static JSONObject obj(JSONObject parent, String name) {
@@ -91,6 +104,9 @@ final class Alarms {
         NotificationManager nm = (NotificationManager) c.getSystemService(Context.NOTIFICATION_SERVICE);
         long now = System.currentTimeMillis();
         String today = dayKey(now);
+        AlarmManager am = (AlarmManager) c.getSystemService(Context.ALARM_SERVICE);
+        log(c, "reschedule: notifications " + (nm.areNotificationsEnabled() ? "on" : "OFF")
+                + ", exact " + (Build.VERSION.SDK_INT < 31 || am.canScheduleExactAlarms() ? "on" : "OFF"));
 
         for (JSONObject d : sortedDoses(s)) {
             String id = d.optString("id"), time = d.optString("time");
@@ -101,12 +117,14 @@ final class Alarms {
             int count = (sn != null ? sn.optInt("count", 0) : 0) + 1;
             long tomorrow = atTime(now + DAY_MS, time);
             long at;
-            if (log.has(key)) { at = tomorrow; nm.cancel(notifId(id)); }
-            else if (now < sched) { at = sched; nm.cancel(notifId(id)); }
-            else if (sn != null && now < sn.optLong("nextAt")) { at = sn.optLong("nextAt"); nm.cancel(notifId(id)); }
-            else if (fired.contains(key + "#" + count)) { at = tomorrow; }   // already showing; wait for Done / Later
-            else { at = now + 1000; }                                         // due now and not shown yet
+            String why;
+            if (log.has(key)) { at = tomorrow; why = "taken today"; nm.cancel(notifId(id)); }
+            else if (now < sched) { at = sched; why = "upcoming"; nm.cancel(notifId(id)); }
+            else if (sn != null && now < sn.optLong("nextAt")) { at = sn.optLong("nextAt"); why = "later #" + count; nm.cancel(notifId(id)); }
+            else if (fired.contains(key + "#" + count)) { at = tomorrow; why = "showing"; }   // wait for Done / Later
+            else { at = now + 1000; why = "due now"; }                                    // due and not shown yet
             setAlarm(c, id, at);
+            log(c, "plan " + id + " " + time + ": " + why + " -> " + fmt(at));
         }
         for (String id : oldIds) if (!ids.contains(id)) { cancelAlarm(c, id); nm.cancel(notifId(id)); }
 
@@ -139,15 +157,18 @@ final class Alarms {
         long now = System.currentTimeMillis();
         String key = dayKey(now) + "|" + id;
         List<JSONObject> doses = sortedDoses(s);
+        log(c, "alarm " + id);
         for (int i = 0; i < doses.size(); i++) {
             JSONObject d = doses.get(i);
             if (!d.optString("id").equals(id)) continue;
             JSONObject sn = snoozes.optJSONObject(key);
             boolean due = !log.has(key) && now >= atTime(now, d.optString("time")) - 5000
                     && (sn == null || now >= sn.optLong("nextAt") - 5000);
+            if (!due) log(c, "  not due: " + (log.has(key) ? "taken" : sn != null ? "later until " + fmt(sn.optLong("nextAt")) : "before " + d.optString("time")));
             if (due) {
                 int count = (sn != null ? sn.optInt("count", 0) : 0) + 1;
-                show(c, s, d, i, key, count);
+                try { show(c, s, d, i, key, count); log(c, "  shown #" + count); }
+                catch (Throwable e) { log(c, "  SHOW FAILED: " + e); continue; }
                 SharedPreferences p = prefs(c);
                 Set<String> fired = new HashSet<>(p.getStringSet(FIRED, new HashSet<String>()));
                 fired.add(key + "#" + count);
@@ -164,6 +185,7 @@ final class Alarms {
             obj(s, "snoozes").remove(key);
         } catch (JSONException ignored) {}
         saveState(c, s.toString());
+        log(c, "done " + id);
         ((NotificationManager) c.getSystemService(Context.NOTIFICATION_SERVICE)).cancel(notifId(id));
         reschedule(c);
     }
@@ -179,6 +201,7 @@ final class Alarms {
             } catch (JSONException ignored) {}
             saveState(c, s.toString());
         }
+        log(c, "later " + id + " #" + count);
         ((NotificationManager) c.getSystemService(Context.NOTIFICATION_SERVICE)).cancel(notifId(id));
         reschedule(c);
     }
