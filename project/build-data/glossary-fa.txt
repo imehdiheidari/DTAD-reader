@@ -2881,3 +2881,619 @@ xx|بیست (به عدد رومی)
 yesterday|دیروز
 yet|هنوز
 zhang|ژانگ (نام)
+abilities|توانایی‌ها
+ability|توانایی
+abrupt|ناگهانی
+abstracted|انتزاعی‌شده
+abstraction|انتزاع، ساده‌سازی به فرم‌های کلی
+abuse|سوءاستفاده کردن، آزار دادن
+accident|تصادف، اتفاقی (by accident = تصادفاً)
+accrue|جمع شدن، اضافه شدن
+accurate|دقیق
+advice|توصیه، نصیحت
+affects|اثر می‌گذارد
+aligned|هم‌راستا، جور
+amazing|شگفت‌انگیز
+annoying|آزاردهنده
+anybody|هر کسی، کسی
+anything|هر چیزی، چیزی
+anyway|به هر حال
+api|ای‌پی‌آی (رابط برنامه‌نویسی؛ API key = کلید دسترسی به سرویس)
+app|اپ، برنامه
+apparently|ظاهراً
+appreciate|قدردانی کردن، ارزش قائل شدن
+areas|مناطق، بخش‌ها
+arguments|استدلال‌ها، دلیل‌ها؛ بحث‌ها
+arrange|چیدن، ترتیب دادن
+arrivals|ورودی‌ها، تازه‌واردها
+arrived|رسید
+arrives|می‌رسد
+arrogant|مغرور، متکبر
+ashamed|شرمنده
+asking|پرسیدن، خواستن
+assume|فرض کردن، گمان کردن
+atmospheric|فضاساز، دارای حال‌وهوا
+attached|وابسته، چسبیده
+automated|خودکار
+automatically|به‌طور خودکار
+average|میانگین (گرفتن)
+bach|باخ (آهنگساز آلمانی)
+balance|تعادل
+balls|توپ‌ها
+bar|میزان (در موسیقی)؛ میله
+barrel|بشکه
+barrels|بشکه‌ها
+barrier|مانع
+basically|اساساً، در واقع
+bastille|باستیل (زندان)
+beautiful|زیبا
+bed|بستر؛ تخت
+beds|بسترها (بستر رودخانه)
+begin|شروع کردن
+believes|باور دارد
+bench|نیمکت
+besides|علاوه بر، کنارِ
+best|بهترین
+bicycles|دوچرخه‌ها
+black|سیاه
+blackouts|بیهوشی‌ها، تاریک شدن‌های ناگهانی
+blocking|بستن، مسدود کردن
+blooming|شکوفه دادن
+bottles|بطری‌ها
+bottom|کف، پایین
+bounces|پس می‌زند، به بیرون پرت می‌کند
+brick|آجر
+bride|عروس
+brought|آورد
+brutal|خشن، بی‌رحمانه
+builds|می‌سازد
+button|دکمه
+buttons|دکمه‌ها
+buy|خریدن
+calmed|آرام شد
+came|آمد
+candy|آب‌نبات، شیرینی
+captured|ثبت‌شده، گرفته‌شده
+card|کارت
+cards|کارت‌ها
+carried|حمل کرد
+cat|گربه
+catalog|فهرست، کاتالوگ
+catch|گرفتن (catch up = عقب‌افتادگی را جبران کردن)
+catholic|کاتولیک
+causes|باعث می‌شود
+cell|سلول (زندان)
+characteristic|ویژه، مشخصه
+chatbot|چت‌بات
+cheap|ارزان، بی‌کیفیت
+choices|انتخاب‌ها
+claustrophobia|ترس از فضای بسته
+clean|تمیز کردن
+click|کلیک کردن
+climbed|بالا رفتی
+clouds|ابرها
+collapse|فرو ریختن
+collapses|فرو می‌ریزد
+collapsing|در حال فرو ریختن
+collection|مجموعه
+colorful|رنگارنگ
+colors|رنگ‌ها
+comic|خنده‌دار، کمیک
+competitions|مسابقه‌ها (در معماری: مسابقه‌ی طراحی)
+completed|کامل‌شده
+complicated|پیچیده
+considered|در نظر گرفته می‌شود
+considers|در نظر می‌گیرد
+constantly|مدام
+constructor|سازنده
+controllable|قابل کنترل
+controllers|کنترل‌کننده‌ها، دسته‌ها
+controls|کنترل‌ها
+costumes|لباس‌های نمایشی
+couch|کاناپه
+couldn't|نتوانستم
+covered|پوشیده
+covers|می‌پوشاند، فرا می‌گیرد
+crazy|دیوانه‌وار، عجیب
+creature|موجود
+crew|گروه کاری
+critique|نقد
+cuckoo|فاخته (ساعت کوکو)
+cuts|برش‌ها، نماها
+damaged|آسیب زد
+dark-sy|تاریک‌تر، تیره
+darker|تاریک‌تر
+day-to-day|روزمره
+daytime|روز
+deal|کنار آمدن (deal with = از پسِ چیزی برآمدن)
+dealers|معامله‌گرها (احتمالاً اشتباهِ ضبط برای demons)
+decode|رمزگشایی کردن، فهمیدن
+demolished|تخریب‌شده
+demon|دیو، دیمن (روح)
+depending|بسته به
+described|توصیف کرد
+destroy|نابود کردن
+destroyed|نابودشده
+detailed|پرجزئیات
+deutschland|آلمان (Deutschland ticket = بلیت ماهانه‌ی حمل‌ونقل آلمان)
+diamond|الماس (احتمالاً اشتباهِ ضبط برای daemon)
+didn't|نکرد
+difficulties|سختی‌ها
+direct|مستقیم
+direction|جهت
+directory|فهرست، پوشه
+discourage|منصرف کردن
+discover|کشف کردن
+dislike|دوست نداشتن
+disown|کنار گذاشتن، انکار کردن
+distorted|کج‌ومعوج، تحریف‌شده (صدا)
+divided|تقسیم‌شده
+dok|داک (جشنواره‌ی فیلم مستند لایپزیگ)
+dot|نقطه
+dots|نقطه‌ها
+double|دو برابر کردن، تکرار کردن
+drive|راندن (drive crazy = دیوانه کردن)
+driven|هدایت‌شده، رانده‌شده
+drone|پهپاد؛ صدای یکنواخت
+duke|دوک (حاکم)
+ears|گوش‌ها
+earth|زمین
+earthquake|زلزله
+effectively|به‌طور مؤثر
+egyptian|مصری
+element|عنصر
+elements|عناصر
+eleven|یازده
+elif|الیف (نام)
+elif's|ـِ الیف
+emotion|احساس
+empty|خالی
+ending|تمام شدن، پایان
+entered|وارد شد
+enters|وارد می‌شود
+entire|تمام، کل
+environments|محیط‌ها
+eraser|پاک‌کن
+escape|فرار کردن
+escaped|فرار کرد
+escapes|فرار می‌کند
+essentially|اساساً
+europe|اروپا
+eventually|سرانجام
+everything's|همه‌چیز ... است
+everywhere|همه‌جا
+explained|توضیح داد
+explains|توضیح می‌دهد
+extreme|افراطی، شدید
+fallen|افتاده
+falling|در حال افتادن
+fastest|سریع‌ترین
+faust|فاوست (نمایشنامه‌ی گوته)
+favorite|مورد علاقه
+felt|احساس کردم
+festival|جشنواره
+fight|جنگیدن
+finds|پیدا می‌کند
+five-minute|پنج‌دقیقه‌ای
+fix|درست کردن
+flashlight|چراغ‌قوه
+flower|گل
+footprints|ردپاها
+footsteps|صدای قدم‌ها
+forcing|مجبور کردن
+found|پیدا کرد
+friend|دوست
+friends|دوستان
+frustrated|کلافه، ناامید
+gate|دروازه
+gate's|ـِ دروازه (the gate's talking = دروازه حرف می‌زند)
+gem|جواهر (احتمالاً اشتباهِ ضبط)
+generate|تولید کردن
+generated|تولیدشده
+geometric|هندسی
+germany|آلمان
+ghost|روح
+giant|غول‌پیکر
+girl|دختر
+given|داده‌شده
+gives|می‌دهد
+god's|ـِ خدا
+gold|طلا، طلایی
+gonna|قرار است (going to)
+goodbye|خداحافظ
+graphics|گرافیک
+grass|چمن
+gravity|جاذبه
+greatly|بسیار
+greedy|سخت‌گیر، حریص
+grew|رشد کرد
+gta|جی‌تی‌اِی (بازی ویدیویی)
+guess|حدس زدن (I guess = فکر کنم)
+guest|مهمان (guest list = فهرست مهمانان)
+guidance|راهنمایی
+guy|پسر، آدم
+halo|هاله
+happen|اتفاق افتادن
+hasn't|نکرده است
+haven't|نکرده‌ام
+hearing|شنیدن
+heartbeat|ضربان قلب
+heaven|بهشت
+heaven's|ـِ بهشت
+heirs|وارثان (احتمالاً اشتباهِ ضبط برای arrows = کلیدهای جهت)
+hello|سلام
+hieroglyphics|هیروگلیف (خط مصر باستان)
+high|بالا
+hindered|مانع شد
+hips|باسن، لگن
+holds|نگه می‌دارد
+hole|سوراخ، چاله
+holes|جاهای خالی
+honestly|راستش
+hooked|معتاد، درگیر (get hooked = جذبِ چیزی شدن)
+hope|امید داشتن
+hoped|امیدوار بود
+hot|داغ
+icons|آیکون‌ها
+illustration|نمونه، تصویرگری
+implementation|پیاده‌سازی
+improve|بهتر کردن
+improves|بهتر می‌کند
+influence|تأثیر
+infrastructure|زیرساخت
+initial|اولیه
+initially|در ابتدا
+instruction|دستور
+integrate|ادغام کردن، همراه کردن
+intended|قصد داشتم
+intention|قصد، نیت
+intentions|قصدها
+inter|میان (پیشوند؛ احتمالاً جمله‌ی ناقص)
+interact|تعامل کردن
+interaction|تعامل
+italy|ایتالیا
+item|شیء، آیتم
+items|اشیا، آیتم‌ها
+iterate|تکرار کردن (قدم‌به‌قدم بهتر کردن)
+iteration|نسخه، دور (از تکرار)
+jesus|عیسی (اینجا: وای!)
+jogiso|جوگیسو (نام)
+johann|یوهان (نام)
+journey|سفر
+judge|قضاوت کردن
+judges|قضاوت می‌کند
+judging|قضاوت
+judgment|حکم، قضاوت
+keeper|نگهبان
+keys|کلیدها
+kicked|لگد زد
+kinds|انواع
+lambs|بره‌ها (احتمالاً اشتباهِ ضبط برای lamps = چراغ‌ها)
+landscape|منظر، چشم‌انداز
+leader|رهبر
+led|هدایت‌شده
+leipzig|لایپزیگ (شهری در آلمان)
+lesson|درس
+let|اجازه دادن
+levels|سطح‌ها
+life-long|مادام‌العمر
+link|پیوند، ارتباط
+literal|تحت‌اللفظی، خیلی مستقیم
+locations|مکان‌ها
+locked|قفل‌شده
+longer|طولانی‌تر
+loop|حلقه (feedback loop = چرخه‌ی بازخورد)
+macmahon|مک‌ماهون (نام)
+maintain|حفظ کردن
+manage|از پسِ ... برآمدن
+managed|موفق شدی
+marked|علامت‌خورده
+match|جور بودن
+mehdi's|ـِ مهدی
+memories|خاطره‌ها
+mess|آشفتگی
+messed|به‌هم‌ریخته (messed up = خراب)
+mic|میکروفون
+milk|شیر
+mine|مال من
+minimal|حداقلی
+missing|گمشده، جاافتاده
+mm-hmm|اوهوم
+mock|مسخره کردن
+mom|مامان
+moral|اخلاقی
+mouth|دهان
+moved|حرکت کرد؛ تحت تأثیر قرار گرفت
+movie|فیلم
+murals|نقاشی‌های دیواری
+museum|موزه
+music|موسیقی
+musician|موسیقی‌دان
+names|نام‌ها
+nara|نارا (نام)
+narrow|محدود کردن
+necklace|گردنبند
+negotiate|مذاکره کردن
+nereem|نریم (نام)
+nerf|نرف (ضعیف کردن در بازی)
+newbie|تازه‌وارد
+nicer|بهتر، قشنگ‌تر
+nightmare|کابوس
+nonsense-daemon|دیمنِ بی‌معنی
+norm|نُرم (نام)
+observe|مشاهده کردن
+obsessed|وسواسی، شیفته
+obsession|وسواس
+obviously|معلوم است که
+offer|پیشنهاد دادن
+oil|نفت
+opportunity|فرصت
+opposed|مخالف
+ores|سنگ‌معدن‌ها (احتمالاً اشتباهِ ضبط)
+origin|منشأ
+outfit|لباس
+outlasts|بیشتر دوام می‌آورد
+palette|پالت (رنگ)
+panel|پنل
+panels|پنل‌ها
+parasite|انگل
+particularly|به‌ویژه
+passed|گذشت
+path|مسیر
+peak|قله
+pen|خودکار
+pencils|مدادها
+person's|ـِ آن شخص
+piles|تپه‌ها، کپه‌ها
+planned|برنامه‌ریزی‌شده
+planning|برنامه‌ریزی
+play|بازی کردن؛ پخش کردن
+playable|قابل بازی
+played|بازی کرد
+player|بازیکن
+players|بازیکنان
+playing|بازی کردن
+plays|پخش می‌شود
+pockets|جیب‌ها
+poland|لهستان (احتمالاً اشتباهِ ضبط)
+post-punk|پست‌پانک
+precise|دقیق
+presenter|ارائه‌دهنده
+presenter's|ـِ ارائه‌دهنده
+preserving|نگه داشتن، حفظ
+previous|قبلی
+probably|احتمالاً
+prompt|پرامپت (دستور متنی به هوش مصنوعی)
+prompts|پرامپت‌ها
+protect|محافظت کردن
+protects|محافظت می‌کند
+protest|اعتراض
+protests|اعتراض‌ها
+puccino|پوچینو (نام)
+pull|کشیدن
+pulled|کشیدی، از پسش برآمدی
+punished|تنبیه کرد
+purely|کاملاً
+purpose|هدف
+pushing|هل دادن
+quicker|سریع‌تر
+quiet|ساکت، آرام
+rainbow|رنگین‌کمان
+raining|باریدن
+rare|کمیاب
+rather|ترجیحاً، نسبتاً
+reach|رسیدن
+reached|رسیده‌ای
+react|واکنش نشان دادن
+reception|پذیرش (احتمالاً اشتباهِ ضبط برای restriction)
+recommend|توصیه کردن
+recording|ضبط، فایل ضبط‌شده
+recreate|دوباره ساختن
+redirects|به جای دیگری می‌فرستد
+reference|مرجع
+refresh|تازه کردن (صفحه)
+regional|منطقه‌ای
+regionalbahn|قطار منطقه‌ای آلمان
+rejoin|دوباره وارد شدن
+relative|نسبی
+relatively|نسبتاً
+relieved|رها شده، آسوده
+remaining|باقی‌مانده
+remediation|ترمیم، بازسازی
+remind|یادآوری کردن
+reminds|یادآوری می‌کند
+remote|از راه دور (آنلاین)
+removal|برداشتن
+remove|برداشتن، حذف کردن
+removed|از راه دور (اینجا)؛ حذف‌شده
+repair|تعمیر کردن
+repeated|تکرارشده
+representing|نمایش دادن
+represents|نمایش می‌دهد، نماینده‌ی ... است
+requirement|الزام
+reset|از نو شروع کردن
+reshape|تغییر شکل دادن
+restart|دوباره راه‌اندازی کردن
+restrict|محدود کردن
+return|برگشتن
+returns|برمی‌گردد
+rewarding|ارزشمند، رضایت‌بخش
+rework|دوباره کار کردن روی چیزی
+rid|خلاص (get rid of = کنار گذاشتن)
+rights|حق‌ها، دسترسی‌ها
+riots|شورش‌ها
+road|جاده، راه
+robert|رابرت (نام)
+route|مسیر
+routine|روال، تکراری
+scaffolding|داربست
+scaffoldings|داربست‌ها
+scary|ترسناک
+scene|صحنه
+screenshot|اسکرین‌شات
+screenshotting|اسکرین‌شات گرفتن
+sebastian|سباستین (نام)
+seeds|بذرها (در کامپیوتر: عدد شروع برای تولید تصادفی)
+seeing|دیدن
+sends|می‌فرستد
+sentence|جمله
+sentences|جمله‌ها
+sentience|ادراک، آگاهی
+serving|خدمت کردن
+shadows|سایه‌ها
+shall|باید
+shape|شکل
+sharing|اشتراک (screen sharing = نمایش صفحه)
+she's|او ... است
+showed|نشان دادند
+shy|خجالتی
+simay|سیمای (نام)
+similar|مشابه
+simpler|ساده‌تر
+simplicity|سادگی
+simplified|ساده‌شده
+simply|به‌سادگی
+sits|می‌نشیند
+size|اندازه
+sketch|طرح اولیه زدن
+sketching|طرح اولیه زدن
+sleep|خوابیدن
+slightly|کمی
+smaller|کوچک‌تر
+snow-adding|برف اضافه کردن
+snowflake|دانه‌ی برف
+snowflakes|دانه‌های برف
+snowy|برفی
+somebody|کسی
+somewhat|تا حدی
+song|آهنگ
+soon|به‌زودی
+sorry|ببخشید
+sort|نوع (sort of = یک‌جورهایی)
+souls|روح‌ها
+sound|صدا
+sounded|به نظر می‌رسید (صدا)
+sounds|صداها؛ به نظر می‌رسد
+spain|اسپانیا
+spanish|اسپانیایی (احتمالاً اشتباهِ ضبط برای screen)
+speakers|بلندگوها
+spider|عنکبوت
+spiders|عنکبوت‌ها
+spin|چرخیدن (احتمالاً اشتباهِ ضبط برای stay)
+spitted|تف شده، بیرون انداخته شده
+spoke|صحبت کردم
+squares|میدان‌ها
+stable|پایدار
+standing|سرپا
+stations|ایستگاه‌ها، مرحله‌ها
+stayed|ماندی
+steered|هدایت‌شده
+steering|هدایت کردن
+step|قدم
+stinking|بدبو
+stole|دزدید
+stone|سنگ
+stop|ایستادن، متوقف شدن
+stories|داستان‌ها
+storyteller|قصه‌گو
+straight|مستقیم
+stress|استرس
+stronger|قوی‌تر
+structural|ساختاری
+stubborn|لجباز
+subscribed|مشترک (کانال)
+suddenly|ناگهان
+suggest|پیشنهاد کردن
+suggesting|پیشنهاد می‌داد
+sunset|غروب
+sunshine|آفتاب
+supposedly|ظاهراً، قرار است
+surprising|غافلگیرکننده
+sustaino|(کلمه‌ی ناقص؛ احتمالاً sustainable = پایدار)
+switched|عوض شد
+switching|عوض کردن
+synth|سینث (ساز الکترونیک)
+t|حرف تی (دکمه‌ی T)
+tachycardia|تپش قلب تند
+tales|داستان‌ها
+talked|صحبت کردم
+taller|بلندتر
+taste|چشیدن، حس کردن
+team|تیم (اینجا: theme)
+telling|گفتن
+temple|معبد
+tension|تنش، کشمکش
+theater|تئاتر
+there'll|خواهد بود
+thinks|فکر می‌کند
+threw|انداخت
+throat|گلو
+throw|انداختن
+ticket|بلیت
+tickets|بلیت‌ها
+till|تا
+timer|زمان‌سنج
+took|برد، گرفت
+top|بالا، رو
+traces|ردها
+trailer|پیش‌نمایش (احتمالاً اشتباهِ ضبط برای trial)
+train|تمرین کردن؛ قطار
+training|تمرین
+translation|ترجمه، برگردان
+transpire|منتقل کردن (اینجا: همه‌ی اطلاعات را نشان دادن)
+transport|منتقل کردن
+trapped|گیر افتاده
+trapping|زندانی کردن
+trash|زباله
+traveling|سفر کردن
+trip|سفر کوتاه، گردش
+twice|دو بار
+type|نوع
+ugly|زشت
+understandability|قابل‌فهم بودن
+understandable|قابل فهم
+undo|برگرداندن، خنثی کردن
+unfortunately|متأسفانه
+unless|مگر اینکه (اینجا: وگرنه)
+useless|بی‌فایده
+usually|معمولاً
+vendors|فروشنده‌ها (احتمالاً اشتباهِ ضبط برای wanderers)
+versions|نسخه‌ها
+vines|پیچک‌ها
+visit|بازدید کردن
+visual|بصری
+visualization|نمایش تصویری
+visualizing|تصویری کردن
+visually|به‌صورت تصویری
+walk|راه رفتن
+walked|راه رفت
+walls|دیوارها
+wandering|پرسه زدن (احتمالاً اشتباهِ ضبط برای waiting)
+wanna|می‌خواهم (want to)
+warm|گرم
+wasn't|نبود
+wears|می‌پوشد
+web|تار (spider web = تار عنکبوت)
+wednesday|چهارشنبه
+weird|عجیب
+whatsoever|هر چه
+wheels|چرخ‌ها
+whenever|هر وقت
+whether|آیا، که
+wilma|ویلما (نام؛ احتمالاً اشتباهِ ضبط)
+win|برنده شدن
+wind|باد
+window|پنجره
+wonderful|عالی
+wondering|فکر کردن، کنجکاو بودن
+woo|اوو (صدا)
+worker|کارگر
+workers|کارگرها
+worries|نگرانی‌ها (no worries = مشکلی نیست)
+worry|نگران بودن
+worse|بدتر
+wow|وای
+yards|حیاط‌ها (court yards = حیاط‌ها)
+you'll|تو خواهی
+yours|مال تو
+zubinart|زوبینارت (نام؛ احتمالاً اشتباهِ ضبط)
