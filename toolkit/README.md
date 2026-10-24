@@ -11,7 +11,7 @@ Transcript format: `**[h:mm:ss]** text` paragraphs; slide text as `>` blockquote
 
 Words may contain accented Latin letters (daímōn, Fürstengruft); the page and the build script treat them as one word.
 
-Other courses built with this toolkit: `project/` (DTAD Project).
+Other courses built with this toolkit: `project/` (DTAD Project), `ai-in-design/` (AI in Design).
 
 Publishing an update: build with `VERSION=N` (N = the new number) and `UPDATE_BASE`, push `content.html` first, wait until `curl --compressed -s <UPDATE_BASE>content.html | grep 'dtad-version'` shows N (GitHub's CDN keeps the old file up to 5 minutes), then push `version.json` with N. The Android app and the PC page both ignore a download whose `dtad-version` is lower than announced.
 
