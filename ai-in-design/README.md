@@ -12,6 +12,10 @@ Content for the **AI in Design** Android app: session transcripts with Persian w
 
 The class recordings are in the Google Drive folder **ai in design**, named `ai in design N` for session N (`ai in design N-1`, `N-2` when a session has several parts).
 
+The recordings are BigBlueButton playbacks (`https://webinarcluster.uni-weimar.de/playback/presentation/2.3/MEETING_ID`). A video saved with right-click is only the silent screen share; the sound is in `https://webinarcluster.uni-weimar.de/presentation/MEETING_ID/video/webcams.webm`. Unprotected recordings can be downloaded from that URL directly (session 1). Protected ones (session 2) return "Recording Not Found" outside a browser that came from Moodle: open that URL in that browser, save the video and put it in the Drive folder (Drive files download with `https://drive.usercontent.google.com/download?id=FILE_ID&export=download&confirm=t` once the folder is shared by link).
+
+Transcription used faster-whisper (`small.en`, int8, CPU) on 16 kHz mono audio, then a pass to fix names and terms (Claude, CLAUDE.md, Grasshopper, Replicate, Nano Banana).
+
 ## Adding a session
 
 1. Download the recording(s) from Drive, transcribe them with timestamps, and write `build-data/sessions/NN.md` (a summary blockquote, then one `> **Part k** (recording N-k)` block per recording).

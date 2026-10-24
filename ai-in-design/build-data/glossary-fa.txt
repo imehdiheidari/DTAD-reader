@@ -3838,3 +3838,223 @@ worst-case|بدترین حالت
 yapping|وراجی
 you'd|تو ...ـی (you would/had)
 yourselves|خودتان
+actual|واقعی
+adapted|تطبیق‌یافته
+addition|افزودنی، بخش اضافه
+adds|اضافه می‌کند
+advantage|برتری، مزیت
+aligning|هم‌راستا کردن
+alt|کلید Alt
+apis|APIها (رابط‌های برنامه‌نویسی)
+apps|اپ‌ها
+arms|دست‌ها، بازوها
+asked|پرسید، خواست
+associated|مرتبط، وصل‌شده
+avoiding|پرهیز کردن
+bake|bake کردن (تبدیل خروجی گرس‌هاپر به هندسه‌ی ثابت در راینو)
+banana|موز (Nano Banana: مدل تصویر گوگل)
+behave|رفتار کردن
+benches|نیمکت‌ها
+benefits|فایده‌ها
+blah|فلان و بهمان
+blog|بلاگ (اینجا: block، بلوک)
+bottleneck|گلوگاه
+boxes|جعبه‌ها
+bueno|خوب (اسپانیایی؛ no bueno: خوب نیست)
+bullet|گلوله؛ نکته (اینجا احتمالاً: جزئیات)
+calculates|محاسبه می‌کند
+canopies|سایه‌بان‌ها
+capital|سرمایه
+cents|سنت‌ها
+chain|زنجیره کردن
+chaining|زنجیره کردن
+cheaply|ارزان
+cheat|تقلب (cheat sheet: برگه‌ی خلاصه)
+commerce|تجاری، فروشگاهی
+consistent|ثابت، یکدست
+continues|ادامه می‌دهد
+cooking|آشپزی کردن (اصطلاح: داری خوب پیش می‌روی)
+copies|نسخه‌ها
+correctly|درست
+crash|از کار افتادن
+credits|اعتبار (پولی)
+currently|در حال حاضر
+curve|منحنی
+cut|بریدن
+cute|بامزه
+cybersecurity|امنیت سایبری
+dad|بابا
+degree|درجه، حد
+demonstrations|نمایش‌ها
+depressing|ناامیدکننده
+destroys|خراب می‌کند
+detect|تشخیص دادن
+domain|حوزه
+downside|عیب
+downsides|عیب‌ها
+drawing|کشیدن، نقشه
+drew|کشیدم
+editing|ویرایش کردن
+efficiency|کارایی
+empowered|توانمند شده
+encodes|رمزگذاری می‌کند، تبدیل می‌کند
+engineers|مهندس‌ها
+env|فایل .env (متغیرهای محیطی)
+evenly|یکنواخت
+exceptionally|به‌طور استثنایی
+expensive|گران
+exploit|سوءاستفاده کردن
+exploited|مورد سوءاستفاده
+exponential|نمایی
+fallbacks|راه‌های جایگزین
+familiar|آشنا
+finishes|تمام می‌کند
+floors|طبقه‌ها
+flux|FLUX (مدل تصویر Black Forest Labs)
+flying|پرواز کردن، معلق
+forest|جنگل
+fruitful|ثمربخش
+fuel|سوخت
+games|بازی‌ها
+gaps|فاصله‌ها، دهانه‌ها
+gaussian|گاوسی (Gaussian splat)
+gb|گیگابایت
+gemini|جمنای (مدل گوگل)
+generates|تولید می‌کند
+generating|تولید کردن
+gigabytes|گیگابایت
+gitignore|فایل .gitignore (چیزهایی که نباید به گیت‌هاب بروند)
+gpu|کارت گرافیک (GPU)
+greatest|بزرگ‌ترین، بهترین
+greenery|فضای سبز
+growth|رشد
+highlighting|رنگی کردن متن کد
+impossible|ناممکن
+includes|شامل می‌شود
+incorrect|نادرست
+increasing|در حال افزایش
+infinite|بی‌پایان
+insert|قرار دادن، وارد کردن
+instagram|اینستاگرام
+integration|یکپارچه‌سازی
+interior|داخلی، طراحی داخلی
+intersection|تقاطع، محل تلاقی
+javascript|جاوااسکریپت
+job|کار
+jobs|کارها
+kontext|Kontext (نسخه‌ای از مدل FLUX)
+labor|کار، نیروی کار
+languages|زبان‌ها
+limiting|محدودکننده
+line|خط
+links|لینک‌ها
+load|بارگذاری کردن
+loaded|بارگذاری‌شده
+loads|بارگذاری می‌کند
+locally|به‌صورت محلی (روی کامپیوتر خودت)
+longest|طولانی‌ترین
+lots|مقدار زیاد؛ قطعه‌زمین‌ها
+low-poly|کم‌چندضلعی (low-poly)
+manual|دستی
+marketplaces|بازارچه‌ها
+mcp|MCP (پروتکل اتصال ایجنت به برنامه‌ها)
+measurements|اندازه‌ها
+meeting|جلسه
+meta|فرا، کلی
+meters|متر
+moments|لحظه‌ها
+months|ماه‌ها
+native|بومی، پیش‌فرض
+nicely|به‌خوبی
+openai|اوپن‌ای‌آی (شرکت سازنده‌ی ChatGPT)
+organization|سازماندهی
+organized|مرتب
+paid|پولی
+parameters|پارامترها
+parametric|پارامتریک
+pasted|پیست‌شده
+paying|پرداختن
+physics|فیزیک
+platforms|پلتفرم‌ها
+plot|قطعه‌زمین
+poly|چندضلعی (low poly: کم‌چندضلعی)
+polyline|پلی‌لاین
+precisely|دقیقاً
+prescriptive|از پیش تعیین‌شده
+pressure|فشار
+private|خصوصی
+pro|حرفه‌ای (نسخه‌ی Pro)
+professionals|متخصصان
+progressing|پیشرفت کردن
+progressively|به‌تدریج
+providers|ارائه‌دهندگان
+pushed|ارسال‌شده (به گیت‌هاب)
+pushes|ارسال می‌کند
+python|پایتون (زبان برنامه‌نویسی)
+realistic|واقع‌گرایانه
+recently|اخیراً
+recognize|شناختن
+recognizes|می‌شناسد
+record|ضبط کردن
+recreation|تفریحی (کاربری)
+regularly|به‌طور معمول
+render|رندر
+rendering|رندر گرفتن
+renders|رندرها
+reopening|دوباره باز کردن
+replace|جایگزین کردن
+replicate|Replicate (بازارچه‌ی مدل‌های هوش مصنوعی)
+request|درخواست
+revit|رویت (نرم‌افزار BIM)
+rhino|راینو (نرم‌افزار مدل‌سازی)
+rude|بی‌ادب
+safely|با خیال راحت
+saves|ذخیره می‌کند
+search|جستجو کردن
+seconds|ثانیه‌ها
+segment|بخش‌بندی کردن
+segmentation|بخش‌بندی تصویر
+sensitive|حساس
+shocked|شوکه
+signing|(اینجا احتمالاً: shining، درخشان)
+skin|پوسته، نما
+skip|رد شدن از
+sky|آسمان
+slider|اسلایدر
+somewhere|جایی
+specialized|تخصصی
+specification|مشخصات
+splat|اسپلت (نقطه‌ی کشیده در فضا)
+splats|اسپلت‌ها
+standard|معمولی، استاندارد
+static|ثابت؛ (اینجا احتمالاً: stressful)
+store|ذخیره کردن
+strike|برقرار کردن (strike a balance: تعادل برقرار کردن)
+stupidest|احمقانه‌ترین
+summarizing|خلاصه کردن
+surfaces|سطح‌ها
+technique|روش، تکنیک
+terrible|افتضاح
+today's|ـِ امروز
+token|توکن، کلید دسترسی
+tooling|ابزارها
+topography|توپوگرافی
+track|پیگیری کردن
+transcription|پیاده‌سازی متن صدا
+transform|تبدیل کردن
+tricks|ترفندها
+unlimited|نامحدود
+unusual|غیرعادی
+updated|به‌روزشده
+updates|به‌روز می‌شود
+upsides|مزیت‌ها
+usual|معمول
+variables|متغیرها
+via|از طریق
+viewport|ویوپورت (پنجره‌ی نمای مدل)
+views|نماها
+visualize|تجسم کردن، نمایش دادن
+wasteland|زمین بایر
+wish|خواستن
+year-old|ساله
+zoom|زوم (نرم‌افزار جلسه‌ی آنلاین)
