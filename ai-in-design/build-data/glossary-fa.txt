@@ -1,0 +1,3500 @@
+the|حرف تعریف (معین)
+and|و
+of|از، ـِ (نشانه‌ی اضافه)
+a|یک (حرف تعریف نامعین)
+is|است، هست
+to|به، برای، تا
+this|این
+we|ما
+in|در، داخل
+so|پس، بنابراین؛ خیلی
+kind|نوع، گونه؛ (kind of) یه جورایی، تقریباً
+are|هستند، هستید
+you|تو، شما
+it's|آن ... است (it is)
+have|داشتن
+for|برای
+design|طراحی؛ طرح
+as|به‌عنوان؛ همان‌طور که
+it|آن، این (ضمیر)
+not|نه، نیست
+what|چه، چه چیزی؛ آنچه
+that|آن؛ که
+but|اما، ولی
+that's|آن ... است (that is)
+be|بودن
+with|با
+an|یک (قبل از صدای مصوت)
+i|من
+or|یا
+technology|فناوری، تکنولوژی
+on|روی، درباره‌ی
+if|اگر
+here|اینجا
+would|(فعل کمکی شرطی) می‌خواست، می‌شد
+then|سپس، بعد؛ در آن صورت
+our|ما (مال ما)
+theory|نظریه، تئوری
+will|خواهد (فعل کمکی آینده)
+at|در، سر (زمان/مکان)
+these|این‌ها
+your|تو، شما (مال شما)
+can|می‌توان، توانستن
+because|چون، زیرا
+about|درباره‌ی؛ تقریباً
+just|فقط؛ همین الان
+semester|نیمسال تحصیلی، ترم
+really|واقعاً
+slide|اسلاید (صفحه‌ی ارائه)
+text|متن
+architecture|معماری
+which|که؛ کدام
+things|چیزها
+only|فقط، تنها
+think|فکر کردن
+from|از
+one|یک
+session|جلسه
+there|آنجا
+by|توسط؛ با؛ تا (زمان)
+all|همه
+do|انجام دادن
+important|مهم
+like|مثل؛ دوست داشتن
+has|دارد
+yeah|آره (محاوره‌ای)
+time|زمان؛ بار، دفعه
+two|دو
+more|بیشتر
+could|می‌توانست؛ ممکن است
+key|کلیدی، اصلی
+research|پژوهش، تحقیق
+material|ماده، مصالح؛ مطالب (درسی)
+us|ما را، به ما
+they|آن‌ها
+how|چگونه، چطور
+say|گفتن
+world|جهان، دنیا
+something|چیزی
+through|از طریق، از میان
+discuss|بحث کردن درباره‌ی
+certain|مشخص، معین؛ نوعی
+thing|چیز
+human|انسان؛ انسانی
+other|دیگر
+some|برخی، چند
+dimension|بُعد، جنبه
+great|عالی؛ بزرگ
+okay|باشه، خب
+digital|دیجیتال
+seminar|سمینار، کلاس بحث
+before|قبل از
+where|کجا؛ جایی که
+form|فرم، شکل؛ ساختن
+matter|ماده؛ اهمیت داشتن
+much|خیلی، زیاد
+well|خب؛ به‌خوبی
+culture|فرهنگ
+sessions|جلسات
+pretty|نسبتاً، کاملاً (محاوره‌ای)؛ زیبا
+very|خیلی
+see|دیدن؛ متوجه شدن
+maybe|شاید
+social|اجتماعی
+process|فرایند
+perspective|دیدگاه، چشم‌انداز
+speculative|گمانه‌زن، نظرورزانه (طراحی آینده‌نگر و فرضی)
+should|باید
+project|پروژه
+between|بین
+condition|شرایط، وضعیت
+new|جدید
+objects|اشیاء
+people|مردم، افراد
+science|علم
+end|پایان
+being|بودن؛ موجود، هستی
+object|شیء
+technologies|فناوری‌ها
+next|بعدی
+way|راه، روش
+everything|همه چیز
+don't|نکن، نمی‌کنیم (do not)
+example|مثال
+there's|وجود دارد (there is)
+installation|چیدمان (اینستالیشن هنری)؛ نصب
+scientific|علمی
+know|دانستن
+university|دانشگاه
+talk|صحبت کردن؛ سخنرانی
+cultural|فرهنگی
+work|کار؛ اثر
+different|متفاوت
+cyborg|سایبورگ (موجود نیمه‌انسان نیمه‌ماشین)
+students|دانشجویان
+course|درس، دوره
+itself|خودش
+dimensions|ابعاد، جنبه‌ها
+individual|فردی؛ فرد
+no|نه
+now|اکنون، حالا
+pdf|فایل پی‌دی‌اف
+performative|اجرایی، کنش‌گر (چیزی که با عمل و اجرا معنا می‌سازد)
+go|رفتن
+michael|مایکل (نام)
+many|بسیاری
+get|گرفتن؛ رسیدن؛ شدن
+actually|در واقع
+said|گفت، گفته‌شده
+sciences|علوم
+you're|شما هستید (you are)
+presentation|ارائه
+good|خوب
+book|کتاب
+three|سه
+understanding|درک، فهم
+professorship|کرسی استادی، گروه استاد
+together|با هم
+discourses|گفتمان‌ها
+discussed|بحث‌شده
+own|خود، مال خود
+already|قبلاً، از قبل
+come|آمدن
+changes|تغییرات
+latour|لاتور (برونو لاتور، فیلسوف فرانسوی)
+each|هر
+modern|مدرن
+active|فعال
+does|انجام می‌دهد؛ (فعل کمکی)
+mean|معنی دادن، منظور داشتن
+doing|انجام دادن
+he|او (مرد)
+reflection|تأمل، بازاندیشی
+space|فضا
+means|یعنی؛ وسیله
+discourse|گفتمان
+least|کمترین؛ (at least) دست‌کم
+artificial|مصنوعی
+practices|رویه‌ها، شیوه‌های عمل
+most|بیشترین؛ اکثر
+construction|ساخت، ساخت‌وساز
+materials|مواد، مصالح
+knowing|دانستن، شناخت
+group|گروه
+examples|مثال‌ها
+projects|پروژه‌ها
+perfect|عالی، کامل
+experiences|تجربه‌ها
+please|لطفاً
+studio|استودیو، کارگاه طراحی
+without|بدون
+performance|اجرا، عملکرد
+experience|تجربه
+materiality|مادیت (ویژگی مادی و جنس اشیاء)
+theories|نظریه‌ها
+since|از وقتی که؛ چون
+start|شروع
+everyone|همه
+exactly|دقیقاً
+bauhaus|باوهاوس (مدرسه‌ی معروف هنر و طراحی آلمان)
+weeks|هفته‌ها
+part|بخش
+was|بود
+idea|ایده
+history|تاریخ
+building|ساختمان؛ ساختن
+when|وقتی، کِی
+been|بوده
+natural|طبیعی
+after|بعد از
+micro|خُرد، کوچک
+discussions|بحث‌ها
+yes|بله
+than|از (در مقایسه)
+used|استفاده‌شده
+designing|طراحی کردن
+experiential|تجربی (مبتنی بر تجربه‌ی حسی)
+cyborgs|سایبورگ‌ها
+methods|روش‌ها
+texts|متن‌ها
+first|اول
+sense|حس؛ معنا
+practice|عمل، رویه، کار حرفه‌ای
+knowledge|دانش
+within|درون
+making|ساختن
+critical|انتقادی؛ حیاتی
+craft|صنعت دستی، مهارت ساختن
+moodle|مودل (سامانه‌ی آموزشی آنلاین دانشگاه)
+every|هر
+short|کوتاه
+future|آینده
+relations|روابط
+read|خواندن
+simon|سایمون (هربرت سایمون، نظریه‌پرداز)
+haraway|هاراوی (دانا هاراوی، فیلسوف فمینیست)
+anymore|دیگر (نه دیگر)
+o'clock|ساعت (مثلاً ساعت دو)
+plan|برنامه
+couple|چندتا، یکی‌دوتا
+why|چرا
+called|نامیده‌شده
+context|بافت، زمینه
+years|سال‌ها
+pain|درد
+mind|ذهن
+discussion|بحث
+need|نیاز
+lot|(a lot) خیلی، مقدار زیاد
+impact|تأثیر
+open|باز
+network|شبکه
+bruno|برونو (برونو لاتور)
+take|گرفتن، برداشتن
+ingold|اینگولد (تیم اینگولد، انسان‌شناس)
+true|درست، واقعی
+vs|در برابر (versus)
+use|استفاده
+always|همیشه
+nature|طبیعت
+manifesto|مانیفست، بیانیه
+module|ماژول، واحد درسی
+winter|زمستان
+create|خلق کردن، ساختن
+today|امروز
+historical|تاریخی
+me|من (مفعولی)
+extent|میزان، حد
+specific|خاص، مشخص
+out|بیرون
+topic|موضوع
+instrument|ابزار
+hand|دست
+introduction|مقدمه، معرفی
+their|آن‌ها (مال آن‌ها)
+possible|ممکن
+situation|وضعیت، موقعیت
+door|در
+phase|مرحله
+th|(پسوند ترتیبی، مثل 10th)
+herbert|هربرت (هربرت سایمون)
+outcome|نتیجه، خروجی
+classical|کلاسیک
+forth|(and so forth) و غیره
+check|بررسی کردن
+seen|دیده‌شده
+doesn't|نمی‌کند (does not)
+program|برنامه (آموزشی)
+stuff|چیزها (محاوره‌ای)
+reason|دلیل
+want|خواستن
+old|قدیمی
+still|هنوز
+media|رسانه
+into|به درون
+statement|بیانیه، گزاره
+production|تولید
+further|بیشتر، فراتر
+forms|فرم‌ها، اشکال
+i'm|من هستم (I am)
+interested|علاقه‌مند
+distinction|تمایز
+over|بیش از؛ روی
+yourself|خودت
+third|سوم
+micro-assignments|تکالیف کوچک
+minutes|دقیقه‌ها
+six|شش
+disciplinary|رشته‌ای (مربوط به رشته‌ی علمی)
+super|خیلی؛ فوق‌العاده
+words|کلمات
+compilation|مجموعه، گردآوری
+producing|تولید کردن
+ok|باشه
+final|نهایی
+becoming|شدن، در حال تبدیل شدن
+artistic|هنری
+boundary|مرز
+triangle|مثلث
+right|درست؛ راست
+versus|در برابر
+semesters|ترم‌ها
+connected|مرتبط، متصل
+ai|هوش مصنوعی
+myself|خودم
+radical|رادیکال، بنیادین
+let's|بیایید (let us)
+engineering|مهندسی
+collectively|به‌صورت جمعی
+professor|استاد
+done|انجام‌شده
+question|سؤال
+practical|عملی
+working|کار کردن
+here's|این‌جا ... است (here is)
+another|دیگری، یکی دیگر
+body|بدن
+having|داشتن
+famous|معروف
+student|دانشجو
+information|اطلاعات
+meet|ملاقات کردن
+changing|در حال تغییر
+perspectives|دیدگاه‌ها
+we've|ما ... داشته‌ایم (we have)
+quote|نقل‌قول
+living|زنده؛ زندگی
+such|چنین
+traditional|سنتی
+preparation|آمادگی
+century|قرن
+documentation|مستندسازی
+down|پایین
+written|نوشته‌شده
+actors|کنشگرها
+revolving|چرخان؛ حول چیزی چرخیدن
+constructed|ساخته‌شده
+agency|عاملیت (توان کنش و اثرگذاری)
+essay|مقاله، جستار
+upload|بارگذاری کردن
+designs|طرح‌ها
+conditions|شرایط
+fixed|ثابت
+uses|استفاده‌ها
+anthropology|انسان‌شناسی
+constraints|محدودیت‌ها
+reality|واقعیت
+futures|آینده‌ها
+beyond|فراتر از
+who|چه کسی؛ که
+gender|جنسیت
+change|تغییر
+fiction|داستان، تخیل
+equalizing|برابرسازی، هم‌سطح‌کردن
+afternoon|بعدازظهر
+list|فهرست
+level|سطح
+fundamental|بنیادی، پایه‌ای
+introduce|معرفی کردن
+heavy|سنگین
+experiment|آزمایش
+my|من (مال من)
+artifacts|مصنوعات، دست‌ساخته‌ها
+spaces|فضاها
+collective|جمعی
+i've|من ... داشته‌ام (I have)
+phd|دکترا
+clear|واضح
+field|حوزه، رشته
+d|(حرف D)
+issue|مسئله؛ شماره (مجله)
+product|محصول
+positive|مثبت
+overall|در کل
+animal|حیوان
+whole|کل، تمام
+humanities|علوم انسانی
+political|سیاسی
+overview|مرور کلی
+rhythm|ریتم، آهنگ برگزاری
+presence|حضور
+tools|ابزارها
+aims|اهداف
+develop|توسعه دادن
+position|موضع، جایگاه
+image|تصویر
+whatever|هرچه
+times|بارها؛ زمان‌ها
+enough|کافی
+construct|ساختن؛ برساخته
+scope|دامنه، محدوده
+even|حتی
+ways|راه‌ها
+berlin|برلین
+buildings|ساختمان‌ها
+designed|طراحی‌شده
+full|کامل، پر
+last|آخرین؛ گذشته
+inspire|الهام بخشیدن
+subject|موضوع؛ سوژه
+diagram|نمودار
+classroom|کلاس درس
+provocative|تحریک‌کننده، چالش‌برانگیز
+up|بالا
+approx|تقریباً
+we're|ما هستیم (we are)
+systems|سیستم‌ها
+his|او (مال او، مرد)
+passive|منفعل
+intelligence|هوش
+installations|چیدمان‌ها (آثار هنری)
+based|بر پایه‌ی
+he's|او هست (he is)
+solution|راه‌حل
+questions|سؤال‌ها
+situated|موقعیت‌مند، قرارگرفته در بافت
+books|کتاب‌ها
+thinking|تفکر
+environment|محیط
+physical|فیزیکی
+she|او (زن)
+else|دیگر
+workshop|کارگاه
+follows|دنبال می‌کند؛ به شرح زیر
+online|آنلاین
+solve|حل کردن
+tell|گفتن
+energy|انرژی
+chris|کریس (نام)
+both|هر دو
+performativity|اجراگری، کنش‌مندی
+meaning|معنا
+leave|ترک کردن
+ui|رابط کاربری
+system|سیستم
+donna|دانا (دانا هاراوی)
+feminist|فمینیست
+cyber|سایبری
+her|او (زن، مفعولی/ملکی)
+sphere|کُره؛ حوزه
+replaces|جایگزین می‌کند
+week|هفته
+dr|دکتر
+d-lab|دی‌لب (نام گروه پژوهشی)
+audience|مخاطب، حاضران
+board|هیئت؛ تخته
+modules|ماژول‌ها
+productive|سازنده، مولد
+workshops|کارگاه‌ها
+testing|آزمودن
+order|ترتیب؛ (in order to) برای اینکه
+society|جامعه
+bring|آوردن
+four|چهار
+school|مدرسه، دانشکده
+tradition|سنت
+complex|پیچیده
+pursue|دنبال کردن
+inside|داخل
+larger|بزرگ‌تر
+studied|مطالعه‌شده
+universities|دانشگاه‌ها
+understand|فهمیدن
+published|منتشرشده
+case|مورد، نمونه
+problem|مسئله، مشکل
+control|کنترل
+thesis|پایان‌نامه؛ تز
+mit|ام‌آی‌تی (دانشگاه)
+did|انجام داد
+center|مرکز
+english|انگلیسی
+study|مطالعه، پژوهش
+emerging|نوظهور
+current|کنونی
+contexts|بافت‌ها، زمینه‌ها
+creative|خلاق
+ultimately|در نهایت
+goals|اهداف
+regarding|درباره‌ی
+transfer|انتقال
+harry|هری
+potter|پاتر (هری پاتر)
+summary|خلاصه
+try|تلاش کردن
+connect|وصل کردن، ربط دادن
+sure|مطمئن
+goal|هدف
+terms|اصطلاحات؛ (in terms of) از نظر
+second|دوم؛ ثانیه
+smart|هوشمند
+talking|صحبت کردن
+act|عمل؛ عمل کردن
+urban|شهری
+lecture|سخنرانی، درس
+class|کلاس
+message|پیام
+ask|پرسیدن
+advance|(in advance) از قبل
+hours|ساعت‌ها
+exam|امتحان
+afterwards|بعداً
+write|نوشتن
+february|فوریه
+therefore|بنابراین
+fine|خوب، مشکلی نیست
+humans|انسان‌ها
+never|هرگز
+relation|رابطه
+creation|خلق، آفرینش
+scale|مقیاس
+actor|کنشگر
+around|اطراف؛ حدود
+method|روش
+debate|مناظره، بحث
+n|(حرف N)
+s|(حرف S)
+assignment|تکلیف
+designers|طراحان
+architects|معماران
+fully|کاملاً
+philosophy|فلسفه
+view|دیدگاه، نما
+relevant|مرتبط
+tim|تیم (تیم اینگولد)
+instruments|ابزارها
+back|عقب؛ برگشت
+script|متن، دستورالعمل؛ اسکریپت
+maker|سازنده
+mode|حالت، شیوه
+mediating|میانجی‌گری
+prepare|آماده کردن
+speculate|گمانه‌زنی کردن
+clock|ساعت
+absolutely|کاملاً
+same|همان، یکسان
+entangled|درهم‌تنیده
+across|در سراسر
+draw|کشیدن، ترسیم
+studies|مطالعات
+race|نژاد؛ مسابقه
+posthuman|پساانسانی (فراتر از انسان‌محوری)
+literature|ادبیات؛ منابع علمی
+expect|انتظار داشتن
+template|قالب، الگو
+summer|تابستان
+registration|ثبت‌نام
+october|اکتبر
+thank|تشکر کردن
+break|استراحت، وقفه
+guys|بچه‌ها، دوستان (محاوره‌ای)
+jan|یان (یان ویلمان، نام استاد)
+diverse|متنوع
+foundation|پایه، بنیان
+make|ساختن، درست کردن
+lectures|سخنرانی‌ها، درس‌ها
+topics|موضوعات
+conjunction|(in conjunction with) همراه با
+themselves|خودشان
+dark|تاریک
+side|طرف، جنبه
+common|مشترک؛ رایج
+series|مجموعه، سری
+powerhouse|نیروگاه (احتمالاً اشتباه شنیداری Bauhaus)
+failure|شکست
+thoughts|افکار
+feelings|احساسات
+ourselves|خودمان
+experiments|آزمایش‌ها
+technological|فناورانه
+quite|کاملاً، نسبتاً
+mission|مأموریت
+products|محصولات
+produce|تولید کردن
+global|جهانی
+processes|فرایندها
+importantly|نکته‌ی مهم اینکه
+coming|آینده؛ آمدن
+became|شد
+architect|معمار
+leading|پیشرو
+head|رئیس؛ سر
+researchers|پژوهشگران
+focus|تمرکز
+produced|تولیدشده
+funding|بودجه، تأمین مالی
+talents|استعدادها
+bringing|آوردن
+wide|گسترده
+interesting|جالب
+huge|عظیم
+monitoring|پایش، نظارت
+lab|آزمایشگاه
+pursued|دنبال‌شده
+hard|سخت
+communication|ارتباط
+propose|پیشنهاد دادن
+printing|چاپ
+connection|ارتباط، اتصال
+artifact|مصنوع، دست‌ساخته
+successful|موفق
+personal|شخصی
+endless|بی‌پایان
+criticizing|نقد کردن
+machine|ماشین
+theoretical|نظری
+beginning|آغاز
+wars|جنگ‌ها
+language|زبان
+modus|شیوه (حالت برگزاری)
+progress|پیشرفت
+background|پیشینه، زمینه
+almost|تقریباً
+five|پنج
+methodological|روش‌شناختی
+transformative|تحول‌آفرین
+broader|گسترده‌تر
+foundations|مبانی
+disciplines|رشته‌ها
+approaches|رویکردها
+separate|جدا
+able|توانا
+strict|سخت‌گیرانه
+figure|شکل؛ چهره
+constructive|سازنده
+specifically|به‌طور خاص
+give|دادن
+going|رفتن
+boundaries|مرزها
+german|آلمانی
+conservative|محافظه‌کار
+despite|با وجود
+fourth|چهارم
+changed|تغییر کرد
+past|گذشته
+flipped|وارونه (کلاس معکوس)
+guide|راهنما
+watch|تماشا کردن
+long|طولانی
+taking|گرفتن
+compiled|گردآوری‌شده
+hour|ساعت
+statements|بیانیه‌ها، گزاره‌ها
+explorative|اکتشافی
+dunne|دان (آنتونی دان، طراح)
+salter|سالتر (نام)
+anyone|هر کسی
+encompasses|دربرمی‌گیرد
+setting|محیط، بستر
+actor-network|کنشگر-شبکه (نظریه‌ی لاتور)
+assumption|فرض
+negative|منفی
+cases|موارد
+prize|جایزه
+decision|تصمیم
+issues|مسائل
+alternative|جایگزین
+solutions|راه‌حل‌ها
+designer|طراح
+fields|حوزه‌ها
+basis|اساس
+feeling|احساس
+intuition|شهود
+inductive|استقرایی
+reconstructed|بازسازی‌شده
+logics|منطق‌ها
+works|کار می‌کند؛ آثار
+computational|محاسباتی
+de|(پیشوند/نام)
+mediated|با واسطه
+driver|محرک؛ راننده
+correspondence|هم‌پاسخی، مکاتبه (نزد اینگولد: هم‌نوایی با ماده)
+exploration|کاوش
+b|(حرف B)
+partner|شریک
+had|داشت
+client|کارفرما
+imagination|تخیل
+sometimes|گاهی
+p|(حرف P)
+plausible|محتمل، باورپذیر
+preferred|ترجیحی، مطلوب
+york|یورک (نیویورک)
+entertainment|سرگرمی
+closed|بسته
+forget|فراموش کردن
+humanist|انسان‌گرا
+fly|پرواز کردن؛ مگس
+star|ستاره
+press|انتشارات؛ فشار دادن
+look|نگاه کردن
+set|مجموعه؛ قرار دادن
+performs|اجرا می‌کند
+individually|به‌صورت فردی
+user|کاربر
+experienced|تجربه‌شده؛ باتجربه
+autonomous|خودمختار
+industrial|صنعتی
+insulation|عایق
+entanglement|درهم‌تنیدگی
+senses|حواس
+solved|حل‌شده
+socially|از نظر اجتماعی
+comes|می‌آید
+infused|آغشته، آمیخته
+machines|ماشین‌ها
+using|با استفاده از
+looks|به نظر می‌رسد
+argument|استدلال
+confusion|سردرگمی
+agree|موافق بودن
+equalize|برابر کردن
+story|داستان
+post-human|پساانسانی
+participation|مشارکت
+seven|هفت
+offered|ارائه‌شده
+handout|جزوه
+morning|صبح
+quarter|ربع
+philip|فیلیپ (نام)
+title|عنوان
+prof|استاد (مخفف professor)
+willmann|ویلمان (نام استاد)
+braun|براون (نام استاد)
+mixed|مختلط، ترکیبی
+comprehensive|جامع
+compact|فشرده
+directly|مستقیماً
+main|اصلی
+goes|می‌رود
+shift|جابه‌جا کردن، تغییر
+corporate|(corporate design) هویت بصری سازمانی
+official|رسمی
+tv|(احتمالاً اشتباه شنیداری، theory)
+strong|قوی
+boss|(اشتباه شنیداری Bauhaus)
+older|قدیمی‌تر
+existing|موجود
+art|هنر
+faculty|دانشکده
+linear|خطی
+narrative|روایت
+merely|صرفاً
+functional|کاربردی
+unique|منحصربه‌فرد
+reflecting|بازتاب دادن؛ تأمل کردن
+evolved|تکامل‌یافته
+experimental|تجربی، آزمایشی
+labs|آزمایشگاه‌ها
+explored|کاوش‌شده
+developed|توسعه‌یافته
+tiny|خیلی کوچک
+england|انگلستان
+oxford|آکسفورد
+ago|پیش (زمان)
+who's|چه کسی هست (who is)
+postdoc|پسادکترا
+spec|(speculative) گمانه‌زن
+sheet|برگه
+plus|به‌علاوه
+materialism|ماده‌گرایی
+tried|تلاش کرد
+heavily|به‌شدت
+endeavor|تلاش، کوشش
+tangles|گره‌ها، درهم‌تنیدگی‌ها
+assessment|ارزیابی
+reflect|تأمل کردن؛ بازتاب دادن
+publish|منتشر کردن
+home|خانه
+bowers|بوئرز (نام)
+staff|کادر، کارکنان
+upper|بالایی
+floor|طبقه؛ کف
+platform|سکو، پلتفرم
+models|مدل‌ها
+community|جامعه
+normally|معمولاً
+clinical|بالینی
+tested|آزموده‌شده
+patients|بیماران
+patient|بیمار
+author|نویسنده
+experimentation|آزمایشگری
+intense|شدید، فشرده
+endeavors|تلاش‌ها
+reflected|بازتاب‌یافته
+centered|متمرکز
+approach|رویکرد
+developing|توسعه دادن
+crisis|بحران
+format|قالب
+lp|واحد (Leistungspunkte آلمانی)
+capacity|ظرفیت
+max|حداکثر
+participants|شرکت‌کنندگان
+promise|قول
+result|نتیجه
+document|سند
+interests|علایق
+situates|قرار می‌دهد (در بافت)
+developments|تحولات
+tracing|ردیابی
+techniques|فنون
+continually|پیوسته
+reshaped|بازشکل‌یافته
+paradigms|پارادایم‌ها، الگوهای فکری
+enable|توانا ساختن
+articulate|بیان کردن به‌روشنی
+essential|ضروری
+positions|مواضع
+capture|ثبت کردن، دریافت
+multi-dimensional|چندبعدی
+grounding|پایه‌گذاری
+safe|امن
+shaping|شکل دادن
+kitchen|آشپزخانه
+market|بازار
+towards|به سوی
+presented|ارائه‌شده
+representation|بازنمایی
+saying|گفتن
+hierarchies|سلسله‌مراتب‌ها
+katerina|کاترینا (نام)
+kamprani|کامپرانی (کاترینا کامپرانی، طراح)
+self-watering|خودآبیار
+rest|بقیه؛ استراحت
+discussing|بحث کردن
+potential|بالقوه؛ توان
+map|نقشه
+terminologies|اصطلاحات
+concentrate|تمرکز کردن
+master's|کارشناسی ارشد
+notion|مفهوم
+close|نزدیک؛ بستن
+slides|اسلایدها
+phone|تلفن
+pre-design|پیش‌طراحی
+conflicts|تعارض‌ها
+pre-phase|پیش‌مرحله
+politics|سیاست
+behind|پشت
+boring|خسته‌کننده
+teacher|معلم
+stage|مرحله؛ صحنه
+beforehand|از قبل
+talks|سخنرانی‌ها
+preparing|آماده کردن
+intensive|فشرده
+summarize|خلاصه کردن
+reading|خواندن؛ متن خواندنی
+notes|یادداشت‌ها
+mappings|نقشه‌نگاری‌ها
+micro-assignment|تکلیف کوچک
+half|نیم
+kickoff|شروع، جلسه‌ی آغاز
+optional|اختیاری
+decided|تصمیم گرفت
+spring|بهار
+exhibition|نمایشگاه
+presenting|ارائه دادن
+public|عمومی
+materialist|ماده‌گرا
+action|کنش
+hybrid|ترکیبی، دورگه
+activities|فعالیت‌ها
+equipment|تجهیزات
+including|از جمله
+laboratory|آزمایشگاه
+film|فیلم
+hotel|هتل
+dynamics|پویایی‌ها
+pp|صفحات
+influential|تأثیرگذار
+human-human|انسان-انسان
+says|می‌گوید
+calibrated|کالیبره‌شده، تنظیم‌شده
+manipulated|دستکاری‌شده
+computer|رایانه
+forces|نیروها
+fast|سریع
+glasses|عینک
+influenced|تحت تأثیر
+networks|شبکه‌ها
+city|شهر
+non-human|غیرانسانی
+bellinkey|(نام، احتمالاً اشتباه شنیداری)
+version|نسخه
+library|کتابخانه
+cognitive|شناختی
+nobel|نوبل
+economic|اقتصادی
+turing|تورینگ (آلن تورینگ)
+concept|مفهوم
+ii|دو (شماره)
+made|ساخته‌شده
+iii|سه (شماره)
+account|حساب
+again|دوباره
+founding|بنیان‌گذاری
+ah|آه
+gave|داد
+self-understanding|خودفهمی
+transformation|دگرگونی
+gray|خاکستری
+zone|منطقه
+predictions|پیش‌بینی‌ها
+pure|خالص
+multiple|چندگانه
+abductive|ربایشی (استدلال بهترین توضیح)
+deductive|قیاسی
+model|مدل
+macro|کلان
+medium|رسانه؛ متوسط
+creating|خلق کردن
+manuel|مانوئل (نام)
+virtual|مجازی
+thought|فکر
+microscales|مقیاس‌های خرد
+office|دفتر
+bound|محدود، مقید
+distinct|متمایز
+signs|نشانه‌ها
+cool|جالب، باحال
+born|متولد
+cambridge|کمبریج
+department|گروه آموزشی
+lines|خطوط
+happening|در حال رخ دادن
+informing|آگاه کردن
+negotiation|مذاکره، چانه‌زنی
+stupid|احمقانه
+however|با این حال
+lies|قرار دارد؛ دروغ‌ها
+sub|زیر
+implies|دلالت دارد
+entity|موجودیت
+cast|ریخته‌گری؛ قالب
+confronts|روبه‌رو می‌شود
+oxman|اکسمن (نری اکسمن، طراح)
+excerpt|گزیده
+face|چهره؛ روبه‌رو شدن
+expected|مورد انتظار
+uncertainty|عدم قطعیت
+recent|اخیر
+imposition|تحمیل
+participate|شرکت کردن
+emergence|ظهور، پیدایش
+execution|اجرا
+ingold's|ـِ اینگولد
+open-ended|باز، بی‌پایان
+participant|شرکت‌کننده
+prediction|پیش‌بینی
+attention|توجه
+response|پاسخ
+weaving|بافتن
+function|کارکرد
+video|ویدئو
+https|(پیشوند آدرس اینترنتی)
+youtube|یوتیوب
+companion|همراه
+easy|آسان
+discipline|رشته
+provocate|تحریک کردن (به چالش کشیدن)
+raby|رابی (فیونا رابی، طراح)
+possibilities|امکان‌ها
+speculating|گمانه‌زنی
+thrives|رشد می‌کند، شکوفا می‌شود
+wicked|پیچیده و بدخیم (wicked problems)
+problems|مسائل
+encourage|تشویق کردن
+people's|ـِ مردم
+imaginations|تخیلات
+flow|جاری شدن
+freely|آزادانه
+speculations|گمانه‌زنی‌ها
+catalyst|کاتالیزور، محرک
+redefining|بازتعریف
+relationship|رابطه
+probable|محتمل
+explores|کاوش می‌کند
+robotic|رباتیک
+debates|بحث‌ها
+money|پول
+circle|دایره
+bodily|بدنی
+post|پسا؛ ارسال
+speculation|گمانه‌زنی
+paper|کاغذ؛ مقاله
+sticks|چوب‌ها
+kinetic|جنبشی
+controlled|کنترل‌شده
+dying|در حال مرگ
+animals|حیوانات
+funny|خنده‌دار
+c|(حرف C)
+archi-gram|آرکیگرام (گروه معماری انگلیسی)
+archegram|آرکیگرام (گروه معماری)
+drawings|نقشه‌ها، طراحی‌ها
+range|بازه
+participated|شرکت کرد
+histories|تاریخ‌ها
+borders|مرزها
+bullshit|مزخرف (عامیانه)
+texture|بافت
+mapping|نقشه‌نگاری
+zip|فایل فشرده
+perform|اجرا کردن
+feel|احساس کردن
+blur|کدر، محو
+furniture|مبلمان
+events|رویدادها
+power|قدرت
+fog|مه
+creates|خلق می‌کند
+wet|خیس
+thread|نخ
+stand|ایستادن
+front|جلو
+ux|تجربه‌ی کاربری
+produces|تولید می‌کند
+light|نور؛ سبک
+lying|دراز کشیدن؛ قرار داشتن
+task|وظیفه
+branko|برانکو (برانکو کولارویچ، نظریه‌پرداز)
+eds|ویراستاران
+instrumentality|ابزاری بودن
+efficient|کارآمد
+colorado|کلرادو
+zoology|جانورشناسی
+western|غربی
+bio|زیست
+early|اوایل؛ زود
+humanism|انسان‌گرایی
+counterbalances|متوازن می‌کند
+hybrids|دورگه‌ها
+organisms|ارگانیسم‌ها، موجودات زنده
+confronting|روبه‌رو شدن
+polymorphous|چندشکلی
+turned|تبدیل شد
+warfare|جنگ‌افروزی
+organism|ارگانیسم
+placeholder|جانگهدار
+creatures|موجودات
+salads|سالادها (احتمالاً اشتباه شنیداری)
+tunnel|تونل
+entering|ورود
+pleasure|لذت
+responsibility|مسئولیت
+perhaps|شاید
+genesis|پیدایش
+outside|بیرون
+man|مرد
+woman|زن
+metaphysical|متافیزیکی
+uniform|یکنواخت
+multiform|چندشکل
+decade|دهه
+sidewalk|پیاده‌رو
+creatives|افراد خلاق
+worlds|جهان‌ها
+emergent|برآمده، نوپدید
+consciousness|آگاهی
+more-than-human|بیش‌ازانسانی
+en|(پیشوند)
+trans-human|فراانسانی
+dissolve|حل شدن، از میان رفتن
+modes|حالت‌ها
+during|در طول
+deadline|مهلت
+submission|تحویل
+send|فرستادن
+reminder|یادآوری
+sit|نشستن
+hundred|صد
+assignments|تکالیف
+present|ارائه دادن؛ حاضر
+compulsory|اجباری
+programme|برنامه
+inform|اطلاع دادن
+starting|شروع
+agenda|دستور کار
+too|هم؛ بیش از حد
+reinhardt|راینهارت (نام)
+depends|بستگی دارد
+any|هر
+dates|تاریخ‌ها
+presentations|ارائه‌ها
+greenhouse|گلخانه
+instead|به جای
+january|ژانویه
+inscribe|حک کردن، ثبت کردن
+groups|گروه‌ها
+per|به ازای
+enrolled|ثبت‌نام‌شده
+mul|(ناقص)
+friday|جمعه
+eight|هشت
+acknowledged|تأیید کرده‌ایم، پذیرفته
+contacted|تماس گرفته
+went|رفت
+basic|پایه‌ای، مقدماتی
+throughout|در سراسرِ
+far|دور؛ (how far) تا کجا
+continue|ادامه دادن
+stay|ماندن
+repeat|تکرار کردن
+teach|درس دادن
+fundamentals|اصول پایه
+ground|زمین؛ (common ground) زمینه‌ی مشترک
+except|به جز
+courses|دروس
+informers|(اشتباه شنیداری formats) قالب‌ها
+feedback|بازخورد
+purposeful|هدفمند
+heritage|میراث
+legacy|میراث، ترکه
+bars|میله‌ها؛ موانع
+differentiated|تفکیک‌شده
+faculties|دانشکده‌ها
+urbanism|شهرسازی
+civil|عمران؛ مدنی
+environmental|محیطی، زیست‌محیطی
+burden|بار، فشار
+contradictions|تناقض‌ها
+aggregation|تجمیع، گردآمدن
+protagonists|بازیگران اصلی، شخصیت‌های محوری
+embedded|جاسازی‌شده، درونی
+fits|مناسب است، جا می‌شود
+understands|می‌فهمد
+distant|دور
+observing|مشاهده کردن
+linked|مرتبط
+interplay|تعامل متقابل
+inquiries|پرسش‌ها، کاوش‌ها
+realization|تحقق، اجرا
+run|اجرا کردن؛ دویدن
+teaching|آموزش
+seminars|سمینارها
+those|آن‌ها
+mention|اشاره کردن
+conquering|فتح کردن
+exploring|کاوش کردن
+spot|نقطه، جا
+worked|کار کرد
+austria|اتریش
+switzerland|سوئیس
+france|فرانسه
+singapore|سنگاپور
+offices|دفاتر
+bau's|(اشتباه شنیداری Bauhaus)
+tectonics|تکتونیک (هنر ساخت و اتصال اجزای ساختمان)
+plans|نقشه‌ها؛ برنامه‌ها
+notations|نمادنگاری‌ها
+operatively|به‌صورت عملیاتی
+groundwork|زیرساخت، کار مقدماتی
+fancy|پرزرق‌وبرق
+postdocs|پژوهشگران پسادکترا
+ten|ده
+constellations|صورت‌بندی‌ها، منظومه‌ها
+widely|به‌طور گسترده
+party|طرف؛ مهمانی
+thematic|موضوعی
+starts|شروع می‌شود
+printed|چاپ‌شده
+coral|مرجان
+reefs|صخره‌ها (آبسنگ‌ها)
+under|زیر
+surface|سطح
+undersea|زیردریایی
+sustainability|پایداری
+ends|پایان‌ها، اهداف
+interfaces|رابط‌ها
+base|پایه
+empirical|تجربی (مبتنی بر مشاهده)
+exhibitions|نمایشگاه‌ها
+conferences|همایش‌ها
+core|هسته
+suffer|رنج بردن
+chronic|مزمن
+doctor|پزشک
+spreadsheets|صفحه‌گسترده‌ها
+sheets|برگه‌ها
+fill|پر کردن
+metrics|معیارها، شاخص‌ها
+textual|متنی
+fluid|سیال
+hospital|بیمارستان
+vienna|وین
+real|واقعی
+device|دستگاه
+suffering|رنج
+indications|نشانه‌ها
+test|آزمون
+them|آن‌ها را
+herself|خودش (زن)
+co-designing|طراحی مشارکتی
+orthosis|ارتز (وسیله‌ی نگهدارنده‌ی اندام)
+relevance|ارتباط، اهمیت
+robustness|استحکام، پایداری
+co-creation|خلق مشترک
+misunderstanding|سوءتفاهم
+non-identical|غیریکسان
+michael's|ـِ مایکل
+intellectual|فکری
+they're|آن‌ها هستند (they are)
+phds|دکتراها
+rewarded|پاداش داده‌شده
+summa|(summa cum laude) با بالاترین افتخار
+cum|(summa cum laude)
+laude|(summa cum laude)
+fail|شکست خوردن
+learn|یاد گرفتن
+touches|لمس می‌کند؛ مربوط می‌شود
+founded|تأسیس‌شده
+nekoponti|نگروپونته (نیکلاس نگروپونته، بنیان‌گذار MIT Media Lab)
+installing|نصب کردن
+picture|تصویر
+brings|می‌آورد
+informed|آگاهانه، مبتنی بر
+understandings|برداشت‌ها
+seems|به نظر می‌رسد
+fit|مناسب بودن
+challenges|چالش‌ها
+climate|اقلیم
+wissenschaftsmodul|ماژول علمی (آلمانی)
+two-weekly|دوهفته یک‌بار
+credit|اعتبار
+points|امتیازها؛ نکته‌ها
+ects|واحد درسی اروپایی
+grading|نمره‌دهی
+caution|احتیاط
+ended|پایان یافت
+finished|تمام‌شده
+professorships|کرسی‌های استادی
+quickly|سریع
+notation|نمادنگاری
+round|دور
+highly|بسیار
+lie|قرار داشتن؛ دروغ
+reasons|دلایل
+although|اگرچه
+show|نشان دادن
+schedule|برنامه‌ی زمانی
+examines|بررسی می‌کند
+against|در برابر
+engage|درگیر شدن
+critically|به‌صورت انتقادی
+aesthetic|زیبایی‌شناختی
+implications|پیامدها
+multidimensional|چندبعدی
+multi-disciplinary|چندرشته‌ای
+interrelations|روابط متقابل
+embedding|جای دادن
+elaboration|بسط، شرح
+related|مرتبط
+acquired|کسب‌شده
+one's|ـِ خود
+providing|فراهم کردن
+half-blood|دورگه (شاهزاده‌ی دورگه)
+prince|شاهزاده
+david|دیوید
+yates|ییتس (کارگردان)
+steve|استیو
+kloves|کلاوز (فیلمنامه‌نویس)
+year|سال
+deeper|عمیق‌تر
+differentiate|تمایز قائل شدن
+cable|کابل
+suit|لباس
+iron|آهن
+bearings|یاتاقان‌ها
+frame|قاب
+word|کلمه
+insights|بینش‌ها
+left|چپ؛ ترک کرد
+symbol|نماد
+narration|روایت‌گری
+achieve|دست یافتن
+j|(بخشی از نام Jürgen)
+rgen|(بخشی از نام Jürgen، یورگن)
+mayer|مایر (یورگن مایر، معمار)
+h|(حرف H)
+metropol|متروپل (Metropol Parasol، سازه‌ای در سویل)
+parasol|چتر آفتابی
+seville|سویل (شهری در اسپانیا)
+encyclop|(بخشی از Encyclopédie، دایرة‌المعارف)
+die|(بخشی از Encyclopédie)
+planches|صفحات تصویری (فرانسوی)
+neuch|(بخشی از Neuchâtel)
+tel|(بخشی از Neuchâtel، شهری در سوئیس)
+vol|جلد
+chimie|شیمی (فرانسوی)
+images|تصاویر
+peanuts|پینتس (کمیک استریپ Peanuts، اسنوپی)
+cartoon|کارتون، کاریکاتور
+night|شب
+stargazing|ستاره‌نگری
+satellite|ماهواره
+allowed|مجاز
+nothing|هیچ چیز
+forbidden|ممنوع
+ethically|از نظر اخلاقی
+mix|ترکیب
+thousands|هزاران
+keystones|سنگ‌های کلیدی، پایه‌ها
+oversee|نظارت کردن
+exemplary|نمونه، مثال‌زدنی
+framing|چارچوب‌بندی
+often|اغلب
+unspecified|نامشخص
+cycle|چرخه
+adaptiveness|سازگاری‌پذیری
+positivism|اثبات‌گرایی
+specify|مشخص کردن
+rounding|تکمیل کردن
+preserve|حفظ کردن
+input|ورودی
+expand|گسترش دادن
+inhabited|سکونت‌یافته، مورد استفاده
+fabricated|ساخته‌شده
+marketed|به بازار عرضه‌شده
+inspiration|الهام
+achievements|دستاوردها
+failures|شکست‌ها
+coin|ابداع کردن (اصطلاح)؛ سکه
+post-design|پساطراحی
+love|عشق، دوست داشتن
+podcast|پادکست
+post-phase|پسامرحله
+fraction|بخش، کسر
+thanks|ممنون
+comparing|مقایسه کردن
+sage|سیج (انتشارات SAGE)
+homework|تکلیف
+tonight|امشب
+activity|فعالیت
+fresh|تازه
+exciting|هیجان‌انگیز
+operandi|(modus operandi) شیوه‌ی کار
+prepared|آماده
+recipe|دستور (آشپزی)
+named|نامیده‌شده
+housing|مسکن
+districts|محله‌ها، مناطق
+neighborhoods|محله‌ها
+bellinci|(نام، احتمالاً اشتباه شنیداری)
+deconstruct|واسازی کردن
+analysis|تحلیل
+interpretations|تفسیرها
+formulate|صورت‌بندی کردن
+uploading|بارگذاری کردن
+writing|نوشتن
+page|صفحه
+explanatory|توضیحی
+uploaded|بارگذاری‌شده
+sketches|طرح‌های اولیه، اسکیس‌ها
+sennett|سنت (ریچارد سنت، جامعه‌شناس)
+crafts|صنایع دستی؛ ساختن
+micro-statement|بیانیه‌ی کوتاه
+upload-as-compiled|بارگذاری به‌صورت مجموعه‌ی کامل
+packed|فشرده، پرمحتوا
+applications|کاربردها
+collaboration|همکاری
+studios|استودیوها
+cost|هزینه
+option|گزینه
+time-consuming|وقت‌گیر
+totally|کاملاً
+pack|بسته
+ant|نظریه‌ی کنشگر-شبکه (ANT)
+particular|خاص
+describe|توصیف کردن
+constructions|ساختارها، ساخت‌ها
+acquisition|کسب، اکتساب
+management|مدیریت
+samples|نمونه‌ها
+treated|رفتارشده
+references|منابع
+reassembling|بازسرهم‌کردن (کتاب لاتور)
+der|(حرف تعریف آلمانی)
+berliner|برلینی
+schl|(بخشی از Schlüssel، کلید)
+ssel|(بخشی از Schlüssel، کلید)
+grand|بزرگ
+edmund|ادموند
+goulding|گولدینگ (کارگردان)
+cvetinovic|تسوتینوویچ (نام)
+nedovic-budic|ندوویچ-بودیچ (نام)
+bolay|بولای (نام)
+decoding|رمزگشایی
+development|توسعه
+geoforum|ژئوفروم (نام مجله)
+philosophers|فیلسوفان
+thinkers|اندیشمندان
+number|عدد، تعداد
+co-invention|هم‌اختراعی، اختراع مشترک
+describes|توصیف می‌کند
+human-based|انسان‌محور
+human-thing|انسان-شیء
+negotiated|مورد مذاکره، توافق‌شده
+humanistic|انسان‌گرایانه
+anthropological|انسان‌شناختی
+false|نادرست
+conditioned|مشروط
+immense|عظیم
+communicate|ارتباط برقرار کردن
+live|زندگی کردن؛ زنده
+massive|عظیم
+provocation|تحریک، چالش
+unit|واحد
+isolated|جدا افتاده
+proposes|پیشنهاد می‌کند
+human-thin|(ناقص، human-thing)
+everyday|روزمره
+powerful|قدرتمند
+special|ویژه
+confluent|هم‌آمیز
+influencing|تأثیر گذاشتن
+manipulations|دستکاری‌ها
+modernism|مدرنیسم
+doorkeeper|دربان
+gatekeeper|دروازه‌بان، دربان
+enter|وارد شدن
+professional|حرفه‌ای
+industry|صنعت
+smartphone|تلفن هوشمند
+calibrating|تنظیم کردن
+continuously|پیوسته
+infrastructures|زیرساخت‌ها
+services|خدمات
+interrupting|قطع کردن
+lay|قرار دادن
+publication|انتشار
+drastically|به‌شدت
+social-cultural|اجتماعی-فرهنگی
+held|برگزارشده؛ نگه داشت
+pioneer|پیشگام
+acm|ACM (انجمن ماشین‌های محاسباتی)
+award|جایزه
+advancement|پیشرفت
+organizational|سازمانی
+major|عمده
+contributions|مشارکت‌ها، سهم‌ها
+advocate|حامی
+interdisciplinary|میان‌رشته‌ای
+expansion|گسترش
+simon's|ـِ سایمون
+collecting|جمع‌آوری
+decisions|تصمیم‌ها
+choice|انتخاب
+choosing|انتخاب کردن
+ron|ران
+arad|آراد (ران آراد، طراح)
+concrete|بتن؛ عینی
+stereo|استریو
+baus|(اشتباه شنیداری Bauhaus)
+master|استاد؛ ارشد
+bulinkis|(نام، احتمالاً اشتباه شنیداری)
+architectures|معماری‌ها
+invite|دعوت کردن
+gr|(ناقص)
+red|قرمز
+scholars|پژوهشگران
+economy|اقتصاد
+psychology|روان‌شناسی
+fathers|پدران، بنیان‌گذاران
+achieved|به دست آورد
+awards|جوایز
+stitches|بخیه‌ها
+reward|پاداش
+distinguishes|متمایز می‌کند
+cosigns|(اشتباه شنیداری co-sciences)
+co-sciences|علوم مکمل
+become|شدن
+happy|خوشحال
+scientists|دانشمندان
+belonging|تعلق
+exact|دقیق
+success|موفقیت
+predictable|پیش‌بینی‌پذیر
+single|تک، یگانه
+predict|پیش‌بینی کردن
+problem-solving|حل مسئله
+assumptions|فرض‌ها
+causality|علیت
+belong|تعلق داشتن
+gut|(gut feeling) حس درونی
+talent|استعداد
+calculation|محاسبه
+lays|قرار می‌دهد
+put|گذاشتن
+comparison|مقایسه
+chart|نمودار
+facets|جنبه‌ها
+similarity|شباهت
+table|جدول؛ میز
+logic|منطق
+hypothesis|فرضیه
+formation|شکل‌گیری
+generator|مولد
+conjecture|حدس
+sequences|توالی‌ها
+dependent|وابسته
+purposes|اهداف
+mid-level|سطح میانی
+applied|کاربردی
+settings|محیط‌ها، بسترها
+big|بزرگ
+small|کوچک
+source|منبع
+shown|نشان‌داده‌شده
+menges|منگس (آخیم منگس، معمار)
+ahlquist|آلکویست (شان آلکویست)
+delanda|دلاندا (مانوئل دلاندا، فیلسوف)
+neil|نیل
+leach|لیچ (نیل لیچ، نظریه‌پرداز معماری)
+age|عصر، سن
+proper|مناسب
+comparative|تطبیقی
+country|کشور
+grants|کمک‌هزینه‌ها
+revolutionary|انقلابی
+point|نکته؛ نقطه
+confident|مطمئن
+overlap|هم‌پوشانی
+dialectical|دیالکتیکی
+landa|(بخشی از De Landa)
+ba|کارشناسی (BA)
+ethnographic|مردم‌نگارانه
+fieldwork|کار میدانی
+northeastern|شمال‌شرقی
+finland|فنلاند
+joined|پیوست
+manchester|منچستر
+later|بعداً
+gluckman|گلاکمن (نام)
+aberdeen|ابردین (شهر/دانشگاه در اسکاتلند)
+established|تأسیس‌شده
+perception|ادراک
+brief|کوتاه؛ دستورکار طراحی
+erc|شورای پژوهش اروپا
+matters|مهم است
+archaeology|باستان‌شناسی
+resource|منبع
+anthropologist|انسان‌شناس
+directed|کارگردانی‌شده
+dialogue|گفت‌وگو
+setup|چیدمان، راه‌اندازی
+re-informing|بازآگاه‌سازی
+constant|ثابت، دائمی
+advancing|پیشرفت کردن
+agent|عامل
+dumb|کودن، غیرهوشمند
+translated|ترجمه‌شده
+microsoft|مایکروسافت
+speech|گفتار
+mingle|آمیختن
+indeed|در واقع
+ob|(ob-ject، شیء)
+ject|(ob-ject، به‌جلو افکنده)
+thrown|پرتاب‌شده
+face-to-face|رودررو
+fait|(fait accompli) کار انجام‌شده
+accompli|(fait accompli) امر انجام‌شده و غیرقابل‌تغییر
+substances|مواد
+neri|نری (نری اکسمن)
+op|(op. cit.) همان منبع
+checked|بررسی‌شده
+entirety|تمامیت
+known|شناخته‌شده
+complete|کامل
+proposing|پیشنهاد دادن
+renegotiating|بازمذاکره
+prominent|برجسته
+binary|دوتایی، دوگانه
+predetermined|ازپیش‌تعیین‌شده
+upon|بر، روی
+tool|ابزار
+consequently|در نتیجه
+becomes|می‌شود
+less|کمتر
+useful|مفید
+fabrication|ساخت (تولید)
+computation|محاسبه
+prototyping|نمونه‌سازی
+material-driven|ماده‌محور
+conventional|متعارف
+form-giving|شکل‌دهی (تحمیل فرم)
+form-emerging|برآمدن فرم
+preconceived|از پیش تصورشده
+controller|کنترل‌کننده
+engagement|درگیری، مشارکت
+flows|جریان‌ها
+meshwork|شبکه‌ی درهم‌بافته (مفهوم اینگولد)
+movement|حرکت
+textility|بافت‌مندی (مفهوم اینگولد)
+www|(آدرس وب)
+com|(آدرس وب)
+v|(حرف V)
+wcswlcg|(بخشی از آدرس اینترنتی)
+y|(حرف Y)
+mediates|میانجی‌گری می‌کند
+negotiating|مذاکره کردن
+pursuit|جست‌وجو، پیگیری
+calculated|محاسبه‌شده
+truth|حقیقت
+co-designer|هم‌طراح
+describing|توصیف کردن
+treat|رفتار کردن
+giving|دادن
+imposed|تحمیل‌شده
+wood|چوب
+timber|الوار، چوب ساختمانی
+radically|به‌صورت بنیادین
+speeches|سخنرانی‌ها
+schools|مکاتب؛ مدارس
+rabies|(اشتباه شنیداری Raby)
+trained|آموزش‌دیده
+contract|قرارداد
+investment|سرمایه‌گذاری
+unsolved|حل‌نشده
+extrapolate|برون‌یابی کردن
+anthony|آنتونی (آنتونی دان)
+fiona|فیونا (فیونا رابی)
+cone|مخروط (Futures Cone)
+takk|(نام، احتمالاً اشتباه)
+various|گوناگون
+lucy|لوسی
+mcrae|مک‌ری (لوسی مک‌ری، هنرمند)
+compression|فشرده‌سازی
+carpet|فرش
+gionata|جوناتا (نام)
+gatto|گاتو (نام)
+et|(et al.) و همکاران
+al|(et al.) و همکاران
+geomerce|(نام، احتمالاً اشتباه)
+men|مردان
+fake|جعلی
+dated|تاریخ‌دار؛ قدیمی
+july|ژوئیه
+auger-loizeau|اوژه-لوازو (استودیوی طراحی)
+flypaper|کاغذ مگس‌گیر
+carnivorous|گوشت‌خوار
+domestic|خانگی
+robots|ربات‌ها
+decline|افول
+finances|مسائل مالی
+alternatives|گزینه‌های جایگزین
+site|سایت، زمین پروژه
+regulations|مقررات
+breaking|شکستن
+financial|مالی
+limitations|محدودیت‌ها
+sleeping|خوابیدن
+gardening|باغبانی
+strategy|راهبرد
+subversive|براندازانه، ساختارشکن
+ever|هرگز؛ همیشه
+subversion|براندازی، ساختارشکنی
+warrants|توجیه می‌کند؛ ضمانت‌ها
+room|اتاق؛ فضا
+lands|فرود می‌آید؛ سرزمین‌ها
+transferred|منتقل‌شده
+daily|روزانه
+comfort|آسایش
+stary|(اشتباه شنیداری)
+wiesemer|(نام، احتمالاً اشتباه شنیداری)
+could-be|ممکن‌الوقوع
+geoffrey|جفری
+bowker|بوکر (جفری بوکر، پژوهشگر)
+stefan|اشتفان
+timmermans|تیمرمانس (نام)
+adele|آدل
+e|(حرف E)
+clarke|کلارک (نام)
+ellen|الن
+balka|بالکا (نام)
+leigh|لی (نام)
+ff|و صفحات بعد
+ironic|کنایه‌آمیز
+wouldn't|نمی‌خواست، نمی‌شد (would not)
+catalysts|محرک‌ها
+thrivers|شکوفاکنندگان
+random|تصادفی
+scanned|اسکن‌شده
+available|در دسترس
+cities|شهرها
+feels|احساس می‌کند
+category|دسته
+transported|منتقل‌شده
+joke|شوخی
+extremely|بی‌نهایت
+well-engineered|خوب مهندسی‌شده
+details|جزئیات
+am|هستم
+praxis|پراکسیس، عمل آگاهانه
+twentieth|بیستم
+twenty-first|بیست‌ویکم
+centuries|قرن‌ها
+xv|پانزده (عدد رومی)
+collages|کلاژها
+perfectly|کاملاً
+engineered|مهندسی‌شده
+wanted|خواست
+seltzer|سلتزر (نام)
+getting|گرفتن؛ شدن
+touch|لمس؛ (in touch) در تماس
+backgrounds|پیشینه‌ها
+parents|والدین
+term|اصطلاح؛ ترم
+redraw|دوباره ترسیم کردن
+differently|به‌طور متفاوت
+completely|کاملاً
+someone|کسی
+logo|لوگو
+outer|بیرونی
+shell|پوسته
+geometry|هندسه
+highlight|برجسته کردن
+aware|آگاه
+inhabitants|ساکنان
+experiencing|تجربه کردن
+value|ارزش
+piece|قطعه، اثر
+what's|چه چیزی است (what is)
+observer|ناظر
+so-called|به‌اصطلاح
+selter|(نام، احتمالاً Seltzer)
+plotted|ترسیم‌شده
+communist|کمونیستی
+st|(مخفف قدیس/خیابان)
+perceived|درک‌شده
+stored|ذخیره‌شده
+triggering|برانگیختن
+performances|اجراها
+diller|دیلر (دیلر اسکوفیدیو، دفتر معماری)
+scofidio|اسکوفیدیو (دیلر اسکوفیدیو)
+yverdon-les-bains|ایوردون-له-بن (شهری در سوئیس)
+swiss|سوئیسی
+expo|نمایشگاه جهانی (اکسپو)
+mischer'traxler|میشر تراکسلر (استودیوی طراحی)
+tree|درخت
+turn|نوبت؛ چرخش
+expressive|بیانگر
+actions|کنش‌ها
+action-based|کنش‌محور
+staged|صحنه‌پردازی‌شده
+focuses|تمرکز می‌کند
+generation|تولید؛ نسل
+meanings|معناها
+seeks|می‌کوشد
+generative|زایشی، مولد
+aspects|جنبه‌ها
+embodiments|تجسم‌ها
+erika|اریکا
+fischer-lichte|فیشر-لیشته (اریکا فیشر-لیشته، نظریه‌پرداز اجرا)
+aesthetics|زیبایی‌شناسی
+routledge|راتلج (انتشارات)
+constructing|ساختن
+nice|خوب
+smith|اسمیت
+r|(حرف R)
+tilland|(نام، احتمالاً اشتباه)
+hear|شنیدن
+ramston|(نام، احتمالاً اشتباه)
+structure|سازه؛ ساختار
+sprayed|اسپری‌شده
+foggy|مه‌آلود
+cloudy|ابری
+fox-blowing|(اشتباه شنیداری fog-blowing) مه‌پاشی
+impression|برداشت، تأثیر
+oh|اوه
+strange|عجیب
+michel|میشل
+trusser|(نام، احتمالاً اشتباه)
+on-site|در محل
+situ|(in situ) در جای خود
+perforated|سوراخ‌دار
+glue|چسب
+dries|خشک می‌شود
+sitting|نشستن
+created|خلق‌شده
+sunlight|نور خورشید
+focused-filled|(احتمالاً اشتباه شنیداری)
+defines|تعریف می‌کند
+understood|فهمیده‌شده
+evaluate|ارزیابی کردن
+questionnaires|پرسشنامه‌ها
+observation|مشاهده
+a-b|(A/B testing) آزمون الف/ب
+incremental|تدریجی
+bunch|دسته، تعداد زیاد
+non-ux|غیر تجربه‌ی کاربری
+iannis|یانیس
+xenakis|کسناکیس (یانیس کسناکیس، آهنگساز و معمار)
+polytope|پلی‌توپ (اثر کسناکیس)
+cluny|کلونی (موزه‌ای در پاریس)
+paris|پاریس
+moving|متحرک؛ تکان‌دهنده
+print|چاپ
+magic|جادو
+circles|دایره‌ها
+well-designed|خوش‌طراحی
+entangles|درهم می‌تند
+speaks|صحبت می‌کند
+sensuality|حسانیت
+ourself|خودمان
+effects|اثرات، جلوه‌ها
+le|(حرف تعریف فرانسوی)
+corbusier|کوربوزیه (لوکوربوزیه، معمار)
+janice|(اشتباه شنیداری Iannis)
+ksenakis|کسناکیس
+threefold|سه‌گانه
+oscillating|نوسان کردن
+completing|کامل کردن
+presupposed|پیش‌فرض‌شده
+perceptive|ادراکی
+abolishes|از میان برمی‌دارد
+involvement|درگیری، مشارکت
+subjectivity|ذهنیت
+distance|فاصله
+objectivity|عینیت
+conceptual|مفهومی
+historically|از نظر تاریخی
+interface|رابط
+scales|مقیاس‌ها
+nano|نانو
+meso|میانه (مقیاس میانی)
+contextual|زمینه‌ای
+occur|رخ دادن
+explicitly|به‌صراحت
+implicitly|به‌طور ضمنی
+non-intentionally|ناخواسته
+kolarevic|کولارویچ (برانکو کولارویچ)
+ali|علی
+m|(حرف M)
+malkawi|ملکاوی (علی ملکاوی)
+spon|اسپان (انتشارات Spon)
+color|رنگ
+atmosphere|اتمسفر، حال‌وهوا
+algorithm|الگوریتم
+formula|فرمول
+needed|لازم
+kulari-rivic|(اشتباه شنیداری Kolarevic)
+died|درگذشت
+sun|خورشید
+shading|سایه‌اندازی
+circology|(احتمالاً اشتباه شنیداری)
+interspecies|میان‌گونه‌ای
+kunsthochschule|دانشکده‌ی هنر (آلمانی)
+berlin-wei|(بخشی از Berlin-Weißensee)
+ensee|(بخشی از Weißensee)
+mark|مارک
+hansen|هنسن (مارک هنسن، هنرمند)
+ben|بن
+rubin|روبین (بن روبین، هنرمند)
+listening|گوش دادن
+caitlind|کیتلیند (نام)
+brown|براون
+wayne|وین
+garrett|گرت (نام)
+cloud|ابر
+instrumental|ابزاری
+effective|مؤثر
+affective|عاطفی
+entangling|درهم‌تنیدن
+grasp|درک کردن، فهم
+screens|صفحه‌نمایش‌ها
+resolution|وضوح؛ حل
+disconnect|گسست
+sensorially|از نظر حسی
+contradiction|تناقض
+messages|پیام‌ها
+photo|عکس
+ca|(مخفف حدوداً یا کالیفرنیا)
+denver|دنور
+college|کالج
+women's|ـِ زنان
+twentieth-century|قرن بیستمی
+developmental|رشدی، تکوینی
+biology|زیست‌شناسی
+yale|ییل (دانشگاه)
+california|کالیفرنیا
+primate|نخستی (پستانداران نخستین)
+visions|چشم‌اندازها
+simians|میمون‌سانان
+women|زنان
+reinvention|بازآفرینی
+species|گونه
+dogs|سگ‌ها
+significant|مهم، معنادار
+otherness|دیگربودگی
+staying|ماندن
+trouble|دردسر
+member|عضو
+british|بریتانیایی
+academy|آکادمی
+listed|فهرست‌شده
+ring|حلقه
+adona|(اشتباه شنیداری a Donna)
+highway|بزرگراه
+must|باید
+introduced|معرفی‌شده
+technology-related|مرتبط با فناوری
+audio|صوتی
+white|سفید
+article|مقاله
+introduces|معرفی می‌کند
+techno-cultural|فن‌فرهنگی
+original|اصلی
+clothes|لباس‌ها
+implants|ایمپلنت‌ها
+pills|قرص‌ها
+drugs|داروها
+state|وضعیت؛ دولت
+ecology|بوم‌شناسی
+anthropocene|آنتروپوسن (دوران اثرگذاری انسان بر زمین)
+cars|خودروها
+phones|تلفن‌ها
+haraway's|ـِ هاراوی
+ontology|هستی‌شناسی
+glance|نگاه گذرا
+representative|نماینده
+overcome|غلبه کردن
+dualistic|دوگانه‌انگارانه
+identities|هویت‌ها
+categories|دسته‌ها
+encounters|مواجهه‌ها
+partiality|جزئی‌بودن
+hybridity|دورگه‌بودن، آمیختگی
+popular|محبوب
+medicine|پزشکی
+beauty|زیبایی
+ontologies|هستی‌شناسی‌ها
+military|نظامی
+etc|و غیره
+soldier|سرباز
+technology-induced|ناشی از فناوری
+name|نام
+confused|گیج
+wrong|اشتباه
+borg|بورگ (موجودات سایبورگ در Star Trek)
+stands|ایستاده؛ (stands for) مخفف
+cyberorganisms|ارگانیسم‌های سایبرنتیک
+person|شخص
+marketing|بازاریابی
+equalizer|برابرکننده
+following|زیر، بعدی
+anouk|آنوک
+wipprecht|ویپرشت (آنوک ویپرشت، طراح مد فناورانه)
+pangolin|پانگولین (مورچه‌خوار پولک‌دار)
+dress|لباس
+starbucks|استارباکس
+responsible|مسئول
+hierarchy|سلسله‌مراتب
+investments|سرمایه‌گذاری‌ها
+interest|علاقه؛ منفعت
+freedom|آزادی
+adapt|سازگار شدن
+google|گوگل
+amazon|آمازون
+data|داده
+normal|عادی
+progressive|پیشرو
+reconstruction|بازسازی
+stakes|منافع، سهم‌ها
+border|مرز
+war|جنگ
+territories|قلمروها
+reproduction|بازتولید
+effort|تلاش
+contribute|مشارکت کردن
+socialist-feminist|سوسیالیست-فمینیست
+postmodernist|پست‌مدرنیستی
+non-naturalist|غیرطبیعت‌گرا
+utopian|آرمان‌شهری
+imagining|تصور کردن
+incarnation|تجسم
+salvation|رستگاری
+dualisms|دوگانه‌انگاری‌ها
+dissolves|از میان می‌برد
+self-developing|خودتوسعه‌دهنده
+externally|از بیرون
+reconstruct|بازسازی کردن
+pleased|خشنود
+threat|تهدید
+chance|فرصت؛ شانس
+sidewalks|پیاده‌روها
+placeholders|جانگهدارها
+deep|عمیق
+can't|نمی‌توان (cannot)
+heal|شفا دادن
+re-ask|دوباره پرسیدن
+identity|هویت
+accept|پذیرفتن
+imagine|تصور کردن
+enormously|به‌شدت
+values|ارزش‌ها
+difference|تفاوت
+combine|ترکیب کردن
+katherine|کاترین
+hayles|هیلز (کاترین هیلز، نظریه‌پرداز پساانسان)
+bodies|بدن‌ها
+cybernetics|سایبرنتیک
+informatics|انفورماتیک
+contrast|تضاد
+conscious|آگاه
+fact|واقعیت
+illusion|توهم
+bespeaks|نشان می‌دهد
+ignorance|نادانی
+constituted|تشکیل‌شده
+mastery|تسلط
+exercise|تمرین؛ اعمال
+tells|می‌گوید
+explain|توضیح دادن
+results|نتایج
+chaotic|آشوبناک
+structures|ساختارها
+teleology|غایت‌شناسی
+reflexive|بازتابی
+epistemology|معرفت‌شناسی
+objectivism|عینیت‌گرایی
+distributed|توزیع‌شده
+cognition|شناخت
+embodiment|تجسم، بدن‌مندی
+support|پشتیبانی
+dynamic|پویا
+partnership|مشارکت، همکاری
+intelligent|هوشمند
+liberal|لیبرال
+subject's|ـِ سوژه
+manifest|آشکار؛ (manifest destiny) سرنوشت محتوم
+destiny|سرنوشت
+dominate|تسلط یافتن
+necessarily|لزوماً
+strands|رشته‌ها
+among|در میان
+its|آن (مال آن)
+seriations|ردیف‌بندی‌ها، توالی‌ها
+highlighted|برجسته‌شده
+combined|ترکیب‌شده
+vision|چشم‌انداز
+leverage|بهره گرفتن
+avoid|اجتناب کردن
+reinscribing|بازنویسی دوباره، تکرار
+thus|بنابراین
+repeating|تکرار کردن
+mistakes|اشتباهات
+multispecies|چندگونه‌ای
+ndion|(ناقص)
+multispecies-design-designing-with-nature|طراحی چندگونه‌ای: طراحی همراه با طبیعت
+biolab|آزمایشگاه زیستی
+d-printed|(3D-printed) چاپ سه‌بعدی‌شده
+scaffold|داربست
+growing|رشد کردن
+mycelium|میسلیوم (ریشه‌ی قارچ)
+measures|معیارها؛ اقدامات
+droids|اندرویدها، ربات‌ها
+anton|آنتون
+poikolainen|پویکولاینن (نام)
+ros|روس (نام)
+antti|آنتی
+salovaara|سالوارا (نام)
+andrea|آندره‌آ
+botero|بوترو (نام)
+marie|ماری
+louise|لوئیز
+juul|یول (نام)
+ndergaard|(بخشی از Søndergaard)
+london|لندن
+heart|قلب
+distinctions|تمایزها
+dissolved|حل‌شده، ازمیان‌رفته
+heroin|(اشتباه شنیداری herein)
+reconnecting|دوباره وصل کردن
+quotes|نقل‌قول‌ها
+vice|(vice versa) برعکس
+versa|(vice versa) برعکس
+separation|جدایی
+ideas|ایده‌ها
+creativeness|خلاقیت
+kim|کیم
+simple|ساده
+co-existence|همزیستی
+co-inhabiting|هم‌سکونتی
+randy|رندی
+acknowledge|تصدیق کردن
+force|نیرو
+decades|دهه‌ها
+find|پیدا کردن
+concise|موجز، مختصر
+quantity|کمیت
+requirements|الزامات
+passing|قبول شدن
+requires|نیاز دارد
+regular|منظم
+in-advance|از قبل
+composed|تشکیل‌شده
+independent|مستقل
+attendance|حضور
+submissions|تحویل‌ها
+surrounding|پیرامون
+underway|در جریان
+separately|جداگانه
+compile|گردآوری کردن
+middle|وسط
+cine|(بخشی از sine)
+conditio|(conditio sine qua non) شرط لازم
+plano|(اشتباه)
+none|هیچ
+note|یادداشت
+above|بالا
+ill|بیمار
+participating|شرکت کردن
+obliged|موظف
+dtat|(اشتباه نوشتاری DTAD)
+careful|مراقب
+contemporary|معاصر
+little|کمی
+bit|(a bit) کمی
+confusing|گیج‌کننده
+forever|برای همیشه
+kick-off|شروع
+roll|غلتاندن؛ نقش
+putting|گذاشتن
+buna|(اشتباه)
+either|هر کدام؛ یا
+switch|تعویض
+prefer|ترجیح دادن
+easier|آسان‌تر
+move|حرکت کردن
+where's|کجاست (where is)
+dieter|دیتر
+mersch|مرش (دیتر مرش، فیلسوف)
+ereignis|رویداد (آلمانی)
+und|و (آلمانی)
+aura|هاله
+untersuchungen|پژوهش‌ها (آلمانی)
+zu|درباره‌ی (آلمانی)
+einer|یک (آلمانی)
+sthetik|(بخشی از Ästhetik، زیبایی‌شناسی)
+des|ـِ (آلمانی)
+performativen|اجرایی (آلمانی)
+suhrkamp|زورکامپ (انتشارات آلمانی)
+do's|بایدها
+bison|گاومیش کوهان‌دار
+green|سبز
+house|خانه
+pm|بعدازظهر
+below|پایین
+until|تا
+depicted|به تصویر کشیده‌شده
+you've|شما ... داشته‌اید (you have)
+positioned|قرارگرفته
+inspired|الهام‌گرفته
+select|انتخاب کردن
+preselected|ازپیش انتخاب‌شده
+peson|(اشتباه تایپی person)
+access|دسترسی
+general|کلی
+nine|نه
+lunch|ناهار
+christmas|کریسمس
+weekly|هفتگی
+correct|درست
+sending|فرستادن
+moolah|(اشتباه شنیداری Moodle)
+chosen|انتخاب‌شده
+divide|تقسیم کردن
+i'll|من ... خواهم (I will)
+recount|بازگو کردن
+sent|فرستاده‌شده
+micron|میکرون
+we'll|ما ... خواهیم (we will)
+decide|تصمیم گرفتن
+days|روزها
+muru|(اشتباه شنیداری)
+manually|دستی
+subscribe|عضو شدن
+breach|نقض
+told|گفت
+sign|امضا؛ نشانه
+expectation|انتظار
+quick|سریع
+relate|ربط دادن
+share|به اشتراک گذاشتن
+section|بخش
+collect|جمع کردن
+joining|پیوستن
+announce|اعلام کردن
+schmidt|اشمیت (نام)
+started|شروع شد
+calendar|تقویم
+screen|صفحه‌نمایش
+hands|دست‌ها
+tomorrow|فردا
+wait|صبر کردن
+day|روز
+christa|کریستا
+hahnke|هانکه (نام)
+mentioned|ذکرشده
+late|دیر
+cannot|نمی‌توان
+join|پیوستن
+latest|جدیدترین
+otherwise|در غیر این صورت
+rigorous|دقیق و سخت‌گیرانه
+wine|شراب
+also|همچنین، هم
+abstract|انتزاعی
+absurd|بی‌معنی، مضحک، پوچ
+accompanied|همراهی‌شده؛ همراهی کرد
+accumulate|انباشتن، جمع کردن
+acoustics|آکوستیک، صدارسانی (ویژگی‌های صوتی فضا)
+acts|عمل می‌کند؛ کارها، اعمال
+adapting|سازگار شدن، تطبیق دادن
+add|اضافه کردن
+added|اضافه کرد، اضافه‌شده
+additional|اضافی، بیشتر
+address|پرداختن به (یک مسئله)؛ نشانی
+admit|راه دادن، پذیرفتن؛ اعتراف کردن
+agentic|عامل‌محور (هوش مصنوعی‌ای که خودش تصمیم می‌گیرد و کار انجام می‌دهد)
+agents|عامل‌ها (برنامه‌های هوشمندی که خودشان کار انجام می‌دهند)
+ages|پیر می‌شود؛ سن‌ها، دوره‌ها
+ai-based|مبتنی بر هوش مصنوعی
+ai-driven|هدایت‌شده با هوش مصنوعی
+aim|هدف؛ هدف داشتن
+algorithms|الگوریتم‌ها
+alive|زنده
+alone|تنها، به‌تنهایی
+ambivalent|دوسویه، دوپهلو (هم خوب هم بد)
+analyze|تحلیل کردن
+animated|متحرک، پویانمایی‌شده
+animism|جان‌گرایی (باور به روح داشتن اشیا و طبیعت)
+animist|جان‌گرا (مربوط به باور به روح داشتن اشیا)
+annoyed|ناراحت، کلافه
+answer|جواب، پاسخ دادن
+anthropic|آنتروپیک (شرکت سازنده‌ی Claude)
+antiquity|دوران باستان
+apology|دفاعیه؛ عذرخواهی
+apparent|ظاهری، آشکار
+appears|ظاهر می‌شود، به نظر می‌رسد
+applicable|قابل‌استفاده، مرتبط
+applies|صدق می‌کند، اعمال می‌شود
+ar|واقعیت افزوده (AR)
+archaic|کهن، باستانی
+architectural|معماری، مربوط به معماری
+area|ناحیه، محدوده
+argue|استدلال کردن؛ بحث کردن
+arguing|بحث و دعوا کردن
+arts|هنرها
+asks|می‌پرسد
+asleep|خواب، در خواب
+aspect|جنبه
+attest|گواهی دادن، تأیید کردن
+awake|بیدار
+away|دور، دور از
+backlog|انبوه کارهای قبلی (سابقه‌ی انباشته)
+backyards|حیاط‌های پشتی
+bad|بد
+ball|توپ، گوی
+barry|بری (نام)
+bauhaus-universität|دانشگاه باوهاوس
+behaves|رفتار می‌کند
+behavior|رفتار
+behaviors|رفتارها
+behaviour|رفتار
+behaviours|رفتارها
+beliefs|باورها
+believable|باورپذیر
+believe|باور داشتن
+better|بهتر
+bi-weekly|دوهفته‌یک‌بار
+bielik|بیلیک (نام)
+block|بلاگ (در متن احتمالاً «blog»)؛ بلوک
+booth|اتاقک، غرفه
+borkenhäuschen|بورکن‌هویسشن (کلبه‌ی پوست‌درختی در پارک ایلم)
+box|جعبه
+bridge|پل
+bridges|پل‌ها
+briefs|شرح‌های پروژه (بریف‌ها)
+browser|مرورگر
+buchenwald|بوخنوالد (اردوگاه کار اجباری نزدیک وایمار)
+budget|بودجه
+build|ساختن
+built|ساخته‌شده؛ ساخت
+burns|می‌سوزد
+bye|خداحافظ
+cake|کیک (piece of cake = خیلی آسان)
+calls|صدا می‌زند؛ تماس‌ها
+camera|دوربین
+candle|شمع
+care|مراقبت کردن، اهمیت دادن
+cave|غار
+central|مرکزی، اصلی
+challenge|چالش
+chamber|اتاق، حجره
+chambers|اتاق‌ها، حجره‌ها
+channel|کانال
+character|شخصیت
+chat|گفت‌وگو، گروه چت
+chatbots|ربات‌های گفت‌وگو (چت‌بات‌ها)
+cheers|به سلامتی؛ ممنون، خداحافظ
+child|کودک
+child's|ـِ کودک (مال کودک)
+children|کودکان
+choose|انتخاب کردن
+chooses|انتخاب می‌کند
+christian|کریستین (نام)
+classicism|کلاسیسیسم (دوره‌ی کلاسیک ادبیات آلمان)
+closer|بسته‌کن (door-closer = آرام‌بند در)؛ نزدیک‌تر
+closing|بستن
+cobblestones|سنگ‌فرش (قلوه‌سنگ‌های خیابان)
+code|کد
+coding|کدنویسی
+coined|ابداع کرد (یک واژه)
+collaborate|همکاری کردن
+collaborative|مشارکتی، همکارانه
+colleagues|همکاران، هم‌کلاسی‌ها
+comments|نظرها، توضیحات
+complementary|مکمل
+components|اجزا
+concentrated|متمرکز
+concepts|مفهوم‌ها، ایده‌ها
+conceptually|از نظر مفهومی
+connecting|وصل کردن، پیوند دادن
+conscience|وجدان
+consider|در نظر گرفتن
+consisting|شامل، متشکل از
+consoled|دلداری‌شده
+constraint|محدودیت، قید
+consultations|جلسه‌های مشاوره
+controlling|کنترل‌کننده
+conversation|گفت‌وگو
+coordinated|هماهنگ‌شده
+costs|هزینه‌ها؛ هزینه دارد
+countries|کشورها
+courage|شجاعت
+courtyard|حیاط
+courtyards|حیاط‌ها
+crond|کران‌دی (سرویس زمان‌بندی در لینوکس)
+crowd|جمعیت
+crypt|سردابه (زیرزمین مقبره)
+crypts|سردابه‌ها
+daemon|دیمن (روح/موجود پنهان؛ در کامپیوتر: برنامه‌ی پس‌زمینه)
+daemon's|ـِ دیمن (مال دیمن)
+daemonic|دیمنی، شیطانی‌وار (نیروی مرموز)
+daemons|دیمن‌ها
+daimon|دایمون (روح واسطه در یونان باستان)
+daimonion|دایمونیون (صدای درونی سقراط)
+daimónion|دایمونیون (صدای درونی سقراط)
+dashboards|داشبوردها (صفحه‌های نمایش داده)
+daímōn|دایمون (روح واسطه در یونان باستان)
+dead|مرده
+debugging|اشکال‌زدایی
+dec|دسامبر
+decides|تصمیم می‌گیرد
+deliberately|عمداً
+deliverables|خروجی‌های تحویلی
+demand|درخواست (on demand = هر وقت بخواهی)
+demons|اهریمن‌ها، دیوها
+density|تراکم
+depth|عمق
+determine|تعیین کردن
+diary|دفتر خاطرات
+dichtung|شعر (به آلمانی)
+difficult|سخت
+discusses|بحث می‌کند
+distribute|پخش کردن، تقسیم کردن
+dog|سگ
+doodles|خط‌خطی‌ها، طرح‌های سریع
+door-closer|آرام‌بند در (وسیله‌ای که در را خودکار می‌بندد)
+dossier|پرونده
+drains|خالی می‌شود، تخلیه می‌شود
+draws|قرعه می‌کشد؛ می‌کشد (نقاشی)
+dtad|DTAD (فناوری‌های دیجیتال در معماری و طراحی)
+dwelling|مسکن، جای زندگی
+easily|به‌راحتی
+effect|اثر
+egor|یگور (نام)
+electricity|برق
+electronic|الکترونیکی
+eliza|الایزا (اولین چت‌بات، دهه‌ی ۱۹۶۰)
+elsewhere|جای دیگر
+emerge|پدیدار شدن
+employed|استخدام‌شده، شاغل
+encounter|برخورد، رویارویی
+enjoy|لذت بردن
+ensure|اطمینان حاصل کردن
+equal|برابر
+erase|پاک کردن
+erik|اریک (نام)
+especially|مخصوصاً
+etd|ETD (گروه فناوری‌های نوظهور و طراحی)
+ethics|اخلاق
+event|رویداد
+everybody|همه
+evil|شر، بد
+excited|هیجان‌زده
+explore|کاوش کردن، امتحان کردن
+exponentially|به‌طور تصاعدی، خیلی بیشتر
+express|بیان کردن
+expresses|بیان می‌کند
+extraordinary|فوق‌العاده
+eyes|چشم‌ها
+facade|نما (نمای ساختمان)
+facades|نماها
+fails|از کار می‌افتد، شکست می‌خورد
+fall|افتادن (fall silent = ساکت شدن)
+falls|می‌افتد
+fascinating|جذاب
+faster|سریع‌تر
+fate|سرنوشت
+fatigue|خستگی (در متن احتمالاً اشتباه شنیداری است)
+façade|نما (نمای ساختمان)
+fear|ترس
+feb|فوریه
+few|چند، کم
+figures|شخصیت‌ها؛ ارقام
+finding|پیدا کردن
+flexible|انعطاف‌پذیر
+folklore|فرهنگ عامه، فولکلور
+follow|دنبال کردن
+foreseeable|قابل‌پیش‌بینی
+formulated|بیان‌شده، فرموله‌شده
+fragment|تکه، بخش
+framework|چارچوب
+frauenplan|فراون‌پلان (میدانی در وایمار، خانه‌ی گوته)
+fritz|فریتس (نام)
+fun|سرگرمی، خوش‌گذرانی
+functions|کارکردها
+fürstengruft|فورستن‌گروفت (مقبره‌ی شاهزادگان در وایمار)
+g|(بخشی از e.g. = برای مثال)
+game|بازی
+gartenhaus|خانه‌باغ
+gateways|دروازه‌ها
+gavrilov|گاوریلوف (نام)
+gaydukov|گایدوکوف (نام)
+gdpr|GDPR (قانون حفاظت از داده‌ها در اروپا)
+gdr|آلمان شرقی (GDR)
+genius|روح (genius loci = روح مکان)؛ نابغه
+gets|می‌گیرد
+ghosts|ارواح، شبح‌ها
+god|خدا
+gods|خدایان
+goethe|گوته (شاعر آلمانی)
+goethe's|ـِ گوته
+gordon|گوردون (نام)
+got|گرفت
+greek|یونانی
+grottos|غارهای کوچک، غارچه‌ها
+grow|بزرگ شدن
+guardian|نگهبان
+hanging|آویزان؛ (اینجا: دنبال کسی بودن)
+happened|اتفاق افتاد
+happens|اتفاق می‌افتد
+hardware|سخت‌افزار
+haunted|جن‌زده، روح‌دار
+haus|خانه (به آلمانی)
+heard|شنیدیم، شنیده‌شده
+hears|می‌شنود
+heider|هایدر (نام)
+hell|جهنم (what the hell = این دیگه چیه)
+help|کمک
+helpful|مفید
+herder|هردر (نویسنده‌ی آلمانی)
+herderplatz|هردرپلاتس (میدانی در وایمار)
+hierarchical|سلسله‌مراتبی
+him|او را، به او
+hold|نگه داشتن
+hopefully|امیدوارانه، امیدوارم
+household|خانگی، خانوار
+houses|خانه‌ها
+httpd|اچ‌تی‌تی‌پی‌دی (سرویس وب در لینوکس)
+hungry|گرسنه
+ideally|در حالت ایده‌آل
+if-then|اگر-آنگاه (قانون شرطی ساده)
+ilm|ایلم (رودخانه‌ی وایمار)
+imagined|تصور کرد
+immediately|فوراً
+impersonate|جعل هویت کردن، نقش کسی را بازی کردن
+include|شامل شدن
+infau|InfAU (گروه انفورماتیک در معماری و شهرسازی)
+inhabits|ساکن است در
+inner|درونی
+inputs|ورودی‌ها؛ (اینجا: ارائه‌های آموزشی)
+install|نصب کردن
+instructions|دستورها
+integrating|یکپارچه کردن
+intelligences|هوش‌ها
+intent|قصد، نیت
+intentionally|عمداً
+interactive|تعاملی
+intermediary|واسطه
+interred|(احتمالاً اشتباه شنیداری)؛ دفن‌شده
+intervention|مداخله
+interventions|مداخله‌ها
+invented|ساختگی، اختراع‌شده
+invisible|نامرئی
+invited|دعوت‌شده
+isn't|نیست
+iterating|تکرار و بهبود کردن
+jakobsfriedhof|یاکوبس‌فریدهوف (گورستانی در وایمار)
+jim|جیم (نام)
+johnson|جانسون (نام)
+joon|جون (نام)
+jun|جونیور (Jun.-Prof. = استادیار)
+keep|نگه داشتن
+keeps|نگه می‌دارد
+kept|نگه داشتند
+knew|می‌دانست، می‌شناخت
+knows|می‌داند
+kubus|کوبوس (ساختمانی در دانشگاه)
+könig|کونیگ (نام)
+lares|لارها (ارواح نگهبان خانه در روم)
+large|بزرگ
+layer|لایه
+lead|منجر شدن
+learned|یاد گرفت
+learning|یادگیری
+lets|اجازه می‌دهد
+life|زندگی
+lighting|نورپردازی
+limit|محدودیت، حد
+limited|محدود
+limits|محدودیت‌ها
+linux|لینوکس
+listen|گوش دادن
+listens|گوش می‌دهد
+literally|به معنای واقعی کلمه
+lived|زندگی کرد
+lives|زندگی می‌کند؛ زندگی‌ها
+location|مکان
+loci|مکان (genius loci = روح مکان)
+log|گزارش، لاگ
+looking|دنبال گشتن (looking for = به دنبال)
+lose|از دست دادن
+lost|گم‌شده؛ گم کرد
+loudest|بلندترین (صدا)
+luck|شانس (good luck = موفق باشی)
+luxury|تجمل، فرصت خاص
+made-up|ساختگی
+mainly|بیشتر، عمدتاً
+maintains|نگهداری می‌کند
+makes|می‌سازد، باعث می‌شود
+marianne|ماریانه (نام)
+markt|مارکت (میدان بازار وایمار)
+martin|مارتین (نام)
+may|ممکن است؛ اجازه دارد
+meant|منظور بود
+measure|اندازه، میزان
+memory|حافظه
+midterm|میان‌ترم
+minute|دقیقه
+miro|میرو (ابزار تخته‌ی آنلاین مشترک)
+misunderstands|اشتباه می‌فهمد
+mixing|مخلوط کردن
+mockup|ماکت، نمونه‌ی اولیه
+moment|لحظه
+mortal|فانی، میرا
+national|ملی
+necessary|لازم
+needs|نیاز دارد
+negotiates|مذاکره می‌کند
+neither|نه این (neither... nor = نه... نه)
+niche|طاقچه، فرورفتگی دیوار
+nico|نیکو (نام)
+nobody|هیچ‌کس
+nonhumans|غیرانسان‌ها
+nonsense|بی‌معنی، چرند
+nor|و نه
+norberg-schulz|نوربرگ-شولتس (نظریه‌پرداز معماری)
+noticed|متوجه شد
+nov|نوامبر
+nowadays|امروزه
+observed|مشاهده‌شده
+obvious|واضح
+oct|اکتبر
+off|خاموش؛ دور (completely off = کاملاً بی‌ربط)
+offerings|نذری‌ها، پیشکش‌ها
+oliver|الیور (نام)
+once|یک بار؛ زمانی
+ones|آن‌هایی
+opened|باز کرد
+opening|باز کردن؛ افتتاح
+openings|بازشوها (در و پنجره)
+opens|باز می‌کند
+opposite|مخالف، متضاد
+optimization|بهینه‌سازی
+oracle|پیشگو، هاتف (مکانی که از آینده خبر می‌دهد)
+orientation|جهت‌یابی، راهنمایی
+orphisch|اورفه‌ای (به آلمانی)
+other's|ـِ همدیگر
+others|دیگران
+outlast|بیشتر دوام آوردن
+outputs|خروجی‌ها
+overlapping|هم‌پوشان
+owns|مالک است
+pages|صفحه‌ها
+pandaemonium|پاندمونیوم (جای همه‌ی دیمن‌ها؛ هرج‌ومرج)
+pandemonium|پاندمونیوم (هرج‌ومرج؛ نام یک مدل هوش مصنوعی قدیمی)
+paradigm|الگو، پارادایم
+parallel|موازی
+parent|والد (پدر یا مادر)
+park|پارک
+parkhöhle|پارک‌هوله (غار پارک ایلم)
+partially|تا حدی
+parts|بخش‌ها
+pask|پَسک (نام)
+pasquino|پاسکوینو (مجسمه‌ی سخنگو در رم)
+passage|گذرگاه
+paths|مسیرها
+paused|متوقف‌شده (موقت)
+pavilion|غرفه، کوشک
+pearce|پیرس (نام)
+perceive|درک کردن، حس کردن
+perceives|درک می‌کند
+permanent|دائمی
+permits|مجوزها
+phases|مرحله‌ها
+phenomenology|پدیدارشناسی
+pick|برداشتن، انتخاب کردن
+pile|کپه، توده
+place|مکان
+places|مکان‌ها
+plants|گیاهان
+plato|افلاطون
+plattenbau|پلاتن‌باو (ساختمان‌های پیش‌ساخته‌ی بتنی آلمان شرقی)
+pleasantly|به‌طور خوشایندی
+plenum|جلسه‌ی عمومی (ارائه‌ی همه جلوی کلاس)
+poem|شعر
+polish|صیقل، تمیزکاری نهایی
+pool|استخر؛ (اینجا: سایت کامپیوتر)
+poop|مدفوع کردن (زبان کودکانه)
+powers|نیروها
+pre-final|پیش‌نهایی
+predictability|پیش‌بینی‌پذیری
+present-day|امروزی
+preset|از پیش تعیین‌شده
+prior|قبلی
+privacy|حریم خصوصی
+privilege|امتیاز، فرصت ویژه
+professionally|به‌طور حرفه‌ای
+programming|برنامه‌نویسی
+projection|پروجکشن، نورافکنی تصویر
+projections|پروجکشن‌ها (تصاویر تابانده‌شده)
+prototype|نمونه‌ی اولیه
+prototypes|نمونه‌های اولیه
+provide|فراهم کردن
+provided|فراهم‌شده
+psychological|روانی، روان‌شناختی
+punishments|تنبیه‌ها
+push|فشار دادن، بالا بردن
+quality|کیفیت
+ran|اجرا شد، برگزار شد
+randomly|به‌طور تصادفی
+realities|واقعیت‌ها
+realize|متوجه شدن
+realized|متوجه شدی
+rearrange|دوباره چیدن
+reasonable|معقول
+receives|دریافت می‌کند
+refuse|رد کردن
+reinhard|راینهارد (نام)
+religion|دین
+reliquaries|ضریح‌ها (جای نگهداری یادگار مقدس)
+reloaded|دوباره بارگذاری‌شده
+remains|بقایا
+remember|به یاد آوردن
+remembers|به یاد می‌آورد
+repository|مخزن (کد)
+represent|نمایش دادن، نمایندگی کردن
+represented|نمایش داده می‌شود
+republic|جمهوری
+required|لازم
+researches|تحقیق می‌کند
+residents|ساکنان
+resonate|طنین انداختن
+responsive|پاسخ‌گو، واکنش‌گرا
+restriction|محدودیت
+restrictions|محدودیت‌ها
+reversible|برگشت‌پذیر
+review|بازبینی، داوری
+reviews|بازبینی‌ها
+rituals|آیین‌ها
+rival|رقیب
+river|رودخانه
+rivers|رودخانه‌ها
+role|نقش
+romans|رومی‌ها
+rome|رم
+rooms|اتاق‌ها
+ruin|ویرانه
+rule|قانون
+rule-based|مبتنی بر قانون
+rules|قانون‌ها
+running|در حال اجرا
+runs|اجرا می‌شود
+russian|روسی
+römisches|رومی (Römisches Haus = خانه‌ی رومی در پارک ایلم)
+sand|ماسه، شن
+sc|(بخشی از M.Sc. = کارشناسی ارشد)
+scheduled|زمان‌بندی‌شده
+schematically|به‌صورت کلی، طرح‌وار
+schiller|شیلر (شاعر آلمانی)
+schluntz|شلانتز (نام)
+scripted|از پیش نوشته‌شده
+sections|بخش‌ها؛ برش‌ها (در نقشه)
+seem|به نظر رسیدن
+sees|می‌بیند
+selected|انتخاب کردند
+selfridge|سلفریج (نام)
+sensor|حسگر
+sensors|حسگرها
+sentient|دارای حس و آگاهی، ذی‌شعور
+separates|جدا می‌کند
+serious|جدی
+seriously|جدی
+sets|تنظیم می‌کند
+several|چند
+shaped|شکل‌گرفته
+shared|مشترک
+shoots|(احتمالاً اشتباه شنیداری: shouts = داد می‌زند)
+shouldn't|نباید
+shout|داد زدن
+shows|نشان می‌دهد
+shrine|زیارتگاه، محراب کوچک
+shrines|زیارتگاه‌ها
+shrinks|کوچک می‌شود
+sight|بینایی
+signal|سیگنال، علامت
+silent|ساکت
+simmel|زیمل (نام)
+simulacra|شبیه‌سازی‌ها، بدل‌ها
+simulated|شبیه‌سازی‌شده
+simulation|شبیه‌سازی
+sites|سایت‌ها، مکان‌ها
+skills|مهارت‌ها
+sleeps|می‌خوابد
+slow|کند، آهسته
+smallest|کوچک‌ترین
+smells|بو می‌کند؛ بوها
+snow|برف
+snows|برف می‌بارد
+socialism|سوسیالیسم (National Socialism = نازیسم)
+sociology|جامعه‌شناسی
+socrates|سقراط
+software|نرم‌افزار
+somehow|به نحوی
+soul|روح
+spatial|فضایی
+spatially|از نظر فضایی
+speak|حرف زدن
+speaker|سخنگو، نماینده
+speed|سرعت
+spent|صرف شد
+spirit|روح
+spirits|ارواح
+spread|پخش‌شده
+sshd|اس‌اس‌اچ‌دی (سرویس اتصال امن در لینوکس)
+stanza|بند شعر
+starter|شروع‌کننده (starter project = پروژه‌ی آماده برای شروع)
+statue|مجسمه
+steps|مراحل
+stick|چسبیدن (stick to = پایبند ماندن)
+stops|متوقف می‌شود
+street|خیابان
+streets|خیابان‌ها
+studying|تحصیل
+style|سبک
+suggestion|پیشنهاد
+sung|سونگ (نام)
+surprise|غافلگیر کردن
+surprised|غافلگیر شدیم
+taken|گرفته‌شده
+takes|طول می‌کشد؛ می‌گیرد
+tamagotchi|تاماگوچی (حیوان خانگی دیجیتال)
+tasks|تکلیف‌ها
+teachers|استادان
+technical|فنی
+technically|از نظر فنی
+telegram|تلگرام
+tempelherrenhaus|تمپل‌هرن‌هاوس (ویرانه‌ای در پارک ایلم)
+temperature|دما
+temples|معبدها
+temporary|موقت
+terminal|ترمینال (پنجره‌ی فرمان)
+terminated|خاتمه‌یافته
+theaterplatz|تئاترپلاتس (میدان تئاتر وایمار)
+theme|موضوع، تم
+themes|موضوع‌ها
+thomas|توماس (نام)
+though|هرچند
+threshold|آستانه
+thresholds|آستانه‌ها
+thursdays|پنجشنبه‌ها
+timekeeper|مسئول وقت
+tourism|گردشگری
+tower|برج
+town|شهر کوچک
+toy|اسباب‌بازی
+toys|اسباب‌بازی‌ها
+tracks|مسیرها
+traditions|سنت‌ها
+trees|درختان
+triangles|مثلث‌ها
+tricky|دشوار، پیچیده
+tries|سعی می‌کند
+triggers|فعال می‌کند
+truly|واقعاً
+trust|اعتماد
+trying|امتحان کردن
+turkish|ترکی
+turns|تبدیل می‌شود؛ برمی‌گرداند
+tutor|دستیار آموزشی
+types|انواع
+typical|معمولی، رایج
+unesco|یونسکو
+unix|یونیکس
+urworte|کلمات آغازین (به آلمانی)
+users|کاربران
+utility|خدمات عمومی (مثل آب و برق)
+vibe|حس، حال‌وهوا (vibe coding = کدنویسی با توصیف به هوش مصنوعی)
+vibration|لرزش
+visible|قابل‌دیدن
+visitor|بازدیدکننده
+voice|صدا
+wahrheit|حقیقت (به آلمانی)
+waits|منتظر می‌ماند
+wake|بیدار شدن
+wakes|بیدار می‌شود
+wall|دیوار
+wants|می‌خواهد
+warm-up|گرم کردن، تمرین آغازین
+warned|هشدار داده‌شده
+warning|هشدار
+warns|هشدار می‌دهد
+watches|تماشا می‌کند
+watching|تماشا کردن
+water|آب
+wayside|کنار جاده
+wednesdays|چهارشنبه‌ها
+weimar|وایمار
+weimar-west|وایمار-غرب (محله‌ای در وایمار)
+welcome|خوش‌آمدگویی
+were|بودند، بودیم
+whatsapp|واتس‌اپ
+wheelchair|ویلچر
+while|در حالی که
+whom|چه کسی (را)
+wieland|ویلاند (نویسنده‌ی آلمانی)
+wins|برنده می‌شود
+wishing|آرزو (wishing well = چاه آرزو)
+won't|نخواهد
+workflows|گردش‌کارها (مراحل ثابت کاری)
+worth|ارزش
+writes|می‌نویسد
+wrote|نوشت
+xx|بیست (به عدد رومی)
+yesterday|دیروز
+yet|هنوز
+zhang|ژانگ (نام)
+abilities|توانایی‌ها
+ability|توانایی
+abrupt|ناگهانی
+abstracted|انتزاعی‌شده
+abstraction|انتزاع، ساده‌سازی به فرم‌های کلی
+abuse|سوءاستفاده کردن، آزار دادن
+accident|تصادف، اتفاقی (by accident = تصادفاً)
+accrue|جمع شدن، اضافه شدن
+accurate|دقیق
+advice|توصیه، نصیحت
+affects|اثر می‌گذارد
+aligned|هم‌راستا، جور
+amazing|شگفت‌انگیز
+annoying|آزاردهنده
+anybody|هر کسی، کسی
+anything|هر چیزی، چیزی
+anyway|به هر حال
+api|ای‌پی‌آی (رابط برنامه‌نویسی؛ API key = کلید دسترسی به سرویس)
+app|اپ، برنامه
+apparently|ظاهراً
+appreciate|قدردانی کردن، ارزش قائل شدن
+areas|مناطق، بخش‌ها
+arguments|استدلال‌ها، دلیل‌ها؛ بحث‌ها
+arrange|چیدن، ترتیب دادن
+arrivals|ورودی‌ها، تازه‌واردها
+arrived|رسید
+arrives|می‌رسد
+arrogant|مغرور، متکبر
+ashamed|شرمنده
+asking|پرسیدن، خواستن
+assume|فرض کردن، گمان کردن
+atmospheric|فضاساز، دارای حال‌وهوا
+attached|وابسته، چسبیده
+automated|خودکار
+automatically|به‌طور خودکار
+average|میانگین (گرفتن)
+bach|باخ (آهنگساز آلمانی)
+balance|تعادل
+balls|توپ‌ها
+bar|میزان (در موسیقی)؛ میله
+barrel|بشکه
+barrels|بشکه‌ها
+barrier|مانع
+basically|اساساً، در واقع
+bastille|باستیل (زندان)
+beautiful|زیبا
+bed|بستر؛ تخت
+beds|بسترها (بستر رودخانه)
+begin|شروع کردن
+believes|باور دارد
+bench|نیمکت
+besides|علاوه بر، کنارِ
+best|بهترین
+bicycles|دوچرخه‌ها
+black|سیاه
+blackouts|بیهوشی‌ها، تاریک شدن‌های ناگهانی
+blocking|بستن، مسدود کردن
+blooming|شکوفه دادن
+bottles|بطری‌ها
+bottom|کف، پایین
+bounces|پس می‌زند، به بیرون پرت می‌کند
+brick|آجر
+bride|عروس
+brought|آورد
+brutal|خشن، بی‌رحمانه
+builds|می‌سازد
+button|دکمه
+buttons|دکمه‌ها
+buy|خریدن
+calmed|آرام شد
+came|آمد
+candy|آب‌نبات، شیرینی
+captured|ثبت‌شده، گرفته‌شده
+card|کارت
+cards|کارت‌ها
+carried|حمل کرد
+cat|گربه
+catalog|فهرست، کاتالوگ
+catch|گرفتن (catch up = عقب‌افتادگی را جبران کردن)
+catholic|کاتولیک
+causes|باعث می‌شود
+cell|سلول (زندان)
+characteristic|ویژه، مشخصه
+chatbot|چت‌بات
+cheap|ارزان، بی‌کیفیت
+choices|انتخاب‌ها
+claustrophobia|ترس از فضای بسته
+clean|تمیز کردن
+click|کلیک کردن
+climbed|بالا رفتی
+clouds|ابرها
+collapse|فرو ریختن
+collapses|فرو می‌ریزد
+collapsing|در حال فرو ریختن
+collection|مجموعه
+colorful|رنگارنگ
+colors|رنگ‌ها
+comic|خنده‌دار، کمیک
+competitions|مسابقه‌ها (در معماری: مسابقه‌ی طراحی)
+completed|کامل‌شده
+complicated|پیچیده
+considered|در نظر گرفته می‌شود
+considers|در نظر می‌گیرد
+constantly|مدام
+constructor|سازنده
+controllable|قابل کنترل
+controllers|کنترل‌کننده‌ها، دسته‌ها
+controls|کنترل‌ها
+costumes|لباس‌های نمایشی
+couch|کاناپه
+couldn't|نتوانستم
+covered|پوشیده
+covers|می‌پوشاند، فرا می‌گیرد
+crazy|دیوانه‌وار، عجیب
+creature|موجود
+crew|گروه کاری
+critique|نقد
+cuckoo|فاخته (ساعت کوکو)
+cuts|برش‌ها، نماها
+damaged|آسیب زد
+dark-sy|تاریک‌تر، تیره
+darker|تاریک‌تر
+day-to-day|روزمره
+daytime|روز
+deal|کنار آمدن (deal with = از پسِ چیزی برآمدن)
+dealers|معامله‌گرها (احتمالاً اشتباهِ ضبط برای demons)
+decode|رمزگشایی کردن، فهمیدن
+demolished|تخریب‌شده
+demon|دیو، دیمن (روح)
+depending|بسته به
+described|توصیف کرد
+destroy|نابود کردن
+destroyed|نابودشده
+detailed|پرجزئیات
+deutschland|آلمان (Deutschland ticket = بلیت ماهانه‌ی حمل‌ونقل آلمان)
+diamond|الماس (احتمالاً اشتباهِ ضبط برای daemon)
+didn't|نکرد
+difficulties|سختی‌ها
+direct|مستقیم
+direction|جهت
+directory|فهرست، پوشه
+discourage|منصرف کردن
+discover|کشف کردن
+dislike|دوست نداشتن
+disown|کنار گذاشتن، انکار کردن
+distorted|کج‌ومعوج، تحریف‌شده (صدا)
+divided|تقسیم‌شده
+dok|داک (جشنواره‌ی فیلم مستند لایپزیگ)
+dot|نقطه
+dots|نقطه‌ها
+double|دو برابر کردن، تکرار کردن
+drive|راندن (drive crazy = دیوانه کردن)
+driven|هدایت‌شده، رانده‌شده
+drone|پهپاد؛ صدای یکنواخت
+duke|دوک (حاکم)
+ears|گوش‌ها
+earth|زمین
+earthquake|زلزله
+effectively|به‌طور مؤثر
+egyptian|مصری
+element|عنصر
+elements|عناصر
+eleven|یازده
+elif|الیف (نام)
+elif's|ـِ الیف
+emotion|احساس
+empty|خالی
+ending|تمام شدن، پایان
+entered|وارد شد
+enters|وارد می‌شود
+entire|تمام، کل
+environments|محیط‌ها
+eraser|پاک‌کن
+escape|فرار کردن
+escaped|فرار کرد
+escapes|فرار می‌کند
+essentially|اساساً
+europe|اروپا
+eventually|سرانجام
+everything's|همه‌چیز ... است
+everywhere|همه‌جا
+explained|توضیح داد
+explains|توضیح می‌دهد
+extreme|افراطی، شدید
+fallen|افتاده
+falling|در حال افتادن
+fastest|سریع‌ترین
+faust|فاوست (نمایشنامه‌ی گوته)
+favorite|مورد علاقه
+felt|احساس کردم
+festival|جشنواره
+fight|جنگیدن
+finds|پیدا می‌کند
+five-minute|پنج‌دقیقه‌ای
+fix|درست کردن
+flashlight|چراغ‌قوه
+flower|گل
+footprints|ردپاها
+footsteps|صدای قدم‌ها
+forcing|مجبور کردن
+found|پیدا کرد
+friend|دوست
+friends|دوستان
+frustrated|کلافه، ناامید
+gate|دروازه
+gate's|ـِ دروازه (the gate's talking = دروازه حرف می‌زند)
+gem|جواهر (احتمالاً اشتباهِ ضبط)
+generate|تولید کردن
+generated|تولیدشده
+geometric|هندسی
+germany|آلمان
+ghost|روح
+giant|غول‌پیکر
+girl|دختر
+given|داده‌شده
+gives|می‌دهد
+god's|ـِ خدا
+gold|طلا، طلایی
+gonna|قرار است (going to)
+goodbye|خداحافظ
+graphics|گرافیک
+grass|چمن
+gravity|جاذبه
+greatly|بسیار
+greedy|سخت‌گیر، حریص
+grew|رشد کرد
+gta|جی‌تی‌اِی (بازی ویدیویی)
+guess|حدس زدن (I guess = فکر کنم)
+guest|مهمان (guest list = فهرست مهمانان)
+guidance|راهنمایی
+guy|پسر، آدم
+halo|هاله
+happen|اتفاق افتادن
+hasn't|نکرده است
+haven't|نکرده‌ام
+hearing|شنیدن
+heartbeat|ضربان قلب
+heaven|بهشت
+heaven's|ـِ بهشت
+heirs|وارثان (احتمالاً اشتباهِ ضبط برای arrows = کلیدهای جهت)
+hello|سلام
+hieroglyphics|هیروگلیف (خط مصر باستان)
+high|بالا
+hindered|مانع شد
+hips|باسن، لگن
+holds|نگه می‌دارد
+hole|سوراخ، چاله
+holes|جاهای خالی
+honestly|راستش
+hooked|معتاد، درگیر (get hooked = جذبِ چیزی شدن)
+hope|امید داشتن
+hoped|امیدوار بود
+hot|داغ
+icons|آیکون‌ها
+illustration|نمونه، تصویرگری
+implementation|پیاده‌سازی
+improve|بهتر کردن
+improves|بهتر می‌کند
+influence|تأثیر
+infrastructure|زیرساخت
+initial|اولیه
+initially|در ابتدا
+instruction|دستور
+integrate|ادغام کردن، همراه کردن
+intended|قصد داشتم
+intention|قصد، نیت
+intentions|قصدها
+inter|میان (پیشوند؛ احتمالاً جمله‌ی ناقص)
+interact|تعامل کردن
+interaction|تعامل
+italy|ایتالیا
+item|شیء، آیتم
+items|اشیا، آیتم‌ها
+iterate|تکرار کردن (قدم‌به‌قدم بهتر کردن)
+iteration|نسخه، دور (از تکرار)
+jesus|عیسی (اینجا: وای!)
+jogiso|جوگیسو (نام)
+johann|یوهان (نام)
+journey|سفر
+judge|قضاوت کردن
+judges|قضاوت می‌کند
+judging|قضاوت
+judgment|حکم، قضاوت
+keeper|نگهبان
+keys|کلیدها
+kicked|لگد زد
+kinds|انواع
+lambs|بره‌ها (احتمالاً اشتباهِ ضبط برای lamps = چراغ‌ها)
+landscape|منظر، چشم‌انداز
+leader|رهبر
+led|هدایت‌شده
+leipzig|لایپزیگ (شهری در آلمان)
+lesson|درس
+let|اجازه دادن
+levels|سطح‌ها
+life-long|مادام‌العمر
+link|پیوند، ارتباط
+literal|تحت‌اللفظی، خیلی مستقیم
+locations|مکان‌ها
+locked|قفل‌شده
+longer|طولانی‌تر
+loop|حلقه (feedback loop = چرخه‌ی بازخورد)
+macmahon|مک‌ماهون (نام)
+maintain|حفظ کردن
+manage|از پسِ ... برآمدن
+managed|موفق شدی
+marked|علامت‌خورده
+match|جور بودن
+mehdi's|ـِ مهدی
+memories|خاطره‌ها
+mess|آشفتگی
+messed|به‌هم‌ریخته (messed up = خراب)
+mic|میکروفون
+milk|شیر
+mine|مال من
+minimal|حداقلی
+missing|گمشده، جاافتاده
+mm-hmm|اوهوم
+mock|مسخره کردن
+mom|مامان
+moral|اخلاقی
+mouth|دهان
+moved|حرکت کرد؛ تحت تأثیر قرار گرفت
+movie|فیلم
+murals|نقاشی‌های دیواری
+museum|موزه
+music|موسیقی
+musician|موسیقی‌دان
+names|نام‌ها
+nara|نارا (نام)
+narrow|محدود کردن
+necklace|گردنبند
+negotiate|مذاکره کردن
+nereem|نریم (نام)
+nerf|نرف (ضعیف کردن در بازی)
+newbie|تازه‌وارد
+nicer|بهتر، قشنگ‌تر
+nightmare|کابوس
+nonsense-daemon|دیمنِ بی‌معنی
+norm|نُرم (نام)
+observe|مشاهده کردن
+obsessed|وسواسی، شیفته
+obsession|وسواس
+obviously|معلوم است که
+offer|پیشنهاد دادن
+oil|نفت
+opportunity|فرصت
+opposed|مخالف
+ores|سنگ‌معدن‌ها (احتمالاً اشتباهِ ضبط)
+origin|منشأ
+outfit|لباس
+outlasts|بیشتر دوام می‌آورد
+palette|پالت (رنگ)
+panel|پنل
+panels|پنل‌ها
+parasite|انگل
+particularly|به‌ویژه
+passed|گذشت
+path|مسیر
+peak|قله
+pen|خودکار
+pencils|مدادها
+person's|ـِ آن شخص
+piles|تپه‌ها، کپه‌ها
+planned|برنامه‌ریزی‌شده
+planning|برنامه‌ریزی
+play|بازی کردن؛ پخش کردن
+playable|قابل بازی
+played|بازی کرد
+player|بازیکن
+players|بازیکنان
+playing|بازی کردن
+plays|پخش می‌شود
+pockets|جیب‌ها
+poland|لهستان (احتمالاً اشتباهِ ضبط)
+post-punk|پست‌پانک
+precise|دقیق
+presenter|ارائه‌دهنده
+presenter's|ـِ ارائه‌دهنده
+preserving|نگه داشتن، حفظ
+previous|قبلی
+probably|احتمالاً
+prompt|پرامپت (دستور متنی به هوش مصنوعی)
+prompts|پرامپت‌ها
+protect|محافظت کردن
+protects|محافظت می‌کند
+protest|اعتراض
+protests|اعتراض‌ها
+puccino|پوچینو (نام)
+pull|کشیدن
+pulled|کشیدی، از پسش برآمدی
+punished|تنبیه کرد
+purely|کاملاً
+purpose|هدف
+pushing|هل دادن
+quicker|سریع‌تر
+quiet|ساکت، آرام
+rainbow|رنگین‌کمان
+raining|باریدن
+rare|کمیاب
+rather|ترجیحاً، نسبتاً
+reach|رسیدن
+reached|رسیده‌ای
+react|واکنش نشان دادن
+reception|پذیرش (احتمالاً اشتباهِ ضبط برای restriction)
+recommend|توصیه کردن
+recording|ضبط، فایل ضبط‌شده
+recreate|دوباره ساختن
+redirects|به جای دیگری می‌فرستد
+reference|مرجع
+refresh|تازه کردن (صفحه)
+regional|منطقه‌ای
+regionalbahn|قطار منطقه‌ای آلمان
+rejoin|دوباره وارد شدن
+relative|نسبی
+relatively|نسبتاً
+relieved|رها شده، آسوده
+remaining|باقی‌مانده
+remediation|ترمیم، بازسازی
+remind|یادآوری کردن
+reminds|یادآوری می‌کند
+remote|از راه دور (آنلاین)
+removal|برداشتن
+remove|برداشتن، حذف کردن
+removed|از راه دور (اینجا)؛ حذف‌شده
+repair|تعمیر کردن
+repeated|تکرارشده
+representing|نمایش دادن
+represents|نمایش می‌دهد، نماینده‌ی ... است
+requirement|الزام
+reset|از نو شروع کردن
+reshape|تغییر شکل دادن
+restart|دوباره راه‌اندازی کردن
+restrict|محدود کردن
+return|برگشتن
+returns|برمی‌گردد
+rewarding|ارزشمند، رضایت‌بخش
+rework|دوباره کار کردن روی چیزی
+rid|خلاص (get rid of = کنار گذاشتن)
+rights|حق‌ها، دسترسی‌ها
+riots|شورش‌ها
+road|جاده، راه
+robert|رابرت (نام)
+route|مسیر
+routine|روال، تکراری
+scaffolding|داربست
+scaffoldings|داربست‌ها
+scary|ترسناک
+scene|صحنه
+screenshot|اسکرین‌شات
+screenshotting|اسکرین‌شات گرفتن
+sebastian|سباستین (نام)
+seeds|بذرها (در کامپیوتر: عدد شروع برای تولید تصادفی)
+seeing|دیدن
+sends|می‌فرستد
+sentence|جمله
+sentences|جمله‌ها
+sentience|ادراک، آگاهی
+serving|خدمت کردن
+shadows|سایه‌ها
+shall|باید
+shape|شکل
+sharing|اشتراک (screen sharing = نمایش صفحه)
+she's|او ... است
+showed|نشان دادند
+shy|خجالتی
+simay|سیمای (نام)
+similar|مشابه
+simpler|ساده‌تر
+simplicity|سادگی
+simplified|ساده‌شده
+simply|به‌سادگی
+sits|می‌نشیند
+size|اندازه
+sketch|طرح اولیه زدن
+sketching|طرح اولیه زدن
+sleep|خوابیدن
+slightly|کمی
+smaller|کوچک‌تر
+snow-adding|برف اضافه کردن
+snowflake|دانه‌ی برف
+snowflakes|دانه‌های برف
+snowy|برفی
+somebody|کسی
+somewhat|تا حدی
+song|آهنگ
+soon|به‌زودی
+sorry|ببخشید
+sort|نوع (sort of = یک‌جورهایی)
+souls|روح‌ها
+sound|صدا
+sounded|به نظر می‌رسید (صدا)
+sounds|صداها؛ به نظر می‌رسد
+spain|اسپانیا
+spanish|اسپانیایی (احتمالاً اشتباهِ ضبط برای screen)
+speakers|بلندگوها
+spider|عنکبوت
+spiders|عنکبوت‌ها
+spin|چرخیدن (احتمالاً اشتباهِ ضبط برای stay)
+spitted|تف شده، بیرون انداخته شده
+spoke|صحبت کردم
+squares|میدان‌ها
+stable|پایدار
+standing|سرپا
+stations|ایستگاه‌ها، مرحله‌ها
+stayed|ماندی
+steered|هدایت‌شده
+steering|هدایت کردن
+step|قدم
+stinking|بدبو
+stole|دزدید
+stone|سنگ
+stop|ایستادن، متوقف شدن
+stories|داستان‌ها
+storyteller|قصه‌گو
+straight|مستقیم
+stress|استرس
+stronger|قوی‌تر
+structural|ساختاری
+stubborn|لجباز
+subscribed|مشترک (کانال)
+suddenly|ناگهان
+suggest|پیشنهاد کردن
+suggesting|پیشنهاد می‌داد
+sunset|غروب
+sunshine|آفتاب
+supposedly|ظاهراً، قرار است
+surprising|غافلگیرکننده
+sustaino|(کلمه‌ی ناقص؛ احتمالاً sustainable = پایدار)
+switched|عوض شد
+switching|عوض کردن
+synth|سینث (ساز الکترونیک)
+t|حرف تی (دکمه‌ی T)
+tachycardia|تپش قلب تند
+tales|داستان‌ها
+talked|صحبت کردم
+taller|بلندتر
+taste|چشیدن، حس کردن
+team|تیم (اینجا: theme)
+telling|گفتن
+temple|معبد
+tension|تنش، کشمکش
+theater|تئاتر
+there'll|خواهد بود
+thinks|فکر می‌کند
+threw|انداخت
+throat|گلو
+throw|انداختن
+ticket|بلیت
+tickets|بلیت‌ها
+till|تا
+timer|زمان‌سنج
+took|برد، گرفت
+top|بالا، رو
+traces|ردها
+trailer|پیش‌نمایش (احتمالاً اشتباهِ ضبط برای trial)
+train|تمرین کردن؛ قطار
+training|تمرین
+translation|ترجمه، برگردان
+transpire|منتقل کردن (اینجا: همه‌ی اطلاعات را نشان دادن)
+transport|منتقل کردن
+trapped|گیر افتاده
+trapping|زندانی کردن
+trash|زباله
+traveling|سفر کردن
+trip|سفر کوتاه، گردش
+twice|دو بار
+type|نوع
+ugly|زشت
+understandability|قابل‌فهم بودن
+understandable|قابل فهم
+undo|برگرداندن، خنثی کردن
+unfortunately|متأسفانه
+unless|مگر اینکه (اینجا: وگرنه)
+useless|بی‌فایده
+usually|معمولاً
+vendors|فروشنده‌ها (احتمالاً اشتباهِ ضبط برای wanderers)
+versions|نسخه‌ها
+vines|پیچک‌ها
+visit|بازدید کردن
+visual|بصری
+visualization|نمایش تصویری
+visualizing|تصویری کردن
+visually|به‌صورت تصویری
+walk|راه رفتن
+walked|راه رفت
+walls|دیوارها
+wandering|پرسه زدن (احتمالاً اشتباهِ ضبط برای waiting)
+wanna|می‌خواهم (want to)
+warm|گرم
+wasn't|نبود
+wears|می‌پوشد
+web|تار (spider web = تار عنکبوت)
+wednesday|چهارشنبه
+weird|عجیب
+whatsoever|هر چه
+wheels|چرخ‌ها
+whenever|هر وقت
+whether|آیا، که
+wilma|ویلما (نام؛ احتمالاً اشتباهِ ضبط)
+win|برنده شدن
+wind|باد
+window|پنجره
+wonderful|عالی
+wondering|فکر کردن، کنجکاو بودن
+woo|اوو (صدا)
+worker|کارگر
+workers|کارگرها
+worries|نگرانی‌ها (no worries = مشکلی نیست)
+worry|نگران بودن
+worse|بدتر
+wow|وای
+yards|حیاط‌ها (court yards = حیاط‌ها)
+you'll|تو خواهی
+yours|مال تو
+zubinart|زوبینارت (نام؛ احتمالاً اشتباهِ ضبط)
+deutschlandticket|بلیت ماهانه‌ی حمل‌ونقل عمومی در کل آلمان

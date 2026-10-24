@@ -5,4 +5,4 @@ Content for the DTAD Reader Android app: lecture transcripts with Persian word m
 - `content.html` is the page the app shows (works offline).
 - `version.json` tells the app when new content is available. Raise `version` after updating `content.html` and the app downloads it on its next launch with internet.
 
-The DTAD Project app reads its content from `project/` (same scheme, its own `content.html` and `version.json`).
+The DTAD Project app reads its content from `project/` and the AI in Design app from `ai-in-design/` (same scheme, each with its own `content.html` and `version.json`).
