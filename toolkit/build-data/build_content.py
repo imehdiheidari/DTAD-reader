@@ -29,11 +29,35 @@ for line in open(os.path.join(DATA, "glossary-fa.txt"), encoding="utf8"):
         k, v = line.split("|", 1)
         gloss[k] = v
 
-parts, words = [], set()
-for fname, title in SESSIONS:
+# optional NN-fa.html (Persian summary) and NN-todo.html (tasks for the next session) beside NN.html turn on tabs:
+# one tab per session, and inside each the transcript, summary and to-do as sub-tabs (tabs.html)
+def extra(fname, kind):
+    p = os.path.join(DATA, "sessions", fname.replace(".html", f"-{kind}.html"))
+    return open(p, encoding="utf8").read() if os.path.exists(p) else None
+TABS = any(extra(f, k) for f, _ in SESSIONS for k in ("fa", "todo"))
+FA_DIGITS = str.maketrans("0123456789", "۰۱۲۳۴۵۶۷۸۹")
+
+parts, words, nav = [], set(), []
+for n, (fname, title) in enumerate(SESSIONS, 1):
     frag = open(os.path.join(DATA, "sessions", fname), encoding="utf8").read()
     words |= words_in(frag)
-    parts.append(f'<h2 class="session-title">{html.escape(title)}</h2>\n{frag}')
+    head = f'<h2 class="session-title">{html.escape(title)}</h2>\n'
+    if not TABS:
+        parts.append(head + frag)
+        continue
+    sid = fname.split(".")[0]
+    nav.append(f'<button type="button" role="tab" data-s="{sid}">جلسه {str(n).translate(FA_DIGITS)}</button>')
+    panes = [("text", "متن کلاس", frag, "")]
+    for kind, label in (("fa", "خلاصه فارسی"), ("todo", "What to do")):
+        body = extra(fname, kind)
+        if body:
+            words |= words_in(body)
+            panes.append((kind, label, body, ' dir="rtl"'))
+    sub = "".join(f'<button type="button" role="tab" data-p="{k}">{l}</button>' for k, l, _, _ in panes)
+    body = "".join(f'<div class="pane pane-{k}" data-p="{k}"{d} hidden>\n{b}\n</div>' for k, _, b, d in panes)
+    parts.append(f'<section class="session" data-s="{sid}" hidden>\n{head}<nav class="subtabs" role="tablist">{sub}</nav>\n{body}\n</section>')
+if TABS:
+    parts.insert(0, '<nav class="sessiontabs" role="tablist">' + "".join(nav) + '</nav>')
 
 audio = lambda w: os.path.join(AUDIO_DIR, w.replace("'", "_") + ".mp3")
 missing_gloss = sorted(w for w in words if w not in gloss)
@@ -48,6 +72,8 @@ theme = open(os.path.join(HERE, "theme.html"), encoding="utf8").read()
 theme = theme.replace("/*__FONTS__*/", open(os.path.join(HERE, "fonts.css")).read())
 theme = theme.replace("__APP_NAME__", html.escape(APP_NAME)).replace("__SUBTITLE__", f"{len(SESSIONS)} session" + ("s" if len(SESSIONS) > 1 else ""))
 script = open(os.path.join(HERE, "reader-script.html"), encoding="utf8").read()
+if TABS:
+    script += "\n" + open(os.path.join(HERE, "tabs.html"), encoding="utf8").read()
 script += "\n" + open(os.path.join(HERE, "updater.html"), encoding="utf8").read()
 
 doc = ('<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n<title>' + html.escape(APP_NAME) + '</title>\n'

@@ -4,6 +4,7 @@ Content for the **DTAD Project** Android app (course *Pandaemonium: Daemons for 
 
 - `content.html` is the page the app shows (works offline). `version.json` tells installed apps when new content is available: raise `version` after updating `content.html`, and the app downloads it on its next launch with internet.
 - `build-data/sessions/NN.md` is each session's source (toolkit transcript format), `NN.html` its converted fragment, `index.json` the session list.
+- `build-data/sessions/NN-fa.html` (Persian summary) and `NN-todo.html` ("What to do": tasks for the next session) are optional; when any exist, the page shows one tab per session with sub-tabs for the transcript, summary and to-do (`toolkit/build-data/tabs.html`).
 - `build-data/glossary-fa.txt` is the full glossary for this course (DTAD Theory's words plus this course's). `build-data/audio.tar` holds only the pronunciations this course added; extract it together with `toolkit/build-data/audio.tar` into one folder.
 - `DTAD-Project-pc.html` is the same page for a PC browser: when online it checks `version.json` and offers to download the newer PC file. `build-pc.py` makes it from `content.html`.
 - `app/` is the overlay on `toolkit/app` (name, icon, update URL); `build-app.sh` builds the APK under the package `ir.mehdi.dtadproject`, so it installs next to DTAD Theory. Same `KEYSTORE` / `KS_PASS` / SDK needs as `toolkit/app/build.sh`.
