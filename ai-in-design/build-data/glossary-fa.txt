@@ -3498,3 +3498,343 @@ you'll|تو خواهی
 yours|مال تو
 zubinart|زوبینارت (نام؛ احتمالاً اشتباهِ ضبط)
 deutschlandticket|بلیت ماهانه‌ی حمل‌ونقل عمومی در کل آلمان
+accurately|به‌دقت، با دقت
+additionally|علاوه بر این
+advanced|پیشرفته
+advise|توصیه کردن، نصیحت کردن
+affect|اثر گذاشتن بر
+aggressively|با شدت، تهاجمی
+allow|اجازه دادن
+allows|اجازه می‌دهد
+amount|مقدار
+animations|انیمیشن‌ها، پویانمایی‌ها
+answers|جواب‌ها
+api's|APIها (رابط‌های برنامه‌نویسی)
+appear|ظاهر شدن
+approve|تأیید کردن
+arranging|مرتب کردن، چیدن
+arrive|رسیدن
+assigned|واگذارشده، تعیین‌شده
+assist|کمک کردن
+assistance|کمک
+assistant|دستیار
+atomic|اتمی
+auto|خودکار
+automatic|خودکار
+biggable|(کلمه‌ی نامفهوم در ضبط)
+bigger|بزرگ‌تر
+bits|تکه‌ها، بیت‌ها
+blocked|مسدود
+boom|رونق، انفجار
+bounded|محدود
+branch|شاخه (نسخه‌ی جدا در گیت)
+branches|شاخه‌ها
+bright|روشن
+busy|شلوغ، مشغول
+calculating|محاسبه کردن
+call|صدا زدن، نامیدن
+capabilities|توانایی‌ها
+car|ماشین
+chair|کرسی (گروه آموزشی)، صندلی
+challenging|چالش‌برانگیز، دشوار
+chances|شانس‌ها، احتمال‌ها
+channels|کانال‌ها، بخش‌ها
+chatgpt|چت‌جی‌پی‌تی (چت‌بات OpenAI)
+chats|چت‌ها
+checking|بررسی کردن
+chunks|تکه‌ها
+claude|کلود (مدل هوش مصنوعی Anthropic)
+clinic|درمانگاه؛ جلسه‌ی کمک
+coder|برنامه‌نویس
+codes|کدها
+comfortable|راحت
+command|فرمان، دستور
+commands|دستورها
+companies|شرکت‌ها
+company|شرکت
+compare|مقایسه کردن
+conclusion|نتیجه‌گیری
+conflicting|متناقض
+console|کنسول (بخش خطاها در ابزار توسعه)
+content|محتوا
+contents|محتویات
+continuity|پیوستگی
+coordinates|مختصات
+copy|کپی، نسخه
+count|شمردن، حساب شدن
+crazier|دیوانه‌وارتر
+creativity|خلاقیت
+ctrl|کلید کنترل
+cue|نشانه، اشاره
+cursive|ایتالیک، کج
+custom|سفارشی
+customize|سفارشی کردن
+daring|جسورانه
+dashes|خط تیره‌ها
+dealing|سروکار داشتن
+default|پیش‌فرض
+define|تعریف کردن
+defining|تعریف کردن
+definitely|حتماً
+definition|تعریف
+degrading|افت کردن، بدتر شدن
+delete|پاک کردن
+deleting|پاک کردن
+demo|نمایش نمونه
+demonstrate|نشان دادن
+demonstration|نمایش
+demos|نمایش‌ها
+depend|وابسته بودن
+description|توضیح، شرح
+dev|توسعه (development)
+developer|توسعه‌دهنده
+developers|توسعه‌دهندگان
+differences|تفاوت‌ها
+display|نمایش دادن
+displayed|نمایش داده‌شده
+documents|سندها
+dollar|دلار
+dollars|دلار
+download|دانلود کردن
+downloaded|دانلودشده
+downloading|دانلود کردن
+dramatically|به‌شدت، چشمگیر
+drink|نوشیدنی
+earlier|قبل‌تر
+edge|برتری؛ لبه
+edit|ویرایش کردن
+em|em (در em dash: خط تیره‌ی بلند)
+email|ایمیل
+emails|ایمیل‌ها
+error|خطا
+errors|خطاها
+estimated|تخمینی
+euros|یورو
+exchanging|مبادله کردن
+execute|اجرا کردن
+executed|اجراشده
+executes|اجرا می‌کند
+experimenting|آزمایش کردن
+expertise|تخصص
+expertises|تخصص‌ها
+explorer|کاوشگر فایل (Explorer)
+export|خروجی گرفتن
+exposed|در معرض قرار گرفته
+extension|پسوند (فایل)
+figured|فهمید، حل کرد (figure out)
+file|فایل
+files|فایل‌ها
+filled|پرشده
+findings|یافته‌ها
+fingertips|نوک انگشتان
+finish|تمام کردن
+folder|پوشه
+folders|پوشه‌ها
+food|غذا
+forgot|فراموش کردم
+forward|رو به جلو (forward slash: اسلش /)
+frank|(اسم شخص)
+free|آزاد، رایگان
+functionality|کارکرد، قابلیت
+gain|به دست آوردن
+github|گیت‌هاب (سایت نگهداری کد)
+gpt|GPT (مدل OpenAI)
+grandma|مادربزرگ
+granted|داده‌شده، اعطاشده
+grasshopper|گرس‌هاپر (افزونه‌ی Rhino)
+harnesses|هارنس‌ها (محیط اجرای ایجنت)
+heading|تیتر
+headings|تیترها
+height|ارتفاع
+heights|ارتفاع‌ها
+helping|کمک کردن
+helps|کمک می‌کند
+hero|قهرمان
+hi|سلام
+hidden|پنهان
+hit|رسیدن به، خوردن به (سقف)
+honest|صادق
+host|میزبانی کردن
+ide|محیط توسعه‌ی یکپارچه (IDE)
+increase|افزایش دادن
+inherited|به ارث برده
+inspecting|بررسی کردن
+installed|نصب‌شده
+integrated|یکپارچه
+internet|اینترنت
+introductions|معرفی‌ها
+land|زمین (land use: کاربری زمین)
+laptop|لپ‌تاپ
+laptops|لپ‌تاپ‌ها
+layers|لایه‌ها
+leap|جهش
+learnings|آموخته‌ها
+libraries|کتابخانه‌ها (کد آماده)
+licenses|مجوزها، لایسنس‌ها
+listing|فهرست کردن
+local|محلی
+localhost|لوکال‌هاست (سرور روی کامپیوتر خودت)
+low|کم، پایین
+lucky|خوش‌شانس
+majestically|باشکوه
+manner|شیوه
+maps|نقشه‌ها
+markdown|مارک‌داون (قالب متن ساده)
+md|پسوند فایل مارک‌داون
+meaningful|معنادار
+meantime|در این فاصله
+meanwhile|در همین حین
+memento|ممنتو (فیلم)
+mere|صرف، فقط
+merge|ادغام کردن
+metaphor|استعاره
+might|ممکن است
+million|میلیون
+month|ماه
+nap|چرت (اینجا: an app)
+non-deterministic|غیرقطعی
+notice|متوجه شدن
+noticeable|قابل توجه
+noticing|متوجه شدن
+npm|ابزار مدیریت بسته‌های جاوااسکریپت
+occurred|رخ داد
+openstreetmap|اوپن‌استریت‌مپ (نقشه‌ی آزاد)
+openstreetmaps|اوپن‌استریت‌مپ
+options|گزینه‌ها
+orange|نارنجی
+osm|اوپن‌استریت‌مپ (OSM)
+output|خروجی
+overpass|Overpass (سرویس پرس‌وجوی OSM)
+overture|Overture (منبع داده‌ی نقشه)
+owning|مالک بودن
+packages|بسته‌ها
+papers|مقاله‌ها
+password|رمز عبور
+paste|چسباندن
+pay|پرداختن
+perceivable|قابل درک
+perish|از بین رفتن
+permission|اجازه
+permissions|اجازه‌ها
+persistent|پیگیر، مداوم
+plots|قطعه‌زمین‌ها
+pointer|نشانگر
+policy|سیاست، قاعده
+presents|ارائه می‌دهد
+pressing|فشار دادن
+preview|پیش‌نمایش
+principles|اصول
+probabilities|احتمال‌ها
+problematic|مشکل‌ساز
+proceed|ادامه دادن
+project's|ـِ پروژه
+property|ویژگی
+proxy|واسطه
+query|پرس‌وجو
+questionnaire|پرسشنامه
+ranges|محدوده‌ها؛ مرتب کردن
+readme|فایل راهنمای پروژه (README)
+ready|آماده
+reasoning|استدلال
+records|ثبت می‌کند
+recover|بهبود یافتن
+recovered|بهبودیافته
+reduce|کاهش دادن (اینجا: produce، تولید کردن)
+release|آزاد کردن
+removes|حذف می‌کند
+replaced|جایگزین‌شده
+replies|جواب می‌دهد
+reply|جواب
+repo|ریپو (مخزن کد)
+repositories|مخزن‌ها
+require|نیاز داشتن
+resources|منابع
+responses|پاسخ‌ها
+resume|ادامه دادن
+retail|خرده‌فروشی
+reveal|نشان دادن
+rich|غنی
+rounds|دورها
+save|ذخیره کردن
+saved|ذخیره‌شده
+saw|دیدم
+scenario|سناریو
+scenes|صحنه‌ها
+scheme|طرح، نمودار
+score|امتیاز
+screenshots|اسکرین‌شات‌ها
+scripts|اسکریپت‌ها
+sea|دریا
+server|سرور
+servers|سرورها
+shapes|شکل‌ها
+shop|مغازه
+shopping|خرید
+shops|مغازه‌ها
+shortest|کوتاه‌ترین
+sick|بیمار
+side-by-side|کنار هم
+significantly|به‌طور چشمگیر
+similarly|به‌طور مشابه
+simulating|شبیه‌سازی کردن
+simulations|شبیه‌سازی‌ها
+skill|مهارت
+slash|اسلش (/)
+slayer|(اینجا: a layer، یک لایه)
+slowly|آهسته
+sources|منابع
+span|بازه
+spend|صرف کردن
+split|تقسیم کردن
+src|پوشه‌ی کد منبع (source)
+stability|پایداری
+station|ایستگاه
+steer|هدایت کردن
+storing|ذخیره کردن
+strive|تلاش کردن
+subdivide|تقسیم کردن
+subfolder|زیرپوشه
+submit|ارسال کردن
+subscription|اشتراک
+subscriptions|اشتراک‌ها
+subsidized|یارانه‌ای
+supported|پشتیبانی‌شده
+supposed|قرار است
+symbols|نمادها
+tab|زبانه؛ کلید Tab
+terminals|ترمینال‌ها
+thumb|شست (rule of thumb: قاعده‌ی سرانگشتی)
+tier|سطح، رده
+tired|خسته
+tokens|توکن‌ها (تکه‌های متن برای مدل)
+transferable|قابل انتقال
+twenty|بیست
+twenty-dollar|بیست‌دلاری
+typing|تایپ کردن
+underneath|زیر، پشت
+uni|دانشگاه
+unpack|از حالت فشرده خارج کردن
+update|به‌روزرسانی کردن
+usage|استفاده
+vague|مبهم
+valuable|ارزشمند
+verify|تأیید کردن، وارسی کردن
+versioning|نسخه‌بندی
+videos|ویدیوها
+voila|بفرما!
+walkability|پیاده‌مداری، قابلیت پیاده‌روی
+walking|پیاده‌روی
+walkthrough|راهنمای قدم‌به‌قدم
+warn|هشدار دادن
+weak|ضعیف
+weapons|سلاح‌ها
+website|وب‌سایت
+websites|وب‌سایت‌ها
+windows|پنجره‌ها
+wisdom|خرد
+wonder|تعجب کردن، کنجکاو بودن
+workflow|روند کار
+worst-case|بدترین حالت
+yapping|وراجی
+you'd|تو ...ـی (you would/had)
+yourselves|خودتان

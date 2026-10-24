@@ -15,6 +15,7 @@ DATA = os.environ.get("DATA_DIR", HERE)
 AUDIO_DIR = os.environ.get("AUDIO_DIR", os.path.join(HERE, "audio"))
 SESSIONS = json.load(open(os.path.join(DATA, "sessions", "index.json"), encoding="utf8"))
 APP_NAME = os.environ.get("APP_NAME", "DTAD Theory")
+COURSE_LINE = os.environ.get("COURSE_LINE", "Digital Technologies in Architecture and Design")
 VERSION = int(os.environ.get("VERSION", "0"))
 UPDATE_BASE = os.environ.get("UPDATE_BASE", "")
 
@@ -70,7 +71,7 @@ if missing_gloss or missing_audio:
 data = {w: [gloss[w], base64.b64encode(open(audio(w), "rb").read()).decode()] for w in sorted(words)}
 theme = open(os.path.join(HERE, "theme.html"), encoding="utf8").read()
 theme = theme.replace("/*__FONTS__*/", open(os.path.join(HERE, "fonts.css")).read())
-theme = theme.replace("__APP_NAME__", html.escape(APP_NAME)).replace("__SUBTITLE__", f"{len(SESSIONS)} session" + ("s" if len(SESSIONS) > 1 else ""))
+theme = theme.replace("__APP_NAME__", html.escape(APP_NAME)).replace("__COURSE_LINE__", html.escape(COURSE_LINE)).replace("__SUBTITLE__", f"{len(SESSIONS)} session" + ("s" if len(SESSIONS) > 1 else ""))
 script = open(os.path.join(HERE, "reader-script.html"), encoding="utf8").read()
 if TABS:
     script += "\n" + open(os.path.join(HERE, "tabs.html"), encoding="utf8").read()

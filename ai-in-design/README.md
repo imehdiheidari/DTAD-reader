@@ -24,7 +24,7 @@ python3 -I conv.py ../../ai-in-design/build-data/sessions/NN.md ../../ai-in-desi
 # add ["NN.html", "Session N · ..."] to ai-in-design/build-data/sessions/index.json
 mkdir -p /tmp/audio && tar xf audio.tar -C /tmp && tar xf ../../project/build-data/audio.tar -C /tmp
 [ -f ../../ai-in-design/build-data/audio.tar ] && tar xf ../../ai-in-design/build-data/audio.tar -C /tmp
-APP_NAME="AI in Design" DATA_DIR=../../ai-in-design/build-data AUDIO_DIR=/tmp/audio \
+APP_NAME="AI in Design" COURSE_LINE="Bauhaus-Universität Weimar · WS 2026/27" DATA_DIR=../../ai-in-design/build-data AUDIO_DIR=/tmp/audio \
   VERSION=N UPDATE_BASE=https://raw.githubusercontent.com/imehdiheidari/DTAD-reader/main/ai-in-design/ \
   python3 -I build_content.py ../../ai-in-design/content.html
 # it lists words missing from the glossary or audio: add glossary lines, run tts.py for the audio, re-run,
