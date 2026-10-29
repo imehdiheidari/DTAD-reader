@@ -30,12 +30,12 @@ for line in open(os.path.join(DATA, "glossary-fa.txt"), encoding="utf8"):
         k, v = line.split("|", 1)
         gloss[k] = v
 
-# optional NN-fa.html (Persian summary) and NN-todo.html (tasks for the next session) beside NN.html turn on tabs:
-# one tab per session, and inside each the transcript, summary and to-do as sub-tabs (tabs.html)
+# optional NN-fa.html (Persian summary), NN-diagram.html (a class diagram with its English explanation) and NN-todo.html
+# (tasks for the next session) beside NN.html turn on tabs: one tab per session, and inside each the transcript and these as sub-tabs (tabs.html)
 def extra(fname, kind):
     p = os.path.join(DATA, "sessions", fname.replace(".html", f"-{kind}.html"))
     return open(p, encoding="utf8").read() if os.path.exists(p) else None
-TABS = any(extra(f, k) for f, _ in SESSIONS for k in ("fa", "todo"))
+TABS = any(extra(f, k) for f, _ in SESSIONS for k in ("fa", "diagram", "todo"))
 FA_DIGITS = str.maketrans("0123456789", "۰۱۲۳۴۵۶۷۸۹")
 
 parts, words, nav = [], set(), []
@@ -49,11 +49,11 @@ for n, (fname, title) in enumerate(SESSIONS, 1):
     sid = fname.split(".")[0]
     nav.append(f'<button type="button" role="tab" data-s="{sid}">جلسه {str(n).translate(FA_DIGITS)}</button>')
     panes = [("text", "متن کلاس", frag, "")]
-    for kind, label in (("fa", "خلاصه فارسی"), ("todo", "What to do")):
+    for kind, label, d in (("fa", "خلاصه فارسی", ' dir="rtl"'), ("diagram", "نمودار کلاس", ""), ("todo", "What to do", ' dir="rtl"')):
         body = extra(fname, kind)
         if body:
             words |= words_in(body)
-            panes.append((kind, label, body, ' dir="rtl"'))
+            panes.append((kind, label, body, d))
     sub = "".join(f'<button type="button" role="tab" data-p="{k}">{l}</button>' for k, l, _, _ in panes)
     body = "".join(f'<div class="pane pane-{k}" data-p="{k}"{d} hidden>\n{b}\n</div>' for k, _, b, d in panes)
     parts.append(f'<section class="session" data-s="{sid}" hidden>\n{head}<nav class="subtabs" role="tablist">{sub}</nav>\n{body}\n</section>')
