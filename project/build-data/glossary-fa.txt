@@ -3498,3 +3498,684 @@ you'll|تو خواهی
 yours|مال تو
 zubinart|زوبینارت (نام؛ احتمالاً اشتباهِ ضبط)
 deutschlandticket|بلیت ماهانه‌ی حمل‌ونقل عمومی در کل آلمان
+aarhus|آرهوس (شهری در دانمارک؛ اینجا احتمالاً اشتباه شنیده شده)
+abandoned|رها شده، متروکه
+absorbed|جذب شده، غرق در چیزی
+accent|لهجه
+accepted|پذیرفته شده
+accessories|زیورآلات، لوازم جانبی
+accidentally|تصادفی، ناخواسته
+acoustic|صوتی، آکوستیک
+actual|واقعی
+adapted|سازگار شده، تطبیق داده شده
+adding|اضافه کردن
+addition|اضافه، افزوده
+ado|معطلی (without further ado: بی‌معطلی)
+affect|اثر گذاشتن بر
+afraid|ترسیده، نگران
+africa|آفریقا
+agreed|توافق شده، پذیرفته
+ahead|جلو، پیش رو
+alike|شبیه هم
+along|همراه، در طول
+amazes|شگفت‌زده می‌کند
+amount|مقدار
+ancestors|نیاکان، اجداد
+ancestry|تبار، اجداد
+anchor|لنگر، نقطه‌ی اتکا
+ancient|باستانی، خیلی قدیمی
+ando|آندو (تادائو آندو، معمار ژاپنی)
+angry|عصبانی
+animal-shaped|به شکل حیوان
+animation|انیمیشن، پویانمایی
+answering|جواب دادن
+answers|جواب‌ها؛ جواب می‌دهد
+apologize|عذرخواهی کردن
+appear|ظاهر شدن
+appetite|اشتها (اینجا احتمالاً اشتباه شنیده شده)
+application|اپلیکیشن، برنامه؛ کاربرد
+apply|به کار بردن
+appointments|قرارها، وقت‌های ملاقات
+argentinian|آرژانتینی
+artist|هنرمند
+asked|پرسید، خواست
+authentic|اصیل، واقعی
+autonomy|خودمختاری، استقلال
+awesome|عالی، فوق‌العاده
+backwards|برعکس، از آخر به اول
+backyard|حیاط پشتی
+bag|کیسه، کیف
+bags|کیسه‌ها
+beam|تیر (سازه)؛ پرتو
+beard|ریش
+beer|آبجو
+beers|آبجوها (اینجا اشتباه شنیده شده، احتمالاً «book»)
+beethovenplatz|بتهوون‌پلاتس (میدانی در وایمار که مجسمه‌ی گوته و حافظ آنجاست)
+beg|التماس کردن
+behave|رفتار کردن
+bell|زنگ
+beside|کنار
+bigbluebutton|بیگ‌بلوباتن (نرم‌افزار کلاس آنلاین)
+biggest|بزرگ‌ترین
+bigness|بزرگی (اصطلاح رم کولهاس)
+bind|بستن، مقید کردن
+bird|پرنده
+birds|پرنده‌ها
+bless|برکت دادن، متبرک کردن
+blessings|برکت‌ها، دعای خیر
+blue|آبی
+bold|جسور؛ پررنگ
+bolt|پیچ و مهره؛ صاعقه
+boom|بوم! (صدای انفجار)
+boot|چکمه؛ (اینجا احتمالاً «book»)
+bothers|اذیت می‌کند
+bowl|کاسه
+breaks|می‌شکند، خراب می‌کند
+breathing|نفس کشیدن
+brim|لبه (ی فنجان)
+broad|پهن، گسترده
+brothers|برادرها
+budged|تکان خورد (اینجا نامفهوم)
+bully|زورگویی کردن، آزار دادن
+burn|سوختن
+call|صدا زدن، تماس گرفتن
+calling|صدا زدن
+calm|آرام؛ آرام کردن
+candles|شمع‌ها
+capable|توانا
+car|ماشین
+carefully|با دقت
+cashier|صندوق‌دار (اینجا اشتباه شنیده شده، اسم یک آکورد)
+catching|گرفتن، جذب کردن
+ceiling|سقف
+celebration|جشن
+chair|صندلی
+chairs|صندلی‌ها
+chapter|فصل (کتاب، زندگی)
+charge|مسئولیت (in charge: مسئول)
+cheating|خیانت کردن؛ تقلب
+chills|لرز، مورمور شدن
+chord|آکورد (موسیقی)
+chorus|همسرایی؛ (اینجا احتمالاً «chords»: آکوردها)
+chose|انتخاب کرد
+church|کلیسا
+cinematic|سینمایی
+clarity|وضوح
+cleaning|تمیز کردن
+clearer|واضح‌تر
+clients|مشتری‌ها، کارفرماها
+cliff|صخره، پرتگاه
+cliffs|پرتگاه‌ها
+closet|کمد دیواری
+coconut|نارگیل
+coconuts|نارگیل‌ها
+coffee|قهوه
+coffee-ground|تفاله‌ی قهوه
+colombia|کلمبیا
+commendable|قابل تحسین
+communicating|منتقل کردن، ارتباط برقرار کردن
+comp|(اینجا نامفهوم، احتمالاً companionship: همراهی)
+competition|رقابت، مسابقه
+comprehend|فهمیدن
+confession|اعتراف
+confessions|اعتراف‌ها
+congratulate|تبریک گفتن
+considering|در نظر گرفتن
+consistent|یکدست، هماهنگ
+content|محتوا
+copper|مس
+corpse|جسد
+correctly|درست
+count|شمردن
+cover|پوشاندن
+creativity|خلاقیت
+creator|سازنده
+creep|آدم چندش؛ آرام خزیدن
+creepiest|ترسناک‌ترین، چندش‌ترین
+creeping|ترسیدن، چندش شدن
+creepy|ترسناک، چندش
+critic|منتقد؛ نقد
+criticize|انتقاد کردن
+crops|محصولات کشاورزی
+crouch|خم شدن، چمباتمه زدن
+cry|گریه کردن
+cuba|کوبا
+cubes|مکعب‌ها
+cue|نشانه (اینجا احتمالاً «cube»)
+cultures|فرهنگ‌ها
+cup|فنجان
+curious|کنجکاو
+custom|رسم، سنت
+customize|شخصی‌سازی کردن
+cute|بامزه، ناز
+dance|رقص (اینجا احتمالاً «them»)
+danger|خطر
+dangerous|خطرناک
+dare|جرئت کردن
+dargatum|دارگاتوم (اسم گربه در بازی یکی از بچه‌ها)
+dating|دوست‌یابی (dating app: اپ دوست‌یابی)
+death|مرگ
+december|دسامبر
+decorated|تزئین کرد
+deeds|کارها، اعمال
+definitely|حتماً
+demo|نمونه‌ی نمایشی (اینجا احتمالاً «daemon»)
+description|توضیح، شرح
+descriptive|توصیفی
+deserve|لایق بودن
+detail|جزئیات
+develops|پیش می‌رود، رشد می‌کند
+diagrams|نمودارها
+directions|جهت‌ها؛ راهنمایی‌ها
+disguised|مبدل، با ظاهر دیگر
+distortion|اعوجاج، بدشکل شدن
+divan|دیوان (مجموعه‌ی شعر)
+dividing|تقسیم کردن
+divine|الهی
+dizzy|سرگیجه‌دار
+dodge|جاخالی دادن
+domain|قلمرو
+donate|اهدا کردن
+doors|درها
+dramatically|به‌طور چشمگیر
+drawable|(اینجا احتمالاً «tarot»)
+drawn|کشیده شده
+dream|رویا، خواب
+dreaming|خواب دیدن
+dreams|خواب می‌بیند؛ رویاها
+dressed|لباس پوشیده
+drink|نوشیدن
+droughts|خشکسالی‌ها (اینجا نامفهوم)
+due|به خاطرِ (due to)
+dust|گرد و خاک
+ease|راحتی
+east|شرق
+eat|خوردن
+echo|پژواک، اکو
+edited|ویرایش کرد
+efficiency|کارایی
+egypt|مصر
+emotional|احساسی
+endings|پایان‌ها
+enemy|دشمن
+energies|انرژی‌ها
+engaging|جذاب، درگیرکننده
+enjoyed|لذت برد
+entirely|کاملاً
+entities|موجودات، هستی‌ها
+everyone's|ـِ همه
+ex|همسر یا دوست سابق
+exaggerated|اغراق‌شده
+excuse|ببخشید (excuse me)
+exit|خروج
+explaining|توضیح دادن
+explanation|توضیح
+expressions|حالت‌های چهره
+extension|ادامه، گسترش
+external|بیرونی
+extra|اضافه
+extract|بیرون کشیدن
+eye|چشم (evil eye: چشم‌زخم)
+fabricate|ساختن (اینجا احتمالاً «fabricated»: ساختگی)
+fal|فال
+familiar|آشنا
+family|خانواده
+fan|طرفدار
+fantastic|عالی
+father|پدر
+feed|غذا دادن
+fighting|جنگیدن
+figured|فهمید (figure out)
+finance|خرج دادن، تأمین مالی
+finish|تمام کردن
+fire|آتش
+flappy|فلپی (بازی Flappy Bird)
+flesh|گوشت (میوه)
+flip|برگرداندن
+float|شناور ماندن
+floating|شناور
+flour|آرد (اینجا احتمالاً «flower»: گل)
+flowers|گل‌ها
+flying|پرنده، در حال پرواز
+foam|کف
+followed|دنبال کرد
+fool|ابله (کارت «دیوانه» در تاروت)
+fool's|ـِ دیوانه
+footnote|پانویس
+footnotes|پانویس‌ها
+forgot|فراموش کردم
+forgotten|فراموش شده
+formed|شکل گرفت
+forward|جلو
+frank|فرانک (فرانک گهری، معمار)
+freaked|وحشت‌زده شد (freaked out)
+gain|به دست آوردن
+games|بازی‌ها
+gap|فاصله، شکاف
+gather|جمع شدن
+gathering|دورهمی، جمع شدن
+gehry|گهری (فرانک گهری، معمار)
+generic|معمولی، بی‌هویت
+gilded|طلاکاری کرد
+gossip|غیبت کردن، شایعه
+grade|نمره
+graded|نمره داده می‌شود
+grader|نمره‌دهنده
+grammatically|از نظر دستوری
+gravestone|سنگ قبر
+groin|کشاله‌ی ران (اینجا اشتباه شنیده شده، احتمالاً «light»: روشنی)
+gropius|گروپیوس (والتر گروپیوس، بنیان‌گذار باوهاوس)
+grounds|تفاله (coffee grounds)
+gulp|بلعیدن
+hadid|حدید (زها حدید، معمار)
+hafez|حافظ
+hair|مو
+hardship|سختی
+hate|متنفر بودن
+heart's|ـِ قلب
+helped|کمک کرد
+higher|بالاتر
+hire|استخدام کردن
+hit|برخورد کردن، زدن
+holding|نگه داشتن
+hon|(اینجا نامفهوم)
+honest|صادق
+honor|افتخار (اینجا احتمالاً «water»)
+horrible|وحشتناک
+hose|شیلنگ (اینجا جای «home» اشتباه خوانده می‌شود، شوخیِ بازی)
+hosted|(اینجا احتمالاً «used»)
+human-shaped|به شکل انسان
+humidity|رطوبت
+hurt|آزار دادن، صدمه زدن
+husband|شوهر
+icon|نماد، چهره‌ی مشهور
+identify|همذات‌پنداری کردن، شناختن
+imaginary|خیالی
+immediate|فوری
+immigrate|مهاجرت کردن
+improved|بهتر شده
+improvement|پیشرفت
+improvements|پیشرفت‌ها
+incentive|انگیزه
+incredibly|به‌طرز باورنکردنی
+india|هند
+indians|هندی‌ها
+indigenous|بومی
+infinite|بی‌نهایت
+innocence|بی‌گناهی، معصومیت
+insert|گذاشتن، وارد کردن
+instagram|اینستاگرام
+instinct|غریزه
+instincts|غریزه‌ها، حس درونی
+interpreters|(اینجا یعنی «interpretation»: تفسیر)
+intricate|درهم‌تنیده، پیچیده
+intriguing|کنجکاوکننده
+intrinsic|درونی
+introspective|درون‌نگر
+inverse|معکوس (اینجا احتمالاً «themes»)
+inverted|برعکس کرد
+invitation|دعوت
+invoke|احضار کردن
+iranian|ایرانی
+janky|خام و ناصاف
+job|شغل
+kahn|کان (لویی کان، معمار)
+keyboard|کیبورد
+kid|بچه
+kids|بچه‌ها
+knife|چاقو
+kola|کولا (دانه‌ی کولا)
+koolhaas|کولهاس (رم کولهاس، معمار)
+lag|تأخیر، کندی
+lake|دریاچه
+laptop|لپ‌تاپ
+layout|چیدمان، پلان
+leaves|برگ‌ها؛ (اینجا احتمالاً «lives»: جان‌ها)
+leaving|رفتن، ترک کردن
+lecturer's|ـِ استاد
+leg|پا
+legitimate|مشروع
+legs|پاها (اینجا احتمالاً «lives»)
+letter|نامه، حرف (اینجا احتمالاً «later»)
+lifetime|طول عمر
+lightness|سبکی
+lightning|آذرخش (اینجا یعنی «lightness»: سبکی)
+liked|خوشش آمد
+lion|شیر
+lobes|قطعه‌ها، لُپ‌ها
+longest|طولانی‌ترین
+lots|خیلی (lots of)
+loudly|بلند
+louis|لویی (لویی کان، معمار)
+lovely|دوست‌داشتنی
+married|ازدواج کرده
+matches|جفت می‌شود (در اپ دوست‌یابی)
+mechanics|سازوکار (بازی)
+meeting|ملاقات
+megus|(اینجا نامفهوم)
+mehdi|مهدی
+men-shaped|به شکل مرد
+messengers|پیام‌رسان‌ها
+midnight|نیمه‌شب
+might|ممکن است
+mina|(اینجا نامفهوم، شاید یک اسم)
+mirror|آینه
+mirrors|آینه‌ها
+misread|اشتباه خواندن
+misreading|اشتباه‌خوان
+misunderstand|اشتباه فهمیدن
+mobile|موبایل
+momentous|مهم (اینجا احتمالاً «nonsense»)
+mood|حال‌وهوا
+mostly|بیشتر، عمدتاً
+mother|مادر
+motion|حرکت (اینجا احتمالاً «portion»: قسمت)
+motivation|انگیزه
+mountains|کوه‌ها
+mouse|ماوس
+moves|حرکت می‌کند
+muisca|مویسکا (مردم بومی کلمبیا)
+multiplayer|چندنفره
+musical|موسیقایی
+musicians|نوازنده‌ها
+muslim|مسلمان
+mysterious|مرموز
+mythicism|افسانه‌ها (کلمه‌ی ساختگی گوینده)
+myths|افسانه‌ها
+naming|نام‌گذاری
+ncp|(اینجا نامفهوم)
+near|نزدیک
+nearest|نزدیک‌ترین
+neck|گردن
+necklaces|گردنبندها
+nesha|(اینجا نامفهوم)
+neutral|خنثی
+nicely|خوب، به زیبایی
+north|شمال
+notice|متوجه شدن
+nowhere|ناکجا (out of nowhere: یک‌دفعه)
+nut|مغز، آجیل
+nuts|آجیل‌ها، دانه‌ها
+obi|اوبی (فال نارگیل در آیین یوروبا)
+objective|عینی
+ocean|اقیانوس
+offering|نذر، پیشکش
+oiled|روغن‌کاری شده (well oiled: روان و بی‌گیر)
+oki|(اینجا احتمالاً «Obi»)
+options|گزینه‌ها
+organization|سازمان‌دهی
+originates|سرچشمه می‌گیرد
+orisha|اوریشا (موجود الهی در آیین یوروبا)
+orta|(اینجا نامفهوم، احتمالاً «earth»: زمین)
+oru|(اینجا نامفهوم)
+ours|مال ما
+outcomes|نتیجه‌ها
+outline|طرح کلی
+overthinking|زیادی فکر کردن
+owner's|ـِ صاحب
+paintings|نقاشی‌ها
+papers|کاغذها
+passes|رد می‌شود
+patience|صبر
+pattern|الگو
+patterns|الگوها
+peace|صلح، آرامش
+pendulum|آونگ، پاندول
+pendulums|آونگ‌ها
+perceiving|درک کردن
+performing|اجرا کردن
+period|دوره، مدت
+permanence|ماندگاری
+persian|فارسی
+persona|شخصیت
+personalize|شخصی کردن
+personally|شخصاً
+persons|نفرها
+photograph|عکس
+piano|پیانو
+pianos|پیانوها
+picks|انتخاب می‌کند
+pictures|تصویرها
+pieces|تکه‌ها
+placed|قرار داده شده
+poems|شعرها
+pointed|اشاره کرد
+polished|(اینجا احتمالاً «pours»: می‌ریزد)
+population|جمعیت
+portfolio|پورتفولیو، نمونه‌کار
+portion|بخش
+possessed|جن‌زده، تسخیرشده
+possibility|امکان
+practitioner|فالگیر، اجراکننده‌ی آیین
+preferences|سلیقه‌ها
+pressed|فشار داد
+pressing|فشار دادن
+previously|قبلاً
+pride|غرور
+primary|اصلی
+prioritize|اولویت دادن
+professors|استادها
+profile|نیم‌رخ (اینجا نامفهوم)
+progressions|توالی‌ها (chord progressions: توالی آکوردها)
+property|ویژگی؛ ملک
+proportions|تناسبات
+proposed|پیشنهاد شده
+prosperity|رفاه، برکت
+prove|ثابت کردن
+psychiatric|روان‌پزشکی
+psychologist|روان‌شناس
+psychologists|روان‌شناس‌ها
+pulls|می‌کشد
+purgatory|برزخ
+purusha|پوروشا (واستو پوروشا، روح زمین در معماری هندی)
+pushes|هل می‌دهد
+qr|کیوآر (QR code)
+quran|قرآن
+randomness|تصادفی بودن
+ranked|(اینجا احتمالاً «wrong»)
+reader|خواننده؛ فالگیر
+readings|فال‌ها، خواندن‌ها
+reads|می‌خواند
+ready|آماده
+realizes|متوجه می‌شود
+realizing|متوجه شدن
+recognize|تشخیص دادن
+record|ثبت کردن؛ پرونده
+recovered|بهبود یافت
+reel|ریلز (ویدیوی کوتاه اینستاگرام)
+regulate|تنظیم کردن
+relax|استراحت کردن
+religious|مذهبی
+rem|رم (رم کولهاس، معمار)
+remembered|به یاد آورد
+renovation|نوسازی، تجدید
+repetitive|تکراری
+replay|دوباره بازی کردن
+respect|احترام
+respectful|محترمانه
+respond|واکنش نشان دادن
+responds|واکنش نشان می‌دهد
+resting|(اینجا احتمالاً «blessing»: برکت)
+revolution|انقلاب؛ چرخش (اینجا یعنی «تولد دوباره»)
+rewondance|(اینجا نامفهوم، احتمالاً «upright piano»)
+ricardo|ریکاردو (اسم)
+rich|ثروتمند؛ غنی
+riddle|معما
+ridiculous|مسخره
+rings|حلقه‌ها؛ زنگ می‌زند
+risk|خطر، ریسک
+ritual|آیین، مراسم
+roles|نقش‌ها
+romantic|عاشقانه
+roots|ریشه‌ها
+rose|گل رز
+rounded|گرد شده
+ruined|خراب شده
+sad|غمگین
+sarah|سارا (اینجا احتمالاً «Zaha»)
+sat|نشست
+save|نجات دادن
+saved|نجات یافته
+saw|دید
+scan|اسکن کردن
+scenarios|سناریوها
+scorpion|عقرب
+scratch|صفر (from scratch: از صفر)
+screams|جیغ می‌زند
+scripts|اسکریپت‌ها
+seamless|روان، بی‌وقفه
+sector|(اینجا نامفهوم)
+self|خود
+sell|(اینجا احتمالاً «soul»: روح)
+sentiment|احساس (اینجا یعنی «sentient»)
+server|سرور
+settled|سامان یافته، آرام
+settles|ته‌نشین می‌شود
+sex|(اینجا اشتباه شنیده شده، احتمالاً «text»)
+shaman|شمن، جادوگر قبیله
+shapes|شکل‌ها
+she'll|او (زن) خواهد
+shelf|قفسه
+shot|عکس، نما
+showing|نشان دادن
+shuffle|بُر زدن، به هم زدن
+sides|طرف‌ها
+silence|سکوت
+simulations|شبیه‌سازی‌ها
+sinister|شوم
+sinks|غرق می‌شود
+skeptic|شکاک
+skin|پوست
+skipping|رد کردن، پریدن
+smile|لبخند
+smoothly|روان
+snake|مار
+snoring|خروپف
+sofa|مبل (شوخیِ بازی: «sofa» به جای «so far»)
+solid|سفت، پر
+somewhere|جایی
+south|جنوب
+sparkle|درخشش
+speaking|حرف زدن
+spectrum|طیف
+spell|طلسم؛ هجی کردن
+spider-web|تار عنکبوت
+spiritual|معنوی
+spiritually|از نظر معنوی
+spots|نقطه‌ها
+square|مربع
+stages|مرحله‌ها
+stairs|پله‌ها
+starwood|(اینجا نامفهوم)
+statistical|آماری
+statistically|از نظر آماری
+stays|می‌ماند
+stepping|قدم گذاشتن
+stopped|ایستاد، تمام کرد
+stores|فروشگاه‌ها
+storyline|خط داستان
+storytelling|قصه‌گویی
+string|سیم (ساز)
+strings|سیم‌ها
+structured|منظم
+stuck|گیر افتاده
+submit|تحویل دادن
+subway|مترو (Subway Surfers: اسم یک بازی)
+suck|افتضاح بودن (I suck at: بلد نیستم)
+superstition|خرافات
+supporting|پشتیبانی کردن
+supports|پشتیبانی می‌کند
+supposed|قرار است
+surfers|موج‌سوارها
+surprises|غافلگیری‌ها
+sweeti|(اینجا اشتباه شنیده شده، احتمالاً «3D»)
+symbolic|نمادین
+tadao|تادائو (تادائو آندو، معمار ژاپنی)
+take-in|برداشت، نگاه
+tap|ضربه زدن (روی صفحه)
+tarot|تاروت
+tarots|کارت‌های تاروت
+tea|چای (اینجا احتمالاً «teeth»: دندان)
+temporality|موقت بودن
+territory|قلمرو (اینجا احتمالاً «tarot»)
+theta|(اینجا نامفهوم)
+thoth|توت (خدای نوشتن در مصر باستان)
+three-dimensional|سه‌بعدی
+throwed|انداخت (شکل غلطِ threw)
+throwing|انداختن
+throws|می‌اندازد
+tiger|ببر
+tim's|(اینجا نامفهوم)
+tin|(اینجا احتمالاً «thing»)
+toilet|توالت (اینجا اشتباه شنیده شده)
+tommy|(اینجا نامفهوم)
+tough|سخت
+towns|(اینجا احتمالاً «things»)
+transform|تغییر شکل دادن
+translating|ترجمه کردن
+translator|مترجم
+transposed|جابه‌جا شده (در موسیقی: تغییر گام)
+travel|سفر کردن
+traveler|مسافر
+traveler's|ـِ مسافر
+traveller|مسافر
+travellers|مسافرها
+tray|سینی
+treatise|رساله
+treats|رفتار می‌کند با
+trigger|به راه انداختن
+trivial|ساده، بدیهی
+tukumi|(اینجا نامفهوم، احتمالاً «Yoruba»)
+tune|آهنگ
+tunjo|تونخو (مجسمه‌ی کوچک طلای مویسکا)
+tunjos|تونخوها
+turkey|ترکیه
+tycho|تیکو (اسم دیمن در بازی یکی از بچه‌ها)
+typing|تایپ کردن
+unbearable|تحمل‌ناپذیر
+uncomfortable|ناراحت، معذب
+uncoupled|جدا، بی‌ارتباط
+unfolding|باز شدن، پیش رفتن
+universe|جهان
+unknown|ناشناخته
+unnecessary|غیرضروری
+upgrade|ارتقا
+upside|بالا (upside down: وارونه)
+usage|مصرف
+valuable|باارزش
+variation|نسخه‌ی دیگر، گونه
+vastu|واستو (اصول معماری سنتی هند)
+veil|تور عروس
+verdict|حکم
+vibes|حال‌وهوا
+views|دیدگاه‌ها
+virtually|مجازی
+visualizations|تصویرسازی‌ها
+visualize|تصویر کردن
+waist|کمر
+waited|منتظر ماند
+waiting|منتظر
+walking|راه رفتن
+walks|راه می‌رود
+wand|چوب جادو (اینجا احتمالاً «head»: سر)
+wanting|خواستن
+washroom|دستشویی
+wasted|هدر رفته
+wax|موم (lost wax: روش ریخته‌گری موم گم‌شده)
+weak|ضعیف
+wealth|ثروت
+wearing|(اینجا احتمالاً «trying»)
+website|وب‌سایت
+wedding|عروسی
+weight|وزن
+weirdest|عجیب‌ترین
+weirdly|عجیب
+whichever|هر کدام
+wise|عاقل؛ (اینجا احتمالاً «blind»: کور)
+wish|آرزو
+worst|بدترین
+wrongly|اشتباه
+yalda|یلدا
+younger|جوان‌تر
+zaha|زها (زها حدید، معمار)
+zero|صفر
