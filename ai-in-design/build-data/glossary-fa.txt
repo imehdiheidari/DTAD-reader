@@ -4058,3 +4058,262 @@ wasteland|زمین بایر
 wish|خواستن
 year-old|ساله
 zoom|زوم (نرم‌افزار جلسه‌ی آنلاین)
+accumulated|انباشته‌شده
+activate|فعال کردن
+adding|اضافه کردن
+administration|اداره، بخش اداری
+affected|تحت تأثیر قرار داد
+agnostic|مستقل، وابسته‌نبودن (tool agnostic: مستقل از ابزار)
+along|همراه، جلو (move along: جلو رفتن)
+anyways|به هر حال
+apartment|آپارتمان
+apartments|آپارتمان‌ها
+arcs|قوس‌ها
+assisted|کمک‌شده
+axis|محور
+baa|(صدای تقلیدی، مثل فلان و بهمان)
+balconies|بالکن‌ها
+balcony|بالکن
+band|نوار؛ (اینجا احتمالاً: bend، خم)
+bay|دهانه
+beneficial|سودمند
+billions|میلیاردها
+blindly|کورکورانه
+blocks|بلوک‌ها
+blue|آبی (blue retention: نگهداشت آب سطحی)
+boats|قایق‌ها
+bolder|جسورانه‌تر
+brain|مغز (اینجا: brain/idea، ایده)
+brainstorming|طوفان فکری، ایده‌پردازی
+bundle|بسته، مجموعه
+calculate|محاسبه کردن
+canal|کانال آب
+capability|توانایی
+captures|ثبت می‌کند، در خود نگه می‌دارد
+castaías|(نام مکان)
+causing|باعث شدن
+chomper|(کلمه‌ی نامفهوم در ضبط)
+clams|(اینجا احتمالاً: columns یا grid، ستون‌ها/شبکه)
+classify|دسته‌بندی کردن
+claude-code|نام Claude Code در نصب skill
+codex|Codex (ایجنت کدنویسی OpenAI)
+coexistence|همزیستی
+collected|جمع‌آوری کرد
+colonnaded|ستون‌دار، رواق‌دار
+column|ستون
+columns|ستون‌ها
+competition|مسابقه
+competition-making|مسابقه‌ساز
+conception|شکل‌گیری ایده
+concludes|جمع‌بندی می‌کند، تمام می‌کند
+connections|اتصال‌ها
+considering|در نظر داشتن
+continued|ادامه دادم
+corners|گوشه‌ها
+corporation|شرکت، کورپوریشن
+corridor|راهرو
+cover|پوشاندن
+crashed|از کار افتاد
+crashing|از کار افتادن
+curves|منحنی‌ها
+decodingspaces|DeCodingSpaces (جعبه‌ابزار Grasshopper گروه InfAU)
+deduct|استنباط کردن (اینجا: deduce)
+democratize|همگانی کردن
+descriptions|توضیح‌ها
+desired|مطلوب
+destination|مقصد
+detail|جزئیات
+diagrams|دیاگرام‌ها
+diameter|قطر
+directions|جهت‌ها
+disallow|منع کردن
+disappear|ناپدید شدن
+discovery|کشف (بخش Discover)
+dividing|تقسیم کردن
+domains|حوزه‌ها
+drafting|نقشه‌کشی
+drop|انداختن، افتادن
+dropped|افت کرد
+edges|لبه‌ها
+edition|دوره (مسابقه)
+editions|دوره‌ها
+effectiveness|اثربخشی
+elevations|نماها
+enlightening|روشنگر
+equally|به یک اندازه
+europan|Europan (مسابقه‌ی معماری اروپایی)
+evaluation|ارزیابی
+exe|فایل اجرایی (EXE)
+expectations|انتظارها
+expecting|انتظار داشتن
+explaining|توضیح دادن
+faced|روبه‌رو شدم
+fascinated|شیفته
+feed|غذا دادن
+feeding|تغذیه (feeding ground: زمینه‌ی مناسب)
+figuring|فهمیدن، پیدا کردن (figuring out)
+filtration|فیلتر کردن، پالایش
+finally|در نهایت
+firms|شرکت‌ها، دفترها
+fishes|ماهی‌ها
+flooding|سیل‌گرفتگی
+focused|متمرکز
+followed|دنبال کردم
+font|فونت
+formalized|رسمی‌شده، ساختاریافته
+formats|قالب‌ها
+fortunately|خوشبختانه
+frontend|فرانت‌اند (بخش ظاهری سایت)
+frustrating|کلافه‌کننده
+glass|شیشه
+globally|سراسری (برای همه‌ی پروژه‌ها)
+gradient|گرادیان، تغییر تدریجی رنگ
+grill-me|grill-me (اسکیلی که با سؤال پیچ‌پیچت می‌کند)
+grows|رشد می‌کند
+handle|مدیریت کردن
+harness|هارنس (محیط اجرای ایجنت)
+hate|متنفر بودن
+hive|کندو (The Hive در فیلم Resident Evil)
+implementing|پیاده‌سازی کردن
+impressed|تحت تأثیر قرار گرفته
+improved|بهبودیافته
+insane|دیوانه‌وار
+instance|نمونه (for instance: مثلاً)
+instructed|دستور داده‌شده
+intend|قصد داشتن
+intrigued|کنجکاو شده
+inverse|معکوس
+irrelevant|بی‌ربط
+isopela|(اسم شخص)
+isovist|ایزوویست (تحلیل میدان دید)
+isovists|ایزوویست‌ها
+jumbled|درهم‌ریخته
+jury|هیئت داوران
+klotch|(اسم شخص)
+kraken|کراکن (هیولای دریایی افسانه‌ای)
+lacks|کم دارد
+law|حقوق، قانون
+liking|سلیقه (to my liking: به دلخواهم)
+looked|نگاه کرد
+loops|حلقه‌ها
+losing|از دست دادن
+marketplace|بازارچه
+maximum|حداکثر
+mechanism|سازوکار
+mediocre|متوسط
+metaskill|متااسکیل (اسکیلی که بقیه را هماهنگ می‌کند)
+miraculously|به‌طور معجزه‌آسا
+monster|هیولا
+mother|مادر
+norms|استانداردها، قواعد
+north|شمال (فلش شمال)
+notch|درجه (step it up a notch: یک درجه بالاتر بردن)
+npx|npx (اجرای بسته‌های جاوااسکریپت)
+numbers|اعداد
+occasionally|گاه‌به‌گاه
+omina|(اسم شخص)
+opencode|OpenCode (ایجنت کدنویسی متن‌باز)
+orchestrates|هماهنگ می‌کند
+organic|ارگانیک
+outbreak|شیوع
+outcomes|نتیجه‌ها
+outline|طرح کلی
+outlines|خطوط دور، طرح‌های کلی
+overnight|یک‌شبه
+packaged|بسته‌بندی‌شده
+palms|(اینجا احتمالاً: prompts، پرامپت‌ها)
+pattern|الگو
+patterns|الگوها
+peace|آرامش (rest in peace: روحش شاد)
+peek|نگاه کوتاه (sneak peek: پیش‌نمایش)
+performed|عمل کرد
+perpetual|همیشگی
+personality|شخصیت
+personally|شخصاً
+photos|عکس‌ها
+pipelines|خط‌لوله‌ها، زنجیره‌های پردازش
+plugin|افزونه (plugin)
+plugins|افزونه‌ها
+pole|(اینجا احتمالاً: bold، جسورانه)
+popped|ناگهان آمد (popped into: به ذهن رسید)
+portrayed|نشان داده‌شده
+preference|ترجیح
+preferences|ترجیح‌ها
+prepares|آماده می‌کند
+proportion|تناسب
+proposal|طرح پیشنهادی
+pulling|کشیدن، جمع کردن (داده)
+pump|پمپ
+purple|بنفش
+recommended|توصیه‌شده
+redo|دوباره انجام دادن
+refers|ارجاع می‌دهد
+regardless|صرف‌نظر از
+remarkable|قابل توجه
+remembering|به خاطر سپردن
+reports|گزارش‌ها
+requests|درخواست‌ها
+retention|نگهداشت
+reuse|دوباره استفاده کردن
+roboto|Roboto (یک فونت رایج)
+rotate|چرخاندن
+rough|کلی، تقریبی
+roughly|تقریباً
+sample|نمونه
+schwarzplan|شوارتس‌پلان (نقشه‌ی سیاه‌وسفید توده‌ی ساختمان‌ها)
+scraped|(اینجا: script، اسکریپت)
+scratch|صفر (from scratch: از صفر)
+screaming|جیغ زدن
+secret|راز
+sh|(در skills.sh)
+shadow|سایه
+sharks|کوسه‌ها
+shorter|کوتاه‌تر
+shortly|به‌زودی، به اختصار
+sims|بازی The Sims
+site-plan|سایت پلان (اسم skill)
+skill-creating|ساختن skill
+sliders|اسلایدرها
+smarter|هوشمندتر
+sneak|دزدکی (sneak peek: پیش‌نمایش)
+speaking|صحبت کردن
+specified|مشخص‌شده
+speeds|سرعت‌ها
+spicestop|(نام پروژه‌ی مسابقه)
+spreading|پخش شدن
+stages|مرحله‌ها
+stair|پله
+stairs|پله‌ها
+statistics|آمار
+styles|سبک‌ها
+subcategory|زیرمجموعه
+submitted|تحویل داده‌شده
+sunrise|طلوع آفتاب
+superpowers|ابرقدرت‌ها (اسم مجموعه‌ای از skillها)
+surprisingly|به‌طور شگفت‌انگیز
+svg|SVG (قالب تصویر برداری)
+svgs|فایل‌های SVG
+tabs|زبانه‌ها
+templates|قالب‌ها
+tempted|وسوسه شده
+tiles|کاشی‌ها؛ (اینجا احتمالاً: styles، سبک‌ها)
+toolbox|جعبه‌ابزار
+toria|(نام مکان)
+tough|سخت
+umbrella|چتر (Umbrella Corporation در فیلم Resident Evil)
+unpleasant|ناخوشایند
+verse|(اینجا احتمالاً: version، نسخه)
+vip|ویژه (VIP)
+virus|ویروس
+visibility|دید، میدان دید
+visualizations|تجسم‌ها، تصویرسازی‌ها
+visuals|تصویرها
+waste|هدر دادن
+whales|نهنگ‌ها
+width|عرض
+wife|همسر
+wipes|(کلمه‌ی نامفهوم در ضبط)
+won|برنده شدیم
+wool|پشم؛ (اینجا احتمالاً: wood، چوب)
+x|ایکس
+yada|و غیره (yada yada)
