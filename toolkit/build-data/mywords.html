@@ -1,0 +1,91 @@
+<style>
+/* "my words": every word looked up is kept on this device; review them as flashcards (Leitner boxes) */
+.pane-words,.pane-phrases{direction:rtl;text-align:right;font-family:var(--font-fa);line-height:1.9}
+.wbar{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin:0 0 1.2rem}
+.wbar p{margin:0;flex:1 1 14rem;color:var(--muted);font-size:.92rem}
+.btn{font:inherit;cursor:pointer;border:2px solid var(--ink);background:var(--paper);color:var(--ink);padding:.3rem .9rem}
+.btn.go{background:var(--red);border-color:var(--red);color:var(--paper);font-weight:700}
+.btn.ok{background:#1f7a3a;border-color:#1f7a3a;color:#fff}
+.btn:disabled{opacity:.45;cursor:default}
+.wlist{list-style:none;margin:0;padding:0}
+.wlist li{display:flex;align-items:center;gap:.6rem;padding:.45rem 0;border-bottom:1px solid var(--rule)}
+.wlist .w{direction:ltr;font-family:var(--font-sans);font-weight:700;min-width:6.5rem}
+.wlist .m{flex:1;min-width:0}
+.wlist .lvl{font-size:.75rem;color:var(--muted);white-space:nowrap}
+.wlist .del{border:0;background:none;color:var(--muted);cursor:pointer;font-size:1rem}
+.card{border:2px solid var(--ink);box-shadow:6px 6px 0 var(--yellow);padding:1.2rem 1rem;margin:0 0 1rem;text-align:center}
+.card .big{direction:ltr;font-family:var(--font-sans);font-size:2rem;font-weight:700;display:flex;align-items:center;justify-content:center;gap:.7rem}
+.card .ctx{direction:ltr;text-align:left;font-family:var(--font-sans);color:var(--muted);font-size:.95rem;margin:.8rem 0 0;line-height:1.6}
+.card .ctx b{color:var(--ink);background:var(--mark)}
+.card .ans{font-size:1.3rem;font-weight:700;margin-top:.9rem}
+.card .row{display:flex;gap:.6rem;justify-content:center;margin-top:1rem;flex-wrap:wrap}
+.card .count{font-size:.8rem;color:var(--muted);margin-bottom:.4rem}
+#gloss .star{flex:none;border:0;background:none;font-size:1.35rem;line-height:1;cursor:pointer;color:var(--yellow);padding:0 .1rem}
+.phr h3{font-size:1.05rem;margin:1.6rem 0 .5rem;padding-bottom:.3rem;border-bottom:2px solid var(--ink)}
+.phr .ph{display:flex;align-items:flex-start;gap:.6rem;padding:.5rem 0;border-bottom:1px solid var(--rule)}
+.phr .ph .tx{flex:1;min-width:0}
+.phr .ph .en{direction:ltr;text-align:left;font-family:var(--font-sans);font-weight:500;line-height:1.5}
+.phr .ph .fa2{color:var(--muted);font-size:.92rem}
+</style>
+<script>
+(function(){
+  const R=window.DTAD; if(!R) return;
+  const KEY='dtad-mywords', DAY=864e5, GAP=[0,1,2,4,8,16].map(d=>d*DAY);
+  let W={}; try{W=JSON.parse(localStorage.getItem(KEY)||'{}')||{};}catch(e){}
+  const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(W));}catch(e){}};
+  const esc=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const FA=n=>String(n).replace(/\d/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d]);
+
+  // the reader calls this for every single-word lookup: keep the word and the sentence it was found in
+  R.onLookup=(k,range,box)=>{
+    if(!k) return;
+    let ctx=''; try{const p=range.startContainer.parentElement.closest('p,li'); if(p){
+      const t=p.textContent.replace(/^\s*\d+:\d\d:\d\d\s*/,'').replace(/\s+/g,' ');
+      ctx=(t.split(/(?<=[.?!])\s+/).find(s=>new RegExp('\\b'+k.replace(/[^a-z']/g,'')+'','i').test(s))||'').slice(0,220);}}catch(e){}
+    const w=W[k]||(W[k]={box:0,due:Date.now(),n:0,added:Date.now()}); w.n++; w.seen=Date.now(); if(ctx&&!w.ctx) w.ctx=ctx; save();
+    const head=box.querySelector('.head'); if(!head) return;
+    const st=document.createElement('button'); st.type='button'; st.className='star';
+    const paint=()=>{st.textContent=W[k]?'★':'☆'; st.title=W[k]?'در لغت‌های من است (بزن تا حذف شود)':'به لغت‌های من اضافه کن';};
+    st.onclick=()=>{ if(W[k]) delete W[k]; else W[k]={box:0,due:Date.now(),n:1,added:Date.now(),seen:Date.now(),ctx}; save(); paint(); };
+    paint(); head.appendChild(st);
+  };
+
+  const pane=document.querySelector('.pane-words'); if(!pane) return;
+  let queue=null, shown=false;
+  const due=()=>Object.keys(W).filter(k=>R.D[k]&&W[k].due<=Date.now());
+  function list(){
+    const keys=Object.keys(W).filter(k=>R.D[k]).sort((a,b)=>(W[b].seen||0)-(W[a].seen||0)), d=due().length;
+    pane.innerHTML='<div class="wbar"><p>هر کلمه‌ای که در متن کلاس انتخاب کنی خودش اینجا ذخیره می‌شود (فقط روی همین گوشی). هر روز چند دقیقه مرورشان کن؛ کلمه‌هایی که بلدی کم‌کم دیرتر برمی‌گردند.</p>'+
+      '<button type="button" class="btn go rev"'+(d?'':' disabled')+'>مرور ('+FA(d)+' کلمه)</button></div>'+
+      (keys.length?'<ul class="wlist">'+keys.map(k=>'<li data-k="'+esc(k)+'"><span class="w">'+esc(k)+'</span><span class="m">'+esc(R.D[k][0])+'</span><span class="lvl">'+'●'.repeat(W[k].box)+'○'.repeat(5-W[k].box)+'</span><button type="button" class="play" aria-label="Play">▶</button><button type="button" class="del" aria-label="حذف">✕</button></li>').join('')+'</ul>'
+        :'<p>هنوز کلمه‌ای ذخیره نشده. در «متن کلاس» روی کلمه‌ای که بلد نیستی انگشت نگه دار.</p>');
+    pane.querySelector('.rev').onclick=()=>{queue=due().sort(()=>Math.random()-.5);shown=false;card();};
+    pane.querySelectorAll('.wlist li').forEach(li=>{const k=li.dataset.k;
+      li.querySelector('.play').onclick=e=>R.playKeys([k],e.currentTarget);
+      li.querySelector('.del').onclick=()=>{delete W[k];save();list();};});
+  }
+  function card(){
+    if(!queue||!queue.length){queue=null; pane.innerHTML='<div class="card"><div class="ans">آفرین! مرور امروز تمام شد. 🎉</div><div class="row"><button type="button" class="btn back">برگشت به لیست</button></div></div>'; pane.querySelector('.back').onclick=list; return;}
+    const k=queue[0], w=W[k], re=new RegExp('\\b('+k.replace(/[^a-z']/g,'')+'\\w*)','i');
+    pane.innerHTML='<div class="card"><div class="count">'+FA(queue.length)+' کلمه مانده</div><div class="big">'+esc(k)+' <button type="button" class="play" aria-label="Play">▶</button></div>'+
+      (w.ctx?'<p class="ctx">'+esc(w.ctx).replace(re,'<b>$1</b>')+'</p>':'')+
+      (shown?'<div class="ans">'+esc(R.D[k][0])+'</div><div class="row"><button type="button" class="btn ok yes">بلد بودم</button><button type="button" class="btn no">بلد نبودم</button></div>'
+        :'<div class="row"><button type="button" class="btn go show">معنی را نشان بده</button></div>')+
+      '</div><button type="button" class="btn back">برگشت به لیست</button>';
+    pane.querySelector('.card .play').onclick=e=>R.playKeys([k],e.currentTarget);
+    pane.querySelector('.back').onclick=()=>{queue=null;list();};
+    if(!shown){pane.querySelector('.show').onclick=()=>{shown=true;card();}; return;}
+    pane.querySelector('.yes').onclick=()=>{w.box=Math.min(5,w.box+1); w.due=Date.now()+GAP[w.box]; save(); queue.shift(); shown=false; card();};
+    pane.querySelector('.no').onclick=()=>{w.box=0; w.due=Date.now(); save(); queue.push(queue.shift()); shown=false; card();};
+  }
+  document.addEventListener('dtad-tab',e=>{ if(e.detail==='words'&&!queue) list(); });
+  list();
+})();
+(function(){
+  const R=window.DTAD, P=window.PHRASES, pane=document.querySelector('.pane-phrases'); if(!R||!P||!pane) return;
+  const esc=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  pane.innerHTML='<p class="howto" style="margin:0 0 .6rem">جمله‌های آماده برای کلاس. ▶ را بزن، گوش کن و بلند تکرار کن. می‌توانی روی هر کلمه هم بزنی تا معنی‌اش را ببینی.</p>'+
+    P.map(g=>'<div class="phr"><h3>'+esc(g[0])+'</h3>'+g[1].map((p,i)=>'<div class="ph"><button type="button" class="play" data-a="'+esc(p[2])+'" aria-label="Play">▶</button><div class="tx"><div class="en">'+esc(p[0])+'</div><div class="fa2">'+esc(p[1])+'</div></div></div>').join('')+'</div>').join('');
+  pane.querySelectorAll('.play').forEach(b=>b.onclick=()=>R.playData(b.dataset.a,b));
+})();
+</script>

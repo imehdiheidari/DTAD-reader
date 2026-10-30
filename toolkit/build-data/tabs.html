@@ -4,6 +4,7 @@
 .sessiontabs{position:sticky;top:0;z-index:10;background:var(--paper);padding:.6rem 0;border-bottom:3px solid var(--ink);margin-bottom:.4rem}
 .sessiontabs button,.subtabs button{font:inherit;cursor:pointer;border:2px solid var(--ink);background:var(--paper);color:var(--ink);padding:.35rem .9rem;font-family:var(--font-fa)}
 .sessiontabs button{font-weight:700}
+.sessiontabs button.extra{background:var(--yellow-soft)}
 .sessiontabs button[aria-selected=true]{background:var(--red);color:var(--paper);border-color:var(--red)}
 .subtabs button{font-size:.92rem}
 .subtabs button[aria-selected=true]{background:var(--blue);color:var(--paper);border-color:var(--blue)}
@@ -36,15 +37,16 @@
   const top=[...document.querySelectorAll('.sessiontabs button')], secs=[...document.querySelectorAll('section.session')];
   function pane(sec,p){
     const btns=[...sec.querySelectorAll('.subtabs button')];
+    if(!btns.length) return;
     if(!btns.some(b=>b.dataset.p===p)) p=btns[0].dataset.p;
     btns.forEach(b=>b.setAttribute('aria-selected',b.dataset.p===p));
     sec.querySelectorAll('.pane').forEach(d=>d.hidden=d.dataset.p!==p);
   }
   function session(s,scroll){
-    if(!secs.some(x=>x.dataset.s===s)) s=secs[secs.length-1].dataset.s;
+    if(!secs.some(x=>x.dataset.s===s)) s=secs.filter(x=>!x.classList.contains('extra')).pop().dataset.s;
     top.forEach(b=>b.setAttribute('aria-selected',b.dataset.s===s));
     secs.forEach(x=>{x.hidden=x.dataset.s!==s; if(!x.hidden) pane(x,(st.p||{})[s]||'text');});
-    st.s=s; save();
+    st.s=s; save(); document.dispatchEvent(new CustomEvent('dtad-tab',{detail:s}));
     if(scroll){const n=document.querySelector('.sessiontabs'); if(n.getBoundingClientRect().top<0) n.scrollIntoView();}
   }
   top.forEach(b=>b.onclick=()=>session(b.dataset.s,true));

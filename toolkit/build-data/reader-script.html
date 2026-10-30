@@ -19,6 +19,10 @@
       audio=new Audio('data:audio/mpeg;base64,'+D[keys[i++]][1]); audio.onended=()=>setTimeout(next,120); audio.onerror=next; audio.play().catch(()=>{btn&&btn.classList.remove('on');}); };
     next();
   }
+  function playData(b64,btn){
+    stop(); btn&&btn.classList.add('on'); audio=new Audio('data:audio/mpeg;base64,'+b64);
+    audio.onended=audio.onerror=()=>{btn&&btn.classList.remove('on');audio=null;}; audio.play().catch(()=>{btn&&btn.classList.remove('on');});
+  }
   function speakPhrase(text,keys,btn){
     // prefer the device's own English voice for a whole phrase (works offline on most devices); else play word by word
     const ss=window.speechSynthesis;
@@ -26,6 +30,8 @@
     if(ss&&v){ stop(); const u=new SpeechSynthesisUtterance(text); u.voice=v; u.lang=v.lang; u.rate=.9; btn.classList.add('on'); u.onend=u.onerror=()=>btn.classList.remove('on'); ss.speak(u); }
     else playKeys(keys,btn);
   }
+  // shared with the optional add-ons (my words, phrases)
+  const R=window.DTAD={D,find,playKeys,playData,onLookup:null};
   const btn=(label)=>'<button class="play" type="button" aria-label="'+esc(label)+'">▶</button>';
 
   function hide(){box.hidden=true;current='';stop();}
@@ -58,6 +64,7 @@
     if(hb) hb.onclick=()=> toks.length===1?playKeys([keys[0]],hb):speakPhrase(text,all,hb);
     box.querySelectorAll('.row .play').forEach(b=>b.onclick=()=>playKeys([b.parentElement.dataset.k],b));
     place(range);
+    if(toks.length===1&&keys[0]&&R.onLookup) R.onLookup(keys[0],range,box);
   }
   function check(){
     const sel=window.getSelection();
