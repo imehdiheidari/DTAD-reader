@@ -953,6 +953,17 @@ window.CLASS_AUDIO={"base":"https://cdn.jsdelivr.net/gh/imehdiheidari/DTAD-reade
 .todo>li{list-style:none;position:relative;border:2px solid var(--ink);padding:.6rem .9rem;margin:0 0 .8rem}
 .todo>li::before{content:"";position:absolute;inset-inline-start:-2px;top:-2px;bottom:-2px;width:6px;background:var(--yellow)}
 .todo{padding:0!important}
+/* class diagram pane: an inline SVG that scrolls sideways on a narrow phone */
+.pane-diagram .diagram-wrap{overflow-x:auto;margin:0 0 1.4rem;border:2px solid var(--ink);background:#fff;padding:.4rem}
+.pane-diagram .diagram-hint{font-size:.85rem;opacity:.7;margin:0 0 .3rem}
+.pane-diagram svg{display:block;width:100%;min-width:640px;height:auto}
+.ant-diagram text{font-family:Jost,Arial,sans-serif;fill:#1d1d1b}
+.ant-diagram .b{fill:#fff;stroke:#1d1d1b;stroke-width:2}
+.ant-diagram .h{font-weight:700;font-size:17px}
+.ant-diagram .t{font-size:14px}
+.ant-diagram .s{font-size:12.5px;fill:#555}
+.ant-diagram .l{stroke:#1d1d1b;stroke-width:2;fill:none}
+.ant-diagram .d{stroke:#888;stroke-width:1.5;stroke-dasharray:5 4;fill:none}
 </style>
 <script>
 (function(){
