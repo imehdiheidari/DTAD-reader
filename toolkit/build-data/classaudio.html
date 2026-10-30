@@ -1,0 +1,98 @@
+<style>
+/* class recording: tap a timestamp to hear that paragraph from the real class; "listen first" hides the text until you reveal it */
+.has-audio .ts{cursor:pointer;user-select:none;-webkit-user-select:none;border:1.5px solid var(--red);padding:.05rem .4rem;border-radius:1rem;white-space:nowrap}
+.has-audio .ts::before{content:"▶ ";font-size:.62rem}
+.has-audio p.now{background:var(--yellow-soft);box-shadow:-.5rem 0 0 var(--yellow-soft),.5rem 0 0 var(--yellow-soft)}
+.has-audio p.now .ts{background:var(--red);color:var(--paper)}
+.listenbar{direction:rtl;font-family:var(--font-fa);display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;border:2px solid var(--ink);padding:.55rem .8rem;margin:0 0 1.4rem;font-size:.92rem;line-height:1.7}
+.listenbar p{margin:0;flex:1 1 14rem}
+.listenbar button,#cplayer button{font:inherit;cursor:pointer;border:2px solid var(--ink);background:var(--paper);color:var(--ink);padding:.2rem .7rem}
+.listenbar button[aria-pressed=true],#cplayer button[aria-pressed=true]{background:var(--blue);border-color:var(--blue);color:var(--paper)}
+.listen-first p.cue:not(.shown){color:transparent;text-shadow:0 0 .55em rgba(17,17,17,.55);cursor:pointer;user-select:none;-webkit-user-select:none}
+.listen-first p.cue:not(.shown) .ts{color:var(--red);text-shadow:none}
+.listen-first p.cue:not(.shown)::after{content:"  (برای دیدن متن بزن)";font-family:var(--font-fa);font-size:.8rem;color:var(--muted);text-shadow:none}
+#cplayer{position:fixed;z-index:15;left:0;right:0;bottom:0;background:var(--paper);border-top:3px solid var(--ink);direction:rtl;font-family:var(--font-fa);font-size:.9rem;
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.4rem;padding:.5rem max(12px,env(safe-area-inset-right,0px)) calc(.5rem + env(safe-area-inset-bottom,0px))}
+#cplayer .t{direction:ltr;font-variant-numeric:tabular-nums;min-width:4.2em;text-align:center;color:var(--red);font-weight:700}
+#cplayer .msg{flex-basis:100%;text-align:center;color:var(--muted);font-size:.82rem}
+</style>
+<script>
+// Class recordings are 5-minute mp3 chunks at <base>class-audio/<part>/<NNN>.mp3 (CLASS_AUDIO from build_content.py).
+(function(){
+  const CFG=window.CLASS_AUDIO; if(!CFG) return;
+  const CH=CFG.chunk, KEY='dtad-listen';
+  let pref={}; try{pref=JSON.parse(localStorage.getItem(KEY)||'{}')||{};}catch(e){}
+  const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(pref));}catch(e){}};
+  const sec2=s=>{const a=s.split(':').map(Number);return a.reduce((x,y)=>x*60+y,0);};
+  const fmt=t=>{t=Math.max(0,Math.floor(t));const h=Math.floor(t/3600),m=Math.floor(t%3600/60),s=t%60;return (h?h+':'+String(m).padStart(2,'0'):m)+':'+String(s).padStart(2,'0');};
+
+  // index every timestamped paragraph: which recording part it belongs to and where it starts and ends
+  const cues={};
+  document.querySelectorAll('section.session').forEach(sec=>{
+    const sid=sec.dataset.s, parts=CFG.sessions[sid], pane=sec.querySelector('.pane-text');
+    if(!parts||!pane) return;
+    pane.classList.add('has-audio');
+    let part=0; const list=[];
+    pane.querySelectorAll('aside.slide, p').forEach(el=>{
+      if(el.tagName==='ASIDE'){const m=el.textContent.match(/\bPart (\d+)\b/); if(m) part=Math.min(+m[1]-1,parts.length-1); return;}
+      const ts=el.querySelector('.ts'); if(!ts||el.closest('aside')) return;
+      el.classList.add('cue'); const c={p:el,part,t:sec2(ts.textContent)}; list.push(c); el._cue=c;
+    });
+    list.forEach((c,i)=>{const n=list[i+1]; c.end=n&&n.part===c.part?n.t:parts[c.part].dur;});
+    cues[sid]={parts,list};
+    const bar=document.createElement('div'); bar.className='listenbar';
+    bar.innerHTML='<p>🎧 روی زمانِ کنار هر پاراگراف بزن تا همان تکه را از <b>صدای واقعی کلاس</b> بشنوی (اینترنت لازم است). با «اول گوش کن» متن پنهان می‌شود؛ اول گوش بده، بعد متن را باز کن.</p><button type="button" class="lf">اول گوش کن</button>';
+    pane.insertBefore(bar,pane.firstChild);
+    const lf=bar.querySelector('.lf');
+    const setLF=on=>{pane.classList.toggle('listen-first',on);lf.setAttribute('aria-pressed',on);};
+    setLF(!!pref.lf);
+    lf.onclick=()=>{pref.lf=!pane.classList.contains('listen-first');save();document.querySelectorAll('.listenbar .lf').forEach(b=>{b.closest('.pane').classList.toggle('listen-first',pref.lf);b.setAttribute('aria-pressed',pref.lf);});};
+  });
+
+  const au=new Audio(); au.preload='auto';
+  let cur=null, chunk=-1, srcNow='', cont=!!pref.cont, slow=!!pref.slow, playing=false, pending=null;
+  const bar=document.createElement('div'); bar.id='cplayer'; bar.hidden=true;
+  bar.innerHTML='<button type="button" class="pp">⏸</button><button type="button" class="again">↺ دوباره</button><span class="t">0:00</span>'+
+    '<button type="button" class="slow">آهسته</button><button type="button" class="cont">پیوسته</button><button type="button" class="x" aria-label="بستن">✕</button><div class="msg" hidden></div>';
+  document.body.appendChild(bar);
+  const $=s=>bar.querySelector(s), msg=t=>{const m=$('.msg');m.textContent=t||'';m.hidden=!t;};
+  const sync=()=>{$('.slow').setAttribute('aria-pressed',slow);$('.cont').setAttribute('aria-pressed',cont);$('.pp').textContent=playing?'⏸':'▶';au.playbackRate=slow?.8:1;};
+  const url=(c,k)=>CFG.base+'class-audio/'+c.dir+'/'+String(k).padStart(3,'0')+'.mp3';
+  const now=()=>chunk*CH+au.currentTime;
+  function mark(c){document.querySelectorAll('p.now').forEach(p=>p.classList.remove('now')); if(c){c.p.classList.add('now');}}
+  function seek(t){
+    const part=cur.parts[cur.c.part], k=Math.floor(t/CH);
+    const u=url(part,k);
+    if(srcNow!==u){chunk=k; srcNow=u; pending=t-k*CH; au.src=u; au.load();}
+    else au.currentTime=t-k*CH;
+    au.playbackRate=slow?.8:1; const pr=au.play(); playing=true; sync(); msg(navigator.onLine===false?'برای صدای کلاس به اینترنت وصل شو.':'');
+    if(pr&&pr.catch) pr.catch(()=>{});
+  }
+  au.addEventListener('loadedmetadata',()=>{if(pending!=null){au.currentTime=pending;pending=null;} au.playbackRate=slow?.8:1;});
+  au.addEventListener('error',()=>{if(!cur) return; playing=false; sync(); msg('صدا باز نشد. اینترنت را چک کن و دوباره بزن.');});
+  au.addEventListener('waiting',()=>{if(playing) msg('در حال بارگیری…');});
+  au.addEventListener('playing',()=>msg(''));
+  au.addEventListener('timeupdate',()=>{
+    if(!cur||pending!=null) return; const t=now(); $('.t').textContent=fmt(t);
+    if(t>=cur.c.end-0.15){
+      if(!cont){au.pause(); playing=false; sync(); return;}
+      const l=cur.list, i=l.indexOf(cur.c), n=l[i+1];
+      if(n&&n.part===cur.c.part){cur.c=n; mark(n);}
+    }
+  });
+  au.addEventListener('ended',()=>{ if(!cur) return; const part=cur.parts[cur.c.part];
+    if((chunk+1)*CH<part.dur && (cont||now()<cur.c.end-0.5)){chunk++; pending=0; srcNow=url(part,chunk); au.src=srcNow; au.load(); au.play().catch(()=>{});} else {playing=false; sync();} });
+  function start(sid,c){ cur={sid,c,list:cues[sid].list,parts:cues[sid].parts}; mark(c); bar.hidden=false; seek(c.t); }
+  document.addEventListener('click',e=>{
+    const ts=e.target.closest('.has-audio .ts');
+    if(ts){const p=ts.closest('p'); const sid=ts.closest('section.session').dataset.s; if(p&&p._cue){e.preventDefault(); start(sid,p._cue);} return;}
+    const hp=e.target.closest('.listen-first p.cue:not(.shown)'); if(hp){hp.classList.add('shown');}
+  });
+  $('.pp').onclick=()=>{ if(!cur) return; if(playing){au.pause();playing=false;} else { if(!cont&&now()>=cur.c.end-0.2) seek(cur.c.t); else {au.play().catch(()=>{});playing=true;} } sync(); };
+  $('.again').onclick=()=>{ if(cur) seek(cur.c.t); };
+  $('.slow').onclick=()=>{slow=!slow;pref.slow=slow;save();sync();};
+  $('.cont').onclick=()=>{cont=!cont;pref.cont=cont;save();sync();};
+  $('.x').onclick=()=>{au.pause();playing=false;cur=null;bar.hidden=true;mark(null);};
+  sync();
+})();
+</script>

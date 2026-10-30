@@ -1,0 +1,6 @@
+{"base": "https://cdn.jsdelivr.net/gh/imehdiheidari/DTAD-reader@main/project/", "chunk": 300,
+ "sessions": {
+  "01": [{"dir": "01", "dur": 1299}],
+  "02": [{"dir": "02-1", "dur": 4086}, {"dir": "02-2", "dur": 1997}],
+  "03": [{"dir": "03-1", "dur": 8098}, {"dir": "03-2", "dur": 289}]
+ }}

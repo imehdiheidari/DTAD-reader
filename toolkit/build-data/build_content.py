@@ -57,8 +57,36 @@ for n, (fname, title) in enumerate(SESSIONS, 1):
     sub = "".join(f'<button type="button" role="tab" data-p="{k}">{l}</button>' for k, l, _, _ in panes)
     body = "".join(f'<div class="pane pane-{k}" data-p="{k}"{d} hidden>\n{b}\n</div>' for k, _, b, d in panes)
     parts.append(f'<section class="session" data-s="{sid}" hidden>\n{head}<nav class="subtabs" role="tablist">{sub}</nav>\n{body}\n</section>')
+# optional add-ons, all on this device only: "my words" (every looked-up word, reviewed as flashcards; with tabs),
+# phrases.txt (ready sentences for class, "## heading" lines and "english|persian" lines; audio in phrases-audio.tar
+# as phrases/NN.mp3, 1-based) and sessions/class-audio.json (the real class recording behind each timestamp)
+extras = ""
 if TABS:
+    nav.append('<button type="button" role="tab" data-s="words" class="extra">لغت‌های من</button>')
+    parts.append('<section class="session extra" data-s="words" hidden>\n<h2 class="session-title">My words · لغت‌های من</h2>\n<div class="pane pane-words"></div>\n</section>')
+    phr_path = os.path.join(DATA, "phrases.txt")
+    if os.path.exists(phr_path):
+        import tarfile
+        tar = tarfile.open(os.path.join(DATA, "phrases-audio.tar"))
+        groups, i = [], 0
+        for line in open(phr_path, encoding="utf8"):
+            line = line.strip()
+            if line.startswith("## "):
+                groups.append([line[3:], []])
+            elif "|" in line:
+                i += 1
+                en, fa = line.split("|", 1)
+                words |= words_in(html.escape(en))
+                mp3 = tar.extractfile(f"phrases/{i:02d}.mp3").read()
+                groups[-1][1].append([en, fa, base64.b64encode(mp3).decode()])
+        nav.append('<button type="button" role="tab" data-s="phrases" class="extra">جمله‌های کلاس</button>')
+        parts.append('<section class="session extra" data-s="phrases" hidden>\n<h2 class="session-title">Class phrases · جمله‌های کلاس</h2>\n<div class="pane pane-phrases"></div>\n</section>')
+        extras += "window.PHRASES=" + json.dumps(groups, ensure_ascii=False, separators=(",", ":")) + ";\n"
     parts.insert(0, '<nav class="sessiontabs" role="tablist">' + "".join(nav) + '</nav>')
+ca_path = os.path.join(DATA, "sessions", "class-audio.json")
+CLASS_AUDIO = json.load(open(ca_path, encoding="utf8")) if os.path.exists(ca_path) else None
+if CLASS_AUDIO:
+    extras += "window.CLASS_AUDIO=" + json.dumps(CLASS_AUDIO, separators=(",", ":")) + ";\n"
 
 audio = lambda w: os.path.join(AUDIO_DIR, w.replace("'", "_") + ".mp3")
 missing_gloss = sorted(w for w in words if w not in gloss)
@@ -73,8 +101,13 @@ theme = open(os.path.join(HERE, "theme.html"), encoding="utf8").read()
 theme = theme.replace("/*__FONTS__*/", open(os.path.join(HERE, "fonts.css")).read())
 theme = theme.replace("__APP_NAME__", html.escape(APP_NAME)).replace("__COURSE_LINE__", html.escape(COURSE_LINE)).replace("__SUBTITLE__", f"{len(SESSIONS)} session" + ("s" if len(SESSIONS) > 1 else ""))
 script = open(os.path.join(HERE, "reader-script.html"), encoding="utf8").read()
+if extras:
+    script = "<script>\n" + extras.replace("</", "<\\/") + "</script>\n" + script
 if TABS:
     script += "\n" + open(os.path.join(HERE, "tabs.html"), encoding="utf8").read()
+    script += "\n" + open(os.path.join(HERE, "mywords.html"), encoding="utf8").read()
+if CLASS_AUDIO:
+    script += "\n" + open(os.path.join(HERE, "classaudio.html"), encoding="utf8").read()
 script += "\n" + open(os.path.join(HERE, "updater.html"), encoding="utf8").read()
 
 doc = ('<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n<title>' + html.escape(APP_NAME) + '</title>\n'

@@ -4179,3 +4179,8 @@ yalda|یلدا
 younger|جوان‌تر
 zaha|زها (زها حدید، معمار)
 zero|صفر
+dies|می‌میرد
+monday|دوشنبه
+scans|اسکن می‌کند
+slowly|آهسته
+split|تقسیم کردن

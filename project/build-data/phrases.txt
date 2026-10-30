@@ -1,0 +1,43 @@
+## وقتی متوجه نمی‌شوی
+Sorry, could you say that again?|ببخشید، می‌شود دوباره بگویید؟
+Could you speak a bit more slowly, please?|می‌شود لطفاً کمی آهسته‌تر صحبت کنید؟
+Sorry, I didn't catch the last part.|ببخشید، قسمت آخر را نشنیدم.
+Do you mean that I should change the story?|یعنی منظورتان این است که داستان را عوض کنم؟
+What do you mean by that?|منظورتان از این چیست؟
+Could you give me an example?|می‌شود یک مثال بزنید؟
+Let me check if I understood correctly.|بگذارید ببینم درست فهمیدم یا نه.
+So, if I understand you right, the game is too long.|پس اگر درست فهمیده باشم، بازی زیادی طولانی است.
+## وقت ارائه دادن
+Today I want to show you my project.|امروز می‌خواهم پروژه‌ام را نشانتان بدهم.
+My theme card was number one, and my constraint was number eleven.|کارت موضوع من شماره‌ی یک بود و محدودیتم شماره‌ی یازده.
+The idea is simple.|ایده ساده است.
+Let me explain how it works.|بگذارید توضیح بدهم چطور کار می‌کند.
+First, everyone scans the QR code.|اول، همه کد QR را اسکن می‌کنند.
+Then the daemon starts to play.|بعد دیمن شروع به بازی می‌کند.
+At the end, the daemon dies.|در آخر، دیمن می‌میرد.
+I would like you to try it.|دوست دارم امتحانش کنید.
+Can everyone see the screen?|همه صفحه را می‌بینند؟
+Give me one second, please.|لطفاً یک لحظه صبر کنید.
+That's it. Thank you.|همین بود. ممنون.
+## جواب دادن به بازخورد
+Thank you, that's a good point.|ممنون، نکته‌ی خوبی است.
+I agree. I will try that.|موافقم. امتحانش می‌کنم.
+I thought about that, but I chose this because it is simpler.|به این فکر کرده بودم، ولی این را انتخاب کردم چون ساده‌تر است.
+I didn't have enough time to test it with many people.|وقت کافی نداشتم که با آدم‌های زیادی امتحانش کنم.
+In the next version, I want to make it clearer.|در نسخه‌ی بعد می‌خواهم واضح‌ترش کنم.
+Do you think it works without an explanation?|فکر می‌کنید بدون توضیح هم کار می‌کند؟
+What would you change first?|شما اول چه چیزی را عوض می‌کردید؟
+## سؤال پرسیدن و نظر دادن
+Can I ask a question?|می‌توانم یک سؤال بپرسم؟
+I really like the atmosphere of your project.|حال‌وهوای پروژه‌ات را خیلی دوست دارم.
+How did you make the sound?|صدا را چطور ساختی؟
+Is the daemon the room itself?|دیمن خود اتاق است؟
+What happens if nobody plays?|اگر هیچ‌کس بازی نکند چه می‌شود؟
+## کار گروهی
+Would you like to work together?|دوست داری با هم کار کنیم؟
+Which place in Weimar do you like?|کدام مکان وایمار را دوست داری؟
+Maybe we can meet on Monday.|شاید بتوانیم دوشنبه همدیگر را ببینیم.
+I can do the coding, and you can do the drawings.|من کدنویسی را انجام می‌دهم و تو نقاشی‌ها را.
+Let's split the work.|بیا کار را تقسیم کنیم.
+When is the deadline?|مهلت تحویل کی است؟
+Where should we upload the video?|ویدیو را کجا آپلود کنیم؟
