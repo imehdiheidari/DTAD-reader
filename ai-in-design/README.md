@@ -5,6 +5,7 @@ Content for the **AI in Design** Android app: session transcripts with Persian w
 - `content.html` is the page the app shows (works offline). `version.json` tells installed apps when new content is available: raise `version` after updating `content.html`.
 - `build-data/sessions/NN.md` is each session's source (toolkit transcript format), `NN.html` its converted fragment, `NN-fa.html` the Persian summary, `NN-todo.html` the tasks for the next session, `index.json` the session list.
 - `build-data/glossary-fa.txt` starts as a copy of the DTAD Project glossary; this course's new words are added to it. `build-data/audio.tar` (created with the first session) holds only the pronunciations this course adds; extract it together with `toolkit/build-data/audio.tar` and `project/build-data/audio.tar` into one folder.
+- Add-ons, same as `../project`: `class-audio/NN/` holds each class recording as 5-minute mp3 chunks (mono 32 kbps, `ffmpeg -vn -ac 1 -ar 22050 -b:a 32k -f segment -segment_time 300 -reset_timestamps 1`), listed in `build-data/sessions/class-audio.json`, so tapping a timestamp plays the real class; `build-data/phrases.txt` + `phrases-audio.tar` (piper, `phrases/NN.mp3`) make the "class phrases" tab; "my words" keeps looked-up words for flashcard review. Chunk the same file the transcript was made from, so the timestamps line up.
 - `AI-in-Design-pc.html` is the page for a PC browser; `build-pc.py` makes it from `content.html`.
 - `app/` is the overlay on `toolkit/app` (name, icon, update URL); `build-app.sh` builds the APK under the package `ir.mehdi.aiindesign`, so it installs next to the DTAD apps. Same `KEYSTORE` / `KS_PASS` / SDK needs as `toolkit/app/build.sh`.
 
@@ -18,7 +19,7 @@ Transcription used faster-whisper (`small.en`, int8, CPU) on 16 kHz mono audio, 
 
 ## Adding a session
 
-1. Download the recording(s) from Drive, transcribe them with timestamps, and write `build-data/sessions/NN.md` (a summary blockquote, then one `> **Part k** (recording N-k)` block per recording).
+1. Download the recording(s) from Drive, cut them into `class-audio/NN/` chunks and add them to `class-audio.json`, transcribe them with timestamps, and write `build-data/sessions/NN.md` (a summary blockquote, then one `> **Part k** (recording N-k)` block per recording).
 2. Write `NN-fa.html` (Persian summary) and `NN-todo.html` (what to do for the next session).
 3. Build:
 

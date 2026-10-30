@@ -1,0 +1,6 @@
+{"base": "https://cdn.jsdelivr.net/gh/imehdiheidari/DTAD-reader@main/ai-in-design/", "chunk": 300,
+ "sessions": {
+  "01": [{"dir": "01", "dur": 5582}],
+  "02": [{"dir": "02", "dur": 5172}],
+  "03": [{"dir": "03", "dur": 5004}]
+ }}

@@ -1,0 +1,34 @@
+## وقتی متوجه نمی‌شوی
+Sorry, could you say that again?|ببخشید، می‌شود دوباره بگویید؟
+Could you speak a bit more slowly, please?|می‌شود لطفاً کمی آهسته‌تر صحبت کنید؟
+Could you show that step again, please?|می‌شود لطفاً آن مرحله را دوباره نشان بدهید؟
+Which command did you type?|چه دستوری تایپ کردید؟
+Where can I find the link?|لینک را کجا پیدا کنم؟
+## وقتی کار نمی‌کند
+It doesn't work on my laptop.|روی لپ‌تاپ من کار نمی‌کند.
+I get an error in the terminal.|در ترمینال خطا می‌گیرم.
+Claude can't find the file.|Claude فایل را پیدا نمی‌کند.
+My Rhino file is not connected.|فایل Rhino من وصل نیست.
+I think I hit the usage limit.|فکر کنم به سقف استفاده رسیدم.
+Should I start a new chat?|باید یک چت جدید شروع کنم؟
+## وقت نشان دادن کارت
+Let me show you what I made.|بگذارید چیزی را که ساختم نشانتان بدهم.
+I started with a very simple prompt.|با یک پرامپت خیلی ساده شروع کردم.
+Then I worked step by step.|بعد قدم‌به‌قدم جلو رفتم.
+The hardest part was controlling the style.|سخت‌ترین بخش کنترل کردن سبک بود.
+It did something I didn't ask for.|کاری کرد که من نخواسته بودم.
+In the end, I was happy with the result.|در آخر از نتیجه راضی بودم.
+Next time I would sketch the idea first.|دفعه‌ی بعد اول ایده را اسکیس می‌کنم.
+## درباره‌ی skill و ماشین مسابقه
+I would like to work on the site skill.|دوست دارم روی skill سایت کار کنم.
+Can I write my name under this skill?|می‌توانم اسمم را زیر این skill بنویسم؟
+How do I push my changes to the repository?|چطور تغییراتم را به ریپو push کنم؟
+Should the skill run automatically?|skill باید خودکار اجرا شود؟
+How long should a skill be?|یک skill چقدر باید طولانی باشد؟
+When will you run the competition machine?|ماشین مسابقه را کی اجرا می‌کنید؟
+## سؤال پرسیدن و نظر دادن
+Can I ask a question?|می‌توانم یک سؤال بپرسم؟
+Is it better to use plan mode for this?|برای این کار بهتر است از plan mode استفاده کنم؟
+How much did the images cost?|تصویرها چقدر هزینه داشت؟
+I really like how you did the renders.|خیلی از رندرهایت خوشم آمد.
+Did you use a reference image?|از تصویر مرجع استفاده کردی؟
