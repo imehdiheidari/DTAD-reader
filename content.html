@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>DTAD Theory</title>
-<meta name="dtad-version" content="6">
+<meta name="dtad-version" content="7">
 <meta name="dtad-update-base" content="https://raw.githubusercontent.com/imehdiheidari/DTAD-reader/main/">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <style>[hidden]{display:none!important}body{margin:0}</style>
@@ -2082,7 +2082,9 @@ window.CLASS_AUDIO={"base":"https://cdn.jsdelivr.net/gh/imehdiheidari/DTAD-reade
 .pane-vocab{direction:rtl;text-align:right;font-family:var(--font-fa);line-height:1.9}
 .pane-vocab .en,.pane-vocab .ltr{direction:ltr;unicode-bidi:isolate;font-family:var(--font-sans)}
 .vstats{display:grid;grid-template-columns:repeat(4,1fr);gap:.5rem;margin:0 0 1rem}
-.vstats div{border:2px solid var(--ink);padding:.4rem .3rem;text-align:center;line-height:1.4}
+.vstats>*{border:2px solid var(--ink);padding:.4rem .3rem;text-align:center;line-height:1.4;background:var(--paper);color:var(--ink);font:inherit}
+.vstats button{cursor:pointer}.vstats button span::after{content:" ›"}
+.vgrp{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin:0 0 .8rem}.vgrp h3{margin:0;flex:1 1 100%;font-size:1.1rem}
 .vstats b{display:block;font-size:1.35rem;font-family:var(--font-sans)}
 .vstats span{font-size:.78rem;color:var(--muted)}
 .vstats .s1{box-shadow:4px 4px 0 var(--red)}.vstats .s2{box-shadow:4px 4px 0 var(--blue)}.vstats .s3{box-shadow:4px 4px 0 var(--yellow)}.vstats .s4{box-shadow:4px 4px 0 var(--ink)}
@@ -2200,7 +2202,7 @@ window.CLASS_AUDIO={"base":"https://cdn.jsdelivr.net/gh/imehdiheidari/DTAD-reade
     const chips=(lab,items,on,attr)=>'<div class="vchips"><span class="lab">'+lab+'</span>'+items.map(([v,t])=>'<button type="button" data-'+attr+'="'+esc(v)+'" aria-pressed="'+on(v)+'">'+t+'</button>').join('')+'</div>';
     pane.innerHTML=
       '<p class="howto" style="margin:0 0 .8rem">'+FA(W.length)+' کلمه‌ی سطح B1 و بالاتر که در کلاس گفته شده، با معنی فارسی، تلفظ، جمله‌ی خودِ کلاس و صدای استاد. هر روز چند کلمه‌ی تازه یاد بگیر و مرورها را انجام بده؛ پیشرفتت روی همین گوشی ذخیره می‌شود.</p>'+
-      '<div class="vstats"><div class="s1"><b>'+FA(streak())+'</b><span>🔥 روز پشت سر هم</span></div><div class="s2"><b>'+FA(L)+'</b><span>یاد گرفته</span></div><div class="s3"><b>'+FA(seen-L)+'</b><span>در حال یادگیری</span></div><div class="s4"><b>'+FA(W.length-seen)+'</b><span>هنوز ندیده</span></div></div>'+
+      '<div class="vstats"><div class="s1"><b>'+FA(streak())+'</b><span>🔥 روز پشت سر هم</span></div><button type="button" class="s2" data-g="learnt"><b>'+FA(L)+'</b><span>یاد گرفته</span></button><button type="button" class="s3" data-g="learning"><b>'+FA(seen-L)+'</b><span>در حال یادگیری</span></button><button type="button" class="s4" data-g="new"><b>'+FA(W.length-seen)+'</b><span>هنوز ندیده</span></button></div>'+
       '<div class="vgoal">هدف امروز: '+FA(Math.min(rec.n,goal))+' از '+FA(goal)+' کلمه‌ی تازه'+(rec.n>=goal?' ✓':'')+'<div class="bar"><i style="width:'+Math.min(100,rec.n/goal*100)+'%"></i></div></div>'+
       chips('سطح:',LV.map(l=>[l,LVF[l]||l]),v=>S.o.lv.includes(v),'lv')+
       chips('جلسه:',[['','همه'],['1','جلسه ۱'],['2','جلسه ۲']],v=>S.o.ss===v,'ss')+
@@ -2213,11 +2215,12 @@ window.CLASS_AUDIO={"base":"https://cdn.jsdelivr.net/gh/imehdiheidari/DTAD-reade
       '</div>'+
       '<div style="font-size:.9rem;margin-bottom:.3rem">پیشرفت در هر سطح</div>'+
       LV.map(l=>{const t=W.filter(x=>x.l===l), k=t.filter(learnt).length; return '<div class="vlv"><span>'+lvb(t[0])+'</span><div class="bar"><i style="width:'+(t.length?k/t.length*100:0)+'%"></i></div><span class="n">'+k+' / '+t.length+'</span></div>';}).join('')+
-      '<p class="vmsg" style="margin-top:1rem">«یاد گرفته» یعنی کلمه را چند بار پشت سر هم درست جواب داده‌ای. کلمه‌ای که اشتباه کنی دوباره به مرور برمی‌گردد.</p>';
+      '<p class="vmsg" style="margin-top:1rem">روی هر کدام از خانه‌های بالا بزن تا کلمه‌هایش را ببینی و همان‌ها را تمرین کنی. کلمه‌هایی که «باید بیشتر تمرین کنم» زده‌ای یا در مرور و کوییز اشتباه کرده‌ای، در «در حال یادگیری» هستند تا چند بار پشت سر هم درست جواب بدهی.</p>';
     pane.querySelectorAll('[data-lv]').forEach(b=>b.onclick=()=>{const v=b.dataset.lv,i=S.o.lv.indexOf(v); if(i>=0){if(S.o.lv.length>1) S.o.lv.splice(i,1);} else S.o.lv.push(v); save(); home(1);});
     pane.querySelectorAll('[data-ss]').forEach(b=>b.onclick=()=>{S.o.ss=b.dataset.ss; save(); home(1);});
     pane.querySelectorAll('[data-goal]').forEach(b=>b.onclick=()=>{S.o.goal=+b.dataset.goal; save(); home(1);});
     pane.querySelectorAll('[data-m]').forEach(b=>b.onclick=()=>({learn,review,quiz,list}[b.dataset.m])());
+    pane.querySelectorAll('[data-g]').forEach(b=>b.onclick=()=>list(b.dataset.g));
   }
   const back='<button type="button" class="btn back">برگشت</button>';
   const wireBack=()=>pane.querySelectorAll('.back').forEach(b=>b.onclick=()=>home());
@@ -2231,15 +2234,16 @@ window.CLASS_AUDIO={"base":"https://cdn.jsdelivr.net/gh/imehdiheidari/DTAD-reade
       pane.innerHTML='<div class="vcard"><div class="top"><span>'+FA(q.length)+' کلمه‌ی تازه مانده</span>'+lvb(x)+'</div>'+
         '<div class="big"><span class="en">'+esc(x.w)+'</span><button type="button" class="play" data-snd="w" aria-label="Play">▶</button></div>'+
         '<div class="fa">'+esc(x.fa)+'</div>'+exBlock(x)+sndRow(false)+
-        '<div class="row"><button type="button" class="btn go nx">یاد گرفتم، بعدی</button><button type="button" class="btn kn">از قبل بلد بودم</button></div></div>'+back;
+        '<div class="row"><button type="button" class="btn go nx">یاد گرفتم</button><button type="button" class="btn pr">باید بیشتر تمرین کنم</button><button type="button" class="btn kn">از قبل بلد بودم</button></div></div>'+back;
       sounds(pane,x); wireBack(); word(x,pane.querySelector('.big .play'));
-      const go=b=>{const p=S.p[x.w]={b,due:Date.now()+GAP[b]*DAY,ok:0,bad:0}; dayRec().n++; save(); done.push(x); q.shift(); next();};
-      pane.querySelector('.nx').onclick=()=>go(1); pane.querySelector('.kn').onclick=()=>go(5);
+      // learnt now -> box 4 (back for review in 8 days); needs practice -> box 1, due now ("in progress"); known already -> box 5
+      const go=b=>{S.p[x.w]={b,due:Date.now()+(b>1?GAP[b]*DAY:0),ok:0,bad:0}; dayRec().n++; save(); done.push(x); q.shift(); next();};
+      pane.querySelector('.nx').onclick=()=>go(4); pane.querySelector('.pr').onclick=()=>go(1); pane.querySelector('.kn').onclick=()=>go(5);
     })();
   }
   // ---------- review: flashcards (English side or Persian side first) ----------
-  function review(){
-    const q=shuffle(due()), done=[]; let shown=false;
+  function review(set){
+    const q=shuffle((Array.isArray(set)?set:due()).slice()), done=[]; let shown=false;
     (function next(){
       stopAll(); toTop(); if(!q.length) return finish('review',done);
       const x=q[0], fa1=S.o.dir==='fa';
@@ -2258,8 +2262,8 @@ window.CLASS_AUDIO={"base":"https://cdn.jsdelivr.net/gh/imehdiheidari/DTAD-reade
     })();
   }
   // ---------- quiz: 10 mixed questions ----------
-  function quiz(){
-    let base=pool().filter(P); if(base.length<10) base=base.concat(shuffle(pool().filter(x=>!P(x))).slice(0,10-base.length));
+  function quiz(set){
+    let base=Array.isArray(set)&&set.length?set.slice():pool().filter(P); if(base.length<10) base=base.concat(shuffle(pool().filter(x=>!P(x))).slice(0,10-base.length));
     const qs=shuffle(base.slice()).slice(0,10), wrong=[]; let i=0, score=0;
     const types=['enfa','faen','listen','gap','type'];
     const distract=(x,key)=>{const same=pool().filter(y=>y!==x&&y[key]!==x[key]); const near=same.filter(y=>y.l===x.l); return shuffle(near.length>=3?near:same).slice(0,3);};
@@ -2294,20 +2298,30 @@ window.CLASS_AUDIO={"base":"https://cdn.jsdelivr.net/gh/imehdiheidari/DTAD-reade
       pane.innerHTML='<div class="vcard"><div class="fa">نتیجه: '+FA(score)+' از '+FA(qs.length)+(score===qs.length?' 🎉':'')+'</div>'+
         (wrong.length?'<p style="margin:.8rem 0 .3rem">این‌ها را دوباره ببین (به مرور هم اضافه شدند):</p><ul class="vlist vres">'+wrong.map(x=>'<li><div class="r"><span class="w">'+esc(x.w)+'</span><span class="m">'+esc(x.fa)+'</span><button type="button" class="play" data-w="'+esc(x.w)+'">▶</button></div></li>').join('')+'</ul>':'')+
         '<div class="row"><button type="button" class="btn go again">کوییز دوباره</button>'+back+'</div></div>';
-      pane.querySelectorAll('[data-w]').forEach(b=>b.onclick=()=>R.playKeys([b.dataset.w],b)); pane.querySelector('.again').onclick=quiz; wireBack();
+      pane.querySelectorAll('[data-w]').forEach(b=>b.onclick=()=>R.playKeys([b.dataset.w],b)); pane.querySelector('.again').onclick=()=>quiz(set); wireBack();
     }
   }
   function finish(kind,done){
     stopAll(); toTop();
     pane.innerHTML='<div class="vcard"><div class="fa">'+(kind==='learn'?'آفرین! '+FA(done.length)+' کلمه‌ی تازه دیدی. فردا برای مرور برمی‌گردند.':'آفرین! مرور تمام شد.')+' 🎉</div>'+
       '<div class="row"><button type="button" class="btn go qz">یک کوییز کوتاه</button>'+back+'</div></div>';
-    pane.querySelector('.qz').onclick=quiz; wireBack();
+    pane.querySelector('.qz').onclick=()=>quiz(); wireBack();
   }
   // ---------- list ----------
-  function list(){
-    stopAll(); toTop(); const all=pool();
-    pane.innerHTML='<input class="vsearch" type="search" placeholder="search / جست‌وجو">'+back+'<ul class="vlist" style="margin-top:.6rem"></ul>';
+  // list(): every word under the current filters; list('learnt'|'learning'|'new'): one group, with practice for just those words
+  const GROUPS={learnt:['یاد گرفته',learnt],learning:['در حال یادگیری',x=>P(x)&&!learnt(x)],'new':['هنوز ندیده',x=>!P(x)]};
+  function list(g){
+    stopAll(); toTop(); const G=GROUPS[g], all=G?W.filter(G[1]):pool();
+    pane.innerHTML=(G?'<div class="vgrp"><h3>'+G[0]+' ('+FA(all.length)+' کلمه)</h3>'+
+        (all.length&&g!=='new'?'<button type="button" class="btn go gr">تمرین با فلش‌کارت</button><button type="button" class="btn gq">کوییز از همین‌ها</button>':'')+
+        (g==='new'&&all.length?'<button type="button" class="btn go gl">یادگیری کلمه‌ی تازه</button>':'')+'</div>':'')+
+      '<input class="vsearch" type="search" placeholder="search / جست‌وجو">'+back+'<ul class="vlist" style="margin-top:.6rem"></ul>';
     const ul=pane.querySelector('.vlist'), inp=pane.querySelector('.vsearch'); wireBack();
+    const gb=s=>pane.querySelector(s);
+    if(gb('.gr')) gb('.gr').onclick=()=>review(W.filter(G[1]));
+    if(gb('.gq')) gb('.gq').onclick=()=>quiz(W.filter(G[1]));
+    if(gb('.gl')) gb('.gl').onclick=learn;
+    if(G&&!all.length) ul.insertAdjacentHTML('beforebegin','<p class="vmsg">هنوز کلمه‌ای اینجا نیست.</p>');
     const dots=x=>{const b=P(x)?P(x).b:0; return '●'.repeat(Math.min(b,4))+'○'.repeat(4-Math.min(b,4));};
     function draw(){const s=inp.value.trim().toLowerCase();
       const rows=all.filter(x=>!s||x.w.includes(s)||x.fa.includes(s)).slice(0,400);
