@@ -127,9 +127,9 @@
       '<div class="vgoal">هدف امروز: '+FA(Math.min(rec.n,goal))+' از '+FA(goal)+' کلمه‌ی تازه'+(rec.n>=goal?' ✓':'')+'<div class="bar"><i style="width:'+Math.min(100,rec.n/goal*100)+'%"></i></div></div>'+
       chips('سطح:',LV.map(l=>[l,LVF[l]||l]),v=>S.o.lv.includes(v),'lv')+
       chips('جلسه:',[['','همه'],['1','جلسه ۱'],['2','جلسه ۲']],v=>S.o.ss===v,'ss')+
-      chips('هدف روزانه:',[['5','۵'],['10','۱۰'],['20','۲۰'],['30','۳۰']],v=>S.o.goal==v,'goal')+
+      chips('هدف روزانه (فقط برای انگیزه، محدودیت نیست):',[['5','۵'],['10','۱۰'],['20','۲۰'],['30','۳۰']],v=>S.o.goal==v,'goal')+
       '<div class="vmodes">'+
-        '<button type="button" class="btn go" data-m="learn"'+(nf?'':' disabled')+'>یادگیری کلمه‌ی تازه<small>'+(left?FA(Math.min(left,nf))+' کلمه برای امروز':'هدف امروز انجام شد؛ باز هم می‌توانی')+'</small></button>'+
+        '<button type="button" class="btn go" data-m="learn"'+(nf?'':' disabled')+'>یادگیری کلمه‌ی تازه<small>'+(left?'هدف امروز: '+FA(left)+' کلمه‌ی دیگر؛ بیشتر هم می‌توانی':'هدف امروز انجام شد؛ هر چقدر بخواهی ادامه بده')+'</small></button>'+
         '<button type="button" class="btn" data-m="review"'+(d?'':' disabled')+'>مرور<small>'+FA(d)+' کلمه منتظر مرور</small></button>'+
         '<button type="button" class="btn" data-m="quiz">کوییز<small>۱۰ سؤال: معنی، شنیدن، جای خالی، نوشتن</small></button>'+
         '<button type="button" class="btn" data-m="list">همه‌ی کلمه‌ها<small>'+FA(all.length)+' کلمه با فیلتر فعلی</small></button>'+
@@ -148,11 +148,11 @@
 
   // ---------- learn: new words, most frequent in class first ----------
   function learn(){
-    const q=fresh().sort((a,b)=>LV.indexOf(a.l)-LV.indexOf(b.l)||b.n-a.n).slice(0,Math.max(5,S.o.goal-dayRec().n)), done=[];
+    const q=fresh().sort((a,b)=>LV.indexOf(a.l)-LV.indexOf(b.l)||b.n-a.n), done=[];   // no daily cap: go on as long as you like
     (function next(){
       stopAll(); toTop(); if(!q.length) return finish('learn',done);
       const x=q[0];
-      pane.innerHTML='<div class="vcard"><div class="top"><span>'+FA(q.length)+' کلمه‌ی تازه مانده</span>'+lvb(x)+'</div>'+
+      pane.innerHTML='<div class="vcard"><div class="top"><span>امروز '+FA(dayRec().n)+' کلمه‌ی تازه'+(dayRec().n>=S.o.goal?' ✓':'')+' · '+FA(q.length)+' مانده</span>'+lvb(x)+'</div>'+
         '<div class="big"><span class="en">'+esc(x.w)+'</span><button type="button" class="play" data-snd="w" aria-label="Play">▶</button></div>'+
         '<div class="fa">'+esc(x.fa)+'</div>'+exBlock(x)+sndRow(false)+
         '<div class="row"><button type="button" class="btn go nx">یاد گرفتم</button><button type="button" class="btn pr">باید بیشتر تمرین کنم</button><button type="button" class="btn kn">از قبل بلد بودم</button></div></div>'+back;
