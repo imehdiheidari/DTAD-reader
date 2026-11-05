@@ -61,14 +61,18 @@ for n, (fname, title) in enumerate(SESSIONS, 1):
 # phrases.txt (ready sentences for class, "## heading" lines and "english|persian" lines; audio in phrases-audio.tar
 # as phrases/NN.mp3, 1-based) and sessions/class-audio.json (the real class recording behind each timestamp)
 extras = ""
-# vocab.json (the course's B1+ words: [word, level, persian, sessions, class sentence, form in it, session id, seconds into
-# the recording, times said]) adds a "vocab training" tab (vocab.html); its words join the dictionary, meanings from the file
+# vocab.json adds a "vocab training" tab (vocab.html): {"src": [[id, label, "class"|"pdf"], ...], "w": [[word, level, persian,
+# {source id: [sentence, word form in it, seconds into the class recording or -1, times used]}], ...]}. Class sources are s1, s2 ...
+# (session NN). Words heard in class join the dictionary (offline audio); words only in readings play <VOCAB_AUDIO>vocab-audio/<word>.mp3
 voc_path = os.path.join(DATA, "vocab.json")
 VOCAB = json.load(open(voc_path, encoding="utf8")) if TABS and os.path.exists(voc_path) else None
 if TABS:
     if VOCAB:
-        for v in VOCAB:
-            words.add(v[0]); gloss.setdefault(v[0], v[2])
+        classes = {s[0] for s in VOCAB["src"] if s[2] == "class"}
+        for v in VOCAB["w"]:
+            if classes & set(v[3]):
+                words.add(v[0]); gloss.setdefault(v[0], v[2])
+        VOCAB["audio"] = os.environ.get("VOCAB_AUDIO", "https://cdn.jsdelivr.net/gh/imehdiheidari/DTAD-reader@main/")
         nav.append('<button type="button" role="tab" data-s="vocab" class="extra">تمرین لغت</button>')
         parts.append('<section class="session extra" data-s="vocab" hidden>\n<h2 class="session-title">Vocab training · تمرین لغت</h2>\n<div class="pane pane-vocab"></div>\n</section>')
         extras += "window.VOCAB=" + json.dumps(VOCAB, ensure_ascii=False, separators=(",", ":")) + ";\n"

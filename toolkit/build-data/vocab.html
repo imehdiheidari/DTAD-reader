@@ -63,9 +63,17 @@
   const R=window.DTAD, V=window.VOCAB, CA=window.CLASS_AUDIO, pane=document.querySelector('.pane-vocab'); if(!R||!V||!pane) return;
   const KEY='dtad-vocab', DAY=864e5, GAP=[0,1,2,4,8,16,32];   // Leitner boxes 0..6, box>=4 counts as "learnt"
   const LV=['B1','B2','C1','C2','C2+'], LVN={'B1':'B1','B2':'B2','C1':'C1','C2':'C2','C2+':'AC'}, LVF={'C2+':'آکادمیک'};
-  const W=V.map(v=>({w:v[0],l:v[1],fa:v[2],ss:v[3],ex:v[4],f:v[5],sid:v[6],t:v[7],n:v[8]}));
+  // sources: class sessions (s1, s2 ...) and readings (pdf); each word keeps one sentence per source it appears in
+  const SRC=V.src, SRCL={}, PDF=SRC.filter(s=>s[2]==='pdf').map(s=>s[0]); SRC.forEach(s=>SRCL[s[0]]=s[1]);
+  const W=V.w.map(v=>({w:v[0],l:v[1],fa:v[2],src:v[3],ss:Object.keys(v[3])}));
+  const inSrc=(x,f)=>!f||(f==='pdf'?x.ss.some(s=>PDF.includes(s)):x.ss.includes(f));
+  // the sentence shown for a word: from the chosen source if it has one, else from class, else from a reading
+  function pick(){const f=S.o.ss; W.forEach(x=>{
+    const k=(f&&f!=='pdf'&&x.src[f])?f:(f==='pdf'?x.ss.find(s=>PDF.includes(s)):null)||x.ss.find(s=>s[0]==='s'&&!PDF.includes(s))||x.ss[0];
+    const e=x.src[k]; x.k=k; x.ex=e[0]; x.f=e[1]; x.t=e[2]; x.n=e[3]; x.cls=!PDF.includes(k); x.sid=x.cls?String(k.slice(1)).padStart(2,'0'):null;});}
   let S={}; try{S=JSON.parse(localStorage.getItem(KEY)||'{}')||{};}catch(e){}
   S.p=S.p||{}; S.d=S.d||{}; S.o=S.o||{lv:['B1','B2','C1','C2','C2+'],ss:'',goal:10,dir:'en'};
+  if(S.o.ss==='1'||S.o.ss==='2') S.o.ss='s'+S.o.ss; if(S.o.ss&&S.o.ss!=='pdf'&&!SRC.some(s=>s[0]===S.o.ss)) S.o.ss='';
   const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}};
   const esc=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
   const FA=n=>String(n).replace(/\d/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d]);
@@ -73,9 +81,9 @@
   const dayRec=()=>S.d[today()]||(S.d[today()]={n:0,r:0,q:0});
   const shuffle=a=>{for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;};
   const P=x=>S.p[x.w];
-  const pool=()=>W.filter(x=>S.o.lv.includes(x.l)&&(!S.o.ss||x.ss.includes(S.o.ss)));
+  const pool=()=>W.filter(x=>S.o.lv.includes(x.l)&&inSrc(x,S.o.ss));
   const fresh=()=>pool().filter(x=>!P(x));
-  const due=()=>W.filter(x=>P(x)&&P(x).b<6&&P(x).due<=Date.now()&&S.o.lv.includes(x.l)&&(!S.o.ss||x.ss.includes(S.o.ss)));
+  const due=()=>W.filter(x=>P(x)&&P(x).b<6&&P(x).due<=Date.now()&&S.o.lv.includes(x.l)&&inSrc(x,S.o.ss));
   const learnt=x=>P(x)&&P(x).b>=4;
   function streak(){let n=0;const d=new Date();if(!active(d)) d.setDate(d.getDate()-1);
     while(active(d)){n++;d.setDate(d.getDate()-1);} return n;
@@ -90,11 +98,15 @@
   let au=null, auTimer=null;
   const toTop=()=>{const n=document.querySelector('.sessiontabs'); if(n&&pane.getBoundingClientRect().top<0) n.scrollIntoView();};
   function stopAll(){ if(au){au.pause();au=null;} clearTimeout(auTimer); if(window.speechSynthesis) speechSynthesis.cancel(); pane.querySelectorAll('.on').forEach(b=>b.classList.remove('on')); }
-  const word=(x,btn)=>{stopAll(); if(R.D[x.w]) R.playKeys([x.w],btn);};
+  // words heard in class have offline audio in the dictionary; reading-only words load theirs (internet) or use the device voice
+  function say(text,btn){const ss=window.speechSynthesis; const v=ss&&(ss.getVoices().find(v=>/^en/i.test(v.lang)&&v.localService!==false)||ss.getVoices().find(v=>/^en/i.test(v.lang)));
+    if(!ss||!v) return false; const u=new SpeechSynthesisUtterance(text);u.voice=v;u.lang=v.lang;u.rate=.9;btn&&btn.classList.add('on');u.onend=u.onerror=()=>btn&&btn.classList.remove('on');ss.speak(u);return true;}
+  const word=(x,btn)=>{stopAll(); if(R.D[x.w]) return R.playKeys([x.w],btn);
+    const a=au=new Audio(V.audio+'vocab-audio/'+encodeURIComponent(x.w)+'.mp3'); btn&&btn.classList.add('on');
+    a.onended=()=>btn&&btn.classList.remove('on'); a.onerror=()=>{btn&&btn.classList.remove('on'); if(au===a) say(x.w,btn);};
+    a.play().catch(()=>{});};
   function sentence(x,btn){
-    stopAll(); const text=x.ex.replace(/…/g,''), ss=window.speechSynthesis;
-    const v=ss&&ss.getVoices().find(v=>/^en/i.test(v.lang)&&v.localService!==false)||ss&&ss.getVoices().find(v=>/^en/i.test(v.lang));
-    if(ss&&v){const u=new SpeechSynthesisUtterance(text);u.voice=v;u.lang=v.lang;u.rate=.9;btn.classList.add('on');u.onend=u.onerror=()=>btn.classList.remove('on');ss.speak(u);return;}
+    stopAll(); const text=x.ex.replace(/…/g,''); if(say(text,btn)) return;
     const keys=(text.match(/[A-Za-z][A-Za-z'’-]*[A-Za-z]|[A-Za-z]/g)||[]).map(R.find).filter(Boolean); R.playKeys(keys,btn);
   }
   function classSay(x,btn,msg){
@@ -112,9 +124,10 @@
     const m=el.querySelector('.vmsg'), msg=t=>{if(m) m.textContent=t;};
     el.querySelectorAll('[data-snd]').forEach(b=>b.onclick=e=>{e.stopPropagation();const k=b.dataset.snd; if(k==='w') word(x,b); else if(k==='s') sentence(x,b); else classSay(x,b,msg);});
   }
-  const sndRow=(withWord)=>'<div class="snd">'+(withWord?'<button type="button" class="btn" data-snd="w">▶ کلمه</button>':'')+
-    '<button type="button" class="btn" data-snd="s">🔊 جمله</button>'+(CA?'<button type="button" class="btn" data-snd="c">🎧 صدای استاد</button>':'')+'</div><div class="vmsg"></div>';
-  const exBlock=x=>'<p class="ex">'+hl(x)+'</p><div class="src">از جلسه‌ی '+FA(+x.sid)+'؛ این کلمه '+FA(x.n)+' بار در کلاس آمده</div>';
+  const sndRow=(withWord,x)=>'<div class="snd">'+(withWord?'<button type="button" class="btn" data-snd="w">▶ کلمه</button>':'')+
+    '<button type="button" class="btn" data-snd="s">🔊 جمله</button>'+(CA&&x&&x.cls&&x.t>=0?'<button type="button" class="btn" data-snd="c">🎧 صدای استاد</button>':'')+'</div><div class="vmsg"></div>';
+  const exBlock=x=>'<p class="ex">'+hl(x)+'</p><div class="src">'+(x.cls?'از جلسه‌ی '+FA(+x.sid)+'؛ این کلمه '+FA(x.n)+' بار در کلاس آمده':'از متن <span class="en">'+esc(SRCL[x.k])+'</span>؛ '+FA(x.n)+' بار در متن آمده')+
+    (x.ss.length>1?'<br>در: '+x.ss.map(s=>'<span class="en">'+esc(SRCL[s])+'</span>').join('، '):'')+'</div>';
 
   // ---------- home ----------
   function home(keep){
@@ -122,11 +135,11 @@
     const seen=W.filter(P).length, L=W.filter(learnt).length;
     const chips=(lab,items,on,attr)=>'<div class="vchips"><span class="lab">'+lab+'</span>'+items.map(([v,t])=>'<button type="button" data-'+attr+'="'+esc(v)+'" aria-pressed="'+on(v)+'">'+t+'</button>').join('')+'</div>';
     pane.innerHTML=
-      '<p class="howto" style="margin:0 0 .8rem">'+FA(W.length)+' کلمه‌ی سطح B1 و بالاتر که در کلاس گفته شده، با معنی فارسی، تلفظ، جمله‌ی خودِ کلاس و صدای استاد. هر روز چند کلمه‌ی تازه یاد بگیر و مرورها را انجام بده؛ پیشرفتت روی همین گوشی ذخیره می‌شود.</p>'+
+      '<p class="howto" style="margin:0 0 .8rem">'+FA(W.length)+' کلمه‌ی سطح B1 و بالاتر از حرف‌های کلاس و متن‌های درس (PDFها)، با معنی فارسی، تلفظ و یک جمله از همان کلاس یا متن. با «منبع» انتخاب کن از کدام جلسه یا کدام PDF تمرین کنی. هر روز چند کلمه‌ی تازه یاد بگیر و مرورها را انجام بده؛ پیشرفتت روی همین گوشی ذخیره می‌شود.</p>'+
       '<div class="vstats"><div class="s1"><b>'+FA(streak())+'</b><span>🔥 روز پشت سر هم</span></div><button type="button" class="s2" data-g="learnt"><b>'+FA(L)+'</b><span>یاد گرفته</span></button><button type="button" class="s3" data-g="learning"><b>'+FA(seen-L)+'</b><span>در حال یادگیری</span></button><button type="button" class="s4" data-g="new"><b>'+FA(W.length-seen)+'</b><span>هنوز ندیده</span></button></div>'+
       '<div class="vgoal">هدف امروز: '+FA(Math.min(rec.n,goal))+' از '+FA(goal)+' کلمه‌ی تازه'+(rec.n>=goal?' ✓':'')+'<div class="bar"><i style="width:'+Math.min(100,rec.n/goal*100)+'%"></i></div></div>'+
       chips('سطح:',LV.map(l=>[l,LVF[l]||l]),v=>S.o.lv.includes(v),'lv')+
-      chips('جلسه:',[['','همه'],['1','جلسه ۱'],['2','جلسه ۲']],v=>S.o.ss===v,'ss')+
+      chips('منبع:',[['','همه']].concat(SRC.filter(s=>s[2]==='class').map(s=>[s[0],s[1]]),[['pdf','همه‌ی PDFها']],SRC.filter(s=>s[2]==='pdf').map(s=>[s[0],'<span class="en">'+esc(s[1])+'</span>'])),v=>S.o.ss===v,'ss')+
       chips('هدف روزانه (فقط برای انگیزه، محدودیت نیست):',[['5','۵'],['10','۱۰'],['20','۲۰'],['30','۳۰']],v=>S.o.goal==v,'goal')+
       '<div class="vmodes">'+
         '<button type="button" class="btn go" data-m="learn"'+(nf?'':' disabled')+'>یادگیری کلمه‌ی تازه<small>'+(left?'هدف امروز: '+FA(left)+' کلمه‌ی دیگر؛ بیشتر هم می‌توانی':'هدف امروز انجام شد؛ هر چقدر بخواهی ادامه بده')+'</small></button>'+
@@ -138,7 +151,7 @@
       LV.map(l=>{const t=W.filter(x=>x.l===l), k=t.filter(learnt).length; return '<div class="vlv"><span>'+lvb(t[0])+'</span><div class="bar"><i style="width:'+(t.length?k/t.length*100:0)+'%"></i></div><span class="n">'+k+' / '+t.length+'</span></div>';}).join('')+
       '<p class="vmsg" style="margin-top:1rem">روی هر کدام از خانه‌های بالا بزن تا کلمه‌هایش را ببینی و همان‌ها را تمرین کنی. کلمه‌هایی که «باید بیشتر تمرین کنم» زده‌ای یا در مرور و کوییز اشتباه کرده‌ای، در «در حال یادگیری» هستند تا چند بار پشت سر هم درست جواب بدهی.</p>';
     pane.querySelectorAll('[data-lv]').forEach(b=>b.onclick=()=>{const v=b.dataset.lv,i=S.o.lv.indexOf(v); if(i>=0){if(S.o.lv.length>1) S.o.lv.splice(i,1);} else S.o.lv.push(v); save(); home(1);});
-    pane.querySelectorAll('[data-ss]').forEach(b=>b.onclick=()=>{S.o.ss=b.dataset.ss; save(); home(1);});
+    pane.querySelectorAll('[data-ss]').forEach(b=>b.onclick=()=>{S.o.ss=b.dataset.ss; save(); pick(); home(1);});
     pane.querySelectorAll('[data-goal]').forEach(b=>b.onclick=()=>{S.o.goal=+b.dataset.goal; save(); home(1);});
     pane.querySelectorAll('[data-m]').forEach(b=>b.onclick=()=>({learn,review,quiz,list}[b.dataset.m])());
     pane.querySelectorAll('[data-g]').forEach(b=>b.onclick=()=>list(b.dataset.g));
@@ -154,7 +167,7 @@
       const x=q[0];
       pane.innerHTML='<div class="vcard"><div class="top"><span>امروز '+FA(dayRec().n)+' کلمه‌ی تازه'+(dayRec().n>=S.o.goal?' ✓':'')+' · '+FA(q.length)+' مانده</span>'+lvb(x)+'</div>'+
         '<div class="big"><span class="en">'+esc(x.w)+'</span><button type="button" class="play" data-snd="w" aria-label="Play">▶</button></div>'+
-        '<div class="fa">'+esc(x.fa)+'</div>'+exBlock(x)+sndRow(false)+
+        '<div class="fa">'+esc(x.fa)+'</div>'+exBlock(x)+sndRow(false,x)+
         '<div class="row"><button type="button" class="btn go nx">یاد گرفتم</button><button type="button" class="btn pr">باید بیشتر تمرین کنم</button><button type="button" class="btn kn">از قبل بلد بودم</button></div></div>'+back;
       sounds(pane,x); wireBack(); word(x,pane.querySelector('.big .play'));
       // learnt now -> box 4 (back for review in 8 days); needs practice -> box 1, due now ("in progress"); known already -> box 5
@@ -171,7 +184,7 @@
       pane.innerHTML='<div class="vcard"><div class="top"><span>'+FA(q.length)+' کلمه مانده</span>'+lvb(x)+'</div>'+
         (fa1&&!shown?'<div class="q">این کلمه به انگلیسی چیست؟</div><div class="fa">'+esc(x.fa)+'</div>'
           :'<div class="big"><span class="en">'+esc(x.w)+'</span><button type="button" class="play" data-snd="w" aria-label="Play">▶</button></div>'+(shown?'<div class="fa">'+esc(x.fa)+'</div>':''))+
-        (shown||!fa1?exBlock(x)+sndRow(false):'')+
+        (shown||!fa1?exBlock(x)+sndRow(false,x):'')+
         (shown?'<div class="row"><button type="button" class="btn ok yes">بلد بودم</button><button type="button" class="btn no">بلد نبودم</button></div>'
           :'<div class="row"><button type="button" class="btn go show">'+(fa1?'جواب را نشان بده':'معنی را نشان بده')+'</button></div>')+
         '</div><div class="vchips"><span class="lab">روی کارت اول:</span><button type="button" data-dir="en" aria-pressed="'+!fa1+'">انگلیسی</button><button type="button" data-dir="fa" aria-pressed="'+fa1+'">فارسی</button></div>'+back;
@@ -206,7 +219,7 @@
       const after=ok=>{grade(x,ok); if(ok) score++; else wrong.push(x); dayRec().q++; save();
         pane.querySelector('.fbx').innerHTML='<div class="vfb '+(ok?'ok':'bad')+'">'+(ok?'درست! ✓':'نه؛ جواب درست:')+'</div>'+
           '<div class="big" style="font-size:1.4rem"><span class="en">'+esc(x.w)+'</span><button type="button" class="play" data-snd="w">▶</button></div><div>'+esc(x.fa)+'</div>'+
-          (t==='gap'?'':exBlock(x))+sndRow(false)+'<div class="row"><button type="button" class="btn go nx">'+(i+1<qs.length?'سؤال بعدی':'نتیجه')+'</button></div>';
+          (t==='gap'?'':exBlock(x))+sndRow(false,x)+'<div class="row"><button type="button" class="btn go nx">'+(i+1<qs.length?'سؤال بعدی':'نتیجه')+'</button></div>';
         sounds(pane,x); if(!ok) word(x,pane.querySelector('.fbx .play'));
         pane.querySelector('.nx').onclick=()=>{i++;next();}; pane.querySelector('.nx').focus();};
       if(opts) pane.querySelectorAll('.vopts button').forEach(b=>b.onclick=()=>{const y=opts[+b.dataset.k], ok=y===x;
@@ -250,12 +263,12 @@
       ul.querySelectorAll('li[data-w]').forEach(li=>{const x=W.find(y=>y.w===li.dataset.w);
         li.querySelector('.play').onclick=e=>{e.stopPropagation();word(x,e.currentTarget);};
         li.querySelector('.r').onclick=()=>{const m=li.querySelector('.more'); if(m){m.remove();return;}
-          const d=document.createElement('div'); d.className='more'; d.innerHTML=exBlock(x)+sndRow(false); li.appendChild(d); sounds(d,x);};});
+          const d=document.createElement('div'); d.className='more'; d.innerHTML=exBlock(x)+sndRow(false,x); li.appendChild(d); sounds(d,x);};});
     }
     inp.oninput=draw; draw();
   }
   document.addEventListener('dtad-tab',e=>{ if(e.detail==='vocab') home(1); else stopAll(); });
   if(window.speechSynthesis) speechSynthesis.getVoices();
-  home();
+  pick(); home();
 })();
 </script>
