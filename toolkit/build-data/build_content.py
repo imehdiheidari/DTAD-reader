@@ -61,7 +61,17 @@ for n, (fname, title) in enumerate(SESSIONS, 1):
 # phrases.txt (ready sentences for class, "## heading" lines and "english|persian" lines; audio in phrases-audio.tar
 # as phrases/NN.mp3, 1-based) and sessions/class-audio.json (the real class recording behind each timestamp)
 extras = ""
+# vocab.json (the course's B1+ words: [word, level, persian, sessions, class sentence, form in it, session id, seconds into
+# the recording, times said]) adds a "vocab training" tab (vocab.html); its words join the dictionary, meanings from the file
+voc_path = os.path.join(DATA, "vocab.json")
+VOCAB = json.load(open(voc_path, encoding="utf8")) if TABS and os.path.exists(voc_path) else None
 if TABS:
+    if VOCAB:
+        for v in VOCAB:
+            words.add(v[0]); gloss.setdefault(v[0], v[2])
+        nav.append('<button type="button" role="tab" data-s="vocab" class="extra">تمرین لغت</button>')
+        parts.append('<section class="session extra" data-s="vocab" hidden>\n<h2 class="session-title">Vocab training · تمرین لغت</h2>\n<div class="pane pane-vocab"></div>\n</section>')
+        extras += "window.VOCAB=" + json.dumps(VOCAB, ensure_ascii=False, separators=(",", ":")) + ";\n"
     nav.append('<button type="button" role="tab" data-s="words" class="extra">لغت‌های من</button>')
     parts.append('<section class="session extra" data-s="words" hidden>\n<h2 class="session-title">My words · لغت‌های من</h2>\n<div class="pane pane-words"></div>\n</section>')
     phr_path = os.path.join(DATA, "phrases.txt")
@@ -106,6 +116,8 @@ if extras:
 if TABS:
     script += "\n" + open(os.path.join(HERE, "tabs.html"), encoding="utf8").read()
     script += "\n" + open(os.path.join(HERE, "mywords.html"), encoding="utf8").read()
+if VOCAB:
+    script += "\n" + open(os.path.join(HERE, "vocab.html"), encoding="utf8").read()
 if CLASS_AUDIO:
     script += "\n" + open(os.path.join(HERE, "classaudio.html"), encoding="utf8").read()
 script += "\n" + open(os.path.join(HERE, "updater.html"), encoding="utf8").read()
