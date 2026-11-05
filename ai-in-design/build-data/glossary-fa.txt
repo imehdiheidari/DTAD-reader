@@ -4318,3 +4318,189 @@ wool|پشم؛ (اینجا احتمالاً: wood، چوب)
 x|ایکس
 yada|و غیره (yada yada)
 hardest|سخت‌ترین
+academic|آکادمیک، دانشگاهی
+accesses|دسترسی‌ها (ورودی‌های ساختمان)
+accidentally|تصادفی، اتفاقی
+afraid|ترسیده، نگران
+agrees|موافق است
+air|هوا
+aligns|هم‌راستا است، می‌خواند
+alternatively|یا به جای آن
+ambitious|بلندپروازانه
+america|آمریکا
+analyses|تحلیل‌ها
+analyzing|تحلیل کردن
+angle|زاویه
+apply|اعمال کردن
+arrow|پیکان؛ (اینجا احتمالاً: error، خطا)
+assemble|سرهم کردن، چیدن
+assign|واگذار کردن
+attack|حمله
+attempt|تلاش
+attributes|نسبت می‌دهد؛ (اینجا: اضافه می‌کند به هزینه)
+biggest|بزرگ‌ترین
+bloated|پف‌کرده، بیش از حد حجیم
+blow|منفجر شدن (blow up: از کنترل خارج شدن)
+blowing|منفجر شدن، بیش از حد بزرگ شدن
+bothers|اذیت می‌کند
+byte|بایت؛ (اینجا کلمه‌ی نامفهوم در ضبط)
+cache|حافظه‌ی موقت (cache read: خواندن از کش، ارزان‌تر)
+carry|حمل کردن، بردن
+characters|شخصیت‌ها
+cheaper|ارزان‌تر
+chose|انتخاب کرد
+clearly|به‌وضوح
+cold|سرد
+collab|همکاری
+commit|ثبت کردن در گیت (commit)
+complexity|پیچیدگی
+computers|کامپیوترها
+conflicted|دودل
+consistency|یکدستی، سازگاری
+contribution|سهم
+convert|تبدیل کردن
+cook|آشپزی کردن
+cores|هسته‌ها (هسته‌ی پله و آسانسور)
+cost-pair|(اینجا: cost per، هزینه به ازای)
+cringe|خجالت‌آور، زشت
+crop|بریدن تصویر
+cropping|بریدن تصویر
+daycare|مهدکودک
+death|مرگ؛ (اینجا احتمالاً: depth، عمیق)
+debug|اشکال‌زدایی کردن
+defined|تعریف‌شده
+deserve|سزاوار بودن
+drives|می‌راند (drives me insane: دیوانه‌ام می‌کند)
+dumber|کم‌هوش‌تر
+education|آموزش
+employ|به کار گرفتن
+endlessly|بی‌پایان
+entries|طرح‌های ارسالی (مسابقه)
+equivalent|معادل
+estimate|تخمین زدن
+excellent|عالی
+exchange|مبادله کردن
+exist|وجود داشتن
+extract|بیرون کشیدن
+extracts|بیرون می‌کشد
+facts|واقعیت‌ها
+fairy|پری (fairy tale: افسانه)
+fifth|پنجم
+finishing|تمام کردن
+flat|تخت، یکدست
+focusing|تمرکز کردن
+frankly|راستش
+graph|نمودار
+graphical|گرافیکی
+grey|خاکستری
+haiku|Haiku (کوچک‌ترین و ارزان‌ترین مدل Claude)
+helped|کمک کرد
+hide|پنهان کردن
+homes|خانه‌ها
+hundreds|صدها
+i'd|من ...ـم (I would)
+inconsistencies|ناهمخوانی‌ها
+increased|افزایش یافت
+indefinite|نامحدود
+india|هند؛ (اینجا کلمه‌ی نامفهوم در ضبط)
+inefficient|ناکارآمد
+intro|مقدمه
+investigate|بررسی کردن
+iterations|دورهای تکرار
+joints|اتصال‌ها
+kinda|یه‌جورایی
+landed|رسید، فرود آمد
+largest|بزرگ‌ترین
+layout|چیدمان
+leaders|پیشتازها
+leaving|رها کردن، باقی گذاشتن
+length|طول
+lessons|درس‌ها
+longest-taking|طولانی‌ترین (از نظر زمان)
+loud|پرسروصدا
+lower|پایین‌تر؛ (اینجا احتمالاً: own، خود)
+mantra|ذکر، شعار؛ (اینجا کلمه‌ی نامفهوم در ضبط)
+mapped|نقشه شد، نمایش داده شد
+massing|توده‌گذاری (حجم کلی ساختمان‌ها)
+masters|استادها
+matches|می‌خواند، تطابق دارد
+metric|معیار
+millimeter|میلی‌متر
+minimize|به حداقل رساندن
+minimized|به حداقل رسیده
+mitigate|کاهش دادن
+modified|اصلاح‌شده
+modulate|تنظیم کردن
+narratives|روایت‌ها
+necessity|ضرورت
+noise|صدا، نویز
+november|نوامبر
+offsetted|جابه‌جا شده
+operation|عملیات؛ (اینجا احتمالاً: cooperation، همکاری)
+opinion|نظر
+opposition|مخالف (در بحث)
+optimal|بهینه
+optimize|بهینه کردن
+opus|Opus (باهوش‌ترین و گران‌ترین مدل Claude)
+orchestrator|هماهنگ‌کننده (ایجنتی که کار را بین بقیه پخش می‌کند)
+over-equival|(کلمه‌ی نامفهوم در ضبط)
+paper-climbing|(کلمه‌ی نامفهوم در ضبط)
+pass|رد کردن، منتقل کردن
+perturb|آشفتن؛ (اینجا: وارد کردن)
+pisses|عصبانی می‌کند (عامیانه)
+placing|قرار دادن
+possibly|احتمالاً، ممکن
+potentially|به‌طور بالقوه
+preceding|قبلی؛ (اینجا: following، بعدی)
+prevent|جلوگیری کردن
+price|قیمت
+profession|حرفه
+profiles|نیم‌رخ‌ها، پروفایل‌ها
+pronounced|اعلام‌شده
+proponent|طرفدار
+ratio|نسبت
+re-doing|دوباره انجام دادن
+readable|خوانا
+realistically|واقع‌بینانه
+realizing|متوجه شدن
+receive|دریافت کردن
+reduced|کاهش‌یافته؛ (اینجا: reused، دوباره استفاده‌شده)
+refusing|امتناع کردن
+regenerating|دوباره تولید کردن
+report|گزارش
+rereading|دوباره خواندن
+rewriting|بازنویسی
+rising|بالا رفتن
+roads|جاده‌ها، خیابان‌ها
+row|ردیف (row house: خانه‌ی ردیفی)
+scale-less|بدون مقیاس
+schemes|طرح‌ها، دیاگرام‌ها
+security|امنیت؛ (اینجا احتمالاً: right answer)
+selects|انتخاب می‌کند
+self-improvement|خودبهبودی
+sizes|اندازه‌ها
+skins|پوسته‌ها؛ (اینجا احتمالاً: schemes، دیاگرام‌ها)
+smartest|باهوش‌ترین
+sonnet|Sonnet (مدل میانی Claude)
+sql|SQL؛ (اینجا کلمه‌ی نامفهوم در ضبط)
+structured|ساختاریافته (اسم یکی از skillها: structure)
+stuck|گیر کرده
+suitable|مناسب
+superhuman|فرابشری
+tables|جدول‌ها
+tale|قصه
+tastes|سلیقه
+touching|لمس کردن
+transcript|متن پیاده‌شده
+treatment|رفتار؛ (اینجا احتمالاً: run three، اجرای سوم)
+unacceptable|غیرقابل قبول
+united|متحد؛ (اینجا کلمه‌ی نامفهوم در ضبط)
+units|واحدها
+vector|وکتور (تصویر برداری)
+vectors|وکتورها
+viewing|دیدن
+visualizes|نمایش می‌دهد
+voted|رأی داد؛ (اینجا احتمالاً: viewed، دیدم)
+winners|برنده‌ها
+winning|برنده
+wrap|جمع‌بندی کردن (wrap up)
