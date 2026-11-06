@@ -4184,3 +4184,295 @@ monday|دوشنبه
 scans|اسکن می‌کند
 slowly|آهسته
 split|تقسیم کردن
+accessible|قابل دسترس
+administration|اداره، مدیریت
+adventure|ماجراجویی
+aep|(کلمه‌ی نامفهوم در ضبط)
+agora|آگورا، میدان عمومی
+alim|علیم (اسم یک دانشجو)
+allow|اجازه دادن
+allowing|اجازه دادن
+ambition|آرزو، جاه‌طلبی
+announced|اعلام‌شده
+apart|جدا، از هم
+appropriate|مناسب
+archivist|بایگان
+arranged|چیدند، مرتب کردند
+artificiality|مصنوعی بودن
+artificially|به‌طور مصنوعی
+artistically|هنرمندانه
+asbaric|(کلمه‌ی نامفهوم در ضبط، اسم یک تونل)
+asian|آسیایی
+assemble|جمع کردن، سوار کردن
+assembled|جمع‌شده، سوارشده
+attracted|جذب کرد
+auntie|خاله، عمه
+aunty|خاله، عمه
+automatize|خودکار کردن
+awareness|آگاهی
+bachelor|کارشناسی (لیسانس)
+basement|زیرزمین
+belongs|تعلق دارد
+bench's|مالِ نیمکت
+benches|نیمکت‌ها
+bend|خم کردن
+benefits|فایده‌ها
+bigger|بزرگ‌تر
+boys|پسرها
+brain|مغز
+branches|شاخه‌ها
+breadth|گستردگی، پهنا
+bricks|آجرها
+briefly|به‌طور خلاصه
+broadness|گستردگی
+bubbling|جوشیدن، حباب زدن
+business|کار، کسب‌وکار
+cage|قفس
+cancel|لغو کردن
+castle|قلعه، کاخ
+castles|قلعه‌ها، کاخ‌ها
+challenged|به چالش کشیدیم
+characters|شخصیت‌ها
+circulation|رفت‌وآمد، گردش
+classes|کلاس‌ها
+cold|سرماخوردگی، سرد
+collector|جمع‌کننده
+comical|خنده‌دار
+comment|نظر
+communicates|منتقل می‌کند
+compare|مقایسه کردن
+computers|کامپیوترها
+concept-wise|از نظر مفهوم
+concerning|درباره‌ی
+conclusion|نتیجه
+consultation|مشاوره
+contacts|آشنایان، تماس‌ها
+contain|شامل شدن
+contract-specific|مخصوص یک قرارداد
+cook|پختن
+corners|گوشه‌ها
+crossover|ترکیب، تلاقی
+crucial|خیلی مهم
+date|تاریخ
+decay|فرسودگی، پوسیدگی
+decoration|تزئین
+defined|تعریف‌شده
+demonstrate|نشان دادن
+depressing|افسرده‌کننده
+disappear|ناپدید شدن
+discovered|کشف کردند
+disregard|نادیده گرفتن
+documented|ثبت‌شده
+documents|مدارک
+drawing|نقاشی، طراحی
+drop|انداختن، گذاشتن
+easiest|آسان‌ترین
+eats|می‌خورد
+efficiently|با کارایی
+ego|خود، منیت
+eliminate|حذف کردن
+eliminated|حذف کرد
+email|ایمیل
+ensures|اطمینان می‌دهد
+entertaining|سرگرم‌کننده
+ethical|اخلاقی
+evangelic|انجیلی، پروتستان
+exchange|تبادل
+exhibit|نمایش دادن
+exist|وجود داشتن
+existed|وجود داشت
+existence|وجود، هستی
+faces|صورت‌ها
+family-wise|از نظر خانواده
+fantasize|خیال‌پردازی کردن
+figuring|فهمیدن
+finality|هدف نهایی
+finsternis|تاریکی (آلمانی)
+flash|ناگهانی (flash mob: تجمع ناگهانی)
+focused|متمرکز
+folder|پوشه
+food|غذا
+foreground|جلوی صحنه
+formats|قالب‌ها
+free|رایگان، آزاد
+garden|باغ
+gardens|باغ‌ها
+gerda|(اسم یک باغ، نامفهوم در ضبط)
+gone|رفته
+gradually|کم‌کم
+graduated|فارغ‌التحصیل شدم
+greater|بزرگ‌تر، بهتر
+hatch|دریچه
+header|(هردر، اشتباه ضبط)
+health|سلامت
+hey|هی، سلام
+hi|سلام
+hidden|پنهان
+i'd|من می‌خواستم / من می‌گفتم
+immigrants|مهاجرها
+indian|هندی
+inspiring|الهام‌بخش
+insurance|بیمه
+intensively|خیلی زیاد و جدی
+interacting|تعامل کردن
+interactions|تعامل‌ها
+international|بین‌المللی
+invest|سرمایه گذاشتن
+involve|درگیر کردن
+kick|ضربه (kick in: وارد کردن)
+kirms-krackow|کیرمس‌کراکو (خانه‌ای در وایمار)
+kirms-krackow-haus|خانه‌ی کیرمس‌کراکو در وایمار
+künstliche|مصنوعی (آلمانی)
+land|زمین
+landschaft|منظره، چشم‌انداز (آلمانی)
+lessons|درس‌ها
+likes|دوست دارد
+limiting|محدودکننده
+listened|گوش دادم
+loves|عاشقِ ... است
+manifestation|نمود، تجسم
+maquette|ماکت
+marriage|ازدواج
+matchmaking|خواستگاری‌جور‌کنی
+maximum|حداکثر
+mentioning|اشاره کردن
+meters|متر
+mimic|تقلید کردن
+mimicking|تقلید کردن
+mining|استخراج (urban mining: بازیافت مصالح شهر)
+miss|دلتنگ بودن، از دست دادن
+missed|از دست دادی
+misses|دلتنگِ ... است
+mob|جمعیت
+modular|ماژولار
+mold|قالب
+monitor|نظارت کردن
+moss|خزه
+motivate|انگیزه دادن
+movements|حرکت‌ها
+naive|ساده‌لوحانه
+newly|تازه
+non-projectors|بدون پروژکتور
+noon|ظهر
+nosy|فضول
+offline|حضوری، آفلاین
+one-way|یک‌طرفه
+opinions|نظرها
+organize|ترتیب دادن
+origins|ریشه‌ها، منشأ
+overconfident|بیش از حد مطمئن
+overlay|لایه‌ی رویی
+pakistan|پاکستان
+paradoxical|متناقض
+pass|رد شدن
+passages|راهروها
+pay|پول دادن
+perceptions|برداشت‌ها، ادراک‌ها
+phenomenon|پدیده
+photos|عکس‌ها
+plant|گیاه
+portland|پورتلند
+poster|پوستر
+potentially|احتمالاً
+printer|پرینتر
+printers|پرینترها
+procedure|روال
+procedures|روال‌ها
+proceed|ادامه دادن
+profession|حرفه
+progressively|قدم‌به‌قدم
+projecting|تاباندن، پروژکت کردن
+projector|پروژکتور
+projectors|پروژکتورها
+prospect|گزینه، امید
+protectable|قابل حفاظت
+protected|حفاظت‌شده
+provenance|منشأ
+publically|به‌طور عمومی
+puppet|عروسک خیمه‌شب‌بازی
+quest|مأموریت، جست‌وجو
+raise|بالا بردن
+reacts|واکنش نشان می‌دهد
+realistic|واقع‌بینانه
+rebuild|دوباره ساختن
+received|دریافت کردیم
+recently|اخیراً
+reclaimed|بازیافتی
+reconnect|دوباره وصل کردن
+reconstructing|بازسازی کردن
+recreation|بازسازی، بازآفرینی
+reflections|تأمل‌ها
+reflects|فکر می‌کند، بازتاب می‌دهد
+regard|توجه، نگاه
+regenerate|دوباره زنده شدن
+register|ثبت‌نام کردن
+registered|ثبت‌نام‌شده
+regrouping|دوباره جمع کردن
+relates|ربط دارد
+relationships|رابطه‌ها
+relaxing|آرام‌بخش
+resemblance|شباهت
+retire|کنار گذاشتن
+reveal|نشان دادن، آشکار کردن
+rishta|ریشته (رابطه، خواستگاری به اردو)
+rough|تقریبی
+roughly|تقریباً
+row|ردیف
+ruine|خرابه (آلمانی)
+ruins|خرابه‌ها
+ruling|(خرابه، اشتباه ضبط)
+sara|سارا
+satisfied|راضی
+sea|دریا
+secret|مخفی
+sentimental|احساساتی
+separating|جدا شدن
+shade|سایه
+shanghai|شانگهای
+shiba|(کلمه‌ی نامفهوم در ضبط)
+shooting|فیلم‌برداری
+sick|بیمار (sick and tired: خسته و بیزار)
+sisters|خواهرها
+sketched|طراحی کردید
+slower|کندتر
+spreading|پخش شدن
+stiff|محکم
+stills|بی‌حرکت
+stones|سنگ‌ها
+stranger|غریبه
+strangers|غریبه‌ها
+supermarket|سوپرمارکت
+supported|حمایت کردم
+supportive|حمایتگر
+surrounds|احاطه می‌کند
+survive|زنده ماندن
+sympathetic|دوست‌داشتنی، دلنشین
+tables|میزها
+theoretically|در تئوری
+therapeutic|درمانی
+they'd|آن‌ها می‌خواستند
+thoughtful|سنجیده
+tired|خسته
+towers|برج‌ها
+traits|ویژگی‌ها
+translates|ترجمه می‌شود
+traumatizing|آسیب‌زا
+twenty|بیست
+u|یو
+um|اِم (مکث)
+undefined|نامشخص
+unlike|برخلافِ
+unmuted|میکروفون روشن
+unreal|غیرواقعی
+vanish|ناپدید شدن
+vertical|عمودی
+videos|ویدیوها
+visa|ویزا
+visitors|بازدیدکننده‌ها
+visits|بازدید می‌کند
+warn|هشدار دادن
+weimar's|مالِ وایمار
+weren't|نبودیم
+wondered|تعجب کردم، فکر کردم
+wonderfully|به‌طور عالی
+yadirim|یلدریم (اسم یک دانشجو)
