@@ -4476,3 +4476,599 @@ weren't|نبودیم
 wondered|تعجب کردم، فکر کردم
 wonderfully|به‌طور عالی
 yadirim|یلدریم (اسم یک دانشجو)
+abundance|فراوانی
+accordingly|بر همین اساس
+achieving|رسیدن به، به دست آوردن
+adam|آدم (حضرت آدم)
+additions|افزوده‌ها
+adopt|پذیرفتن، تطبیق دادن
+adult|بزرگسال
+adults|بزرگسالان
+affecting|اثر گذاشتن روی
+aggressive|تهاجمی، تند
+ai-written|نوشته‌شده با هوش مصنوعی
+aid|کمک
+air|هوا
+air-raid|حمله‌ی هوایی
+ais|هوش‌های مصنوعی
+akvan|اکوان (دیو شاهنامه)
+alamance|(کلمه‌ی نامفهوم در ضبط)
+align|هم‌راستا بودن
+alongside|در کنارِ
+aloud|بلند (با صدا)
+alterations|تغییرات
+anality|(احتمالاً ritual: آیین)
+anonymity|ناشناس ماندن
+appearance|ظاهر
+appeared|ظاهر شد
+arc|قوس، کمان
+arch|طاق، قوس
+arcs|قوس‌ها، طاق‌ها
+aristocratic|اشرافی
+arrangements|چیدمان‌ها، ترتیب‌ها
+arranging|چیدن
+artifice|ساختگی بودن، صنعت
+artists|هنرمندان
+artsy|هنری‌مآب
+ashes|خاکستر
+aside|کنار
+atelier|آتلیه، کارگاه
+auto-expresser|(کلمه‌ی نامفهوم در ضبط)
+bachelard|باشلار (فیلسوف فرانسوی، «بوطیقای فضا»)
+backstage|پشت صحنه
+basing|بنا کردن بر
+bats|خفاش‌ها
+beach|ساحل
+bichalriba|(اسم یک شهر در کلمبیا، نامفهوم در ضبط)
+bike|دوچرخه
+bikes|دوچرخه‌ها
+bits|تکه‌ها
+blind|نابینا
+blocks|بلوک‌ها، قطعه‌ها
+boards|تخته‌ها
+bobby|(اسم یک نفر)
+bone|استخوان (اینجا احتمالاً bomb: بمب)
+boruto|(اسم یک انیمه)
+bounding|محدود کردن
+boxes|جعبه‌ها
+brainstorm|طوفان فکری
+brandi|برندی (چزاره برندی، نظریه‌پرداز مرمت)
+bright|روشن، شاد
+brocken|بروکن (کوهی در آلمان)
+broken|شکسته
+brute|زور خالی
+burned|سوخت
+burnt|سوخته
+cairo|قاهره
+calculate|حساب کردن
+cameras|دوربین‌ها
+canopies|سایبان‌ها
+cape|(احتمالاً cave: غار)
+capsule|کپسول
+career-y|(احتمالاً cheesy: کلیشه‌ای و سطحی)
+carpets|فرش‌ها
+cause|باعث شدن
+celebrate|جشن گرفتن
+celebrated|جشن می‌گرفتیم
+cesare|چزاره (اسم کوچک)
+chaharshanbe|چهارشنبه (چهارشنبه‌سوری)
+challenging|چالش‌برانگیز
+chancellor|صدراعظم (اینجا نامفهوم)
+characteristics|ویژگی‌ها
+cheaper|ارزان‌تر
+cheapest|ارزان‌ترین
+check-in|احوال‌پرسی کوتاه اول جلسه
+cheeky|شیطون، پررو (بامزه)
+circularism|(کلمه‌ی نامفهوم در ضبط)
+citizens|شهروندان
+clarify|روشن کردن
+clay|گِل رُس
+cliche|کلیشه
+collected|جمع‌شده
+collectives|گروه‌های جمعی
+collects|جمع می‌کند
+colours|رنگ‌ها
+combines|ترکیب می‌کند
+combining|ترکیب کردن
+comparable|قابل مقایسه
+complexity|پیچیدگی
+component|جزء، بخش
+composition|ترکیب‌بندی
+compressed|فشرده
+compresses|فشرده می‌کند
+compressing|فشرده کردن
+confection|(منظور confession: اعتراف)
+connections|ارتباط‌ها
+connects|وصل می‌کند
+context-specific|مخصوص همان مکان و زمینه
+continuation|ادامه
+continuous|پیوسته
+converge|به هم رسیدن، همگرا شدن
+copy|نسخه، کپی
+corner|گوشه
+cracked|ترک‌خورده، شکافته
+cram|چپاندن
+cramming|چپاندن (همه چیز در یک جا)
+cryptids|(نامفهوم؛ احتمالاً تصویرِ دیواری)
+cube|مکعب
+culprit|مقصر
+cursor|نشانگر ماوس
+curtain|پرده
+cut|بریدن، بریده
+cutting|بریدن
+daimonic|دیمونی، مربوط به دایمون
+dan|دن (اسم یک نفر)
+darkness|تاریکی
+dealing|سروکار داشتن
+decreased|کم شد
+dedicate|اختصاص دادن
+dedicated|تقدیم شده، اختصاص داده‌شده
+define|تعریف کردن
+definition|تعریف
+demon's|مالِ دیو
+demonstrates|نشان می‌دهد
+depend|وابسته بودن
+detection|تشخیص
+deutsches|آلمانی (در اسم تئاتر)
+dilutes|رقیق می‌کند، کم‌رنگ می‌کند
+dino|(احتمالاً اسم یک چیز؛ نامفهوم)
+dirty|کثیف (quick and dirty: سریع و خام)
+dis-intelligence|(منظور this intelligence: این هوش)
+disappointed|ناامید
+discussable|قابل بحث
+disnot|(کلمه‌ی نامفهوم در ضبط)
+disruptive|برهم‌زننده
+dolling|(منظور dwelling: سکونت، خانه)
+doubt|شک
+downstairs|طبقه‌ی پایین
+drag|کشش
+drops|می‌افتد
+duck|اردک
+ear|گوش
+earlier|قبلی، زودتر
+eating|خوردن
+edan|عدن (بهشت)
+eden|عدن (باغ بهشت)
+el|(تکه‌ای از اسم)
+electrons|الکترون‌ها (اینجا نامفهوم)
+elephant|فیل
+elephants|فیل‌ها
+eliasson|الیاسون (هنرمند دانمارکی)
+eliasson's|مالِ الیاسون
+emergency|اضطراری
+emotions|احساسات
+entrance|ورودی
+entry|ورود، ورودی
+equilibrium|تعادل
+essence|جوهر، اصل
+eve|حوا
+eve's|مالِ حوا
+evidence|شاهد، مدرک
+excellence|عالی بودن
+execute|اجرا کردن
+exhibited|به نمایش گذاشته‌شده
+exile|تبعید، غربت
+exists|وجود دارد
+expectations|انتظارات
+explanations|توضیحات
+explorations|کاوش‌ها
+expressed|بیان‌شده
+expressing|بیان کردن
+expression|بیان
+extend|گسترش دادن
+extending|گسترش دادن
+extensions|افزوده‌ها، امتدادها
+fabric|پارچه
+fabrics|پارچه‌ها
+faced|روبه‌رو شدیم
+facial|صورت، چهره (اینجا منظور spatial: فضایی)
+facing|روبه‌رو شدن
+factor|عامل
+fade|کم‌رنگ شدن
+fades|کم‌رنگ می‌شود
+faith|ایمان (اینجا احتمالاً place: مکان)
+fans|پنکه‌ها
+farideh|فریده (اسم)
+features|ویژگی‌ها
+feeds|غذا می‌دهد؛ فیدها
+feet|پاها
+felix|فلیکس (اسم)
+ferdowsi|فردوسی
+filter|فیلتر کردن
+finally|در نهایت
+fixing|درست کردن
+floors|کف‌ها
+flute|فلوت، نی
+foot|پا
+forest|جنگل
+forests|جنگل‌ها
+forgery|جعل
+fork|چنگال (اینجا احتمالاً fog: مه)
+fossils|فسیل‌ها
+foster|پرورش دادن، تقویت کردن
+fragments|تکه‌ها
+frankenstein's|مالِ فرانکنشتاین
+friend's|مالِ دوستم
+fuels|سوخت‌ها (نامفهوم)
+gallery|گالری
+generates|تولید می‌کند
+generating|تولید کردن
+ghibli|جیبلی (استودیوی انیمیشن ژاپنی)
+glass|شیشه
+glove|دستکش (نامفهوم)
+goethe-hafis|گوته-حافظ
+gourdling|(نامفهوم؛ اسم یک خانه)
+greatest|بزرگ‌ترین
+grid|شبکه
+guessed|حدس زد
+guiding|راهنمایی کردن
+hafez's|مالِ حافظ
+half-remembered|نیمه‌یادمانده
+halle|هاله (شهری در آلمان)
+hang|آویزان کردن
+hangs|آویزان است
+headphone|هدفون
+headphones|هدفون
+heads|سرها
+heaps|انبوه
+heck|(در why the heck: آخر چرا)
+heider-simmel|هایدر-زیمل (آزمایش ۱۹۴۴ با شکل‌های متحرک)
+helps|کمک می‌کند
+hero|قهرمان
+hers|مالِ او
+hetard|(نامفهوم)
+hiking|کوهپیمایی
+himself|خودش
+hint|اشاره، راهنمایی
+historic|تاریخی
+hmm|هوم
+hollow|توخالی
+homes|خانه‌ها
+homesick|دلتنگ خانه
+homesickness|دلتنگی برای خانه، غم غربت
+hoping|امیدوار بودن
+humanity|بشریت
+humanity's|مالِ بشریت
+hypothetically|به‌طور فرضی
+iceberg|کوه یخ
+ideal|ایده‌آل، آرمان
+imagines|تصور می‌کند
+imminent|نزدیک، قریب‌الوقوع
+impossible|غیرممکن
+incorporate|گنجاندن
+indicate|نشان دادن
+inherit|به ارث بردن
+ink|جوهر
+inspirations|الهام‌ها
+installationist|(منظور installation: چیدمان)
+installed|نصب‌شده
+internet|اینترنت
+interpret|تفسیر کردن
+interprets|تفسیر می‌کند
+interview|مصاحبه
+introspection|درون‌نگری
+invent|اختراع کردن
+investor|سرمایه‌گذار
+inviting|دعوت‌کننده، گیرا
+iowa|(نامفهوم؛ احتمالاً Weimar)
+iran|ایران
+irrelevant|بی‌ربط
+jam|(نامفهوم)
+jet|(نامفهوم؛ احتمالاً chat: گفت‌وگو)
+keeping|نگه داشتن
+kill|کشتن
+kingdoms|پادشاهی‌ها
+kiosk|کیوسک، کوشک
+kumbhna|(نامفهوم؛ اسم)
+laid|گذاشته‌شده، چیده‌شده
+largely|تا حد زیادی
+latin|لاتین
+latitudes|(منظور literature: منابع)
+layers|لایه‌ها
+learns|یاد می‌گیرد
+legislature|(منظور literature: منابع)
+leishenshin's|(نامفهوم؛ اسم یک خانه)
+lightly|کمی، سطحی
+lights|چراغ‌ها، نورها
+lightweight|سبک
+limitation|محدودیت
+line|خط
+links|پیوندها
+loneliness|تنهایی
+loses|از دست می‌دهد
+lothus|(نامفهوم؛ اسم)
+loud|بلند
+lovers|عاشق‌ها
+low|کم، پایین
+lucky|خوش‌شانس
+ludwig|لودویگ (اسم)
+manipulate|دست‌کاری کردن
+marks|نشانه‌ها، اثرها
+mastaf|(نامفهوم)
+matched|جور شده
+matchmaker|خواستگاری‌جورکن، واسطه‌ی ازدواج
+matrix|ماتریکس
+meaningful|معنادار
+measuring|اندازه گرفتن
+mediate|میانجی شدن
+mediator|میانجی
+medieval|قرون‌وسطایی
+melody|ملودی
+mental|ذهنی
+metal|فلز
+microphone|میکروفون
+midway|وسط کار
+million|میلیون
+mislead|گمراه کردن
+misleading|گمراه‌کننده
+mistake|اشتباه
+monster|هیولا
+monument|بنای یادبود
+moreover|علاوه بر این
+morph|تغییر شکل دادن
+motivates|انگیزه می‌دهد
+motto|(نامفهوم؛ احتمالاً myth: اسطوره)
+mountain|کوه
+movable|متحرک
+movies|فیلم‌ها
+mysticism|عرفان، رازآلودگی
+mythology|اسطوره‌شناسی
+nangmei|(اسم یک دانشجو)
+nationaltheater|تئاتر ملی
+nature's|مالِ طبیعت
+navigate|راه پیدا کردن
+nearly|تقریباً
+neatly|مرتب
+needing|نیاز داشتن
+nevertheless|با این حال
+newborn|نوزاد، تازه‌متولد
+ney|نی (ساز)
+nfc|ان‌اف‌سی (برچسب بی‌سیم)
+non-humans|غیرانسان‌ها
+notions|تصورات
+observes|مشاهده می‌کند
+occasionally|گاهی
+occurred|اتفاق افتاد
+olafur|اولافور (اسم)
+one-line|(نامفهوم)
+onto|روی
+opportunities|فرصت‌ها
+originally|در اصل
+overthink|زیادی فکر کردن
+oxygen|اکسیژن
+pacific|(منظور specific: مشخص)
+paint|رنگ
+palace|قصر
+panatic|(نامفهوم؛ احتمالاً kinetic: متحرک)
+paradise|بهشت
+paragraph|پاراگراف
+parking|پارکینگ
+parties|طرف‌ها
+partitions|دیوارهای جداکننده
+passenger|مسافر
+passerby|رهگذر
+passers-by|رهگذرها
+pasts|گذشته‌ها
+pause|مکث
+pedestrian|پیاده
+persia|ایران (پرشیا)
+personality|شخصیت
+philosopher|فیلسوف
+physicality|جسمیت، فیزیکی بودن
+pinward|(نامفهوم)
+pizza|پیتزا
+plate|صفحه
+playful|بازیگوش
+poetry|شعر
+portal|درگاه
+portray|به تصویر کشیدن
+potentials|پتانسیل‌ها
+pre-and-off|(نامفهوم)
+precisely|دقیقاً
+predicting|پیش‌بینی کردن
+predicts|پیش‌بینی می‌کند
+preference|ترجیح
+prefers|ترجیح می‌دهد
+presents|ارائه می‌دهد
+priest|کشیش
+prison|زندان
+prisoner|زندانی
+product-design|طراحی محصول
+projected|تابیده‌شده
+promises|وعده می‌دهد
+promising|امیدوارکننده
+proposal|پیشنهاد
+provider|ارائه‌دهنده
+pulling|کشیدن
+pulse|نبض
+purchase|(نامفهوم؛ احتمالاً pages: صفحه)
+purge|پاک شدن
+pyramid|هرم
+questioning|سؤال کردن
+quo|(در status quo: وضع موجود)
+rearranged|دوباره چیده‌شده
+reassemble|دوباره سر هم کردن
+rebuilt|بازسازی‌شده
+recap|مرور کوتاه
+recorded|ضبط شده
+recreated|بازآفرینی‌شده
+redesigned|دوباره طراحی کردیم
+reed|نی
+reeds|نی‌ها
+referencing|ارجاع دادن
+refused|(اینجا احتمالاً refuged: پناه گرفتند)
+relating|ربط دادن
+remain|ماندن
+remained|ماند
+remembrance|یاد، خاطره
+reminded|یادآوری کرد
+remodel|بازسازی کردن
+removes|حذف می‌کند
+renderings|رندرها
+renders|رندرها (تصویرهای سه‌بعدی)
+renewed|(نامفهوم)
+repetition|تکرار
+representations|بازنمایی‌ها
+request|درخواست کردن
+researched|تحقیق کردیم
+researching|تحقیق کردن
+resistance|مقاومت
+restored|مرمت کردند
+rethink|دوباره فکر کردن
+returned|برگردانده شد
+richer|غنی‌تر
+roberts|(نامفهوم؛ احتمالاً Socrates)
+rock|سنگ
+rocks|سنگ‌ها
+rooftop|پشت‌بام
+rostam|رستم
+rumi's|مالِ مولانا
+sadness|غم
+safer|امن‌تر
+safety|ایمنی
+scaled|مقیاس‌دار
+scenario|سناریو
+schießgarten|باغ تیراندازی
+schlossbrücke|پل قصر
+search|جست‌وجو
+searched|جست‌وجو کردم
+seatings|نشیمن‌ها
+seconds|ثانیه‌ها
+secretary|منشی (اینجا نامفهوم)
+secure|امن
+seeking|در جست‌وجوی
+seesaw|الاکلنگ
+semi-circle|نیم‌دایره
+semi-circular|نیم‌دایره‌ای
+sensing|حس کردن
+separated|جدا
+served|کار کرد، خدمت کرد
+sha'an|(نامفهوم؛ اسم موزه)
+shahnameh|شاهنامه
+shakespeare|شکسپیر
+shaking|لرزیدن
+shard|تکه‌ی شکسته
+shattered|تکه‌تکه شد
+shattering|تکه‌تکه شدن
+sheist|(نامفهوم؛ Schieß: تیراندازی)
+shelter|پناهگاه
+shem|(نامفهوم)
+shoes|کفش‌ها
+shrek|شرک (انیمیشن)
+sights|(منظور site: مکان)
+signals|سیگنال‌ها
+signed|امضا کرد
+similarly|به همین شکل
+simplify|ساده کردن
+sin|گناه
+sing|آواز خواندن
+singing|آواز خواندن
+sins|گناهان
+sister|خواهر
+situations|موقعیت‌ها
+skate|(منظور cave: غار)
+skill|مهارت
+sky|آسمان
+smarter|باهوش‌تر
+smell|بو
+solar|خورشیدی
+solving|حل کردن
+songs|آوازها
+sparked|جرقه زد
+spectre|شبح
+spectres|شبح‌ها
+spend|صرف کردن
+spikes|نوک‌ها
+spiral|مارپیچ
+spite|(in spite of: با وجودِ)
+squeeze|فشار دادن، بیرون کشیدن
+stair|پله
+standard|استاندارد
+stashtos|(Stadtschloss: قصر شهر)
+states|وضعیت‌ها
+stating|بیان کردن
+station|ایستگاه
+status|وضعیت
+steal|دزدیدن
+sternbrücke|پل ستاره (پلی در وایمار)
+stillness|سکون
+store|انبار کردن
+storing|انبار کردن
+strength|زور، قدرت
+strive|تلاش کردن
+struggle|تقلا، سختی
+subconscious|ناخودآگاه
+subconsciousness|ناخودآگاه
+suhrawardi|سهروردی
+suhrawardi's|مالِ سهروردی
+sundial|ساعت آفتابی
+super-didictional|(نامفهوم)
+surf|گشتن (در اینترنت)
+surfaces|سطح‌ها
+suri|سوری (در چهارشنبه‌سوری)
+surrounded|احاطه‌شده
+survived|زنده ماند
+tactile|لمسی
+tags|برچسب‌ها
+tasting|(منظور tasteless: بی‌سلیقه)
+teams|(اینجا demons: دیمن‌ها)
+teens|(منظور things: چیزها)
+tents|چادرها
+terminology|اصطلاحات
+tests|آزمایش‌ها
+textures|بافت‌ها
+theatre|تئاتر
+theatrical|نمایشی
+theirs|مالِ آنها
+thermal|حرارتی
+tile|کاشی
+tiles|کاشی‌ها
+timeline|خط زمانی
+timelines|خط‌های زمانی
+timing|زمان‌بندی
+tippity|(نامفهوم)
+token|ژتون، نشانه
+tomb|آرامگاه
+tour|گردش
+trace|اثر، رد
+track|مسیر، رشته
+transformable|قابل تغییر شکل
+transformed|تغییر شکل داد
+transforming|تغییر شکل دادن
+treatment|درمان؛ پردازش
+treatments|پردازش‌ها
+tricks|ترفندها
+trips|سفرها
+tucked|جاگرفته، پنهان در گوشه
+uh|اِه
+uh-huh|آهان
+unconsciousness|ناخودآگاه
+underground|زیرزمینی
+unexpected|غیرمنتظره
+unfamiliar|ناآشنا
+uni|دانشگاه
+unpredictable|غیرقابل پیش‌بینی
+untouched|دست‌نخورده
+usual|معمول
+vinaire|(Weimar: وایمار)
+visited|بازدید کردم
+visitor's|مالِ بازدیدکننده
+vivid|زنده، تند
+voluntary|داوطلبانه
+vote|(نامفهوم)
+warmer|گرم‌تر
+wear|پوشیدن
+weddings|عروسی‌ها
+week's|مالِ هفته‌ی
+west|غرب
+whose|که مالِ او
+wilhelmsburg|ویلهلمسبورگ (قصر قدیم وایمار)
+windmills|آسیاب‌های بادی
+windows|پنجره‌ها
+wizard|(منظور visitor: بازدیدکننده)
+wonder|تعجب کردن، فکر کردن
+wooden|چوبی
+wrap|جمع‌بندی کردن
+writer|نویسنده
+x|ضربدر
+yep|آره
