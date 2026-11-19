@@ -5072,3 +5072,756 @@ wrap|جمع‌بندی کردن
 writer|نویسنده
 x|ضربدر
 yep|آره
+absent|غایب، نبودن
+absolute|مطلق، کامل
+according|بر اساس، طبق
+actuated|به حرکت درآمده (با موتور)
+actuator|عملگر، موتور حرکت‌دهنده
+actuators|عملگرها، موتورهای حرکت‌دهنده
+adaptation|سازگاری، تطبیق
+admire|تحسین کردن
+advantage|مزیت
+aesthetical|زیبایی‌شناختی
+affluent|روان، پربار
+african|آفریقایی
+agreements|توافق‌ها
+aiming|نشانه گرفتن
+alien|موجود فضایی، بیگانه
+aliens|موجودات فضایی
+alignment|هم‌ترازی (هوش مصنوعی با خواسته‌ی انسان)
+all-time|همیشگی، تمام‌دوران
+alumnus|دانش‌آموخته
+ambitious|بلندپروازانه
+amr|عمرو (نام)
+analyzed|تحلیل‌شده
+angles|زاویه‌ها
+answered|جواب داده‌شده
+ants|مورچه‌ها
+anybody's|مال هر کسی
+anywhere|هر جایی
+apartment|بخش اداری (این‌جا)، آپارتمان
+apparatus|دستگاه، ابزار
+apple|سیب
+approximately|تقریباً
+apps|اپلیکیشن‌ها
+aqua|آب
+arabic|عربی
+arrival|ورود؛ نام فیلم Arrival
+arrive|رسیدن
+articulated|مفصل‌بندی‌شده، چندتکه
+articulations|مفصل‌بندی‌ها
+artifactual|مربوط به ساختن مصنوع
+ascetic|زیبایی‌شناختی (aesthetic)
+assault|حمله؛ این‌جا: تکان، ضربه
+assembly|سرهم کردن، مونتاژ
+assigned|نسبت داده‌شده
+associated|مرتبط
+asylum|پناهگاه
+attract|جذب کردن
+attractive|جذاب
+aunty's|مال خاله
+austrian|اتریشی
+autographs|دست‌نوشته‌ها
+avenues|راه‌ها، مسیرها
+avoiding|دوری کردن
+awakes|بیدار می‌شود
+awarded|پاداش داده‌شده
+backward|به عقب
+baek|بک (نام)
+barely|به‌زحمت
+barthes|بارت (رولان بارت، فیلسوف فرانسوی)
+beat|ضربه، تپش
+beating|تپیدن
+behaving|رفتار کردن
+believed|باور داشتند
+belly|شکم؛ belly of wisdom: دل حکمت
+beloved|محبوب؛ این‌جا: رایج
+berkeley|برکلی
+bible|کتاب مقدس
+biological|زیستی
+blackness|سیاهی؛ این‌جا احتمالاً blurriness: محوی
+blood|خون
+blowing|فوت کردن، وزیدن
+bombing|بمباران
+bowling|این‌جا: blowing، فوت کردن
+brace|این‌جا: breath، نفس
+braces|این‌جا: breaths، نفس‌ها
+bracing|این‌جا: breathing، نفس کشیدن
+braised|این‌جا: breathed، دمید
+braved|این‌جا: broke، خراب کرد
+breath|نفس، دم
+breathe|نفس کشیدن
+breathes|نفس می‌کشد
+breeze|نسیم
+brilliance|درخشش
+brochure|بروشور
+bubble|حباب
+buried|دفن‌شده
+buronsky|بورونسکی (نام)
+bus|اتوبوس
+cables|کابل‌ها
+cacao|کاکائو
+camp|اردوگاه
+capitalized|بهره گرفتن از
+carmona|کارمونا (نام)
+carry|حمل کردن
+casually|بی‌خیال، عادی
+catches|می‌گیرد
+cautious|این‌جا: Gaussian
+cavemen|انسان‌های غارنشین
+cellular|سلولی
+cemetery|قبرستان
+cetera|و غیره (et cetera)
+chinese|چینی
+chums|رفیق‌ها
+churchyard|حیاط کلیسا
+circuit|مدار
+circular|دایره‌ای
+claim|ادعا
+classic|کلاسیک
+classmates|هم‌کلاسی‌ها
+cleanup|این‌جا: Plenum، پلنوم
+clearly|به‌وضوح
+clicked|کلیک کرد
+clicking|کلیک کردن
+closes|بسته می‌شود
+closest|نزدیک‌ترین
+cloth|پارچه
+cluster|خوشه
+co-calibrate|با هم تنظیم کردن
+co-design|با هم طراحی کردن
+cockroach|سوسک
+coexist|هم‌زیستی کردن
+coexistence|هم‌زیستی
+coexisting|در کنار هم بودن
+coherent|منسجم
+combination|ترکیب
+commenting|نظر دادن
+concentration|تمرکز؛ concentration camp: اردوگاه کار اجباری
+concerns|نگرانی‌ها
+congrats|تبریک
+constellation|منظومه، چیدمان
+contact|تماس گرفتن
+contrasting|متضاد
+conveyor|این‌جا: basement، زیرزمین
+corny|این‌جا: core، اصلی
+correlates|همبستگی دارد
+corresponding|متناظر
+counter-breathing|ضدنفس، نفس کشیدن برخلاف
+counter-shaking|لرزش متقابل
+counteracting|مقابله کردن
+creators|خالقان
+crisp|روشن و دقیق
+critics|منتقدها
+curated|گزینش و چیده‌شده
+curators|متصدی‌های نمایشگاه
+currently|در حال حاضر
+cycling|دوچرخه‌سواری
+data-wise|از نظر داده
+database|پایگاه داده
+daughter|دختر
+decaying|پوسیدن
+deciding|تصمیم گرفتن
+defining|تعریف کردن
+deform|تغییر شکل دادن
+deformed|تغییرشکل‌یافته
+degree|درجه
+delivers|می‌رساند
+deposit|ته‌نشین کردن
+descriptions|توصیف‌ها
+designable|قابل طراحی
+desire|خواسته، میل
+detect|تشخیص دادن
+detectable|قابل تشخیص
+detecting|تشخیص دادن
+detects|تشخیص می‌دهد
+deterministic|قطعی، از پیش معلوم
+devices|دستگاه‌ها
+devil|شیطان
+dialoguing|گفت‌وگو کردن
+differences|تفاوت‌ها
+digitized|دیجیتالی‌شده
+dimensional|بُعدی
+dire|این‌جا: dia، گفت‌وگو
+dirt|این‌جا: turn، برگرداندن
+disappearing|ناپدید شدن
+discrete|گسسته، جدا جدا
+display|نمایش دادن
+dissociation|این‌جا: visualisation
+distorting|مخدوش کردن
+distracted|حواس‌پرت
+distraction|برهم زدن، اغتشاش
+divisive|این‌جا: divided، تقسیم‌شده
+dna|دی‌ان‌ای، ذات
+doable|شدنی
+driving|رانندگی
+dubiae|مشکوک (لاتین)
+duration|مدت
+dutch|این‌جا: TouchDesigner (نرم‌افزار)
+edge|لبه
+edges|لبه‌ها
+elderly|سالمند
+elm|ایلم (رود ایلم)
+embroider|گلدوزی کردن
+embroidery|گلدوزی
+emotionally|از نظر احساسی
+empathy|همدلی
+enforce|وادار کردن
+envy|حسادت
+erwin|اروین
+establishment|تأسیس
+esther|این‌جا: «استغفرالله»
+evolves|تکامل می‌یابد
+exceptional|استثنایی
+exclusive|انحصاری
+exhaling|بازدم
+expanding|گسترش یافتن
+expectable|قابل انتظار
+expects|انتظار دارد
+experienceable|قابل تجربه
+experientially|از نظر تجربه
+experimenting|آزمایش کردن
+expert|متخصص
+expertise|تخصص
+explicit|صریح
+facilitate|تسهیل کردن
+facts|واقعیت‌ها
+families|خانواده‌ها
+feasibility|امکان‌پذیری
+feasible|شدنی
+feature|ویژگی
+feeding|خوراندن، وارد کردن (داده)
+filtering|فیلتر کردن
+fine-tune|دقیق تنظیم کردن
+finishing|تمام کردن
+first-team|این‌جا: first-term، ترم اول
+fitness|تناسب اندام
+fitting|جور بودن
+flat|صاف، تخت
+flats|سطح‌های صاف
+flies|پرواز می‌کند
+flipping|برگرداندن
+floods|پر می‌کند
+flowing|جاری شدن
+focusing|تمرکز کردن
+follow-up|پیگیری
+fooling|سر کار گذاشتن
+formations|شکل‌گیری‌ها
+fossil|فسیل
+fostering|پرورش دادن
+freezing|یخ‌زده
+frequencies|بسامدها
+frequency|بسامد، فرکانس
+frequented|پررفت‌وآمد
+frequently|اغلب
+frustrating|ناامیدکننده
+fundamentally|اساساً
+furious|خشمگین
+fused|ادغام‌شده
+game's|مال بازی
+gamification|بازی‌وارسازی
+garments|این‌جا: gardens، باغ‌ها
+gaussian|گاوسی (Gaussian splat: روش سه‌بعدی‌سازی)
+gear|این‌جا: VR
+generally|به‌طور کلی
+gentlemen|آقایان
+gently|به‌آرامی
+geometrical|هندسی
+germans|آلمانی‌ها
+goffman|گافمن (جامعه‌شناس)
+golden|طلایی؛ این‌جا: Gaussian
+gps|جی‌پی‌اس
+grab|گرفتن، چنگ زدن
+grammar|دستور زبان
+grammars|دستور زبان‌ها
+graphic|گرافیکی
+graphical|گرافیکی
+grateful|سپاسگزار
+greed|طمع
+gregor|گرگور
+groom|داماد
+grown|رشدکرده
+grows|رشد می‌کند
+guards|این‌جا: gardens، باغ‌ها
+hail|تگرگ؛ Project Hail Mary: نام کتاب/فیلم
+halloween|این‌جا: «تاریخ غنی»
+handling|کار کردن با
+hangover|این‌جا: hanging، آویزان
+haus-rucker-co|هاوس-روکر-کو (گروه معماری اتریشی)
+headset|هدست
+healthy|سالم
+heart-rhythm|ریتم قلب
+hebrew|این‌جا: Hygroskin
+height|قد، ارتفاع
+helmets|کلاه‌ها
+helpless|درمانده
+high-tech|پیشرفته، فناوری بالا
+hill|تپه
+holy|مقدس
+homeland|وطن
+how's|چطور است
+hufeland's|مال هوفه‌لاند
+hugely|به‌شدت
+hydraulics|هیدرولیک
+hydro|آبی
+hygroskin|هیگرواسکین (پوسته‌ی حساس به رطوبت)
+i-o|ورودی-خروجی، روشن-خاموش
+icd|آی‌سی‌دی (مؤسسه‌ی اشتوتگارت)
+igor|ایگور
+imagery|تصویرسازی
+impacts|ضربه‌ها، تأثیرها
+implement|اجرا کردن
+imply|دلالت کردن
+imports|ورودی‌ها
+includes|شامل می‌شود
+inclusive|فراگیر، همه‌شمول
+incorporated|گنجانده‌شده
+increases|افزایش می‌یابد
+inflatable|بادی
+inflating|باد کردن
+info-box|جعبه‌ی اطلاعات
+info-boxing|اطلاعات‌دهی
+informative|آموزنده
+inhaling|دم
+injection|این‌جا: interaction، تعامل
+insect|حشره
+inside-outside|درون-بیرون
+insight|بینش
+instant|فوری
+instructive|آموزنده، راهنما
+intending|قصد داشتن
+intensity|شدت
+interactively|به‌صورت تعاملی
+interacts|تعامل می‌کند
+interim|میان‌ترم، موقت
+interpretation|تفسیر
+interpreted|تفسیرشده
+interpreting|تفسیر کردن
+intuitive|شهودی
+involved|درگیر
+irony|طنز، کنایه
+irrigation|آبیاری
+iterations|تکرارها، نسخه‌ها
+jacobsfriedhof|یاکوبس‌فریدهوف (قبرستان یاکوب)
+japan|ژاپن
+jenga|جنگا (بازی)
+john|جان
+joy|شادی
+jump|پرش
+kafka|کافکا
+kafka's|مال کافکا
+keyboards|این‌جا: keywords، کلیدواژه‌ها
+knot|گره
+kunstlicher|مصنوعی (آلمانی)
+lack|نبود، کمبود
+lamp|چراغ
+lamps|چراغ‌ها
+laptops|لپ‌تاپ‌ها
+layered|لایه‌لایه
+layering|لایه‌بندی
+leaf|برگ
+learnable|قابل یادگیری
+length|طول
+letting|اجازه دادن
+lift|بلند کردن
+linguistics|زبان‌شناسی
+linking|پیوند دادن
+listing|فهرست کردن
+literatures|منابع
+located|واقع‌شده
+logging|این‌جا: logue (گفت‌وگو)
+logos|لوگوس، کلمه
+longing|دلتنگی، اشتیاق
+looked|نگاه کرد
+loops|حلقه‌ها، دور خود چرخیدن
+loudness|بلندی صدا؛ این‌جا احتمالاً: blurriness
+machinating|این‌جا: mechanising
+machining|ماشینی
+magnetic|مغناطیسی
+magnetism|مغناطیس
+mahatma|این‌جا: نام یک منتقد
+manipulation|دستکاری
+maria|ماریا
+marriages|ازدواج‌ها
+mary|مری
+masks|ماسک‌ها
+matrimony|ازدواج
+measurable|قابل اندازه‌گیری
+measured|اندازه گرفت
+medical|پزشکی
+mediums|رسانه‌ها
+melting|ذوب شدن
+melts|ذوب می‌شود
+memorize|به خاطر سپردن
+mensa|مِنسا
+mesh|شبکه، توری
+metals|فلزات
+metamorphology|ریخت‌شناسی دگرگونی
+metamorphosis|دگردیسی
+metaphor|استعاره
+microflow|جریان کوچک
+mimicry|تقلید
+minds|ذهن‌ها
+mini|کوچک؛ این‌جا: minimum
+minimum|کمینه
+mock-up|ماکت
+mock-ups|ماکت‌ها
+mockups|ماکت‌ها
+modeling|مدل‌سازی
+modularized|ماژولار
+moments|لحظه‌ها
+momentum|تکانه، شتاب
+monitored|پایش‌شده
+morphed|تغییر شکل داد
+morphing|تغییر شکل دادن
+morphology|ریخت‌شناسی
+morphs|تغییر شکل می‌دهد
+mortuary|مرده‌شوی‌خانه، سردخانه
+ms|خانم
+multi-layered|چندلایه
+mural|دیواری؛ این‌جا: mirror، آینه
+muscle|ماهیچه
+mutual|این‌جا: neutral، خنثی
+myth|اسطوره
+myth-making|اسطوره‌سازی
+nazi|نازی
+nearby|نزدیک
+negatively|منفی
+neighbor|همسایه
+noise|صدا، سروصدا
+non-corresponding|نامتناظر
+non-linear|غیرخطی
+non-programmed|بدون برنامه
+nouveau|نو (art nouveau: هنر نو)
+nudge|تلنگر زدن، هل دادن آرام
+numerous|این‌جا: humorous، طنزآمیز
+observable|قابل مشاهده
+occupy|اشغال کردن
+on-off|روشن-خاموش
+one-off|یک‌باره
+one-person|یک‌نفره
+one-to-one|یک‌به‌یک
+opaque|کدر
+opener|بازکننده
+opinion|نظر
+ordinary|معمولی
+organ|اندام، عضو
+organic|ارگانیک
+origami|اوریگامی
+originated|سرچشمه گرفت
+over-subscribe|اغراق کردن (exaggerate)
+overdo|زیادی انجام دادن
+overdocument|بیش از حد مستند کردن
+overgather|بیش از حد جمع کردن
+overruling|این‌جا: blurring، محو شدن
+ownership|مالکیت
+pair|جفت کردن
+paper-module|ماژول کاغذی
+paper-type|کاغذمانند
+parkour|این‌جا: Parkhöhle، غار پارک
+partners|این‌جا: daemons، دیمن‌ها
+pathway|مسیر
+peaks|قله‌ها
+pedestrians|عابران پیاده
+pediatric|این‌جا: poetic، شاعرانه
+percent|این‌جا: present، ارائه دادن
+performatively|به‌صورت اجرایی
+persecution|آزار، شکنجه
+pest|این‌جا: Pask (گوردون پسک)
+philosophical|فلسفی
+photographs|عکس‌ها
+physically|به‌صورت فیزیکی
+picked|انتخاب کرد
+pipe|لوله
+pitty|حیف
+plastic|پلاستیک
+plot|طرح داستان
+pneumatic|بادی، پنوماتیک
+poetic|شاعرانه
+poetically|شاعرانه
+poisoning|مسموم کردن
+poke|سیخونک زدن
+positively|مثبت
+pr|روابط عمومی
+practically|عملاً
+pragmatically|عمل‌گرایانه
+pre-programming|برنامه‌ریزی از پیش
+pre-story|پیش‌داستان
+predictive|پیش‌بینی‌کننده
+presentational|نمایشی
+prestige|اعتبار، پرستیژ
+prevalent|رایج
+private|خصوصی
+proceeding|ادامه دادن، پردازش
+processing|پردازش
+programmed|برنامه‌ریزی‌شده
+programs|برنامه‌ها
+prompting|پرامپت دادن
+proof|اثبات
+propaganda|تبلیغات
+properly|درست
+proposals|پیشنهادها
+provocations|تحریک‌ها، چالش‌ها
+proximity|نزدیکی
+purging|پاک کردن
+purpose-wise|از نظر هدف
+qualifying|کیفیت دادن
+qualities|کیفیت‌ها
+quirky|عجیب و بامزه
+rain|باران
+rama|راما (نام)
+rap|این‌جا: wrath، خشم
+reaction|واکنش
+readable|این‌جا: flexible
+rear|این‌جا: beer، آبجو
+rebuilding|بازسازی
+receive|دریافت کردن
+recognition|شناسایی
+recognitions|شناسایی‌ها
+recommendations|توصیه‌ها
+reconsidering|بازنگری
+records|ضبط می‌کند
+recovering|بهبود یافتن
+reduced|کاهش‌یافته
+reflective|بازتابی
+region|منطقه
+remembering|به یاد آوردن
+remotely|از راه دور
+replace|جایگزین کردن
+researcher|پژوهشگر
+resemble|شبیه بودن
+resembling|شبیه
+residence|محل زندگی
+resolutions|وضوح‌ها
+resolve|حل کردن
+resolved|حل‌شده
+resources|منابع
+restaurant|رستوران
+retraceable|قابل ردیابی
+reunion|این‌جا: ruin، خرابه
+revisit|دوباره دیدن
+rhythms|ریتم‌ها
+ringing|زنگ زدن
+rodrigo|رودریگو
+ronald|این‌جا: Roland
+ruin-daemon|دیمن خرابه
+rumi|مولانا
+sake|خاطر؛ for the sake of: به خاطر
+scanning|اسکن کردن
+scenes|این‌جا: sins، گناهان
+schloss|کاخ (آلمانی)
+schlosspark|پارک کاخ
+schulhof|شولهوف (نام)
+screaming|داد زدن
+seat|صندلی
+seats|صندلی‌ها
+secondly|دوم اینکه
+secretaries|منشی‌ها
+secured|محافظت‌شده
+see-through|شفاف
+segment|بخش
+segments|بخش‌ها
+selecting|انتخاب کردن
+semi-programmable|نیمه‌برنامه‌پذیر
+semi-programmed|نیمه‌برنامه‌ریزی‌شده
+sensory|حسی
+sensual|حسی
+sequence|توالی
+shadow|سایه
+sharp|تیز، دقیق
+shut|بستن، خاموش شدن
+signal's|مال سیگنال
+significantly|به‌طور چشمگیر
+silly|ساده، احمقانه
+sima|سیما (نام)
+simplest|ساده‌ترین
+sings|آواز می‌خواند
+sloth|تنبلی
+sociographical|این‌جا: geometrical، هندسی
+sociologist|جامعه‌شناس
+somebody's|مال کسی
+son|پسر
+sources|منابع
+spaceship|سفینه
+specified|مشخص‌شده
+specimen|نمونه
+splat|اسپلت (Gaussian splat)
+splats|اسپلت‌ها
+splitting|تقسیم کردن
+stacking|روی هم چیدن
+stain|لکه
+stains|لکه‌ها
+state-of-the-art|پیشرفته‌ترین، به‌روز
+stated|گفته‌شده
+stationary|ثابت
+stirs|برمی‌انگیزد
+storage|انبار
+streaming|پخش زنده
+stressed|این‌جا: pressed، فشرده
+strictly|دقیقاً
+strike|زدن
+struggling|سختی کشیدن
+stuttgart|اشتوتگارت
+submitted|ارائه داد
+suggested|پیشنهاد داد
+sustain|این‌جا: assign، نسبت دادن
+swiping|کشیدن انگشت روی صفحه
+synagogue|این‌جا: Schlosspark
+tactical|این‌جا: tactile، لمسی
+tangible|ملموس
+target|هدف
+technique|تکنیک
+technologic-wise|از نظر فناوری
+technologically|از نظر فناوری
+tectonic|ساختاری، تکتونیک
+textile|پارچه، منسوج
+texting|پیام دادن
+thin|این‌جا: breathing، نفس
+thinning|این‌جا: sand، شن
+thousand|هزار
+three-layer|سه‌لایه
+three-quarter|سه‌چهارم
+toaster|این‌جا: transponder، کارت
+today's|امروز
+total|کامل
+touching|لمس کردن
+tourists|گردشگرها
+traceable|قابل ردیابی
+trackable|قابل ردیابی
+tracked|ردیابی‌شده
+tracking|ردیابی
+tractor|این‌جا: character، شخصیت
+transcriptional|این‌جا: translational، ترجمه‌ای
+transferring|انتقال
+transitional|گذرا، انتقالی
+translate|ترجمه کردن
+translucent|نیمه‌شفاف
+transparent|شفاف
+trial|آزمایش
+triggered|برانگیخت
+tuning|این‌جا: Tourist Information
+turning|برگرداندن
+tv's|این‌جا: this
+tweak|کمی تغییر، پیچ
+twist|پیچش داستان
+typed|تایپ کرد
+ula|اولا
+umbrella|چتر
+uncertain|نامطمئن
+uncommon|غیرمعمول
+unexpectedness|غیرمنتظره بودن
+universal|همگانی
+unmarried|مجرد
+unproceivable|این‌جا: unperceivable، غیرقابل درک
+upstairs|طبقه‌ی بالا
+urging|این‌جا: purging، پاک کردن
+usability|کاربردپذیری
+usable|قابل استفاده
+user-trained|این‌جا: trained architect، معمار آموزش‌دیده
+vegetation|پوشش گیاهی
+veins|رگ‌ها
+via|از طریق
+vibrated|لرزانده‌شده
+vibrating|لرزان
+viewing|دیدن
+visibly|به‌طور آشکار
+visiting|بازدید کردن
+visualisations|تصویرسازی‌ها
+visualise|نمایش دادن، تصویری کردن
+visualized|تصویری‌شده
+visuals|تصاویر
+vitae|زندگی (لاتین)
+vocabulary|واژگان
+voices|صداها
+volume|حجم
+vr|واقعیت مجازی
+war-related|مربوط به جنگ
+wardrobe|این‌جا: World War، جنگ جهانی
+waste|هدر دادن
+weather|آب و هوا
+well-known|شناخته‌شده
+wife|همسر
+wikipedia|ویکی‌پدیا
+wilhelmberg|این‌جا: Wilhelmsburg (کاخ)
+wisdom|حکمت
+wishes|آرزوها
+woke|بیدار شد
+woods|چوب‌ها
+word-input|ورودی کلمه
+wristband|مچ‌بند
+yard|حیاط
+zoning|منطقه‌بندی
+aih|این‌جا: AI، هوش مصنوعی
+air-compensated|این‌جا: AI-generated، ساخته‌ی هوش مصنوعی
+al-baiqar|این‌جا: نام یک باغ (نامفهوم در ضبط)
+alum|این‌جا: Ilm، رود ایلم
+anamna|نام یک دانشجو
+ans|این‌جا: نام یک رویداد (نامفهوم در ضبط)
+ardeeman|این‌جا: «اَنتی» (Aunty)
+azma|«در ما» (بیت مولانا: ما چو ناییم و نوا در ما ز توست)
+azolot|این‌جا: Asylum، پناهگاه
+bardel|این‌جا: Garden، باغ
+basa|این‌جا: نامفهوم در ضبط
+ben-nush|نام یک دانشجو
+bhukta|این‌جا: نامفهوم در ضبط
+bimod|این‌جا: Weimar، وایمار
+bisha|نام یک دانشجو
+bismuths|این‌جا: demons، دیمن‌ها
+cream's|این‌جا: نام یک باغ
+dimun|دیمن
+dube'i|این‌جا: Dubiae، مشکوک (لاتین)
+edie|این‌جا: Eden، عدن
+gaun|این‌جا: Gordon (گوردون پسک)
+guta|این‌جا: Goethe، گوته
+guta's|این‌جا: Goethe's، مال گوته
+gutter|این‌جا: Goethe، گوته
+hauswucker|این‌جا: Haus-Rucker-Co (گروه معماری اتریشی)
+houghland|این‌جا: Hufeland، هوفه‌لاند
+hozor|این‌جا: Haus (خانه‌ی یک مجموعه‌دار)
+ida|بخشی از یک کلمه‌ی ساختگی
+ilkhar|این‌جا: Ilm Park، پارک ایلم
+imo|«ایم» (بیت مولانا)
+iza|نام یک دانشجو
+jakub|این‌جا: Jakob (نام پزشک)
+jashtanti|این‌جا: Rishta Aunty، ریشتا آنتی
+k|حرف کِی
+ka|بخشی از یک کلمه‌ی ساختگی
+karim|این‌جا: نام یک خانه/مجموعه‌دار
+karkli|این‌جا: «در واقع» (نامفهوم در ضبط)
+kuza|بخشی از یک کلمه‌ی ساختگی
+limon|این‌جا: daimon، دیمن
+maha|«ما» (بیت مولانا)
+mahina|این‌جا: نام یک منتقد
+mena|«مِن» (بیت مولانا)
+myanmar|میانمار
+nachlussen|این‌جا: نامفهوم در ضبط
+nava|«نوا» (بیت مولانا: صدا، آهنگ)
+oda|بخشی از یک کلمه‌ی ساختگی
+organ-held|این‌جا: organic، ارگانیک
+osiyar's|این‌جا: «دیگران» (نامفهوم در ضبط)
+p-unit|این‌جا: Parkhöhle؟ (نامفهوم در ضبط)
+piu|بخشی از یک کلمه‌ی ساختگی
+pong|بخشی از یک کلمه‌ی ساختگی
+reimer|این‌جا: Reinhard (نام استاد)
+rishtani|این‌جا: Rishta Aunty، ریشتا آنتی
+roan|این‌جا: ruin، خرابه
+schussel|این‌جا: نامفهوم در ضبط
+sim|این‌جا: sin، گناه
+slap|این‌جا: splat
+slot|این‌جا: sloth، تنبلی
+soprat|این‌جا: Socrates، سقراط
+soto|این‌جا: Sara، سارا
+spritu|این‌جا: نام پزشک (Bruhier؟)
+sub-ations|این‌جا: stations، ایستگاه‌ها
+syn|این‌جا: sin، گناه
+tiford|این‌جا: Tiefurt، تیفورت (پارک)
+tion|بخشی از یک کلمه‌ی ساختگی
+tri-electics|این‌جا: dialectics، دیالکتیک
+urdu-sashilian|این‌جا: Urdu/Hindi، اردو
+uut|نام یک توتور (Ute?)
+vayner|این‌جا: Weimar، وایمار
+waianae|این‌جا: Weimar، وایمار
+willi|این‌جا: نامفهوم در ضبط
+wita'i|این‌جا: Vitae، زندگی (لاتین)
+zep|بخشی از یک کلمه‌ی ساختگی
+zetos|«ز توست» (بیت مولانا: از توست)
