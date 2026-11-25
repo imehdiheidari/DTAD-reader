@@ -3,18 +3,39 @@
 "slides": [
 {
 "n": "1",
-"t": "MAKING – Title",
+"t": "MAKING – Introduction",
 "paras": [
 [
 "Good morning everyone.",
-"Today we present Chapter 2 of Tim Ingold's book <i>Making</i>, called \"The materials of life\".",
-"Our focus is one simple question: when we make something, who really shapes the result?",
-"Is it the maker, with an idea in the head, or is it the material itself?",
-"We will follow Ingold's main example, students weaving willow baskets on a beach in Scotland, and then we will ask what this means for digital fabrication today."
+"We are Simay, Isabela and Mehdi, and today we present Chapter 2 of Tim Ingold's book <i>Making</i>, called \"The materials of life\"."
+],
+[
+"Tim Ingold is a British anthropologist.",
+"This book grew out of a course he taught at the University of Aberdeen, called \"The 4 As\": Anthropology, Archaeology, Art and Architecture.",
+"In this course, students did not only read.",
+"They made things with their own hands, because for Ingold we learn about the world by making, not only by looking."
+],
+[
+"Our chapter actually begins in that class.",
+"In the first week, the students brought objects, and in the second week, materials like sand and mud, and they felt how different the two are.",
+"Isabela will tell you more about this."
+],
+[
+"The chapter asks one simple question: when we make something, who really shapes the result?",
+"The maker, with an idea in the head, or the material itself?"
+],
+[
+"We will follow Ingold's main example, students weaving willow baskets on a cold beach in Scotland, and focus on two questions.",
+"First, how does the resistance of the willow change the weaving and the shape of the basket?",
+"And second, what does this mean for digital fabrication today, when the form is already designed on a screen?"
+],
+[
+"Our talk has three parts: Ingold's key ideas, then examples from different cultures and from our own work, and finally what this means for design today.",
+"Let's begin."
 ]
 ],
-"fa": "صبح بخیر. امروز فصل دوم کتاب «ساختن» (Making) از تیم اینگولد را ارائه می‌کنیم، با عنوان «مواد زندگی». تمرکز ما یک سؤال ساده است: وقتی چیزی می‌سازیم، واقعاً چه کسی نتیجه را شکل می‌دهد؟ سازنده با ایده‌ای که در ذهن دارد، یا خودِ ماده؟ مثال اصلی اینگولد را دنبال می‌کنیم، یعنی دانشجوهایی که در ساحلی در اسکاتلند سبد بید می‌بافند، و بعد می‌پرسیم این حرف برای ساخت دیجیتال امروز چه معنایی دارد.",
-"tip": "آرام شروع کن و سؤال اصلی را با مکث بگو."
+"fa": "صبح بخیر. ما سیمای، ایزابلا و مهدی هستیم و امروز فصل دوم کتاب «ساختن» از تیم اینگولد را ارائه می‌کنیم، با عنوان «مواد زندگی».<br><br>تیم اینگولد انسان‌شناس بریتانیایی است. این کتاب از درسی بیرون آمده که در دانشگاه آبردین درس می‌داد، به اسم «چهار A»: انسان‌شناسی، باستان‌شناسی، هنر و معماری. در این درس دانشجوها فقط نمی‌خواندند؛ با دست خودشان چیز می‌ساختند. چون برای اینگولد ما جهان را با ساختن یاد می‌گیریم، نه فقط با نگاه‌کردن.<br><br>فصل ما در واقع از همان کلاس شروع می‌شود. هفته‌ی اول دانشجوها شیء آوردند، و هفته‌ی دوم ماده، مثل شن و گل، و حس کردند این دو چقدر با هم فرق دارند. ایزابلا بیشتر درباره‌اش می‌گوید.<br><br>فصل یک سؤال ساده می‌پرسد: وقتی چیزی می‌سازیم، واقعاً چه کسی نتیجه را شکل می‌دهد؟ سازنده با ایده‌ای که در ذهن دارد، یا خودِ ماده؟<br><br>مثال اصلی اینگولد را دنبال می‌کنیم، یعنی دانشجوهایی که در ساحلی سرد در اسکاتلند سبد بید می‌بافند، و روی دو سؤال تمرکز می‌کنیم. اول، مقاومت بید چطور بافتن و شکل سبد را تغییر می‌دهد؟ دوم، این برای ساخت دیجیتال امروز چه معنایی دارد، وقتی فرم از قبل روی صفحه طراحی شده است؟<br><br>ارائه‌ی ما سه بخش دارد: ایده‌های اصلی اینگولد، بعد مثال‌هایی از فرهنگ‌های مختلف و از کار خودمان، و در آخر معنای این‌ها برای طراحی امروز. شروع کنیم.",
+"tip": "این اسلاید خودت است (حدود ۱:۴۵). دو سؤال استاد را آرام و با مکث بگو. تلفظ: آبِردین (Aberdeen)، فور ایز (The 4 As)، آرکی‌آلِجی (Archaeology)."
 },
 {
 "n": "2",
