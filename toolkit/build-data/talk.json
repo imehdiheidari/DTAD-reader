@@ -1,0 +1,345 @@
+{
+"title": "Ingold presentation · Making, Ch. 2 · Thu 26.11.2026",
+"slides": [
+{
+"n": "1",
+"t": "MAKING – Title",
+"paras": [
+[
+"Good morning everyone.",
+"Today we present Chapter 2 of Tim Ingold's book <i>Making</i>, called \"The materials of life\".",
+"Our focus is one simple question: when we make something, who really shapes the result?",
+"Is it the maker, with an idea in the head, or is it the material itself?",
+"We will follow Ingold's main example, students weaving willow baskets on a beach in Scotland, and then we will ask what this means for digital fabrication today."
+]
+],
+"fa": "صبح بخیر. امروز فصل دوم کتاب «ساختن» (Making) از تیم اینگولد را ارائه می‌کنیم، با عنوان «مواد زندگی». تمرکز ما یک سؤال ساده است: وقتی چیزی می‌سازیم، واقعاً چه کسی نتیجه را شکل می‌دهد؟ سازنده با ایده‌ای که در ذهن دارد، یا خودِ ماده؟ مثال اصلی اینگولد را دنبال می‌کنیم، یعنی دانشجوهایی که در ساحلی در اسکاتلند سبد بید می‌بافند، و بعد می‌پرسیم این حرف برای ساخت دیجیتال امروز چه معنایی دارد.",
+"tip": "آرام شروع کن و سؤال اصلی را با مکث بگو."
+},
+{
+"n": "2",
+"t": "Know for yourself!",
+"paras": [
+[
+"Ingold's starting point is simple: <b>know for yourself</b>.",
+"Knowledge does not come only from books or from watching.",
+"It grows through experience, when we engage with the world with our hands and bodies, not just observe it from outside.",
+"That is also how we will look at making today."
+]
+],
+"fa": "نقطه‌ی شروع اینگولد ساده است: «خودت بدان». دانش فقط از کتاب یا نگاه‌کردن نمی‌آید. از تجربه رشد می‌کند، وقتی با دست و بدنمان با جهان درگیر می‌شویم، نه اینکه فقط از بیرون تماشایش کنیم. امروز ساختن را هم همین‌طور نگاه می‌کنیم.",
+"tip": "کوتاه است؛ ۲۰ ثانیه کافی است."
+},
+{
+"n": "3",
+"t": "Who shapes the result?",
+"paras": [
+[
+"The usual story goes like this: first there is an idea, then we take a material, and at the end we get an object.",
+"The designer decides, and the material simply obeys.",
+"Ingold offers another picture.",
+"The maker, the material and the environment all act together, and the form <i>emerges</i> from their meeting.",
+"So the form is not placed on the material from outside.",
+"It grows out of the process."
+]
+],
+"fa": "داستان معمول این است: اول ایده، بعد ماده، و در آخر شیء. طراح تصمیم می‌گیرد و ماده فقط اطاعت می‌کند. اینگولد تصویر دیگری پیشنهاد می‌کند. سازنده، ماده و محیط با هم عمل می‌کنند و فرم از برخورد آن‌ها «پدید می‌آید». یعنی فرم از بیرون روی ماده گذاشته نمی‌شود، بلکه از دلِ فرایند رشد می‌کند.",
+"tip": "روی کلمه‌ی emerges تأکید کن."
+},
+{
+"n": "4",
+"t": "Hylomorphism",
+"paras": [
+[
+"Ingold gives the usual story a name: <b>hylomorphism</b>.",
+"It comes from two Greek words, <i>hyle</i>, matter, and <i>morphe</i>, form.",
+"The idea is that form is first designed in the mind and then imposed on passive matter.",
+"Ingold's problem with this model is that it only looks at what goes in and what comes out.",
+"It ignores everything that happens in between.",
+"That is why he says: \"I want to think of making, instead, as a process of growth.\""
+]
+],
+"fa": "اینگولد برای این داستان معمول یک اسم دارد: «هیلومورفیسم». از دو کلمه‌ی یونانی می‌آید: «هوله» یعنی ماده و «مورفه» یعنی فرم. ایده این است که فرم اول در ذهن طراحی می‌شود و بعد روی ماده‌ی بی‌جان تحمیل می‌شود. مشکل اینگولد با این مدل این است که فقط می‌بیند چه چیزی وارد می‌شود و چه چیزی بیرون می‌آید، و هر چه را در این میان اتفاق می‌افتد نادیده می‌گیرد. برای همین می‌گوید: «می‌خواهم ساختن را به‌جایش یک فرایند رشد ببینم.»",
+"tip": "تلفظ: هایلو-مورفیزم."
+},
+{
+"n": "5",
+"t": "Objects and materials",
+"paras": [
+[
+"Ingold also asks: what is the difference between an object and a material?",
+"A coin is an object, but it is also copper.",
+"A paper clip is wire, a drinks can is aluminium, an old pot is scrap metal, and for a spoon, the soup is the material it works with.",
+"So objects and materials are not two different kinds of things.",
+"In Ingold's words, it is \"a difference of perspective\".",
+"The same thing can be seen as a finished object or as a material still on its way."
+]
+],
+"fa": "اینگولد می‌پرسد فرق شیء و ماده چیست؟ سکه یک شیء است، ولی مس هم هست. گیره‌ی کاغذ سیم است، قوطی نوشابه آلومینیوم است، قابلمه‌ی کهنه آهن‌قراضه است، و برای قاشق، سوپ همان ماده‌ای است که با آن کار می‌کند. پس شیء و ماده دو نوع چیز جدا نیستند. به قول اینگولد «تفاوتِ زاویه‌ی دید» است. یک چیز را می‌شود شیء تمام‌شده دید یا ماده‌ای که هنوز در راه است.",
+"tip": ""
+},
+{
+"n": "6",
+"t": "Resistance",
+"paras": [
+[
+"Every material pushes back in its own way.",
+"Wood bends with the grain but snaps across it.",
+"Clay is shaped by moisture but cracks if it dries unevenly.",
+"Metal becomes soft when heated but is ruined if overheated.",
+"Stone splits along its layers.",
+"Glass softens with heat but breaks under sudden impact.",
+"So what if these limits are not obstacles, but <b>information</b>?",
+"Resistance tells the maker how the material wants to move.",
+"This brings us to the willow."
+]
+],
+"fa": "هر ماده به شیوه‌ی خودش مقاومت می‌کند. چوب در جهت الیاف خم می‌شود ولی عمود بر آن می‌شکند. گِل با رطوبت شکل می‌گیرد ولی اگر ناهمگون خشک شود ترک می‌خورد. فلز با گرما نرم می‌شود ولی اگر زیادی داغ شود خراب می‌شود. سنگ در امتداد لایه‌هایش می‌شکافد. شیشه با گرما نرم می‌شود ولی با ضربه‌ی ناگهانی می‌شکند. حالا اگر این محدودیت‌ها مانع نباشند بلکه «اطلاعات» باشند چه؟ مقاومت به سازنده می‌گوید ماده دوست دارد چطور حرکت کند. این ما را به بید می‌رساند.",
+"tip": ""
+},
+{
+"n": "7",
+"t": "Baskets in the sand  (+ answer to question 1)",
+"paras": [
+[
+"On a cold day near Aberdeen, Ingold and his students tried to weave baskets from willow.",
+"Each basket started with long sticks pushed into the sand, bent and tied at the top.",
+"Then the students wove more willow around them.",
+"It was hard.",
+"The willow did not want to bend.",
+"It sprang back, sometimes right into the weaver's face.",
+"The students had to work slowly, with their whole body.",
+"The size of each basket came from the body itself: how far an arm can reach.",
+"And the wind bent many baskets into a curve that nobody had planned.",
+"But here is the key point: the same resistance that made the work hard also held the basket together.",
+"The tension in the willow <i>is</i> the structure.",
+"Ingold says the form was \"generated in this force field\", between the hands, the willow, the body and the wind."
+],
+[
+"So, to answer the first question directly: the willow resists.",
+"It springs back when you bend it.",
+"The weaver cannot force a shape, so they work slowly and follow the willow.",
+"But this same resistance holds the basket together.",
+"The final form is not the plan.",
+"It is the balance between hands, willow, body and wind.",
+"In one sentence: resistance is not the enemy of form.",
+"It is where form comes from."
+]
+],
+"fa": "در یک روز سرد نزدیک آبردین، اینگولد و دانشجوهایش سعی کردند از بید سبد ببافند. هر سبد با ترکه‌های بلندی شروع می‌شد که در شن فرو می‌کردند و سرشان را خم کرده و به هم می‌بستند. بعد دانشجوها بیدِ بیشتری دورشان می‌بافتند. کار سختی بود. بید نمی‌خواست خم شود. برمی‌گشت و گاهی درست به صورت بافنده می‌خورد. دانشجوها باید آرام و با تمام بدنشان کار می‌کردند. اندازه‌ی هر سبد از خودِ بدن می‌آمد، یعنی اینکه دست تا کجا می‌رسد. و باد خیلی از سبدها را به انحنایی خم کرد که هیچ‌کس برنامه‌اش را نداشت. ولی نکته‌ی اصلی این است: همان مقاومتی که کار را سخت می‌کرد، سبد را سرِ پا نگه می‌داشت. کشش درون بید «خودِ» سازه است. اینگولد می‌گوید فرم «در این میدانِ نیروها تولید شد»، بین دست‌ها، بید، بدن و باد.<br><br>پس برای اینکه مستقیم به سؤال اول جواب بدهیم: بید مقاومت می‌کند. وقتی خمش می‌کنی برمی‌گردد. بافنده نمی‌تواند شکلی را به زور تحمیل کند، پس آرام کار می‌کند و دنبال بید می‌رود. ولی همین مقاومت سبد را کنار هم نگه می‌دارد. فرم نهایی همان نقشه نیست، بلکه تعادلِ بین دست‌ها، بید، بدن و باد است. در یک جمله: مقاومت دشمن فرم نیست؛ فرم از همان‌جا می‌آید.",
+"tip": "مهم‌ترین اسلاید. پاراگراف دوم همان جواب سؤال اول استاد است؛ جمله‌ی آخر را شمرده بگو."
+},
+{
+"n": "8",
+"t": "Correspondence",
+"paras": [
+[
+"Ingold describes this relationship with a special word: <b>correspondence</b>.",
+"Interaction is like two fixed things sending messages back and forth, A to B, B to A.",
+"Correspondence is different.",
+"It is like two lines moving along together, each one answering the other as they go.",
+"The maker intends, makes, the material answers, and the maker revises, again and again, without a clear end.",
+"Making is not a simple interaction between maker and material, but an ongoing correspondence in which both respond to each other."
+]
+],
+"fa": "اینگولد این رابطه را با کلمه‌ی خاصی توصیف می‌کند: «همراهی» یا correspondence. تعامل (interaction) مثل دو چیز ثابت است که پیام را رفت‌وبرگشت می‌فرستند، از الف به ب و از ب به الف. همراهی فرق دارد؛ مثل دو خط است که کنار هم جلو می‌روند و در طول راه به هم جواب می‌دهند. سازنده قصد می‌کند، می‌سازد، ماده جواب می‌دهد و سازنده بازنگری می‌کند، بارها و بارها، بدون پایانی مشخص. ساختن یک تعامل ساده بین سازنده و ماده نیست، بلکه همراهی‌ای پیوسته است که در آن هر دو به هم پاسخ می‌دهند.",
+"tip": "تلفظ: کارِسپاندِنس."
+},
+{
+"n": "9",
+"t": "Materiality",
+"paras": [
+[
+"Ingold also criticises how modern thought sees the human being: as a creature that can only know the world by stepping out of it, onto a mental and cultural level, above the material one.",
+"For Ingold, we never leave the world of materials.",
+"Think of one timber beam.",
+"Its grain and knots come from how the tree grew.",
+"Sawing decides how it will move.",
+"Drying makes it shrink and crack.",
+"Working it, it bends or splits.",
+"In use it turns grey and swells, and when it is reused it carries nail holes and decay.",
+"A material is not a fixed list of properties.",
+"It is a history that keeps going.",
+"Ingold calls this an \"ongoing historicity\": what a material does, not just what it is."
+],
+[
+"On the slide we separate two sides: <b>physical materiality</b>, materials as physical substances with properties, and <b>cultural materiality</b>, the meanings and values that society and history give to them.",
+"Ingold's point is that in real making these two are never apart."
+]
+],
+"fa": "اینگولد همچنین نقد می‌کند که تفکر مدرن چطور انسان را می‌بیند: موجودی که فقط با بیرون رفتن از جهان، روی سطحی ذهنی و فرهنگی بالاتر از سطح مادی، می‌تواند جهان را بشناسد. برای اینگولد ما هیچ‌وقت از جهانِ مواد بیرون نمی‌رویم. یک تیر چوبی را در نظر بگیر. رگه‌ها و گره‌هایش از نحوه‌ی رشد درخت می‌آید. اره‌کردن تعیین می‌کند چطور تکان بخورد. خشک‌شدن باعث جمع‌شدن و ترک‌خوردنش می‌شود. موقع کار، خم می‌شود یا می‌شکافد. در استفاده خاکستری می‌شود و باد می‌کند، و وقتی دوباره به کار می‌رود جای میخ و پوسیدگی را با خودش دارد. ماده یک فهرست ثابت از ویژگی‌ها نیست؛ تاریخی است که ادامه دارد. اینگولد به این می‌گوید «تاریخ‌مندیِ پیوسته»: اینکه ماده چه می‌کند، نه فقط اینکه چیست.<br><br>روی اسلاید دو طرف را جدا کرده‌ایم: «مادیت فیزیکی»، یعنی مواد به‌عنوان چیزهایی با ویژگی‌های فیزیکی، و «مادیت فرهنگی»، یعنی معناها و ارزش‌هایی که جامعه و تاریخ به آن‌ها می‌دهد. حرف اینگولد این است که در ساختنِ واقعی این دو هیچ‌وقت از هم جدا نیستند.",
+"tip": ""
+},
+{
+"n": "10",
+"t": "The return to alchemy – Metal",
+"paras": [
+[
+"Ingold says we should return to something like <b>alchemy</b>: not specifying materials from a list, but learning what they do.",
+"Metal is a good example.",
+"In <b>melting</b>, it flows and takes the shape of a mould.",
+"In <b>forging</b>, it is reshaped through heat and repeated hammering.",
+"In <b>rolling</b>, it is pressed between rollers into thin sheets.",
+"Through <b>oxidation</b>, it reacts with oxygen and moisture, and its surface changes.",
+"In <b>welding</b>, pieces are joined together through heat.",
+"The smith does not just know these facts; they learn them by working.",
+"This is what Bateson called <b>deutero-learning</b>: experience does not only teach us new skills, it changes the way we perceive, understand and respond to the world."
+]
+],
+"fa": "اینگولد می‌گوید باید به چیزی شبیه «کیمیاگری» برگردیم: نه اینکه مواد را از روی یک فهرست انتخاب کنیم، بلکه یاد بگیریم چه می‌کنند. فلز مثال خوبی است. در «ذوب»، روان می‌شود و شکل قالب را می‌گیرد. در «آهنگری»، با گرما و چکش‌کاریِ پشت‌سرهم دوباره شکل می‌گیرد. در «نوردکاری»، بین غلتک‌ها فشرده و ورق نازک می‌شود. با «اکسیدشدن»، با اکسیژن و رطوبت واکنش می‌دهد و سطحش عوض می‌شود. در «جوشکاری»، قطعه‌ها با گرما به هم وصل می‌شوند. آهنگر این‌ها را فقط «نمی‌داند»؛ با کارکردن یادشان می‌گیرد. بیتسون به این می‌گوید «یادگیریِ درجه‌دو» (deutero-learning): تجربه فقط مهارت تازه یاد نمی‌دهد، بلکه شیوه‌ی دیدن، فهمیدن و پاسخ‌دادن ما به جهان را عوض می‌کند.",
+"tip": "تلفظ: اَلکِمی، دیوتِرو-لِرنینگ. اسلاید مال هم‌گروهی است؛ اگر او ارائه می‌کند، فقط هماهنگ کن."
+},
+{
+"n": "11",
+"t": "Cultural example – Tapia (Colombia)",
+"paras": [
+[
+"Ingold's ideas are not only about baskets.",
+"We find them in building traditions around the world.",
+"In Colombia, <i>tapia</i> is rammed earth.",
+"Builders press moist earth into a frame, layer by layer, with pressure, repetition and physical effort.",
+"The final wall comes from the meeting between the builder's body and the earth."
+]
+],
+"fa": "ایده‌های اینگولد فقط درباره‌ی سبد نیستند؛ آن‌ها را در سنت‌های ساختمانی سراسر دنیا پیدا می‌کنیم. در کلمبیا «تاپیا» یعنی خاکِ کوبیده. سازنده‌ها خاکِ نمناک را لایه به لایه در قالب می‌کوبند، با فشار، تکرار و زور بدنی. دیوارِ نهایی از برخورد بدن سازنده و خاک به وجود می‌آید.",
+"tip": "این بخش را هم‌گروهی‌ات ارائه می‌کند؛ متن را با او هماهنگ کن."
+},
+{
+"n": "12",
+"t": "Cultural example – Çeşm-i Bülbül (Turkey)",
+"paras": [
+[
+"In Turkey, <i>Çeşm-i Bülbül</i>, \"the nightingale's eye\", is a traditional Ottoman glass technique.",
+"Coloured threads are laid into hot, molten glass and twisted, so they form spiral patterns.",
+"The maker cannot fix the pattern in advance.",
+"As the glass moves and transforms, the maker adapts to its behaviour, and the pattern comes out of that dialogue."
+]
+],
+"fa": "در ترکیه «چشمِ بلبل» یک تکنیک سنتی شیشه‌گری عثمانی است. رشته‌های رنگی را داخل شیشه‌ی داغ و مذاب می‌گذارند و می‌پیچانند تا نقش‌های مارپیچ بسازند. سازنده نمی‌تواند نقش را از قبل ثابت کند. همان‌طور که شیشه حرکت می‌کند و تغییر می‌کند، سازنده خودش را با رفتار آن تطبیق می‌دهد و نقش از همین گفت‌وگو بیرون می‌آید.",
+"tip": "تلفظ: چِشمی بولبول. این اسلاید را هم‌گروهی‌ات ارائه می‌کند."
+},
+{
+"n": "13",
+"t": "Cultural example – Iran: vaults without centering",
+"paras": [
+[
+"On the Iranian plateau, wood was very rare.",
+"People built with mud brick, and there was not even enough timber to make a formwork.",
+"The Romans had a lot of wood, so to build a vault they first made a wooden frame, called <b>centering</b>, and then laid the bricks on top of it.",
+"In Iran this was not possible."
+],
+[
+"So builders developed another way: <b>vaulting without centering</b>.",
+"They laid the bricks in tilted rows.",
+"Each new brick leans on the bricks behind it and passes its load to them, and fast-setting gypsum holds it in a few seconds.",
+"The vault grows row by row, and no brick ever needs a frame."
+],
+[
+"To find the shape of the vault, they used a <b>hanging chain</b>.",
+"A chain hangs only under its own weight, so when you turn its shape upside down, you get an arch that stands in pure compression.",
+"The form comes from the weight of the material itself."
+],
+[
+"With this method they reached huge spans, like Taq Kasra, about 25 metres wide."
+],
+[
+"Here, the material did not only shape the form.",
+"It shaped the way of building."
+]
+],
+"fa": "در فلات ایران چوب خیلی کم بود. مردم با خشت می‌ساختند و حتی چوب کافی برای قالب هم نداشتند. رومی‌ها چوب فراوان داشتند. برای ساختن طاق اول یک قالب چوبی می‌زدند که به آن سنترینگ می‌گویند، و بعد آجرها را رویش می‌چیدند. در ایران این کار ممکن نبود.<br><br>برای همین سازنده‌ها راه دیگری ابداع کردند: طاق‌زدن بدون قالب. آجرها را در ردیف‌های مایل می‌چیدند. هر آجر تازه به آجرهای پشتش تکیه می‌دهد و بارش را به آن‌ها منتقل می‌کند، و گچِ زودگیر در چند ثانیه نگهش می‌دارد. طاق ردیف به ردیف جلو می‌رود و هیچ آجری به قالب احتیاج ندارد.<br><br>برای پیدا کردن فرم طاق از زنجیر آویزان استفاده می‌کردند. زنجیر فقط زیر وزن خودش آویزان می‌شود. وقتی شکلش را وارونه کنی، طاقی به دست می‌آید که فقط فشاری کار می‌کند. یعنی فرم از وزن خودِ ماده می‌آید.<br><br>با همین روش به دهانه‌های عظیمی مثل طاق کسری رسیدند، با حدود ۲۵ متر عرض.<br><br>اینجا ماده فقط فرم را شکل نداد، شیوه‌ی ساختن را هم شکل داد.",
+"tip": "این اسلاید خودت است. وقتی به زنجیر می‌رسی، به نقاشی کوچک روی آسمان اشاره کن. جمله‌ی آخر را آرام بگو. تلفظ: سِنتِرینگ، کَمپرِشِن (compression). اگر استاد منبعِ زنجیر را خواست: «The profile of Taq Kasra is very close to a catenary, the shape of a hanging chain.»"
+},
+{
+"n": "14",
+"t": "Bending-Active – our own case",
+"paras": [
+[
+"Now our own example.",
+"This is a bending-active pavilion that I designed and built with my group in Tehran in 2025, with Grasshopper and Python.",
+"The panels are 1 millimetre PET sheets, bent into a curved form.",
+"On screen, in our first model, everything could bend.",
+"Some parts had very high curvature, and the computer accepted it.",
+"But during assembly, some pieces broke exactly at those parts.",
+"So we changed the form, and then again, and again, until it was both what we wanted and what the material accepted.",
+"Like Ingold's willow, the resistance of the material did not stop the design.",
+"It shaped it.",
+"In the software, everything bends.",
+"In reality, the material decides."
+]
+],
+"fa": "حالا مثال خودمان. این یک پاویون bending-active است که من با گروهم در سال ۲۰۲۵ در تهران، با گرس‌هاپر و پایتون، طراحی کردیم و ساختیم. پنل‌ها ورق PET یک‌میلی‌متری هستند که به فرمی منحنی خم شده‌اند. روی صفحه، در مدل اول‌مان، همه‌چیز می‌توانست خم شود. بعضی قسمت‌ها انحنای خیلی زیادی داشتند و کامپیوتر قبولش می‌کرد. ولی موقع مونتاژ، بعضی قطعه‌ها دقیقاً در همان قسمت‌ها شکستند. پس فرم را عوض کردیم، و دوباره، و دوباره، تا هم چیزی شد که می‌خواستیم و هم چیزی که ماده قبول می‌کرد. مثل بیدِ اینگولد، مقاومت ماده طراحی را متوقف نکرد؛ شکلش داد. در نرم‌افزار همه‌چیز خم می‌شود؛ در واقعیت، ماده تصمیم می‌گیرد.",
+"tip": "این اسلاید خودت است. با عکس Rhino شروع کن، بعد به عکس نهایی اشاره کن. جمله‌ی آخر را آهسته بگو."
+},
+{
+"n": "15",
+"t": "From digital intention to material correspondence  (+ answer to question 2)",
+"paras": [
+[
+"Digital design defines the form before we touch the material.",
+"But if making is a process of correspondence, can a design be complete before it meets the material?",
+"This is the second question.",
+"On the screen we decide the overall idea, the geometry, the panel pattern and the cutting files.",
+"But the material still decides many things: how far it can bend before it breaks, the thickness and size of the pieces, where the joints go, the order of assembly, and how it reacts to heat, humidity and gravity.",
+"So digital fabrication does not end correspondence.",
+"It moves it into a loop: model, test, and change the model.",
+"The screen gives a proposal.",
+"The material gives the answer."
+]
+],
+"fa": "طراحی دیجیتال فرم را قبل از اینکه به ماده دست بزنیم تعیین می‌کند. ولی اگر ساختن یک فرایند همراهی است، آیا یک طرح می‌تواند قبل از رسیدن به ماده کامل باشد؟ این سؤال دوم است. روی صفحه ایده‌ی کلی، هندسه، الگوی پنل‌ها و فایل‌های برش را تعیین می‌کنیم. ولی ماده هنوز خیلی چیزها را تعیین می‌کند: اینکه تا کجا خم می‌شود قبل از اینکه بشکند، ضخامت و اندازه‌ی قطعه‌ها، جای اتصال‌ها، ترتیب مونتاژ، و واکنشش به گرما، رطوبت و جاذبه. پس ساخت دیجیتال همراهی را تمام نمی‌کند؛ آن را به یک چرخه منتقل می‌کند: مدل، آزمایش، و تغییر مدل. صفحه یک پیشنهاد می‌دهد. ماده جواب می‌دهد.",
+"tip": "این همان جواب سؤال دوم استاد است. سؤال روی اسلاید را بپرس، مکث کن، بعد جواب بده."
+},
+{
+"n": "16",
+"t": "Drawing as a way of knowing",
+"paras": [
+[
+"For Ingold, drawing is like making.",
+"Drawing is not simply about representing what we see, but about discovering what we see through the act of drawing.",
+"First, <b>observing</b>: drawing makes us pay attention to details, movements and relationships.",
+"Second, <b>following</b>: the hand follows lines and movements instead of copying a fixed image.",
+"Third, <b>discovering</b>: understanding grows during the drawing itself.",
+"So a sketch is also a kind of correspondence, between the hand, the line and the thing we look at."
+]
+],
+"fa": "برای اینگولد نقاشی‌کردن هم مثل ساختن است. طراحی (drawing) فقط بازنمایی چیزی که می‌بینیم نیست، بلکه کشفِ آن چیزی است که می‌بینیم، در حینِ کشیدن. اول «مشاهده»: کشیدن ما را وادار می‌کند به جزئیات، حرکت‌ها و رابطه‌ها دقت کنیم. دوم «دنبال‌کردن»: دست خط‌ها و حرکت‌ها را دنبال می‌کند، نه اینکه یک تصویر ثابت را کپی کند. سوم «کشف‌کردن»: فهم در خودِ فرایند کشیدن رشد می‌کند. پس اسکیس هم نوعی همراهی است، بین دست، خط و چیزی که نگاهش می‌کنیم.",
+"tip": ""
+},
+{
+"n": "17",
+"t": "Closing quote (+ spoken line about pyramids)",
+"paras": [
+[
+"Let us close with Ingold's words: \"The riddle gives the material a voice and allows it to tell its own story: it is up to us, then, to listen, and from the clues it offers, to discover what is speaking.\""
+],
+[
+"One last thought.",
+"In Egypt, in Mesoamerica and at Chogha Zanbil in Iran, people built very different monuments in different times and cultures, and yet many of them grow narrower toward the top.",
+"One simple reason is that a heavy mass of brick or stone is most stable in that shape.",
+"Perhaps this is the oldest sign that the material has always had a say in the form."
+]
+],
+"fa": "بیایید با کلمات اینگولد تمام کنیم: «معما به ماده صدا می‌دهد و اجازه می‌دهد داستان خودش را بگوید؛ پس این به ما بستگی دارد که گوش بدهیم و از سرنخ‌هایی که می‌دهد، کشف کنیم چه چیزی دارد حرف می‌زند.» <br><br><b>جمله‌ی پایانی درباره‌ی اهرام (بدون اسلاید):</b> یک فکر آخر. در مصر، در آمریکای مرکزی و در چغازنبیل ایران، مردم در زمان‌ها و فرهنگ‌های مختلف بناهای خیلی متفاوتی ساختند، و با این حال خیلی از آن‌ها رو به بالا باریک‌تر می‌شوند. یک دلیل ساده این است که توده‌ی سنگین آجر یا سنگ در این شکل پایدارترین حالت را دارد. شاید این قدیمی‌ترین نشانه‌ی این باشد که ماده همیشه در فرم حرف داشته است.",
+"tip": "نگو که «از هم یاد نگرفتند»؛ چغازنبیل زیگورات ایلامی است و از بین‌النهرین اثر گرفته."
+},
+{
+"n": "18",
+"t": "References + discussion",
+"paras": [
+[
+"These are our references.",
+"We would like to open the discussion with four questions.",
+"One: is productive resistance real, or are we romanticising it?",
+"Two: how much should an architect decide in advance?",
+"Three: can a parametric model correspond with a material, or only interact with it?",
+"You can think about our pavilion here.",
+"And four: can we understand a material without its meaning?",
+"Thank you."
+]
+],
+"fa": "این‌ها منابع ما هستند. دوست داریم بحث را با چهار سؤال باز کنیم. یک: آیا مقاومتِ سازنده واقعی است یا داریم آن را رمانتیک می‌کنیم؟ دو: معمار چقدر باید از قبل تصمیم بگیرد؟ سه: آیا یک مدل پارامتریک می‌تواند با ماده «همراهی» کند، یا فقط با آن تعامل دارد؟ اینجا می‌توانید به پاویون ما فکر کنید. و چهار: آیا می‌توانیم ماده را بدون معنایش بفهمیم؟ ممنون.",
+"tip": "سؤال‌های بحث روی اسلاید نیستند؛ فقط بگو. بعد از «Thank you» مکث کن."
+}
+]
+}
