@@ -4002,3 +4002,10 @@ upside|بالا (upside down: وارونه)
 usual|معمول
 wind|باد
 wooden|چوبی
+begin|شروع کردن
+begins|شروع می‌شود
+brought|آورد، آوردند (گذشته‌ی bring)
+isabela|ایزابلا (اسم)
+mehdi|مهدی (اسم)
+simay|سیمای (اسم)
+taught|درس داد (گذشته‌ی teach)
