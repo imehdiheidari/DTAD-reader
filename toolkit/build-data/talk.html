@@ -1,0 +1,46 @@
+<style>
+/* presentation tab: the spoken script, slide by slide; tap a sentence to hear it, ▶ plays the whole slide */
+.pane-talk .howto{direction:rtl;text-align:right;font-family:var(--font-fa);line-height:1.9;margin:0 0 .8rem}
+.talk-bar{display:flex;flex-wrap:wrap;gap:.35rem;align-items:center;background:var(--paper);padding:.4rem 0;border-bottom:2px solid var(--ink);margin-bottom:1rem;font-family:var(--font-fa);font-size:.9rem}
+.talk-bar button{font:inherit;cursor:pointer;border:2px solid var(--ink);background:var(--paper);color:var(--ink);padding:.15rem .6rem}
+.talk-bar button.on{background:var(--blue);color:var(--paper);border-color:var(--blue)}
+.talk-bar .jump{display:flex;flex-wrap:wrap;gap:.25rem;width:100%}
+.talk-bar .jump a{font-size:.8rem;color:var(--ink);text-decoration:none;border:1.5px solid var(--ink);padding:0 .45rem}
+.tk{border:2px solid var(--ink);padding:.8rem 1rem;margin:0 0 1rem;scroll-margin-top:12rem}
+.tk-hd{display:flex;gap:.6rem;align-items:center;margin-bottom:.4rem}
+.tk-n{background:var(--ink);color:var(--paper);font-weight:700;padding:0 .5rem}
+.tk-t{flex:1;font-weight:600}
+.tk-play{flex:none;width:2.2rem;height:2.2rem;border:none;border-radius:50%;background:var(--red);color:var(--paper);cursor:pointer;font-size:.9rem}
+.tk p{margin:0 0 .7rem}
+.tk .s{cursor:pointer;border-radius:3px}
+.tk .s:hover{background:var(--yellow-soft)}
+.tk .s.now{background:var(--yellow)}
+.tk details{font-family:var(--font-fa);direction:rtl;text-align:right;margin-top:.3rem}
+.tk details summary{cursor:pointer;opacity:.75;font-size:.9rem}
+.tk details div{line-height:2;padding-top:.4rem}
+.tk .tip{direction:rtl;text-align:right;font-family:var(--font-fa);font-size:.88rem;border-right:4px solid var(--yellow);padding:.3rem .7rem;margin-top:.5rem;background:var(--yellow-soft)}
+</style>
+<script>
+(function(){
+  const T=window.TALK, pane=document.querySelector('.pane-talk'); if(!T||!pane) return;
+  const R=window.DTAD||{};
+  let k=0;
+  const cards=T.slides.map(sl=>'<div class="tk" id="tk-'+sl.n+'"><div class="tk-hd"><span class="tk-n">'+sl.n+'</span><span class="tk-t">'+sl.t+'</span><button type="button" class="tk-play" aria-label="Play slide">▶</button></div>'+
+    sl.paras.map(p=>'<p>'+p.map(s=>'<span class="s" data-i="'+(k++)+'">'+s+'</span>').join(' ')+'</p>').join('')+
+    '<details><summary>ترجمه‌ی فارسی</summary><div>'+sl.fa+'</div></details>'+(sl.tip?'<div class="tip">💡 '+sl.tip+'</div>':'')+'</div>').join('');
+  pane.innerHTML='<p class="howto">روی هر جمله بزن تا خوانده شود. دکمه‌ی قرمز ▶ کل اسلاید را می‌خواند. برای معنی یک کلمه، مثل بقیه‌ی اپ، کلمه را انتخاب کن (نگه دار).</p>'+
+    '<div class="talk-bar"><span>سرعت</span><button type="button" data-r="0.8">0.8×</button><button type="button" data-r="1" class="on">1×</button><button type="button" data-r="1.15">1.15×</button><button type="button" class="stop">■ توقف</button><button type="button" class="fa">فارسی همه</button>'+
+    '<div class="jump">'+T.slides.map(sl=>'<a href="#tk-'+sl.n+'">'+sl.n+'</a>').join('')+'</div></div>'+cards;
+  const spans=[...pane.querySelectorAll('.s')], au=new Audio(); let rate=1, q=[];
+  function mark(i){spans.forEach(s=>s.classList.remove('now')); if(i==null) return; const s=spans[i]; s.classList.add('now'); const r=s.getBoundingClientRect(); if(r.top<200||r.bottom>innerHeight-40) s.scrollIntoView({block:'center',behavior:'smooth'});}
+  function next(){ if(!q.length){mark(null);return;} const i=q.shift(); mark(i); au.src='data:audio/mpeg;base64,'+T.audio[i]; au.playbackRate=rate; au.play().catch(()=>{}); }
+  au.onended=next;
+  function play(l){ if(window.speechSynthesis) speechSynthesis.cancel(); au.pause(); q=l.slice(); next(); }
+  spans.forEach(s=>s.addEventListener('click',()=>{ const sel=getSelection(); if(sel&&!sel.isCollapsed) return; play([+s.dataset.i]); }));
+  pane.querySelectorAll('.tk').forEach(c=>c.querySelector('.tk-play').onclick=()=>play([...c.querySelectorAll('.s')].map(s=>+s.dataset.i)));
+  pane.querySelectorAll('[data-r]').forEach(b=>b.onclick=()=>{rate=+b.dataset.r; au.playbackRate=rate; pane.querySelectorAll('[data-r]').forEach(x=>x.classList.toggle('on',x===b));});
+  pane.querySelector('.stop').onclick=()=>{au.pause(); q=[]; mark(null);};
+  let open=false; pane.querySelector('.fa').onclick=()=>{open=!open; pane.querySelectorAll('.tk details').forEach(d=>d.open=open);};
+  document.addEventListener('dtad-tab',e=>{ if(e.detail!=='talk'){au.pause(); q=[]; mark(null);} });
+})();
+</script>

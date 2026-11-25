@@ -96,6 +96,22 @@ if TABS:
         nav.append('<button type="button" role="tab" data-s="phrases" class="extra">جمله‌های کلاس</button>')
         parts.append('<section class="session extra" data-s="phrases" hidden>\n<h2 class="session-title">Class phrases · جمله‌های کلاس</h2>\n<div class="pane pane-phrases"></div>\n</section>')
         extras += "window.PHRASES=" + json.dumps(groups, ensure_ascii=False, separators=(",", ":")) + ";\n"
+    # talk.json adds a "presentation" tab (talk.html): a spoken script, slide by slide, {"title", "slides": [{"n", "t",
+    # "paras": [[sentence html, ...], ...], "fa", "tip"}]}; one mp3 per sentence in talk-audio.tar as talk/NNNN.mp3 (0-based, in order)
+    talk_path = os.path.join(DATA, "talk.json")
+    if os.path.exists(talk_path):
+        import tarfile
+        TALK = json.load(open(talk_path, encoding="utf8"))
+        ttar = tarfile.open(os.path.join(DATA, "talk-audio.tar"))
+        TALK["audio"], k = [], 0
+        for sl in TALK["slides"]:
+            for p in sl["paras"]:
+                for sent in p:
+                    words |= words_in(sent)
+                    TALK["audio"].append(base64.b64encode(ttar.extractfile(f"talk/{k:04d}.mp3").read()).decode()); k += 1
+        nav.append('<button type="button" role="tab" data-s="talk" class="extra">ارائه Ingold</button>')
+        parts.append('<section class="session extra" data-s="talk" hidden>\n<h2 class="session-title">' + html.escape(TALK["title"]) + '</h2>\n<div class="pane pane-talk"></div>\n</section>')
+        extras += "window.TALK=" + json.dumps(TALK, ensure_ascii=False, separators=(",", ":")) + ";\n"
     parts.insert(0, '<nav class="sessiontabs" role="tablist">' + "".join(nav) + '</nav>')
 ca_path = os.path.join(DATA, "sessions", "class-audio.json")
 CLASS_AUDIO = json.load(open(ca_path, encoding="utf8")) if os.path.exists(ca_path) else None
@@ -124,6 +140,8 @@ if VOCAB:
     script += "\n" + open(os.path.join(HERE, "vocab.html"), encoding="utf8").read()
 if CLASS_AUDIO:
     script += "\n" + open(os.path.join(HERE, "classaudio.html"), encoding="utf8").read()
+if "window.TALK=" in extras:
+    script += "\n" + open(os.path.join(HERE, "talk.html"), encoding="utf8").read()
 script += "\n" + open(os.path.join(HERE, "updater.html"), encoding="utf8").read()
 
 doc = ('<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n<title>' + html.escape(APP_NAME) + '</title>\n'

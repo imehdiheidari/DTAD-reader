@@ -3801,3 +3801,204 @@ you'd|تو ...ـی (you would/had)
 zent|(اسم)
 zero|صفر
 zuluna|(اسم)
+adapts|خودش را تطبیق می‌دهد
+alchemy|کیمیاگری
+aluminium|آلومینیوم
+arm|بازو، دست
+basket|سبد
+baskets|سبدها
+bateson|بیتسون (گرگوری بیتسون، انسان‌شناس)
+bending-active|فعال‌شده با خمش (سازه‌ای که با خم‌کردن شکل می‌گیرد)
+bends|خم می‌شود
+bent|خم‌شده
+builder's|مالِ سازنده
+builders|سازنده‌ها، بنّاها
+bülbül|بلبل (ترکی)
+centering|قالب چوبی موقت طاق
+chogha|چغا (در چغازنبیل)
+clip|گیره
+clues|سرنخ‌ها
+coloured|رنگی
+correspond|همراهی کردن، هم‌پاسخ بودن
+crack|ترک خوردن، ترک
+cracks|ترک می‌خورد
+criticises|نقد می‌کند
+curvature|انحنا
+curved|منحنی، خمیده
+deutero-learning|یادگیری درجه‌دو (یاد گرفتنِ شیوه‌ی یادگیری)
+discovering|کشف کردن
+drinks|نوشیدنی‌ها
+drying|خشک شدن
+fast-setting|زودگیر
+forging|آهنگری، شکل‌دادن فلز با چکش
+formwork|قالب‌بندی
+grain|رگه‌ی چوب، الیاف
+gypsum|گچ
+hammering|چکش‌کاری
+heat|گرما
+heated|گرم‌شده
+historicity|تاریخ‌مندی
+hyle|هوله (یونانی: ماده)
+hylomorphism|هیلومورفیسم (تحمیل فرم بر ماده)
+ignores|نادیده می‌گیرد
+intends|قصد دارد
+kasra|کسری (در طاق کسری)
+knots|گره‌های چوب
+leans|تکیه می‌دهد
+mass|توده، جرم
+meets|برخورد می‌کند، می‌رسد به
+mesoamerica|آمریکای مرکزی (باستان)
+metres|متر (جمع)
+millimetre|میلی‌متر
+moist|نمناک
+moisture|رطوبت
+molten|مذاب
+monuments|بناهای یادمانی
+morphe|مورفه (یونانی: فرم)
+mould|قالب
+mud|گِل
+nail|میخ
+narrower|باریک‌تر
+nightingale's|مالِ بلبل
+obeys|اطاعت می‌کند
+obstacles|موانع
+offers|ارائه می‌دهد
+ongoing|جاری، پیوسته
+ottoman|عثمانی
+overheated|بیش از حد داغ‌شده
+oxidation|اکسید شدن
+pet|PET (نوعی پلاستیک شفاف)
+plateau|فلات
+pot|قابلمه، دیگ
+properties|ویژگی‌ها
+resists|مقاومت می‌کند
+reused|دوباره استفاده‌شده
+revises|بازنگری می‌کند
+rollers|غلتک‌ها
+rolling|نوردکاری، غلتاندن
+romanticising|رمانتیک کردن، آرمانی نشان دادن
+rows|ردیف‌ها
+sawing|اره کردن
+scotland|اسکاتلند
+scrap|قراضه
+shrink|جمع شدن، کوچک شدن
+snaps|ناگهان می‌شکند
+soft|نرم
+softens|نرم می‌شود
+soup|سوپ
+spans|دهانه‌ها
+specifying|مشخص کردن
+spoon|قاشق
+sprang|برگشت، پرید (گذشته‌ی spring)
+springs|برمی‌گردد، فنری برمی‌جهد
+sudden|ناگهانی
+swells|باد می‌کند، متورم می‌شود
+tapia|تاپیا (دیوار خاک کوبیده در کلمبیا)
+taq|طاق
+tehran|تهران
+thickness|ضخامت
+threads|رشته‌ها، نخ‌ها
+tilted|مایل، کج
+transforms|تغییر شکل می‌دهد
+twisted|پیچانده‌شده
+unevenly|ناهمگون، نامساوی
+vault|طاق
+vaulting|طاق‌زنی
+weave|بافتن
+weaver|بافنده
+weaver's|مالِ بافنده
+welding|جوشکاری
+willow|بید
+wire|سیم
+wove|بافت (گذشته‌ی weave)
+zanbil|زنبیل (در چغازنبیل)
+çeşm-i|چشمِ (ترکی عثمانی)
+answering|جواب دادن
+arch|طاق، قوس
+asks|می‌پرسد
+assembly|سرهم کردن، مونتاژ
+beach|ساحل
+beam|تیر (سازه)؛ پرتو
+behaviour|رفتار
+bend|خم کردن
+brick|آجر
+bricks|آجرها
+clay|گِل رُس
+cold|سرد؛ سرماخوردگی
+copper|مس
+creature|موجود
+curve|منحنی
+cutting|بریدن
+decay|فرسودگی، پوسیدگی
+decides|تصمیم می‌گیرد
+discover|کشف کردن
+egypt|مصر
+enemy|دشمن
+facts|واقعیت‌ها
+files|فایل‌ها
+fix|ثابت کردن؛ درست کردن
+generated|تولیدشده
+grasshopper|گرس‌هاپر (افزونه‌ی Rhino)
+gravity|جاذبه
+greek|یونانی
+grew|رشد کرد
+grey|خاکستری
+grows|رشد می‌کند
+growth|رشد
+hanging|آویزان
+hangs|آویزان است
+holes|سوراخ‌ها
+hot|داغ
+humidity|رطوبت
+joints|اتصال‌ها
+keeps|نگه می‌دارد
+kinds|انواع
+laid|گذاشته‌شده، چیده‌شده
+layer|لایه
+layers|لایه‌ها
+load|بار (نیرو)؛ بارگذاری کردن
+loop|حلقه (feedback loop = چرخه‌ی بازخورد)
+melting|ذوب شدن
+mental|ذهنی
+metal|فلز
+movements|حرکت‌ها
+moves|حرکت می‌کند
+observe|مشاهده کردن
+oxygen|اکسیژن
+panel|پنل
+panels|پنل‌ها
+passes|رد می‌کند، منتقل می‌کند
+pattern|الگو
+pavilion|پاویون، غرفه، کوشک
+perceive|درک کردن، حس کردن
+pressed|فشار داد
+pressure|فشار
+pushed|هل داده‌شده، فرو برده‌شده
+pushes|هل می‌دهد
+python|پایتون (زبان برنامه‌نویسی)
+rare|کمیاب
+reached|رسیدند، رسید
+relationships|رابطه‌ها
+repetition|تکرار
+representing|نمایش دادن
+return|برگشتن
+riddle|معما
+romans|رومی‌ها
+row|ردیف
+ruined|خراب شده
+seconds|ثانیه‌ها
+sees|می‌بیند
+simply|به‌سادگی
+size|اندازه
+skills|مهارت‌ها
+spiral|مارپیچ
+stable|پایدار
+stepping|قدم گذاشتن
+technique|تکنیک
+tension|کشش؛ تنش
+thin|نازک
+traditions|سنت‌ها
+upside|بالا (upside down: وارونه)
+usual|معمول
+wind|باد
+wooden|چوبی
