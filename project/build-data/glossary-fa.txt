@@ -5825,3 +5825,302 @@ willi|این‌جا: نامفهوم در ضبط
 wita'i|این‌جا: Vitae، زندگی (لاتین)
 zep|بخشی از یک کلمه‌ی ساختگی
 zetos|«ز توست» (بیت مولانا: از توست)
+acting|عمل کردن، رفتار کردن؛ بازیگری
+advantages|مزیت‌ها
+altered|تغییر داده‌شده
+american|آمریکایی (این‌جا احتمالاً اشتباه شنیده‌شده: ambient، محیطی)
+analytical|تحلیلی
+analyzing|تحلیل کردن
+anger|خشم
+anxiety|اضطراب
+apples|سیب‌ها
+arbitrary|دلبخواهی، بی‌قاعده
+aren't|نیستند (are not)
+arises|پیش می‌آید، به وجود می‌آید
+association|تداعی؛ انجمن
+assuming|با فرض این‌که
+ate|خورد (گذشته‌ی eat)
+attach|وصل کردن، چسباندن
+attachment|دلبستگی؛ اتصال
+automatic|خودکار
+autumn|پاییز
+averaging|میانگین گرفتن
+baked|پخته (این‌جا احتمالاً اشتباه شنیده‌شده)
+bargain|معامله (این‌جا اشتباه شنیده‌شده: garden، باغ)
+bedāhe-navāzi|بداهه‌نوازی (موسیقی ایرانی بدون نت از پیش آماده)
+beef|گوشت گاو (این‌جا اشتباه شنیده‌شده: Eve، حوا)
+biased|جانبدار، سوگیرانه
+blank|خالی، سفید
+bloody|خونین
+blow|فوت کردن؛ وزیدن
+bombed|بمباران‌شده
+bored|خسته، حوصله‌سررفته
+breath-to-sound|تبدیل نفس به صدا
+breathings|نفس‌ها، نفس کشیدن‌ها
+breaths|نفس‌ها
+cab|تاکسی
+captures|ثبت‌ها، برداشت‌ها (اسکن سه‌بعدی)
+cared|مراقبت شد؛ اهمیت داد
+caring|مراقبت کردن؛ اهمیت دادن
+caught|گرفت، گرفته‌شده (گذشته‌ی catch)
+centimeters|سانتی‌متر
+centipede|هزارپا (این‌جا نام یک پروژه، احتمالاً اشتباه شنیده‌شده)
+charter|منشور؛ کرایه (این‌جا احتمالاً اشتباه شنیده‌شده)
+checking|بررسی کردن، چک کردن
+cinema|سینما
+closeness|نزدیکی
+coat|کت، پالتو
+codes|کدها
+colleague|همکار
+colour|رنگ
+combinations|ترکیب‌ها
+combo|ترکیب (این‌جا اشتباه شنیده‌شده)
+comfortable|راحت
+command|فرمان؛ فرمان دادن
+commanding|فرمان دادن
+company|شرکت؛ همراهی
+compared|مقایسه کرد، مقایسه‌شده
+conclusions|نتیجه‌گیری‌ها
+configuration|پیکربندی، چیدمان
+confirm|تأیید کردن
+confirms|تأیید می‌کند
+confronted|روبه‌رو شد، مواجه‌شده
+consuming|مصرف کردن
+converting|تبدیل کردن
+cooling|خنک کردن
+coolness|خنکی
+cooperation|همکاری
+couples|زوج‌ها
+coupling|جفت کردن، زوج کردن
+cows|گاوها (این‌جا اشتباه شنیده‌شده)
+cozy|دنج، گرم و راحت
+criticized|نقد شد
+crits|نقدها، جلسه‌های نقد (در دانشکده‌ی معماری)
+cruel|بی‌رحم
+crying|گریه کردن
+culturally|از نظر فرهنگی
+curiosity|کنجکاوی
+cyberpunk-y|سایبرپانکی، به سبک آینده‌ی تاریک و تکنولوژیک
+dad's|مال پدر (این‌جا اشتباه شنیده‌شده: that place، آن مکان)
+decent|مناسب، آبرومند (این‌جا احتمالاً: distant، دور)
+deeply|عمیقاً
+depression|افسردگی
+desk|میز
+detected|تشخیص داده‌شده
+detection-action|تشخیص و بعد واکنش (یک‌طرفه)
+difficulty|سختی، دشواری
+dig|کندن؛ عمیق شدن در موضوعی
+disadvantages|معایب
+discommunicated|(ساختگی، اشتباه شنیده‌شده: communicated، منتقل شد)
+dish|بشقاب؛ کاسه
+drank|نوشید (گذشته‌ی drink)
+dropped|کنار گذاشته شد؛ افتاد
+duet|دوئت، دونفره (در موسیقی)
+else's|مال کس دیگر
+enabled|ممکن کرد، فعال‌شده
+encode|رمزگذاری کردن، کد کردن
+encoded|رمزگذاری‌شده
+engineers|مهندس‌ها
+enjoying|لذت بردن
+envelope|پاکت؛ پوسته، حد بیرونی
+evaluates|ارزیابی می‌کند
+excluded|کنار گذاشته‌شده
+excluding|بیرون گذاشتن، شامل نکردن
+executing|اجرا کردن
+exhale|بازدم
+exiting|بیرون رفتن (این‌جا احتمالاً: exciting یا air exiting)
+experimented|آزمایش کرد
+expositions|نمایشگاه‌ها
+extracted|استخراج کرد، بیرون کشید
+factory|کارخانه (این‌جا اشتباه شنیده‌شده: cave، غار)
+fair|عادلانه؛ نمایشگاه (این‌جا اشتباه شنیده‌شده: fear، ترس)
+featuring|(این‌جا اشتباه شنیده‌شده: future، آینده)
+feedbacks|بازخوردها
+fish|ماهی
+fish-bowl|تُنگ ماهی
+fishes|ماهی‌ها
+fleet|ناوگان (این‌جا اشتباه شنیده‌شده)
+flutes|فلوت‌ها، نی‌ها
+forged|جعل‌شده (این‌جا اشتباه شنیده‌شده: forgotten، فراموش‌شده)
+frames|فریم‌ها، قاب‌ها
+frightened|ترسیده
+frustration|ناکامی، کلافگی
+gadgets|ابزارها، دستگاه‌های کوچک
+gas|گاز
+gaussian-splat|گاوسین اسپلت (روش اسکن و نمایش سه‌بعدی با نقطه‌های نرم)
+gentle|ملایم، آرام
+graph|نمودار
+graphs|نمودارها
+guides|راهنماها
+handy|به‌دردبخور، دم دست
+hdmi|کابل HDMI برای وصل کردن تصویر
+heavens|آسمان‌ها، بهشت
+helmet|کلاه‌خود (این‌جا: هدست واقعیت مجازی)
+helping|کمک کردن
+hints|سرنخ‌ها، اشاره‌ها
+holbein|(اشتباه شنیده‌شده: احتمالاً Weimar)
+horse|اسب (این‌جا اشتباه شنیده‌شده: whole، کامل)
+human-like|شبیه انسان
+hundreds|صدها
+imperfection|نقص، کامل نبودن
+improvisations|بداهه‌ها
+improvising|بداهه‌نوازی، بداهه‌سازی
+included|شامل‌شده
+incorporating|گنجاندن، وارد کردن
+inhale|دم (نفس به داخل)
+inputted|وارد‌شده (به کامپیوتر)
+interactors|کسانی که تعامل می‌کنند
+internal|درونی
+intimacy|صمیمیت
+intimate|صمیمی
+intrigued|کنجکاو، علاقه‌مندشده
+invasive|مزاحم، تهاجمی
+investigate|بررسی کردن، تحقیق کردن
+irregular|نامنظم
+jakobskirche|کلیسای یاکوب در وایمار (کنار یاکوبس‌فریدهوف)
+jazz|موسیقی جَز
+juggle|بازی کردن با چند چیز با هم، جابه‌جا کردن
+keywords|کلیدواژه‌ها
+lacks|کم دارد (این‌جا احتمالاً: reflects، نشان می‌دهد)
+laugh|خندیدن
+laughing|خندیدن
+lina|لینا (نام یک دانشجو)
+liquid|مایع (این‌جا احتمالاً: آبجو)
+lungs|ریه‌ها
+mad|عصبانی؛ دیوانه
+malaise|بی‌حالی (این‌جا اشتباه شنیده‌شده)
+manner|روش، شیوه
+menu|منو، فهرست انتخاب
+microphones|میکروفون‌ها
+millions|میلیون‌ها
+mixes|قاطی می‌کند، ترکیب می‌کند
+modified|تغییر داده‌شده
+motive|انگیزه
+multi-level|چندلایه
+multimedia|چندرسانه‌ای
+muscles|ماهیچه‌ها
+musics|موسیقی‌ها
+mutable|قابل تغییر (این‌جا احتمالاً: movable، متحرک)
+naked|برهنه
+neuron|نورون، سلول عصبی
+neuron-like|شبیه نورون
+news|خبر (این‌جا: کسی که بلد است)
+nice-to-have|خوب است داشته باشیم ولی ضروری نیست
+nonverbal|غیرکلامی
+notices|متوجه می‌شود
+observers|ناظرها، تماشاگرها
+odd|عجیب
+operating|کار کردن؛ (این‌جا احتمالاً: breathing)
+output|خروجی
+oven|فِر (این‌جا اشتباه شنیده‌شده: obvious، بدیهی)
+parameters|پارامترها، متغیرها
+parks|پارک‌ها
+passengers|مسافرها
+peaceful|آرام، صلح‌آمیز
+perplexed|گیج، حیران
+personalities|شخصیت‌ها
+pipes|لوله‌ها
+playfulness|بازیگوشی
+pleasers|کسانی که می‌خواهند همه را راضی کنند
+plots|(اشتباه شنیده‌شده: blocks، بلوک‌ها)
+plug|وصل کردن (به برق یا کابل)
+pointing|اشاره کردن
+poor|فقیر
+positioning|جای گذاشتن، موقعیت‌دهی
+powerpoint|نرم‌افزار ارائه‌ی پاورپوینت
+prank|شوخی، سرکار گذاشتن
+pre-insure|(اشتباه شنیده‌شده: presence of, حضورِ)
+pre-programmed|از قبل برنامه‌ریزی‌شده
+pressure|فشار
+processed|پردازش‌شده
+progressing|پیش رفتن
+pump|پمپ؛ پمپ کردن
+pumping|پمپ کردن
+punctually|به‌موقع (این‌جا احتمالاً: نقطه‌به‌نقطه، در جزئیات)
+puzzle|پازل، معما
+raised|بالا برد؛ مطرح کرد
+rambling|پرحرفی بی‌هدف (این‌جا احتمالاً: claiming، ادعا کردن)
+reacting|واکنش نشان دادن
+reactions|واکنش‌ها
+realist|واقع‌گرا (این‌جا احتمالاً: realized، فهمیدم)
+realm|قلمرو
+recapitulate|خلاصه‌ی دوباره گفتن
+recapitulation|مرور و خلاصه‌ی دوباره
+recognizes|تشخیص می‌دهد
+recognizing|تشخیص دادن
+recommended|پیشنهاد کرد
+recover|بازیابی کردن، دوباره به دست آوردن
+recovers|دوباره به دست می‌آورد
+refreshed|تازه‌شده
+reinforcement|تقویت
+responding|پاسخ دادن
+revert|برگشتن (به حالت قبل)
+rgb|نور رنگی قرمز-سبز-آبی
+robot|ربات
+roughness|زبری، خشونت (صدا)
+schematic|طرح‌واره، شماتیک
+shatters|خرد می‌شود، می‌شکند
+shifting|تغییر کردن، جابه‌جا شدن
+shirt|پیراهن
+sophisticated|پیچیده، پیشرفته
+sorting|مرتب کردن، جدا کردن
+spark|جرقه؛ جرقه زدن
+spectrum's|مال طیف
+sped|تند شد (گذشته‌ی speed)
+splitted|(غلط رایج برای split) تقسیم‌شده، شکسته
+spoken|گفتاری
+stakeholder|ذی‌نفع (این‌جا اشتباه شنیده‌شده)
+steam|بخار (این‌جا احتمالاً: demon)
+stepped|قدم گذاشت (stepped back: یک قدم عقب رفت)
+stopping|متوقف کردن، مانع شدن
+sudden|ناگهانی
+taxi|تاکسی
+teachable|قابل آموزش (Teachable Machine: ابزار ساده‌ی گوگل برای آموزش بینایی کامپیوتر)
+technique-wise|از نظر فنی
+tend|گرایش داشتن
+tends|گرایش دارد
+terrible|وحشتناک
+they've|آن‌ها ... اند (they have)
+tissue|دستمال کاغذی؛ بافت
+tissue-paper|دستمال کاغذی
+tissues|دستمال‌های کاغذی
+tone|لحن، تُن صدا
+tore|پاره کرد (گذشته‌ی tear)
+totem|توتم، ستون نمادین
+touched|لمس کرد؛ به آن پرداخت
+touchpad|صفحه‌ی لمسی
+tower-rich|(اشتباه شنیده‌شده: tower-like، برج‌مانند)
+traced|دنبال کرد، ردگیری کرد
+traffic|ترافیک
+traffic-light|چراغ راهنمایی
+transmitted|منتقل‌شده
+trauma|ضربه‌ی روحی (این‌جا احتمالاً: thinks there is، فکر می‌کند هست)
+trick|ترفند؛ (این‌جا: track، مسیر)
+tube|لوله؛ اتاقک لوله‌ای
+tubes|لوله‌ها
+tukka|(نام یک دانشجو، احتمالاً اشتباه شنیده‌شده)
+two-way|دوطرفه
+ugh|اَه (صدای ناراحتی)
+unclear|نامشخص، مبهم
+unexpectedly|به‌طور غیرمنتظره
+unexperiencable|غیرقابل تجربه
+unfolds|باز می‌شود، آشکار می‌شود
+unhappy|ناراحت
+unintentionally|ناخواسته، بی‌قصد
+unsecure|(غلط رایج برای insecure) ناامن
+unsettled|ناآرام، معذب
+unsettling|ناآرام‌کننده، معذب‌کننده
+unusual|غیرعادی
+ventilating|تهویه کردن
+vermin|جانوران موذی (این‌جا اشتباه شنیده‌شده: Weimar)
+vertically|عمودی
+vibrations|لرزش‌ها
+vulnerability|آسیب‌پذیری
+vulnerable|آسیب‌پذیر
+waves|موج‌ها
+weakness|ضعف
+wheel|چرخ
+wire|سیم، کابل
+word-to-colour|تبدیل کلمه به رنگ
+worldwide|در سراسر دنیا
+yellow|زرد
